@@ -1,0 +1,24 @@
+{
+  "kind": "narrow deterministic local checks, supplemented by manual review",
+  "finite_range": [
+    3,
+    5,
+    7,
+    9
+  ],
+  "problem_2_at_x_2": {
+    "actual_value": "3/2",
+    "generated_simplification": "5/2",
+    "correct_simplification": "x - 1/x",
+    "blind_common_domain_equality": false
+  },
+  "problem_4_target": [
+    1,
+    0
+  ],
+  "problem_4_required_input": [
+    "1/3",
+    "1/3"
+  ],
+  "limits": "These checks establish the specific displayed counterexample; they do not establish universal validator coverage or statistical reviewer accuracy."
+}

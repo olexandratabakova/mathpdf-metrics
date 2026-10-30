@@ -10,7 +10,12 @@
     <title>MathPDF · Quality Lab</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="vendor/katex/katex.min.css" />
+    <script src="vendor/katex/katex.min.js" defer></script>
+    <script src="vendor/math-renderer.js" defer></script>
     <script src="data.js" defer></script>
+    <script src="reviews-data.js" defer></script>
+    <script src="reviews.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -27,6 +32,7 @@
         ><a href="#cards" data-view="cards"><span>▤</span> Картки</a
         ><a href="#issues" data-view="issues"
           ><span>⊙</span> Ручна перевірка <b id="issue-count"></b></a
+        ><a href="#reviews" data-view="reviews"><span>◇</span> Експерименти</a
         ><a href="#guide" data-view="guide"><span>⌁</span> Як це працює</a>
       </nav>
       <div class="sidebar-bottom">

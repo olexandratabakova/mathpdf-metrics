@@ -264,7 +264,17 @@ function comparison() {
           })
           .join("")
       : '<div class="empty">Немає зіставних наборів.<br>Оберіть версії з однаковою темою, рівнем і сторінками.</div>'
-  }${pairs.length ? `<details class="more-metrics"><summary>Ще 3 показники</summary>${metrics.slice(5).map(m=>`<div class="bar-heading"><span>${m.label}</span><span>${pct(avg(left,m.key))} → ${pct(avg(right,m.key))} &nbsp; ${delta(avg(left,m.key),avg(right,m.key),m.high)}</span></div>`).join('')}</details>` : ''}<div class="note compare-foot">${pairs.length ? `Зіставлено ${pairs.length} ${pairs.length === 1 ? "набір" : "набори"} · ${sum(left)} карток у ${esc(baseline)} та ${sum(right)} у ${esc(current)}. ${pairs.map((p) => esc(name(p[1].topic)) + " · " + esc(p[1].level || "без рівня") + " · стор. " + esc(p[1].pages)).join("; ")}. ` : ""}Різні вибірки не змішуємо. Зміни показані у відсоткових пунктах; це оцінки LLM, а не доказ математичної правильності.</div></div></section>`;
+  }${
+    pairs.length
+      ? `<details class="more-metrics"><summary>Ще 3 показники</summary>${metrics
+          .slice(5)
+          .map(
+            (m) =>
+              `<div class="bar-heading"><span>${m.label}</span><span>${pct(avg(left, m.key))} → ${pct(avg(right, m.key))} &nbsp; ${delta(avg(left, m.key), avg(right, m.key), m.high)}</span></div>`,
+          )
+          .join("")}</details>`
+      : ""
+  }<div class="note compare-foot">${pairs.length ? `Зіставлено ${pairs.length} ${pairs.length === 1 ? "набір" : "набори"} · ${sum(left)} карток у ${esc(baseline)} та ${sum(right)} у ${esc(current)}. ${pairs.map((p) => esc(name(p[1].topic)) + " · " + esc(p[1].level || "без рівня") + " · стор. " + esc(p[1].pages)).join("; ")}. ` : ""}Різні вибірки не змішуємо. Зміни показані у відсоткових пунктах; це оцінки LLM, а не доказ математичної правильності.</div></div></section>`;
 }
 function overview() {
   const rows = selectedRecords(current),
@@ -448,9 +458,14 @@ function guide() {
     `<div class="guide-grid"><article class="panel"><h2>Додати наступну версію</h2><ol><li>Згенеруйте матеріали окремо від робочого MathPDF.</li><li>Запустіть evaluate для цієї вибірки.</li><li>Натисніть «Нова версія», вставте точний промпт і додайте cards_*.csv.</li><li>Порівняйте показники та перевірте задачі вручну.</li><li>Збережіть висновок і експортуйте JSON.</li></ol></article><article class="panel"><h2>Де зберігаються зміни</h2><p>Нові версії, промпти та статуси зберігаються лише у вашому браузері. Вони не завантажуються в GitHub автоматично.</p><p>«Експорт JSON» створює повну резервну копію. «Імпорт» об’єднує записи за ID; однакові ID замінюються імпортованими. Для публікації нового знімка: <code>python tools/publish_snapshot.py backup.json</code>, потім commit і push.</p></article><article class="panel"><h2>Чесне порівняння</h2><p>Порівнюємо лише однакові тему, рівень і сторінки джерела. Повторні набори з однаковим ключем виключені як неоднозначні. Ваги метрик — кількість карток; покриття також показане як зважене середнє наборів.</p><p>Одна генерація не доводить покращення. Збережіть PDF, модель, налаштування та точний промпт для повторних запусків.</p></article><article class="panel"><h2>Що є в історії</h2><p>v1: 160 карток; v2: 180; v3: 130; v4: 35. Різні вибірки не можна трактувати як єдиний чистий експеримент. Повтор Sets у v3 збережено окремо.</p><p>Знімки промптів історичних версій не були підтверджені. Нові PDF з функціями, обговорені пізніше, не оцінені цим набором метрик і не додані як «v5».</p></article></div><div class="section-head"><h2>Що означають показники</h2></div><section class="panel">${metrics.map((m) => `<div class="glossary-row"><strong>${m.label} ${m.high ? "↑" : "↓"}</strong><span>${m.hint}. ${m.high ? "Більше — краще." : "Менше — краще."}</span></div>`).join("")}<div class="glossary-row"><strong>LLM-оцінка ≠ істина</strong><span>Відповідність джерелу не перевіряє математичну правильність. Дублікати та покриття залежать від оцінювача. Ручні зауваження до задач не перетворюються на відсоткові метрики.</span></div></section>`;
 }
 function render() {
-  view = ["overview", "versions", "cards", "issues", "guide"].includes(
-    location.hash.slice(1),
-  )
+  view = [
+    "overview",
+    "versions",
+    "cards",
+    "issues",
+    "reviews",
+    "guide",
+  ].includes(location.hash.slice(1))
     ? location.hash.slice(1)
     : "overview";
   document.querySelectorAll("[data-view]").forEach((a) => {
@@ -463,12 +478,15 @@ function render() {
     versions: "Версії та промпти",
     cards: "Картки",
     issues: "Ручна перевірка",
+    reviews: "Експерименти з перевіркою",
     guide: "Як це працює",
   }[view];
   $("issue-count").textContent = db.issues.filter(
     (i) => i.status !== "resolved",
   ).length;
-  ({ overview, versions, cards, issues, guide })[view]();
+  ({ overview, versions, cards, issues, reviews: window.renderReviews, guide })[
+    view
+  ]();
   document
     .querySelectorAll("[data-go]")
     .forEach((b) => (b.onclick = () => (location.hash = b.dataset.go)));

@@ -90,3 +90,7 @@ The original working directory and historical outputs were preserved. This repos
 ## Verification
 
 27 Python tests pass. Browser checks cover dataset totals, weighted calculations, strict comparison cohorts, card search, detail dialogs, CSV import, source metadata, prompt escaping, persistence across reloads, valid/invalid backup imports, JSON export downloads, manual findings, 320/390-pixel layouts and direct offline file opening. No paid model requests were made.
+
+## Generator + examiner experiment
+
+Open **[Експерименти](https://olexandratabakova.github.io/mathpdf-metrics/#reviews)** to inspect four newly generated problems and two GPT-4.1 examinations. The model accepted all four; the separately displayed local check shows an algebraic error it missed. Costs, original answers, blind examination and audit are preserved independently of flashcard scores. See [experiment details](experiments/review-four/README.md). No changes were made to the live MathPDF app.
