@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="MathPDF quality lab — історія експериментів, порівняння промптів і перевірка якості."
+    />
+    <title>MathPDF · Quality Lab</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="#overview"
+        ><span class="brand-mark">m<span>·</span></span
+        ><span>MathPDF<small>QUALITY LAB</small></span></a
+      >
+      <div class="nav-label">РОБОЧИЙ ПРОСТІР</div>
+      <nav aria-label="Розділи">
+        <a href="#overview" data-view="overview"><span>◫</span> Огляд</a
+        ><a href="#versions" data-view="versions"
+          ><span>≋</span> Версії та промпти</a
+        ><a href="#cards" data-view="cards"><span>▤</span> Картки</a
+        ><a href="#issues" data-view="issues"
+          ><span>⊙</span> Ручна перевірка <b id="issue-count"></b></a
+        ><a href="#guide" data-view="guide"><span>⌁</span> Як це працює</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="live-dot"></div>
+        <strong>Ваш простір експериментів</strong>
+        <p>Порівнюйте. Перевіряйте.<br />Покращуйте з доказами.</p>
+        <a
+          href="https://github.com/olexandratabakova/mathpdf-metrics"
+          target="_blank"
+          rel="noreferrer"
+          >Репозиторій ↗</a
+        >
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <span
+          >MathPDF <span class="slash">/</span>
+          <b id="breadcrumb">Огляд якості</b></span
+        >
+        <div class="top-actions">
+          <span class="storage-label" id="storage-label"
+            >Дані у цьому браузері</span
+          ><button id="backup" class="quiet">Експорт JSON ↗</button
+          ><button id="import-backup" class="quiet">Імпорт</button
+          ><button id="new-run" class="primary">＋ Нова версія</button>
+        </div>
+      </header>
+      <main id="main" tabindex="-1"></main>
+      <footer class="page-footer">
+        <span>MathPDF Quality Lab</span
+        ><span
+          >Оцінки допомагають перевіряти якість, але не замінюють математичну
+          перевірку.</span
+        >
+      </footer>
+    </div>
+    <dialog id="version-dialog" aria-labelledby="version-title">
+      <form id="version-form">
+        <div class="modal-heading">
+          <div>
+            <span class="eyebrow">ІСТОРІЯ ЕКСПЕРИМЕНТІВ</span>
+            <h2 id="version-title">Нова версія</h2>
+          </div>
+          <button type="button" class="icon" data-close aria-label="Закрити">
+            ×
+          </button>
+        </div>
+        <div class="form-body">
+          <div class="two-col">
+            <label
+              >Назва версії<input
+                name="id"
+                required
+                maxlength="40"
+                placeholder="v5" /></label
+            ><label>Дата<input name="date" type="date" required /></label>
+          </div>
+          <label
+            >Коротка назва<input
+              name="title"
+              required
+              maxlength="160"
+              placeholder="Наприклад: точніші умови задач" /></label
+          ><label
+            >Статус<select name="status">
+              <option value="draft">Чернетка</option>
+              <option value="review">На перевірці</option>
+              <option value="accepted">Прийнято</option>
+            </select></label
+          ><label
+            >Що змінилося та що перевіряємо<textarea
+              name="notes"
+              rows="3"
+              maxlength="12000"
+              placeholder="Гіпотеза, зміни, висновок…"
+            ></textarea></label
+          ><label
+            >Знімок промпту <span class="muted">необов’язково</span
+            ><textarea
+              name="prompt"
+              rows="5"
+              maxlength="100000"
+              placeholder="Вставте точний текст промпту для цієї версії"
+            ></textarea></label
+          ><label
+            >Результати оцінювання CSV <span class="muted">необов’язково</span
+            ><input name="csv" type="file" accept=".csv,text/csv"
+          /></label>
+          <div id="set-scopes"></div>
+          <p class="hint">
+            Файл cards_*.csv з evaluate. Запис версії без CSV не створює
+            вигаданих оцінок. Зберігання локальне; для перенесення
+            використовуйте експорт JSON.
+          </p>
+          <p id="form-error" class="error" role="alert" hidden></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="quiet" data-close>Скасувати</button
+          ><button class="primary" type="submit">Зберегти версію</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="card-dialog" aria-labelledby="card-title">
+      <div class="modal-heading">
+        <h2 id="card-title">Картка</h2>
+        <button class="icon" data-close aria-label="Закрити картку">×</button>
+      </div>
+      <div id="card-detail" class="form-body"></div>
+    </dialog>
+    <dialog id="issue-dialog" aria-labelledby="issue-title">
+      <form id="issue-form">
+        <div class="modal-heading">
+          <h2 id="issue-title">Нове зауваження</h2>
+          <button
+            type="button"
+            class="icon"
+            data-close
+            aria-label="Закрити зауваження"
+          >
+            ×
+          </button>
+        </div>
+        <div class="form-body">
+          <div class="two-col">
+            <label>Версія<select name="version"></select></label
+            ><label
+              >Серйозність<select name="severity">
+                <option>Суттєва</option>
+                <option>Критична</option>
+                <option>Форматування</option>
+              </select></label
+            >
+          </div>
+          <label
+            >Тема<input
+              name="topic"
+              required
+              maxlength="200"
+              placeholder="Наприклад: функції, задачі"
+          /></label>
+          <div class="two-col">
+            <label
+              >Де саме<input
+                name="location"
+                required
+                maxlength="200"
+                placeholder="Задача 3, PDF стор. 2" /></label
+            ><label
+              >Категорія<input
+                name="category"
+                required
+                maxlength="100"
+                placeholder="Хибна умова"
+            /></label>
+          </div>
+          <label
+            >Що не працює<textarea
+              name="description"
+              required
+              rows="3"
+              maxlength="8000"
+            ></textarea></label
+          ><label
+            >Доказ або контрприклад<textarea
+              name="evidence"
+              rows="2"
+              maxlength="8000"
+            ></textarea></label
+          ><label
+            >Наступний крок<input
+              name="next"
+              maxlength="2000"
+              placeholder="Що має пройти повторну перевірку"
+          /></label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="quiet" data-close>Скасувати</button
+          ><button class="primary" type="submit">Додати зауваження</button>
+        </div>
+      </form>
+    </dialog>
+    <input
+      id="backup-file"
+      type="file"
+      accept=".json,application/json"
+      hidden
+    />
+    <div id="toast" role="status" hidden></div>
+    <noscript>Увімкніть JavaScript, щоб відкрити панель.</noscript>
+  </body>
+</html>
