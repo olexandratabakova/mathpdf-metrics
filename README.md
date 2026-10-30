@@ -2,6 +2,8 @@
 
 A small, offline-capable workspace for tracking prompt versions, reviewing flashcard quality and keeping mathematical issues visible. The interface is in Ukrainian.
 
+**[Open the live dashboard](https://olexandratabakova.github.io/mathpdf-metrics/)** · [Source repository](https://github.com/olexandratabakova/mathpdf-metrics)
+
 ## Open the dashboard
 
 Open **[index.html](index.html)** in a browser. No installation, API key, build step or internet connection is needed. Alternatively:
@@ -84,3 +86,7 @@ docs/                         Detailed CLI and data provenance notes
 ```
 
 The original working directory and historical outputs were preserved. This repository is a curated copy: caches, API credentials, duplicate screenshots, temporary logs and source PDFs are excluded.
+
+## Verification
+
+27 Python tests pass. Browser checks cover dataset totals, weighted calculations, strict comparison cohorts, card search, detail dialogs, CSV import, source metadata, prompt escaping, persistence across reloads, valid/invalid backup imports, JSON export downloads, manual findings, 320/390-pixel layouts and direct offline file opening. No paid model requests were made.

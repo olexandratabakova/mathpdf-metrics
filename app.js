@@ -264,7 +264,7 @@ function comparison() {
           })
           .join("")
       : '<div class="empty">Немає зіставних наборів.<br>Оберіть версії з однаковою темою, рівнем і сторінками.</div>'
-  }<div class="note compare-foot">${pairs.length ? `Зіставлено ${pairs.length} ${pairs.length === 1 ? "набір" : "набори"} · ${sum(left)} карток у ${esc(baseline)} та ${sum(right)} у ${esc(current)}. ${pairs.map((p) => esc(name(p[1].topic)) + " · " + esc(p[1].level || "без рівня") + " · стор. " + esc(p[1].pages)).join("; ")}. ` : ""}Різні вибірки не змішуємо. Зміни показані у відсоткових пунктах; це оцінки LLM, а не доказ математичної правильності.</div></div></section>`;
+  }${pairs.length ? `<details class="more-metrics"><summary>Ще 3 показники</summary>${metrics.slice(5).map(m=>`<div class="bar-heading"><span>${m.label}</span><span>${pct(avg(left,m.key))} → ${pct(avg(right,m.key))} &nbsp; ${delta(avg(left,m.key),avg(right,m.key),m.high)}</span></div>`).join('')}</details>` : ''}<div class="note compare-foot">${pairs.length ? `Зіставлено ${pairs.length} ${pairs.length === 1 ? "набір" : "набори"} · ${sum(left)} карток у ${esc(baseline)} та ${sum(right)} у ${esc(current)}. ${pairs.map((p) => esc(name(p[1].topic)) + " · " + esc(p[1].level || "без рівня") + " · стор. " + esc(p[1].pages)).join("; ")}. ` : ""}Різні вибірки не змішуємо. Зміни показані у відсоткових пунктах; це оцінки LLM, а не доказ математичної правильності.</div></div></section>`;
 }
 function overview() {
   const rows = selectedRecords(current),

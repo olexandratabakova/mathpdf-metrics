@@ -997,3 +997,5 @@ label {
     padding: 20px 18px;
   }
 }
+
+.more-metrics{font-size:11px;color:#7c8870;margin:0 0 20px}.more-metrics summary{cursor:pointer;margin-bottom:15px}.more-metrics .bar-heading{padding:8px 0}
