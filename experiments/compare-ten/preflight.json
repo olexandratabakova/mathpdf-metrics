@@ -1,0 +1,7 @@
+{
+  "cases": 10,
+  "valid": 5,
+  "invalid": 5,
+  "labels_frozen_before_calls": true,
+  "checks": "Exact rational counterexamples, finite range and uniqueness checks; remaining elementary proofs manually reviewed. No blanket symbolic validation claim."
+}

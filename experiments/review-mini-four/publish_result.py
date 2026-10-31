@@ -26,6 +26,7 @@ def main():
  assert Fraction(3,5)-3*Fraction(1,5)==0
  (ROOT/'result.json').write_text(json.dumps(run,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  runs=[json.loads(p.read_text(encoding='utf-8')) for p in sorted((PROJECT/'experiments').glob('*/result.json'))]
+ runs=[r for r in runs if 'problems' in r and 'audit' in r]
  (PROJECT/'reviews-data.js').write_text('window.MATHPDF_REVIEWS = '+json.dumps(runs,ensure_ascii=False).replace('<','\\u003c')+';\n',encoding='utf-8')
  print(run['cost_usd'])
 if __name__=='__main__':main()

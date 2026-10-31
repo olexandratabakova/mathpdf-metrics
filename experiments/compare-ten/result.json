@@ -1,0 +1,261 @@
+{
+  "id": "compare-ten-2026-10-31",
+  "date": "2026-10-31",
+  "cases": [
+    {
+      "id": 1,
+      "topic": "Алгебраїчне спрощення",
+      "question": "For x in R excluding 0, simplify (x^2-1)/x.",
+      "solution": "(x^2-1)/x = x+1-1/x.",
+      "expected_accept": false,
+      "truth": "Правильно x−1/x. При x=2 вираз дорівнює 3/2, запропонована відповідь — 5/2."
+    },
+    {
+      "id": 2,
+      "topic": "Ін’єктивність",
+      "question": "Is f: Z → Z, f(x)=2x+5 injective? Prove your answer.",
+      "solution": "Yes. If 2a+5=2b+5 then 2a=2b and a=b.",
+      "expected_accept": true,
+      "truth": "Коректна умова й достатній доказ ін’єктивності."
+    },
+    {
+      "id": 3,
+      "topic": "Бієкція цілих пар",
+      "question": "Prove f: Z^2 → Z^2, f(m,n)=(2m+n,m+3n), is bijective and find its inverse.",
+      "solution": "The determinant is 5, so f is invertible. The inverse is ((3x-y)/5,(-x+2y)/5); hence f is bijective on Z^2.",
+      "expected_accept": false,
+      "truth": "Не сюр’єктивна на Z²: ціль (1,0) вимагає (3/5,−1/5). Ненульовий визначник не забезпечує цілочисельний прообраз."
+    },
+    {
+      "id": 4,
+      "topic": "Образ скінченної множини",
+      "question": "Find the image of f:{-2,-1,0,1,2} → Z, f(x)=x^2.",
+      "solution": "The outputs are 4,1,0,1,4, so the image is {0,1,4}.",
+      "expected_accept": true,
+      "truth": "Правильний образ: {0,1,4}; повтори не створюють нових елементів."
+    },
+    {
+      "id": 5,
+      "topic": "Сюр’єктивність",
+      "question": "Is f: Z^2 → Z, f(m,n)=m-2n surjective? Prove your answer.",
+      "solution": "Yes. For arbitrary z in Z choose (m,n)=(z,0). Then f(z,0)=z.",
+      "expected_accept": true,
+      "truth": "Для кожного цілого z наведено цілочисельний прообраз (z,0)."
+    },
+    {
+      "id": 6,
+      "topic": "Рівність функцій і область",
+      "question": "Are f:R → R, f(x)=x+1 and g:R excluding {1} → R, g(x)=(x^2-1)/(x-1), equal as functions?",
+      "solution": "Yes. Cancelling x-1 gives g(x)=x+1, identical to f(x), so they are equal functions.",
+      "expected_accept": false,
+      "truth": "Функції мають різні області визначення: f(1) існує, g(1) — ні. Збіг на спільній області не означає рівності функцій."
+    },
+    {
+      "id": 7,
+      "topic": "Обернена функція",
+      "question": "Find the inverse of f:R → R, f(x)=3x-2.",
+      "solution": "Solving y=3x-2 yields x=(y+2)/3. Thus f^{-1}(y)=(y+2)/3. Both compositions are the identity on R.",
+      "expected_accept": true,
+      "truth": "Обернена (y+2)/3 визначена на R; обидві композиції тотожні."
+    },
+    {
+      "id": 8,
+      "topic": "Композиція",
+      "question": "For f:R → R, f(x)=x^2 and g:R → R, g(x)=x+1, compute (f composed with g)(x).",
+      "solution": "(f composed with g)(x)=g(f(x))=x^2+1.",
+      "expected_accept": false,
+      "truth": "Переплутано порядок композиції. f(g(x))=(x+1)²; при x=1 це 4, а не 2."
+    },
+    {
+      "id": 9,
+      "topic": "Обмеження області й бієкція",
+      "question": "Prove f:[0,infinity) → [0,infinity), f(x)=x^2, is bijective and give its inverse.",
+      "solution": "For nonnegative a,b, a^2=b^2 implies a=b. Every y≥0 has the preimage sqrt(y)≥0. The inverse is sqrt(y).",
+      "expected_accept": true,
+      "truth": "Обмеження невід’ємними числами забезпечує ін’єктивність; корінь дає прообраз кожного y≥0."
+    },
+    {
+      "id": 10,
+      "topic": "Існування та єдиність значення",
+      "question": "Does R={(0,1),(0,2),(1,3)} define a function from X={0,1} to Y={1,2,3}?",
+      "solution": "Yes. Each element of X appears as a first coordinate, so the relation defines a function from X to Y.",
+      "expected_accept": false,
+      "truth": "Для аргументу 0 є два різні значення 1 і 2. Наявності хоча б одного значення недостатньо — потрібна єдиність."
+    }
+  ],
+  "results": {
+    "mini": {
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "usage": {
+        "input_tokens": 994,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 589,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1583
+      },
+      "cost_usd": 0.00134,
+      "duration_seconds": 4.23,
+      "raw_output": "{\"items\":[{\"id\":1,\"accept\":false,\"explanation\":\"Розклад (x^2-1)/x = (x-1)(x+1)/x = x+1 - 1/x некоректний, оскільки (x^2-1)/x = x - 1/x, а не x+1 - 1/x.\"},{\"id\":2,\"accept\":true,\"explanation\":\"Доведено, що f(x)=2x+5 ін'єктивна, оскільки рівність f(a)=f(b) приводить до a=b.\"},{\"id\":3,\"accept\":false,\"explanation\":\"Функція f:Z^2→Z^2 не є бієктивною, оскільки обернена матриця має коефіцієнти з дробами, а не всі обернені значення належать Z^2. Отже, f не є бієктивною на Z^2.\"},{\"id\":4,\"accept\":true,\"explanation\":\"Образ функції f(x)=x^2 на множині {-2,-1,0,1,2} є {0,1,4}, що правильно наведено.\"},{\"id\":5,\"accept\":true,\"explanation\":\"Для будь-якого z∈Z існує (m,n)=(z,0), що дає f(m,n)=z, отже f сюр'єктивна.\"},{\"id\":6,\"accept\":false,\"explanation\":\"Функції f і g мають різні області визначення: g не визначена в x=1, тому вони не рівні як функції (рівність функцій вимагає однакової області визначення).\"},{\"id\":7,\"accept\":true,\"explanation\":\"Обернена функція f^{-1}(y)=(y+2)/3 коректно знайдена, композиції дають тотожність.\"},{\"id\":8,\"accept\":false,\"explanation\":\"(f∘g)(x)=f(g(x))=f(x+1)=(x+1)^2=x^2+2x+1, а не g(f(x))=x^2+1. Відповідь неправильна.\"},{\"id\":9,\"accept\":true,\"explanation\":\"f(x)=x^2 на [0,∞) є бієктивною, оскільки x≥0, і обернена функція f^{-1}(y)=√y визначена на [0,∞).\"},{\"id\":10,\"accept\":true,\"explanation\":\"Відношення R визначає функцію з X у Y, оскільки кожен елемент X зустрічається рівно один раз у першій координаті.\"}]}",
+      "input_sha256": "1e09b2274d393f9819c81b4ad7a9efaf93780ba4977bb49473e0bac8d2993d9e",
+      "prompt_sha256": "f7adafa9ce8021ec57a388618f88636c99575a9b8168edeaa7de52ecefb20248",
+      "cases_sha256": "38974ccb4abf6763bfe9752d85c0de169b15559fd4bfa66b91f6ae94ee41b7b1",
+      "parsed": {
+        "items": [
+          {
+            "id": 1,
+            "accept": false,
+            "explanation": "Розклад (x^2-1)/x = (x-1)(x+1)/x = x+1 - 1/x некоректний, оскільки (x^2-1)/x = x - 1/x, а не x+1 - 1/x."
+          },
+          {
+            "id": 2,
+            "accept": true,
+            "explanation": "Доведено, що f(x)=2x+5 ін'єктивна, оскільки рівність f(a)=f(b) приводить до a=b."
+          },
+          {
+            "id": 3,
+            "accept": false,
+            "explanation": "Функція f:Z^2→Z^2 не є бієктивною, оскільки обернена матриця має коефіцієнти з дробами, а не всі обернені значення належать Z^2. Отже, f не є бієктивною на Z^2."
+          },
+          {
+            "id": 4,
+            "accept": true,
+            "explanation": "Образ функції f(x)=x^2 на множині {-2,-1,0,1,2} є {0,1,4}, що правильно наведено."
+          },
+          {
+            "id": 5,
+            "accept": true,
+            "explanation": "Для будь-якого z∈Z існує (m,n)=(z,0), що дає f(m,n)=z, отже f сюр'єктивна."
+          },
+          {
+            "id": 6,
+            "accept": false,
+            "explanation": "Функції f і g мають різні області визначення: g не визначена в x=1, тому вони не рівні як функції (рівність функцій вимагає однакової області визначення)."
+          },
+          {
+            "id": 7,
+            "accept": true,
+            "explanation": "Обернена функція f^{-1}(y)=(y+2)/3 коректно знайдена, композиції дають тотожність."
+          },
+          {
+            "id": 8,
+            "accept": false,
+            "explanation": "(f∘g)(x)=f(g(x))=f(x+1)=(x+1)^2=x^2+2x+1, а не g(f(x))=x^2+1. Відповідь неправильна."
+          },
+          {
+            "id": 9,
+            "accept": true,
+            "explanation": "f(x)=x^2 на [0,∞) є бієктивною, оскільки x≥0, і обернена функція f^{-1}(y)=√y визначена на [0,∞)."
+          },
+          {
+            "id": 10,
+            "accept": true,
+            "explanation": "Відношення R визначає функцію з X у Y, оскільки кожен елемент X зустрічається рівно один раз у першій координаті."
+          }
+        ]
+      }
+    },
+    "full": {
+      "status": "completed",
+      "model": "gpt-4.1-2025-04-14",
+      "usage": {
+        "input_tokens": 994,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 543,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1537
+      },
+      "cost_usd": 0.006332,
+      "duration_seconds": 4.3,
+      "raw_output": "{\"items\":[{\"id\":1,\"accept\":false,\"explanation\":\"(x^2-1)/x = (x-1)(x+1)/x = x+1-1, або x-1+1/x, але не x+1-1/x. Перевірка: (x+1-1/x)x = x^2 + x - 1, що не дорівнює x^2-1.\"},{\"id\":2,\"accept\":true,\"explanation\":\"Правильно: якщо 2a+5=2b+5, то 2a=2b, отже a=b. Функція інʼєктивна.\"},{\"id\":3,\"accept\":false,\"explanation\":\"Обратна формула ((3x-y)/5,(-x+2y)/5) не завжди дає цілі числа для цілих x,y, бо 5 не ділить всі можливі значення. f не є бієкцією на Z^2.\"},{\"id\":4,\"accept\":true,\"explanation\":\"Вірно: f(-2)=4, f(-1)=1, f(0)=0, f(1)=1, f(2)=4. Образ — {0,1,4}.\"},{\"id\":5,\"accept\":true,\"explanation\":\"Вірно: для будь-якого z ∈ Z, f(z,0)=z. Функція сюрʼєктивна.\"},{\"id\":6,\"accept\":false,\"explanation\":\"Області визначення різні: f визначена на всій R, g — лише на R\\\\{1}. Функції не рівні як відображення.\"},{\"id\":7,\"accept\":true,\"explanation\":\"Вірно: f^{-1}(y)=(y+2)/3, обидві композиції дають тотожне відображення на R.\"},{\"id\":8,\"accept\":false,\"explanation\":\"(f∘g)(x)=f(g(x))=f(x+1)=(x+1)^2=x^2+2x+1, а не x^2+1.\"},{\"id\":9,\"accept\":true,\"explanation\":\"Вірно: f(x)=x^2 на [0,∞) є бієкцією, обернена — sqrt(y).\"},{\"id\":10,\"accept\":false,\"explanation\":\"0 має два різних образи (1 і 2), тому R не є функцією з X у Y.\"}]}",
+      "input_sha256": "1e09b2274d393f9819c81b4ad7a9efaf93780ba4977bb49473e0bac8d2993d9e",
+      "prompt_sha256": "f7adafa9ce8021ec57a388618f88636c99575a9b8168edeaa7de52ecefb20248",
+      "cases_sha256": "38974ccb4abf6763bfe9752d85c0de169b15559fd4bfa66b91f6ae94ee41b7b1",
+      "parsed": {
+        "items": [
+          {
+            "id": 1,
+            "accept": false,
+            "explanation": "(x^2-1)/x = (x-1)(x+1)/x = x+1-1, або x-1+1/x, але не x+1-1/x. Перевірка: (x+1-1/x)x = x^2 + x - 1, що не дорівнює x^2-1."
+          },
+          {
+            "id": 2,
+            "accept": true,
+            "explanation": "Правильно: якщо 2a+5=2b+5, то 2a=2b, отже a=b. Функція інʼєктивна."
+          },
+          {
+            "id": 3,
+            "accept": false,
+            "explanation": "Обратна формула ((3x-y)/5,(-x+2y)/5) не завжди дає цілі числа для цілих x,y, бо 5 не ділить всі можливі значення. f не є бієкцією на Z^2."
+          },
+          {
+            "id": 4,
+            "accept": true,
+            "explanation": "Вірно: f(-2)=4, f(-1)=1, f(0)=0, f(1)=1, f(2)=4. Образ — {0,1,4}."
+          },
+          {
+            "id": 5,
+            "accept": true,
+            "explanation": "Вірно: для будь-якого z ∈ Z, f(z,0)=z. Функція сюрʼєктивна."
+          },
+          {
+            "id": 6,
+            "accept": false,
+            "explanation": "Області визначення різні: f визначена на всій R, g — лише на R\\{1}. Функції не рівні як відображення."
+          },
+          {
+            "id": 7,
+            "accept": true,
+            "explanation": "Вірно: f^{-1}(y)=(y+2)/3, обидві композиції дають тотожне відображення на R."
+          },
+          {
+            "id": 8,
+            "accept": false,
+            "explanation": "(f∘g)(x)=f(g(x))=f(x+1)=(x+1)^2=x^2+2x+1, а не x^2+1."
+          },
+          {
+            "id": 9,
+            "accept": true,
+            "explanation": "Вірно: f(x)=x^2 на [0,∞) є бієкцією, обернена — sqrt(y)."
+          },
+          {
+            "id": 10,
+            "accept": false,
+            "explanation": "0 має два різних образи (1 і 2), тому R не є функцією з X у Y."
+          }
+        ]
+      }
+    }
+  },
+  "scores": {
+    "mini": {
+      "correct_decisions": 9,
+      "detected_invalid": 4,
+      "false_accepts": 1,
+      "false_rejects": 0
+    },
+    "full": {
+      "correct_decisions": 10,
+      "detected_invalid": 5,
+      "false_accepts": 0,
+      "false_rejects": 0
+    }
+  },
+  "cost_usd": 0.007672,
+  "explanation_notes": {
+    "full:1": "Рішення відхилити правильне, але пояснення містить дві хибні альтернативи спрощення: x+1−1 і x−1+1/x. Правильно x−1/x. Наведена далі перевірка множенням правильна. Отже, 10/10 рішень не означає 10 безпомилкових пояснень.",
+    "mini:10": "Хибне схвалення: модель стверджує, що кожний аргумент зустрічається рівно раз, хоча 0 має значення 1 та 2."
+  },
+  "method": "10 вручну підготовлених контрольних задач за темою функцій із конспекту: 5 правильних і 5 з навмисними помилками. Еталон зафіксовано до запитів; моделі не отримували його чи частку помилок. Однакові умови, розв’язки, порядок, промпт і схема, temperature=0, ліміт 3000 output tokens. Один пакет із 10 задач на модель, 2 платні виклики, без повторів і виправлень. PDF не надсилався; відповідність джерелу та якість генерації не оцінювались.",
+  "limitations": "Малий підібраний набір, один прогін, спільний контекст десяти задач. Це порівняння рішень на цьому наборі, не загальна точність і не доказ переваги на всіх задачах. Пояснення переглянуто вручну; автоматично оцінено лише булеві рішення. Попередні тести не змішані з цими результатами."
+}

@@ -82,4 +82,5 @@ window.renderReviews = function () {
         options,
       );
     }
+  window.renderComparison?.();
 };

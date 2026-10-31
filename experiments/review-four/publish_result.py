@@ -48,6 +48,7 @@ def main():
     (ROOT/'result.json').write_text(json.dumps(run,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     # Preserve other published experiments. Browser-local benchmark history is untouched.
     runs=[json.loads(p.read_text(encoding='utf-8')) for p in sorted((PROJECT/'experiments').glob('*/result.json'))]
+    runs=[r for r in runs if 'problems' in r and 'audit' in r]
     (PROJECT/'reviews-data.js').write_text('window.MATHPDF_REVIEWS = '+json.dumps(runs,ensure_ascii=False).replace('<','\\u003c')+';\n',encoding='utf-8')
     print(json.dumps({'published_run':run['id'],'tasks':len(run['problems']),'reviewer_accepts':sum(x['decision']=='accept' for x in run['audit']['items']),'local_critical_findings':1,'cost_usd':run['cost_usd']},ensure_ascii=False))
 
