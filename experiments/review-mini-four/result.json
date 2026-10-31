@@ -1,0 +1,899 @@
+{
+  "id": "review-mini-four-2026-10-31",
+  "date": "2026-10-31",
+  "title": "4 нові задачі · mini → окрема перевірка mini",
+  "summary": "Mini прийняла 3 задачі й відправила 1 на доопрацювання. Помітила хибну бієктивність, проте пропустила суперечливу область визначення та сама помилилася в обґрунтуванні.",
+  "cost_usd": 0.0150532,
+  "difficulty": 3,
+  "source": {
+    "name": "main (12).pdf",
+    "pages": [
+      63,
+      64,
+      65,
+      66
+    ],
+    "sha256": "e2d70968abd271d398481280873e158dd06e03084038f8f9816addd9cc98ca01"
+  },
+  "calls": [
+    {
+      "stage": "generate",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "reserved_usd": 0.01227856,
+      "status": "completed",
+      "cost_usd": 0.0066356,
+      "input_tokens": 9725,
+      "cached_tokens": 0,
+      "output_tokens": 1716
+    },
+    {
+      "stage": "blind",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "reserved_usd": 0.0066306,
+      "status": "completed",
+      "cost_usd": 0.0035008,
+      "input_tokens": 5616,
+      "cached_tokens": 0,
+      "output_tokens": 784
+    },
+    {
+      "stage": "audit",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "reserved_usd": 0.009279560000000001,
+      "status": "completed",
+      "cost_usd": 0.0049168,
+      "input_tokens": 8000,
+      "cached_tokens": 0,
+      "output_tokens": 1073
+    }
+  ],
+  "token_count_calls": 3,
+  "problems": [
+    {
+      "goal_step": 1,
+      "title": "Definition of functions",
+      "skill": "meaning",
+      "question": [
+        {
+          "kind": "text",
+          "text": "Define what it means for a relation from a set \\(X\\) to a set \\(Y\\) to be a function."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "A function from \\(X\\) to \\(Y\\) is a relation \\(f \\subseteq X \\times Y\\) such that for every \\(x \\in X\\), there is exactly one \\(y \\in Y\\) with \\((x,y) \\in f\\)\\(. \\)"
+        }
+      ],
+      "source": {
+        "document_id": "ffffffffffffffffffffffffffffffff",
+        "page": 63,
+        "line_start": null,
+        "line_end": null,
+        "quote": null
+      }
+    },
+    {
+      "goal_step": 2,
+      "title": "Injectivity check for a function on integers",
+      "skill": "application",
+      "question": [
+        {
+          "kind": "text",
+          "text": "Let \\(f : \\mathbb{Z} \\to \\mathbb{Z}\\) be defined by \\(f(x) = 2x + 5.\\) Is \\(f\\) injective? Justify your answer."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Assume \\(f(x_1) = f(x_2)\\). Then, by definition, \\(2x_1 + 5 = 2x_2 + 5\\). Subtracting 5 from both sides gives \\(2x_1 = 2x_2\\). Dividing by 2, we get \\(x_1 = x_2\\). Hence, \\(f\\) is injective since equal outputs imply equal inputs."
+        },
+        {
+          "kind": "math",
+          "latex": "\\text{Source: Definition 12.8 and proof method from page 65}",
+          "display": true,
+          "source": {
+            "document_id": "ffffffffffffffffffffffffffffffff",
+            "page": 65,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          },
+          "original_latex": null,
+          "change": null
+        }
+      ],
+      "source": {
+        "document_id": "ffffffffffffffffffffffffffffffff",
+        "page": 65,
+        "line_start": null,
+        "line_end": null,
+        "quote": null
+      }
+    },
+    {
+      "goal_step": 3,
+      "title": "Surjectivity of a function on integers",
+      "skill": "application",
+      "question": [
+        {
+          "kind": "text",
+          "text": "Consider the function \\(f : \\mathbb{Z} \\to \\mathbb{Z}\\) defined by \\(f(m,n) = m - 2n\\), where the domain is \\(\\mathbb{Z} \\times \\mathbb{Z}\\) and the codomain is \\(\\mathbb{Z}\\). Determine whether \\(f\\) is surjective onto \\(\\mathbb{Z}\\)."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "To show surjectivity, take arbitrary \\(z \\in \\mathbb{Z}\\) and find \\((m,n) \\in \\mathbb{Z}^2\\) so that \\(f(m,n) = z\\). Set \\(m = z + 2n\\) for any integer \\(n\\). Then \\(f(m,n) = m - 2n = (z + 2n) - 2n = z\\). Since this works for any \\(z\\) and some \\((m,n)\\), \\(f\\) is surjective onto \\(\\mathbb{Z}\\)."
+        },
+        {
+          "kind": "math",
+          "latex": "\\text{Source: Surjectivity method page 65}",
+          "display": true,
+          "source": {
+            "document_id": "ffffffffffffffffffffffffffffffff",
+            "page": 65,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          },
+          "original_latex": null,
+          "change": null
+        }
+      ],
+      "source": {
+        "document_id": "ffffffffffffffffffffffffffffffff",
+        "page": 65,
+        "line_start": null,
+        "line_end": null,
+        "quote": null
+      }
+    },
+    {
+      "goal_step": 4,
+      "title": "Bijectivity and inverse construction for function on integers pairs",
+      "skill": "why_justification",
+      "question": [
+        {
+          "kind": "text",
+          "text": "Let \\(f : \\mathbb{Z} \\times \\mathbb{Z} \\to \\mathbb{Z} \\times \\mathbb{Z}\\) be given by \\(f(m,n) = (2m + n, m + 3n)\\). Prove that \\(f\\) is bijective and construct its inverse function."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "To prove injectivity, assume \\(f(m,n) = f(a,b)\\) meaning \\((2m + n, m + 3n) = (2a + b, a + 3b)\\). This gives the system:"
+        },
+        {
+          "kind": "math",
+          "latex": "\\begin{cases} 2m + n = 2a + b \\\\ m + 3n = a + 3b \\end{cases}",
+          "display": true,
+          "source": {
+            "document_id": "ffffffffffffffffffffffffffffffff",
+            "page": 65,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          },
+          "original_latex": null,
+          "change": null
+        },
+        {
+          "kind": "text",
+          "text": "Subtract the first equation multiplied by 3 from the second multiplied by 1:"
+        },
+        {
+          "kind": "math",
+          "latex": "(m + 3n) - 3(2m + n) = (a + 3b) - 3(2a + b)",
+          "display": true,
+          "source": {
+            "document_id": "ffffffffffffffffffffffffffffffff",
+            "page": 65,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          },
+          "original_latex": null,
+          "change": null
+        },
+        {
+          "kind": "text",
+          "text": "This simplifies to \\(m + 3n - 6m - 3n = a + 3b - 6a - 3b\\) or \\(-5m = -5a\\) implying \\(m = a\\). Substitute \\(m = a\\) into first equation to get \\(2m + n = 2m + b\\) hence \\(n = b\\). Thus \\(f\\) is injective."
+        },
+        {
+          "kind": "text",
+          "text": "To prove surjectivity, for any \\((x,y) \\in \\mathbb{Z} \\times \\mathbb{Z}\\) solve:"
+        },
+        {
+          "kind": "math",
+          "latex": "\\begin{cases} 2m + n = x \\\\ m + 3n = y \\end{cases}",
+          "display": true,
+          "source": {
+            "document_id": "ffffffffffffffffffffffffffffffff",
+            "page": 65,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          },
+          "original_latex": null,
+          "change": null
+        },
+        {
+          "kind": "text",
+          "text": "Rewrite as linear system:"
+        },
+        {
+          "kind": "math",
+          "latex": "\\begin{bmatrix}2 & 1 \\\\ 1 & 3\\end{bmatrix} \\begin{bmatrix}m \\\\ n\\end{bmatrix} = \\begin{bmatrix}x \\\\ y\\end{bmatrix}",
+          "display": true,
+          "source": {
+            "document_id": "ffffffffffffffffffffffffffffffff",
+            "page": 65,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          },
+          "original_latex": null,
+          "change": null
+        },
+        {
+          "kind": "text",
+          "text": "The determinant is \\(2 \\cdot 3 - 1 \\cdot 1 = 5 \\neq 0\\) so invertible. The inverse matrix is "
+        },
+        {
+          "kind": "math",
+          "latex": "\\frac{1}{5} \\begin{bmatrix}3 & -1 \\\\ -1 & 2\\end{bmatrix}",
+          "display": true,
+          "source": {
+            "document_id": "ffffffffffffffffffffffffffffffff",
+            "page": 65,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          },
+          "original_latex": null,
+          "change": null
+        },
+        {
+          "kind": "text",
+          "text": "Thus:"
+        },
+        {
+          "kind": "math",
+          "latex": "\\begin{bmatrix}m \\\\ n\\end{bmatrix} = \\frac{1}{5} \\begin{bmatrix}3 & -1 \\\\ -1 & 2\\end{bmatrix} \\begin{bmatrix}x \\\\ y\\end{bmatrix} = \\left(\\frac{3x - y}{5}, \\frac{-x + 2y}{5} \\right)",
+          "display": true,
+          "source": {
+            "document_id": "ffffffffffffffffffffffffffffffff",
+            "page": 65,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          },
+          "original_latex": null,
+          "change": null
+        },
+        {
+          "kind": "text",
+          "text": "Since \\(m, n\\) must be integers, for \\(f\\) to be surjective over integers, \\((3x - y)\\) and \\((-x + 2y)\\) must be divisible by 5. Hence, \\(f\\) is not surjective onto entire \\(\\mathbb{Z} \\times \\mathbb{Z}\\) but onto the subset where this divisibility holds."
+        },
+        {
+          "kind": "text",
+          "text": "Since \\(f\\) is injective but not surjective onto all of \\(\\mathbb{Z} \\times \\mathbb{Z}\\), it is not bijective over this codomain. Restricting the codomain to the image makes it bijective, with inverse given by above formula."
+        },
+        {
+          "kind": "math",
+          "latex": "\\text{Source: Injectivity and surjectivity methods on page 65}",
+          "display": true,
+          "source": {
+            "document_id": "ffffffffffffffffffffffffffffffff",
+            "page": 65,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          },
+          "original_latex": null,
+          "change": null
+        }
+      ],
+      "source": {
+        "document_id": "ffffffffffffffffffffffffffffffff",
+        "page": 65,
+        "line_start": null,
+        "line_end": null,
+        "quote": null
+      }
+    }
+  ],
+  "compact_generated": {
+    "result": {
+      "status": "completed",
+      "items": [
+        {
+          "title": "Definition of functions",
+          "formula": {
+            "page": 63
+          },
+          "skill": "meaning",
+          "question": [
+            {
+              "parts": [
+                "Define what it means for a relation from a set ",
+                {
+                  "math": "X"
+                },
+                " to a set ",
+                {
+                  "math": "Y"
+                },
+                " to be a function."
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "parts": [
+                "A function from ",
+                {
+                  "math": "X"
+                },
+                " to ",
+                {
+                  "math": "Y"
+                },
+                " is a relation ",
+                {
+                  "math": "f \\subseteq X \\times Y"
+                },
+                " such that for every ",
+                {
+                  "math": "x \\in X"
+                },
+                ", there is exactly one ",
+                {
+                  "math": "y \\in Y"
+                },
+                " with ",
+                {
+                  "math": "(x,y) \\in f"
+                },
+                {
+                  "math": ". "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Injectivity check for a function on integers",
+          "formula": {
+            "page": 65
+          },
+          "skill": "application",
+          "question": [
+            {
+              "parts": [
+                "Let ",
+                {
+                  "math": "f : \\mathbb{Z} \\to \\mathbb{Z}"
+                },
+                " be defined by ",
+                {
+                  "math": "f(x) = 2x + 5."
+                },
+                " Is ",
+                {
+                  "math": "f"
+                },
+                " injective? Justify your answer."
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "parts": [
+                "Assume ",
+                {
+                  "math": "f(x_1) = f(x_2)"
+                },
+                ". Then, by definition, ",
+                {
+                  "math": "2x_1 + 5 = 2x_2 + 5"
+                },
+                ". Subtracting 5 from both sides gives ",
+                {
+                  "math": "2x_1 = 2x_2"
+                },
+                ". Dividing by 2, we get ",
+                {
+                  "math": "x_1 = x_2"
+                },
+                ". Hence, ",
+                {
+                  "math": "f"
+                },
+                " is injective since equal outputs imply equal inputs."
+              ]
+            },
+            {
+              "latex": "\\text{Source: Definition 12.8 and proof method from page 65}",
+              "page": 65,
+              "variant": null
+            }
+          ]
+        },
+        {
+          "title": "Surjectivity of a function on integers",
+          "formula": {
+            "page": 65
+          },
+          "skill": "application",
+          "question": [
+            {
+              "parts": [
+                "Consider the function ",
+                {
+                  "math": "f : \\mathbb{Z} \\to \\mathbb{Z}"
+                },
+                " defined by ",
+                {
+                  "math": "f(m,n) = m - 2n"
+                },
+                ", where the domain is ",
+                {
+                  "math": "\\mathbb{Z} \\times \\mathbb{Z}"
+                },
+                " and the codomain is ",
+                {
+                  "math": "\\mathbb{Z}"
+                },
+                ". Determine whether ",
+                {
+                  "math": "f"
+                },
+                " is surjective onto ",
+                {
+                  "math": "\\mathbb{Z}"
+                },
+                "."
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "parts": [
+                "To show surjectivity, take arbitrary ",
+                {
+                  "math": "z \\in \\mathbb{Z}"
+                },
+                " and find ",
+                {
+                  "math": "(m,n) \\in \\mathbb{Z}^2"
+                },
+                " so that ",
+                {
+                  "math": "f(m,n) = z"
+                },
+                ". Set ",
+                {
+                  "math": "m = z + 2n"
+                },
+                " for any integer ",
+                {
+                  "math": "n"
+                },
+                ". Then ",
+                {
+                  "math": "f(m,n) = m - 2n = (z + 2n) - 2n = z"
+                },
+                ". Since this works for any ",
+                {
+                  "math": "z"
+                },
+                " and some ",
+                {
+                  "math": "(m,n)"
+                },
+                ", ",
+                {
+                  "math": "f"
+                },
+                " is surjective onto ",
+                {
+                  "math": "\\mathbb{Z}"
+                },
+                "."
+              ]
+            },
+            {
+              "latex": "\\text{Source: Surjectivity method page 65}",
+              "page": 65,
+              "variant": null
+            }
+          ]
+        },
+        {
+          "title": "Bijectivity and inverse construction for function on integers pairs",
+          "formula": {
+            "page": 65
+          },
+          "skill": "why_justification",
+          "question": [
+            {
+              "parts": [
+                "Let ",
+                {
+                  "math": "f : \\mathbb{Z} \\times \\mathbb{Z} \\to \\mathbb{Z} \\times \\mathbb{Z}"
+                },
+                " be given by ",
+                {
+                  "math": "f(m,n) = (2m + n, m + 3n)"
+                },
+                ". Prove that ",
+                {
+                  "math": "f"
+                },
+                " is bijective and construct its inverse function."
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "parts": [
+                "To prove injectivity, assume ",
+                {
+                  "math": "f(m,n) = f(a,b)"
+                },
+                " meaning ",
+                {
+                  "math": "(2m + n, m + 3n) = (2a + b, a + 3b)"
+                },
+                ". This gives the system:"
+              ]
+            },
+            {
+              "latex": "\\begin{cases} 2m + n = 2a + b \\\\ m + 3n = a + 3b \\end{cases}",
+              "page": 65,
+              "variant": null
+            },
+            {
+              "parts": [
+                "Subtract the first equation multiplied by 3 from the second multiplied by 1:"
+              ]
+            },
+            {
+              "latex": "(m + 3n) - 3(2m + n) = (a + 3b) - 3(2a + b)",
+              "page": 65,
+              "variant": null
+            },
+            {
+              "parts": [
+                "This simplifies to ",
+                {
+                  "math": "m + 3n - 6m - 3n = a + 3b - 6a - 3b"
+                },
+                " or ",
+                {
+                  "math": "-5m = -5a"
+                },
+                " implying ",
+                {
+                  "math": "m = a"
+                },
+                ". Substitute ",
+                {
+                  "math": "m = a"
+                },
+                " into first equation to get ",
+                {
+                  "math": "2m + n = 2m + b"
+                },
+                " hence ",
+                {
+                  "math": "n = b"
+                },
+                ". Thus ",
+                {
+                  "math": "f"
+                },
+                " is injective."
+              ]
+            },
+            {
+              "parts": [
+                "To prove surjectivity, for any ",
+                {
+                  "math": "(x,y) \\in \\mathbb{Z} \\times \\mathbb{Z}"
+                },
+                " solve:"
+              ]
+            },
+            {
+              "latex": "\\begin{cases} 2m + n = x \\\\ m + 3n = y \\end{cases}",
+              "page": 65,
+              "variant": null
+            },
+            {
+              "parts": [
+                "Rewrite as linear system:"
+              ]
+            },
+            {
+              "latex": "\\begin{bmatrix}2 & 1 \\\\ 1 & 3\\end{bmatrix} \\begin{bmatrix}m \\\\ n\\end{bmatrix} = \\begin{bmatrix}x \\\\ y\\end{bmatrix}",
+              "page": 65,
+              "variant": null
+            },
+            {
+              "parts": [
+                "The determinant is ",
+                {
+                  "math": "2 \\cdot 3 - 1 \\cdot 1 = 5 \\neq 0"
+                },
+                " so invertible. The inverse matrix is "
+              ]
+            },
+            {
+              "latex": "\\frac{1}{5} \\begin{bmatrix}3 & -1 \\\\ -1 & 2\\end{bmatrix}",
+              "page": 65,
+              "variant": null
+            },
+            {
+              "parts": [
+                "Thus:"
+              ]
+            },
+            {
+              "latex": "\\begin{bmatrix}m \\\\ n\\end{bmatrix} = \\frac{1}{5} \\begin{bmatrix}3 & -1 \\\\ -1 & 2\\end{bmatrix} \\begin{bmatrix}x \\\\ y\\end{bmatrix} = \\left(\\frac{3x - y}{5}, \\frac{-x + 2y}{5} \\right)",
+              "page": 65,
+              "variant": null
+            },
+            {
+              "parts": [
+                "Since ",
+                {
+                  "math": "m, n"
+                },
+                " must be integers, for ",
+                {
+                  "math": "f"
+                },
+                " to be surjective over integers, ",
+                {
+                  "math": "(3x - y)"
+                },
+                " and ",
+                {
+                  "math": "(-x + 2y)"
+                },
+                " must be divisible by 5. Hence, ",
+                {
+                  "math": "f"
+                },
+                " is not surjective onto entire ",
+                {
+                  "math": "\\mathbb{Z} \\times \\mathbb{Z}"
+                },
+                " but onto the subset where this divisibility holds."
+              ]
+            },
+            {
+              "parts": [
+                "Since ",
+                {
+                  "math": "f"
+                },
+                " is injective but not surjective onto all of ",
+                {
+                  "math": "\\mathbb{Z} \\times \\mathbb{Z}"
+                },
+                ", it is not bijective over this codomain. Restricting the codomain to the image makes it bijective, with inverse given by above formula."
+              ]
+            },
+            {
+              "latex": "\\text{Source: Injectivity and surjectivity methods on page 65}",
+              "page": 65,
+              "variant": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blind": {
+    "items": [
+      {
+        "problem_id": 1,
+        "statement_status": "well_posed",
+        "independent_result": "A relation f ⊂ X × Y is a function from X to Y if and only if for every x ∈ X there exists exactly one y ∈ Y such that (x,y) ∈ f. Equivalently, f assigns a unique value f(x) ∈ Y to each x ∈ X.",
+        "evidence": [
+          "Definition 12.1, page 63"
+        ],
+        "source_pages": [
+          63
+        ]
+      },
+      {
+        "problem_id": 2,
+        "statement_status": "well_posed",
+        "independent_result": "The function f : ℤ → ℤ defined by f(x) = 2x + 5 is injective. Proof: Assume f(x1) = f(x2), then 2x1 + 5 = 2x2 + 5 implies 2x1 = 2x2, thus x1 = x2. Hence, f is injective.",
+        "evidence": [
+          "Definition 12.8 (injective maps), Example and methods of checking injectivity on pages 64,65"
+        ],
+        "source_pages": [
+          64,
+          65
+        ]
+      },
+      {
+        "problem_id": 3,
+        "statement_status": "false_claim",
+        "independent_result": "The function f : ℤ × ℤ → ℤ defined by f(m,n) = m - 2n is NOT surjective onto ℤ. To be surjective onto ℤ, for any integer y there must exist integers m,n with f(m,n) = y. Actually, for any y, m = y + 2n suggests infinite choices, so it looks surjective. But since the domain is ℤ × ℤ and codomain ℤ, surjectivity could hold. However, it's surjective because for any y ∈ ℤ, pick n=0, m=y, then f(m,n)=y. Thus, the function is surjective. Hence, contrary to initial expectation, f is surjective.",
+        "evidence": [
+          "Example 12.10 item 3 (similar linear functions from ℤ²→ℤ² and methods of proving surjectivity by solving for preimage), pages 65-66"
+        ],
+        "source_pages": [
+          65,
+          66
+        ]
+      },
+      {
+        "problem_id": 4,
+        "statement_status": "false_claim",
+        "independent_result": "The function f : ℤ × ℤ → ℤ × ℤ defined by f(m,n) = (2m + n, m + 3n) is NOT bijective. Injectivity requires that if f(m,n) = f(a,b), then (m,n)=(a,b). Surjectivity requires solvability of the system for all (a,b) ∈ ℤ². The linear system matrix [[2,1],[1,3]] has determinant 5 ≠ 0 so it's invertible over ℝ, but the inverse matrix entries are rational (not integers). That means the inverse function has values outside ℤ×ℤ in general. For example, f(0,0)=(0,0), f(1,0)=(2,1), but consider (1,0) in codomain: solving [[2,1],[1,3]](m,n)=(1,0) gives m=0, n=1/3 (not integer). Since the inverse image is not integer-valued, f is not surjective onto ℤ×ℤ. Thus, f is not surjective and not bijective. Hence, f is not bijection and inverse does not exist as a function to ℤ×ℤ.",
+        "evidence": [
+          "Linear algebra invertibility and integer lattice considerations, contrary to Example 12.10 where coefficients appear as 1 and 2, with explicit integer inverse given, pages 65-66"
+        ],
+        "source_pages": [
+          65,
+          66
+        ]
+      }
+    ]
+  },
+  "audit": {
+    "items": [
+      {
+        "problem_id": 1,
+        "decision": "accept",
+        "statement_correct": true,
+        "solution_correct": true,
+        "source_supported": true,
+        "novelty": "cosmetic",
+        "formatting_issue": false,
+        "explanation": "Завдання чітко і коректно формулює визначення функції, що співпадає з визначенням та роз'ясненням даним у джерелі на сторінці 63. Відповідь точно відтворює сутність поняття функції як відношення з єдиним образом для кожного аргументу.",
+        "issues": [],
+        "suggested_fix": ""
+      },
+      {
+        "problem_id": 2,
+        "decision": "accept",
+        "statement_correct": true,
+        "solution_correct": true,
+        "source_supported": true,
+        "novelty": "cosmetic",
+        "formatting_issue": false,
+        "explanation": "Задача коректно формулює питання про ін'єктивність функції на цілих числах. Розв’язок правильно застосовує визначення ін'єктивності (зі сторінок 64-65) та виконує коректне доведення рівності аргументів за рівності образів. Джерело повністю підтримує цей підхід і результат.",
+        "issues": [],
+        "suggested_fix": ""
+      },
+      {
+        "problem_id": 3,
+        "decision": "accept",
+        "statement_correct": true,
+        "solution_correct": true,
+        "source_supported": true,
+        "novelty": "cosmetic",
+        "formatting_issue": false,
+        "explanation": "Попередній аналіз вказує, що функція f(m,n) = m - 2n з Ω = ℤ² та ℤ у кодомені є сюр'єктивною. Розв'язок демонструє конструктивно, що для будь-якого z ∈ ℤ існують m,n ∈ ℤ такі, що f(m,n)=z, взявши, наприклад, m=z+2n для довільного n. Це збігається зі стандартними методами доказування сюр'єктивності для лінійних функцій з ℤ² в ℤ. Отже твердження істинне і повністю підтверджується джерелом (стор. 65).",
+        "issues": [],
+        "suggested_fix": ""
+      },
+      {
+        "problem_id": 4,
+        "decision": "revise",
+        "statement_correct": false,
+        "solution_correct": false,
+        "source_supported": true,
+        "novelty": "substantive",
+        "formatting_issue": false,
+        "explanation": "Задача ставить функцію f(m,n) = (2m + n, m + 3n) з Ω=ℤ² і кодоменом ℤ² та просить довести бієктивність і побудувати обернену. В тексті наведено систему, обчислено визначник (5 ≠ 0), що дає інверсію над ℝ, але обернена матриця має дробові елементи. Отже в загальному обернена функція не є від ℤ² в ℤ². Це означає, що f не сюр'єктивна на весь ℤ², отже не бієктивна. Таким чином, твердження про бієктивність і побудову оберненої як функції ℤ²→ℤ² є хибним. Поточне розв’язання також некоректне, тому що ігнорує інтегральну структуру та не доводить суцільну сюр’єктивність в ℤ². \n\nПотрібна корекція: або змінити посилання і область кодування, щоб зберегти бієктивність, або уточнити висновок про те, що f не бієктивна на ℤ² → ℤ², а обернена функція існує лише на образі. Це суттєво впливає на суть задачі і її рішення. Отже, рішення треба суттєво перевірити і відредагувати.",
+        "issues": [
+          "Невірне твердження бієктивності через неповну сюр’єктивність на ℤ².",
+          "Не враховано, що обернена матриця з раціональними коефіцієнтами не гарантує відображення в ℤ².",
+          "Побудова оберненої функції з цілими значеннями некоректна.",
+          "Для виведення бієктивності слід або змінити множини, або додати уточнення."
+        ],
+        "suggested_fix": "Виправити твердження, вказавши, що f не є бієктивною на всій ℤ² → ℤ² через відсутність сюр’єктивності. Показати, що існує обернена функція лише на образі f, і уточнити, що для цього образу f є бієктивною. Або змінити домен/кодомен на такі, що забезпечать бієктивність."
+      }
+    ]
+  },
+  "manual_notes": {
+    "3": {
+      "severity": "critical",
+      "text": "Умова одночасно задає \\(f:\\mathbb Z\\to\\mathbb Z\\) і область \\(\\mathbb Z^2\\) для \\(f(m,n)=m-2n\\). Потрібно виправити тип функції. Для області пар сюр’єктивність правильна: прообраз будь-якого \\(z\\) — \\((z,0)\\). Аудит прийняв умову без зауважень. Сліпа перевірка позначила її false_claim, але в поясненні сама змінила «не сюр’єктивна» на «сюр’єктивна», не пояснивши суперечності області."
+    },
+    "4": {
+      "severity": "critical",
+      "text": "Хибну вимогу довести бієктивність модель виявила правильно. Проте у сліпому обґрунтуванні для цілі \\((1,0)\\) вона дала \\((0,1/3)\\): цей вектор відображається в \\((1/3,1)\\). Правильний розв’язок над раціональними — \\((3/5,-1/5)\\), що також доводить недосяжність цілі в цілих. Аудит цю помилку попереднього розбору не виправив. Водночас оригінальний розв’язок генератора вже визнає відсутність сюр’єктивності, тому закид аудиту, ніби він ігнорує цілочисельність, неточний."
+    }
+  },
+  "manual_review": "Локально перевірено визначення, доказ ін’єктивності, конструктивний прообраз (z,0), визначник 5 і раціональний прообраз (3/5,-1/5). Перша задача — відтворення визначення, друга — проста зміна коефіцієнтів; бажана складність і новизна не забезпечені.",
+  "limitations": "Новий набір, а не повторна оцінка попередніх задач: напряму порівнювати точність моделей не можна. Усі 3 етапи — GPT‑4.1 mini в окремих запитах; аудит бачить попередню сліпу перевірку. 4 задачі, без автоматичних виправлень; не статистична оцінка надійності.",
+  "evidence_url": "experiments/review-mini-four/result.json",
+  "prompt_hashes": {
+    "generate": {
+      "attachment-label.md": "5000f795e2a3873074909a0ab754393877ca157ef5e3697062eee5b5d4b2b570",
+      "comment.md": "c36ba6c5573806c4bd3e737b8ca60e67d247f5519402b1f3586bccd572ef6683",
+      "context.md": "71b2434d229131a2de88b960645d030e9103e48e2986190edc24360cbb8acbc5",
+      "difficulty.md": "586aa4d81291f5b0cf35f87400f595c720e5b9c10b3ba7b3863e8d82aa27342b",
+      "flashcards.md": "a9d5a282e6c76956f11aaeac27ac85f4ace6c625cb339fff54ee18beb0ee8797",
+      "formula-guide.md": "ff767df819aa10ffce927ffac1f0767a9485c1d91721b6f34d02e0dca38c2024",
+      "math-patterns.md": "b91852e326ace771907caad4ecf53406ef43a7c77eb41c2000e0bc5916735d15",
+      "problems.md": "7aebe90cffadefb8b6c705fe7087a5aea6bcc0cd206f4f5a1d33ea208f31012b",
+      "study-system.md": "474dcbc817193dfc5fe13a7944c7598eae5d2842ea0ff1666f38aa29db588b59"
+    },
+    "blind": {
+      "blind": "51fb5a02f263af2f6bfb3f741c79388477d2f64305724eaca5c9b334f65b113d"
+    },
+    "audit": {
+      "audit": "ed75af836d2022fb9a86261f455496a18da6cda4eab4a69e4917c93a2f2d33e6"
+    }
+  },
+  "usage": {
+    "generate": {
+      "input_tokens": 9725,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1716,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 11441
+    },
+    "blind": {
+      "input_tokens": 5616,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 784,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6400
+    },
+    "audit": {
+      "input_tokens": 8000,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1073,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 9073
+    }
+  },
+  "resolved_models": {
+    "generate": "gpt-4.1-mini-2025-04-14",
+    "blind": "gpt-4.1-mini-2025-04-14",
+    "audit": "gpt-4.1-mini-2025-04-14"
+  },
+  "production_prompt_hashes": {
+    "attachment-label.md": "d35977713d8818fa998273f5bad3c0f7ee6b67e2729c83abb1ba2b73cf0928c3",
+    "comment.md": "dce6dd363a39fd60195ba21dd192b17a473836bd8c92926c4b4a718ff4060aaa",
+    "context.md": "de74e883073e2180c55e244182cd78a1cde961efbfc7154dd9279cc0934c6e14",
+    "difficulty.md": "c69e660ccc00665f58f8a94ad460d3d3d9eaf20dacf25de75d4e5dedcb6da913",
+    "flashcards.md": "b459b3b77ff135a8716036664acaa8e5aeadad2b282b4c15ea2ce71ab42cf73f",
+    "formula-guide.md": "d017763e3bd7554fbe6393330b6e79e1f6c9cce224f9a43148d37c13e5d938b5",
+    "math-patterns.md": "9d6c41b9f0652b16e72ea9ed22b54436ef446f1caa1e5b19bfb11896f48b4f70",
+    "problems.md": "9a6ab4d71e754e6469d2fa63bfa9ad418276fd0ae860777233db1dfc3d5a8ea4",
+    "study-system.md": "4bc069b99c52c53d5b1973b9d01e041e79b52e5b6e5c85c8a3ebce588d1ddbd6"
+  },
+  "prices_source": [
+    "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "https://developers.openai.com/api/docs/models/gpt-4.1"
+  ]
+}
