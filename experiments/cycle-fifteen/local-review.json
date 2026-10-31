@@ -1,0 +1,21 @@
+{
+  "method": "Manual review of all 15 questions and solutions before and after; narrow exact calculations in local_checks.py. Mathematical validity assessed separately from novelty, difficulty and rendering.",
+  "items": [
+    {"id":1,"before_correct":true,"after_correct":true,"reason":"Correct definition with existence and uniqueness. After repair structured inline math is converted to plain strings."},
+    {"id":2,"before_correct":true,"after_correct":true,"reason":"x=0 forces y=1/3, not an integer; sufficient counterexample."},
+    {"id":3,"before_correct":true,"after_correct":true,"reason":"Domain {0,1,2}, codomain R, range {1,3,5}."},
+    {"id":4,"before_correct":true,"after_correct":true,"reason":"Matches source Definition 12.6 and its alternative convention. Stray Answer: in question is cosmetic."},
+    {"id":5,"before_correct":true,"after_correct":true,"reason":"Different domains suffice for inequality of functions."},
+    {"id":6,"before_correct":true,"after_correct":true,"reason":"Nonzero slope 5; cancellation proof is valid."},
+    {"id":7,"before_correct":true,"after_correct":true,"reason":"Squares of real numbers cannot attain negative real codomain targets."},
+    {"id":8,"before_correct":true,"after_correct":true,"reason":"Reciprocal plus 1 is well defined into R excluding 1, injective; x=1/(y-1) is nonzero for every allowed target."},
+    {"id":9,"before_correct":true,"after_correct":true,"reason":"Original elimination 2(second)-first gives 5n=5b and m=a; determinant 5 does not prevent injectivity. Review falsely rejects. Repair changes matrix to source example [[1,1],[1,2]], also injective, unnecessarily replacing a valid task."},
+    {"id":10,"before_correct":true,"after_correct":true,"reason":"Target 4 requires x=3/2 outside integer domain."},
+    {"id":11,"before_correct":true,"after_correct":true,"reason":"Apply injectivity of g then f; complete argument."},
+    {"id":12,"before_correct":true,"after_correct":true,"reason":"Choose preimage y under g then x under f for arbitrary codomain z."},
+    {"id":13,"before_correct":false,"after_correct":false,"reason":"h:R excluding 0 -> R excluding 2, h(x)=2/x+1, is not a function into its stated codomain: h(2)=2. Target 1 belongs to stated codomain but is never attained. Both reviews accept and repair leaves the mathematical defect unchanged."},
+    {"id":14,"before_correct":true,"after_correct":true,"reason":"Different domains; sine values need not be computed to prove inequality."},
+    {"id":15,"before_correct":true,"after_correct":true,"reason":"g(f(x))=2x+2 and f(g(x))=2x+1; noncommutative. Original has irregular math delimiters in prose; repair converts to unmarked strings."}
+  ],
+  "limits": "One sample, no proof of universal validator accuracy. Many tasks directly recall or repeat source results and several differ mainly in constants; novelty and pedagogical quality are not established. Mathematical validity counts do not establish rendering quality."
+}

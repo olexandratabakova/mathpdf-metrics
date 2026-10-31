@@ -1,0 +1,18 @@
+{
+  "before": {
+    "katex": 127,
+    "fallbacks": 0,
+    "math_blocks": 25
+  },
+  "after": {
+    "katex": 124,
+    "fallbacks": 0,
+    "math_blocks": 0
+  },
+  "page_errors": [],
+  "mobile_widths": [
+    320,
+    390
+  ],
+  "history_cards": 505
+}

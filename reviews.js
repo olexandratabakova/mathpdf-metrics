@@ -83,4 +83,5 @@ window.renderReviews = function () {
       );
     }
   window.renderComparison?.();
+  window.renderCycle?.();
 };
