@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "tasks": 100,
+  "topics": 10,
+  "math_blocks": 294,
+  "rendered_math_blocks": 294,
+  "fallbacks": 0,
+  "page_errors": [],
+  "mobile_widths": [
+    320,
+    390
+  ],
+  "history_cards": 505
+}
