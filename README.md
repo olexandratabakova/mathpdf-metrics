@@ -20,18 +20,27 @@ The overview gives each attempt a short description, a chart explaining its scop
 | [08 · Theory-only RAG](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=rag-fifteen) | 15 goals → retrieval → family choice → compilation | Expected top-1 14/15, top-3 15/15; supported variants passed checks | $0.007815 |
 | [09 · Two-PDF RAG](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=rag-hundred) | 50 goals, 50 families, 100 numeric variants | 98 initially admitted; 100 after a retrieval fix and short retry | $0.027301 |
 | [10 · Wildflower](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=wildflower) | Ordinary site generation: 60 cards + 40 problems | Cards: 80% self-contained, 84.7% faithfulness; task judge approval is contradicted by local findings | $0.144844 |
+| [11 · Clearleaf](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=clearleaf) | Isolated prompt revision; 20 cards | Original self-contained 70%; revised diagnostic 90%; five multi-target cards and one wrong citation remain | $0.054391 |
 
 Costs describe these recorded runs, not current price quotes or forecasts. The SymPy total includes two exploratory pilots; the main 55-task sample cost $0.0353724. Requests, outputs, usage and limitations are retained under [experiments/](experiments/).
 
 ## Cross-version comparison and next steps
 
-The [comparison page](https://olexandratabakova.github.io/mathpdf-metrics/#comparison) shows v1–v4 and Wildflower card metrics side by side, a selectable descriptive chart, all ten task/reviewer experiments, and the proposed next experiment. Custom browser-local versions also appear, with missing metrics preserved.
+The [comparison page](https://olexandratabakova.github.io/mathpdf-metrics/#comparison) shows v1–v4, Wildflower and Clearleaf card metrics side by side, a selectable descriptive chart, all eleven studies, and the proposed next experiment. Custom browser-local versions also appear, with missing metrics preserved.
 
 The recommendation is to calibrate evaluation first, target semantic formula errors, then run a small paired baseline/candidate pilot with fixed source pages, counts, difficulty, model settings and rubric. Keep controlled retrieval/compilation as a separate supported route. Reserve unseen pages/documents for follow-up; do not treat a small zero-error pilot as a reliability guarantee. No production changes or paid calls are made by this comparison.
 
 These are different samples, settings and methods. The table does not rank them as one accuracy trend; the historical matched-set tool remains available for comparable subsets.
 
-## Latest baseline: Wildflower
+## Latest pilot: Clearleaf
+
+[Study](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=clearleaf) · [Prompt](experiments/clearleaf/flashcards.md) · [Evidence](experiments/clearleaf/result.json)
+
+20 new cards, five per topic. Original judge: self-contained **70%**, source faithfulness **83.6%**, atomicity **70%**. A separate revised self-containment diagnostic gives **18/20**, after matching eight known controls. Local inspection finds **15/20 atomic cards**, one incorrect page citation and one incomplete explanation. **Not ready to promote.** Cost: approximately **$0.0544**.
+
+Only the isolated flashcard prompt changed; production MathPDF and the original evaluator remain unchanged. Wildflower has 60 cards, so this is not a paired improvement test. The previous chessboard exponent regression was not generated and remains untested. Website summaries are shorter; methods, detailed evidence and original mistakes remain accessible in expandable sections and linked records.
+
+## Baseline: Wildflower
 
 [Wildflower study](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=wildflower) · [Method and reproduction](experiments/wildflower/README.md) · [60-card metrics CSV](experiments/wildflower/cards_wildflower.csv)
 
@@ -157,10 +166,10 @@ uv run evaluate run --help
 
 See [evaluator instructions](docs/evaluator.md) for the separate paid CLI. Opening or testing the static site does not invoke it. Experiment folders retain prompts, seeds, usage, checks and reproduction scripts where available. Rerunning a model generation is a separate paid operation and need not reproduce the exact output; historical exports have the provenance limitations described above.
 
-The current revision passes **97 Python tests**. With Playwright available in your Python environment and a local server running, the optional browser regression check is:
+The current revision passes **101 Python tests**. With Playwright available in your Python environment and a local server running, the optional browser regression check is:
 
 ```sh
 python tools/check_site.py --url http://127.0.0.1:8894 --chrome "/path/to/chrome"
 ```
 
-It covers all ten studies, the cross-version comparison and four historical versions, lazy evidence loading, formula rendering, English page text, 320/390/1440-pixel layouts, preservation of existing browser data, version editing, JSON import/export, CSV import and direct file opening. Reports and screenshots are written to ignored `output/site-checks/`.
+It covers all eleven studies, the cross-version comparison and four historical versions, lazy evidence loading, formula rendering, English page text, 320/390/1440-pixel layouts, preservation of existing browser data, version editing, JSON import/export, CSV import and direct file opening. Reports and screenshots are written to ignored `output/site-checks/`.

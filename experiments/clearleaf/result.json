@@ -1,0 +1,5076 @@
+{
+  "id": "clearleaf-2026-10-31",
+  "date": "2026-10-31",
+  "version": "clearleaf",
+  "kind": "isolated_flashcard_prompt_pilot",
+  "generator": "gpt-4.1-mini",
+  "judge": "gpt-4o-mini",
+  "card_sets": [
+    {
+      "id": "sets",
+      "topic": "Sets",
+      "pages": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Set membership notation",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "How do you denote that an object x is an element of a set A?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "We write \\(x \\in A\\) when \\(x\\) is an element of \\(A\\)."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "This is the standard symbolic notation for set membership."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "math",
+              "latex": "x \\in A",
+              "display": true,
+              "source": {
+                "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                "page": 4,
+                "line_start": null,
+                "line_end": null,
+                "quote": null
+              },
+              "original_latex": null,
+              "change": null
+            },
+            {
+              "kind": "text",
+              "text": "We write \\(x \\in A\\) when \\(x\\) is an element of \\(A\\)."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "This is the standard symbolic notation for set membership."
+            }
+          ],
+          "source": null
+        },
+        {
+          "goal_step": 2,
+          "title": "Definition of a subset",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What does it mean for a set A to be a subset of a set B?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "A set \\(A\\) is a subset of \\(B\\) if every element of \\(A\\) belongs to \\(B\\)."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "Subset means all elements of A are contained in B."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "A set \\(A\\) is a subset of \\(B\\) if every element of \\(A\\) belongs to \\(B\\)."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "Subset means all elements of A are contained in B."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 5,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 3,
+          "title": "Number of subsets of a finite set",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why does a finite set with n elements have exactly 2 to the power n subsets?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "If a finite set \\(S\\) has \\(n\\) elements, then it has \\(2^n\\) subsets."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "Each element can be included or not included in a subset independently, giving two choices per element, so total subsets equals \\(2\\cdot 2 \\cdots 2 = 2^n\\)."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "math",
+              "latex": "2^n",
+              "display": true,
+              "source": {
+                "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                "page": 5,
+                "line_start": null,
+                "line_end": null,
+                "quote": null
+              },
+              "original_latex": null,
+              "change": null
+            },
+            {
+              "kind": "text",
+              "text": "If a finite set \\(S\\) has \\(n\\) elements, then it has \\(2^n\\) subsets."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "Each element can be included or not included in a subset independently, giving two choices per element, so total subsets equals \\(2\\cdot 2 \\cdots 2 = 2^n\\)."
+            }
+          ],
+          "source": null
+        },
+        {
+          "goal_step": 4,
+          "title": "Union and intersection of sets",
+          "skill": "conditions",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Under what conditions does the equality A intersect the union of B and C equal the union of A intersect B and A intersect C hold?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "We have the equality: \\(A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)\\)."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "This equality is always true for any sets \\(A\\)\\(, \\)\\(B\\)\\(, and \\)\\(C\\)\\(.\\)"
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "We have the equality: \\(A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)\\)."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "This equality is always true for any sets \\(A\\)\\(, \\)\\(B\\)\\(, and \\)\\(C\\)\\(.\\)"
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 6,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "Power set definition",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the definition of the power set P of a set A?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "The power set of \\(A\\) is the set of all subsets of \\(A\\): \\(P(A) = \\{ B : B \\subset A \\}\\)."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "The power set contains every possible subset of \\(A\\) including the empty set and \\(A\\) itself."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "The power set of \\(A\\) is the set of all subsets of \\(A\\): \\(P(A) = \\{ B : B \\subset A \\}\\)."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "The power set contains every possible subset of \\(A\\) including the empty set and \\(A\\) itself."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 6,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "metrics": {
+        "topic": "Sets",
+        "card_type": "Flashcards",
+        "level": "Level 3",
+        "card_metrics": [
+          {
+            "card_number": 1,
+            "front": "How do you denote that an object x is an element of a set A?",
+            "back": "From notes\nx \\in A\nWe write \\(x \\in A\\) when \\(x\\) is an element of \\(A\\).\nExplanation\nThis is the standard symbolic notation for set membership.",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "You denote that an object x is an element of a set A by writing \"x ∈ A\".",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "We write x ∈ A when x is an element of A.",
+                  "status": "supported",
+                  "page": 4,
+                  "quote": "We write 𝑥∈ 𝐴 when 𝑥 is an element of𝐴",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "x ∈ A is the standard symbolic notation for set membership.",
+                  "status": "unsupported",
+                  "page": null,
+                  "quote": "",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 1,
+              "total": 2,
+              "unsupported": 1,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "definition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 1
+          },
+          {
+            "card_number": 2,
+            "front": "What does it mean for a set A to be a subset of a set B?",
+            "back": "From notes\nA set \\(A\\) is a subset of \\(B\\) if every element of \\(A\\) belongs to \\(B\\).\nExplanation\nSubset means all elements of A are contained in B.",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A set A is a subset of a set B if every element of A is also an element of B. This is denoted as A ⊆ B.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "A set A is a subset of B if every element of A belongs to B.",
+                  "status": "supported",
+                  "page": 5,
+                  "quote": "A set A is a subset of B, written A⊂B, if every element of A belongs to B.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "Subset means all elements of A are contained in B.",
+                  "status": "supported",
+                  "page": 5,
+                  "quote": "A set A is a subset of B if every element of A belongs to B.",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 2,
+              "total": 2,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "definition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 1
+          },
+          {
+            "card_number": 3,
+            "front": "Why does a finite set with n elements have exactly 2 to the power n subsets?",
+            "back": "From notes\n2^n\nIf a finite set \\(S\\) has \\(n\\) elements, then it has \\(2^n\\) subsets.\nExplanation\nEach element can be included or not included in a subset independently, giving two choices per element, so total subsets equals \\(2\\cdot 2 \\cdots 2 = 2^n\\).",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A finite set with n elements has exactly 2^n subsets because each element can either be included in a subset or not. For each of the n elements, there are 2 choices (include or exclude), leading to a total of 2^n combinations of elements, which corresponds to the number of subsets.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "If a finite set S has n elements, then it has 2^n subsets.",
+                  "status": "supported",
+                  "page": 5,
+                  "quote": "If a finite set S has n elements, then it has 2^n subsets.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "Each element can be included or not included in a subset independently.",
+                  "status": "supported",
+                  "page": 5,
+                  "quote": "For each element x_i, there are two independent choices: include it in a subset.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "Total subsets equals 2·2···2 = 2^n.",
+                  "status": "supported",
+                  "page": 5,
+                  "quote": "Hence the number of subsets is 2·2···2 = 2^n.",
+                  "quote_verified": true
+                }
+              ],
+              "supported": 3,
+              "total": 3,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "why_question",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 3
+          },
+          {
+            "card_number": 4,
+            "front": "Under what conditions does the equality A intersect the union of B and C equal the union of A intersect B and A intersect C hold?",
+            "back": "From notes\nWe have the equality: \\(A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)\\).\nExplanation\nThis equality is always true for any sets \\(A\\)\\(, \\)\\(B\\)\\(, and \\)\\(C\\)\\(.\\)",
+            "self_contained": {
+              "understandable": false,
+              "whats_missing": "The specific equality is not fully stated; it should specify 'A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)'.",
+              "blind_answer": "The equality holds under the condition that A, B, and C are sets, and it is a standard result in set theory known as the distributive law of intersection over union.",
+              "blind_answer_matches": true,
+              "passes": false
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "The equality A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) is true.",
+                  "status": "supported",
+                  "page": 6,
+                  "quote": "A∩(B∪C)=(A∩B)∪(A∩C).",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "This equality is always true for any sets A, B, and C.",
+                  "status": "unsupported",
+                  "page": null,
+                  "quote": "",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 1,
+              "total": 2,
+              "unsupported": 1,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "theorem_condition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 4
+          },
+          {
+            "card_number": 5,
+            "front": "What is the definition of the power set P of a set A?",
+            "back": "From notes\nThe power set of \\(A\\) is the set of all subsets of \\(A\\): \\(P(A) = \\{ B : B \\subset A \\}\\).\nExplanation\nThe power set contains every possible subset of \\(A\\) including the empty set and \\(A\\) itself.",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The power set P of a set A is the set of all possible subsets of A, including the empty set and A itself.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "The power set of A is the set of all subsets of A.",
+                  "status": "supported",
+                  "page": 6,
+                  "quote": "The power set of 𝐴 is the set of all subsets of 𝐴.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "P(A) = { B : B ⊂ A }.",
+                  "status": "supported",
+                  "page": 6,
+                  "quote": "P(𝐴) ={𝐵 : 𝐵⊂ 𝐴}",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "The power set contains every possible subset of A including the empty set and A itself.",
+                  "status": "unsupported",
+                  "page": null,
+                  "quote": "",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 2,
+              "total": 3,
+              "unsupported": 1,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "definition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 2
+          }
+        ],
+        "duplicate_pairs": [],
+        "duplicate_rate": 0.0,
+        "material_type": "mixed",
+        "count_match": true,
+        "coverage_key_concepts": [
+          "Definition of a set",
+          "Set membership notation",
+          "Empty set definition",
+          "Cardinality of a set",
+          "Equality of sets",
+          "Set-builder notation",
+          "Ordered pairs",
+          "Cartesian product of sets",
+          "Subsets and power sets",
+          "Theorem on subsets",
+          "Union and intersection of sets",
+          "Set difference",
+          "Complement of a set",
+          "Families of sets",
+          "Sum and product notation"
+        ],
+        "coverage_covered": [
+          "Set membership notation",
+          "Subsets and power sets",
+          "Theorem on subsets",
+          "Union and intersection of sets"
+        ],
+        "coverage_ratio": 0.26666666666666666,
+        "difficulty_spearman": 0.6668859288553501
+      },
+      "summary": {
+        "pct_self_contained": 0.8,
+        "avg_faithfulness": 0.7333333333333333,
+        "pct_front_leaks": 0.0,
+        "pct_atomic": 1.0,
+        "pct_understanding": 1.0,
+        "pct_trivial": 0.0,
+        "duplicate_rate": 0.0,
+        "coverage_ratio": 0.26666666666666666,
+        "difficulty_spearman": 0.6668859288553501,
+        "avg_back_length": 2.0,
+        "card_type_distribution": {
+          "definition": 0.6,
+          "why_question": 0.2,
+          "theorem_condition": 0.2
+        },
+        "count_match": true
+      },
+      "revised_self_contained": {
+        "items": [
+          {
+            "id": 1,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "You denote that an object x is an element of a set A using the symbol '∈', so you would write 'x ∈ A'."
+            },
+            "passes": true
+          },
+          {
+            "id": 2,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A set A is a subset of a set B if every element of A is also an element of B."
+            },
+            "passes": true
+          },
+          {
+            "id": 3,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A finite set with n elements has exactly 2^n subsets because each element can either be included in a subset or not, leading to 2 choices (include or exclude) for each of the n elements. Therefore, the total number of subsets is 2 multiplied by itself n times, which is 2^n."
+            },
+            "passes": true
+          },
+          {
+            "id": 4,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The equality A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) holds for all sets A, B, and C, as it is a property of set operations known as the distributive law."
+            },
+            "passes": true
+          },
+          {
+            "id": 5,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The power set P of a set A is the set of all possible subsets of A, including the empty set and A itself."
+            },
+            "passes": true
+          }
+        ],
+        "passed": 5,
+        "total": 5
+      }
+    },
+    {
+      "id": "induction",
+      "topic": "Mathematical Induction",
+      "pages": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Principle of Mathematical Induction",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What are the three steps required to prove a statement for all integers greater than or equal to a fixed n0 using mathematical induction?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "To prove a statement \\(P(n)\\) for every integer \\(n \\geq n_0\\), we use: 1. Base case: prove \\(P(n_0)\\). 2. Induction hypothesis: assume \\(P(n)\\) is true for an arbitrary integer \\(n \\geq n_0\\). 3. Induction step: prove that \\(P(n+1)\\) is true using the induction hypothesis."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "To prove a statement \\(P(n)\\) for every integer \\(n \\geq n_0\\), we use: 1. Base case: prove \\(P(n_0)\\). 2. Induction hypothesis: assume \\(P(n)\\) is true for an arbitrary integer \\(n \\geq n_0\\). 3. Induction step: prove that \\(P(n+1)\\) is true using the induction hypothesis."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 14,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 2,
+          "title": "Divisibility and Induction Example",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What does it mean for an integer a to divide another integer b, and how is this used in induction to prove divisibility statements?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "For integers \\(a\\) and \\(b\\), \\(a | b\\) means \\(\\exists c \\in \\mathbb{Z} : b = ca\\). This concept is used in induction by assuming \\(a | f(n) \\) for some function \\(f\\), then proving \\(a | f(n+1)\\) using the induction hypothesis and additional algebraic manipulation."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "For integers \\(a\\) and \\(b\\), \\(a | b\\) means \\(\\exists c \\in \\mathbb{Z} : b = ca\\). This concept is used in induction by assuming \\(a | f(n) \\) for some function \\(f\\), then proving \\(a | f(n+1)\\) using the induction hypothesis and additional algebraic manipulation."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 15,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 3,
+          "title": "Why is usual induction not directly applicable to proving sum of reciprocals squared is less than 2?",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why is it impossible to prove directly by induction that the sum from i equals 1 to n of 1 divided by i squared is less than or equal to 2?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "It is impossible to prove this inequality directly by induction because the induction step requires strengthening the inequality. The stronger statement proven is that the sum is less than or equal to \\(2 - \\frac{1}{n}\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "It is impossible to prove this inequality directly by induction because the induction step requires strengthening the inequality. The stronger statement proven is that the sum is less than or equal to \\(2 - \\frac{1}{n}\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 16,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 4,
+          "title": "Triangle inequality for sums",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "How is the triangle inequality for the sum of n real numbers proved using induction?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "The base case for \\(n=1\\) is trivial. Assuming the inequality holds for n terms, the proof for n+1 terms uses the two-number triangle inequality lemma to bound the absolute value of the sum."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "The base case for \\(n=1\\) is trivial. Assuming the inequality holds for n terms, the proof for n+1 terms uses the two-number triangle inequality lemma to bound the absolute value of the sum."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 17,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "Strong Induction Principle",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What distinguishes strong induction from ordinary induction in proving statements for all integers greater than or equal to an initial value?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "In strong induction, to prove a statement for \\(n+1\\), we assume the statement holds for all integers from the initial value up to \\(n\\), rather than assuming only the statement for \\(n\\). This stronger assumption is then used to prove the case for \\(n+1\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "In strong induction, to prove a statement for \\(n+1\\), we assume the statement holds for all integers from the initial value up to \\(n\\), rather than assuming only the statement for \\(n\\). This stronger assumption is then used to prove the case for \\(n+1\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 18,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "metrics": {
+        "topic": "Mathematical Induction",
+        "card_type": "Flashcards",
+        "level": "Level 3",
+        "card_metrics": [
+          {
+            "card_number": 1,
+            "front": "What are the three steps required to prove a statement for all integers greater than or equal to a fixed n0 using mathematical induction?",
+            "back": "From notes\nTo prove a statement \\(P(n)\\) for every integer \\(n \\geq n_0\\), we use: 1. Base case: prove \\(P(n_0)\\). 2. Induction hypothesis: assume \\(P(n)\\) is true for an arbitrary integer \\(n \\geq n_0\\). 3. Induction step: prove that \\(P(n+1)\\) is true using the induction hypothesis.",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "1. Base Case: Verify the statement for the initial integer n = n0.  \n2. Inductive Step: Assume the statement is true for some integer k ≥ n0 (inductive hypothesis), and then prove it for k + 1.  \n3. Conclusion: Conclude that the statement is true for all integers n ≥ n0 based on the base case and the inductive step.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "To prove a statement P(n) for every integer n ≥ n0, we use: 1. Base case: prove P(n0).",
+                  "status": "supported",
+                  "page": 14,
+                  "quote": "Base case: prove P(n0).",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "To prove a statement P(n) for every integer n ≥ n0, we use: 2. Induction hypothesis: assume P(n) is true for an arbitrary integer n ≥ n0.",
+                  "status": "supported",
+                  "page": 14,
+                  "quote": "Induction hypothesis: fix an arbitrary integer n ≥ n0 and assume that P(n) is true.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "To prove a statement P(n) for every integer n ≥ n0, we use: 3. Induction step: prove that P(n+1) is true using the induction hypothesis.",
+                  "status": "supported",
+                  "page": 14,
+                  "quote": "Induction step: using the induction hypothesis, prove that P(n+1) is true.",
+                  "quote_verified": true
+                }
+              ],
+              "supported": 3,
+              "total": 3,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "procedure",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 6,
+            "difficulty": 3
+          },
+          {
+            "card_number": 2,
+            "front": "What does it mean for an integer a to divide another integer b, and how is this used in induction to prove divisibility statements?",
+            "back": "From notes\nFor integers \\(a\\) and \\(b\\), \\(a | b\\) means \\(\\exists c \\in \\mathbb{Z} : b = ca\\). This concept is used in induction by assuming \\(a | f(n) \\) for some function \\(f\\), then proving \\(a | f(n+1)\\) using the induction hypothesis and additional algebraic manipulation.",
+            "self_contained": {
+              "understandable": false,
+              "whats_missing": "The specific definition of divisibility is not provided, and the context of induction is vague without a specific statement or example.",
+              "blind_answer": "An integer a divides another integer b if there exists an integer k such that b = ak. In induction, this concept is used to prove statements about divisibility by establishing a base case and an inductive step.",
+              "blind_answer_matches": true,
+              "passes": false
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "For integers a and b, a | b means there exists c in Z such that b = ca.",
+                  "status": "supported",
+                  "page": 15,
+                  "quote": "For integers𝑎 and𝑏, the notation𝑎|𝑏 means that𝑎 divides𝑏.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "This concept is used in induction by assuming a | f(n) for some function f.",
+                  "status": "unsupported",
+                  "page": null,
+                  "quote": "",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "Then proving a | f(n+1) using the induction hypothesis and additional algebraic manipulation.",
+                  "status": "unsupported",
+                  "page": null,
+                  "quote": "",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 1,
+              "total": 3,
+              "unsupported": 2,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "definition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 2
+          },
+          {
+            "card_number": 3,
+            "front": "Why is it impossible to prove directly by induction that the sum from i equals 1 to n of 1 divided by i squared is less than or equal to 2?",
+            "back": "From notes\nIt is impossible to prove this inequality directly by induction because the induction step requires strengthening the inequality. The stronger statement proven is that the sum is less than or equal to \\(2 - \\frac{1}{n}\\).",
+            "self_contained": {
+              "understandable": false,
+              "whats_missing": "The specific properties or conditions of the series or the context of the induction proof are not defined.",
+              "blind_answer": "It is generally difficult to prove inequalities involving series directly by induction without establishing a base case and an inductive step that clearly shows how the inequality holds for all n. In this case, the behavior of the series as n approaches infinity and the comparison to known convergent series may be necessary.",
+              "blind_answer_matches": false,
+              "passes": false
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "It is impossible to prove this inequality directly by induction.",
+                  "status": "supported",
+                  "page": 16,
+                  "quote": "it is impossible to prove this inequality directly by induction.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "The induction step requires strengthening the inequality.",
+                  "status": "supported",
+                  "page": 16,
+                  "quote": "the induction step requires strengthening the inequality.",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "The stronger statement proven is that the sum is less than or equal to 2 - 1/n.",
+                  "status": "supported",
+                  "page": 16,
+                  "quote": "the stronger statement proven is that the sum is less than or equal to 2 - 1/n.",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 3,
+              "total": 3,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "why_question",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 4
+          },
+          {
+            "card_number": 4,
+            "front": "How is the triangle inequality for the sum of n real numbers proved using induction?",
+            "back": "From notes\nThe base case for \\(n=1\\) is trivial. Assuming the inequality holds for n terms, the proof for n+1 terms uses the two-number triangle inequality lemma to bound the absolute value of the sum.",
+            "self_contained": {
+              "understandable": false,
+              "whats_missing": "The specific statement of the triangle inequality for n real numbers is not provided.",
+              "blind_answer": "To prove the triangle inequality for the sum of n real numbers using induction, one would typically start by stating the inequality: |x1 + x2 + ... + xn| ≤ |x1| + |x2| + ... + |xn|. Then, for the base case (n=1), it holds true. For the inductive step, assume it holds for n=k, and show it holds for n=k+1 by considering |x1 + x2 + ... + xk + x(k+1)| and applying the triangle inequality for two terms.",
+              "blind_answer_matches": true,
+              "passes": false
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "The base case for n=1 is trivial.",
+                  "status": "supported",
+                  "page": 17,
+                  "quote": "For the base case n = 1, the statement is the equality",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "Assuming the inequality holds for n terms.",
+                  "status": "unsupported",
+                  "page": null,
+                  "quote": "",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "The proof for n+1 terms uses the two-number triangle inequality lemma.",
+                  "status": "supported",
+                  "page": 17,
+                  "quote": "by Lemma 3.6",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "The absolute value of the sum is bounded.",
+                  "status": "unsupported",
+                  "page": null,
+                  "quote": "",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 2,
+              "total": 4,
+              "unsupported": 2,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "method",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 4
+          },
+          {
+            "card_number": 5,
+            "front": "What distinguishes strong induction from ordinary induction in proving statements for all integers greater than or equal to an initial value?",
+            "back": "From notes\nIn strong induction, to prove a statement for \\(n+1\\), we assume the statement holds for all integers from the initial value up to \\(n\\), rather than assuming only the statement for \\(n\\). This stronger assumption is then used to prove the case for \\(n+1\\).",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "Strong induction differs from ordinary induction in that it allows the assumption of the truth of the statement for all integers less than or equal to a certain value (the induction hypothesis) to prove the statement for the next integer. In ordinary induction, the assumption is only for the immediate predecessor. This makes strong induction particularly useful for statements that depend on multiple previous cases.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "In strong induction, to prove a statement for n+1, we assume the statement holds for all integers from the initial value up to n.",
+                  "status": "supported",
+                  "page": 18,
+                  "quote": "In strong induction, we assume that P(k) holds for every integer k from the initial value up to n.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "In strong induction, we assume only the statement for n.",
+                  "status": "contradicts",
+                  "page": 18,
+                  "quote": "Ordinary induction assumes P(n) in order to prove P(n+ 1).",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "This stronger assumption is then used to prove the case for n+1.",
+                  "status": "supported",
+                  "page": 18,
+                  "quote": "We show that n+ 1 can also be written in this form.",
+                  "quote_verified": true
+                }
+              ],
+              "supported": 2,
+              "total": 3,
+              "unsupported": 0,
+              "contradicts": 1
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "theorem_condition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 3
+          }
+        ],
+        "duplicate_pairs": [],
+        "duplicate_rate": 0.0,
+        "material_type": "mixed",
+        "count_match": true,
+        "coverage_key_concepts": [
+          "Mathematical induction principle",
+          "Base case in induction",
+          "Induction hypothesis",
+          "Induction step",
+          "Proof by induction",
+          "Divisibility notation",
+          "Triangle inequality",
+          "Factorial definition",
+          "Strong induction",
+          "Tiling problems with trominoes",
+          "Summation of squares",
+          "Conjectures and proofs",
+          "Inequalities in induction",
+          "Fibonacci sequence properties"
+        ],
+        "coverage_covered": [
+          "Mathematical induction principle",
+          "Base case in induction",
+          "Induction hypothesis",
+          "Induction step",
+          "Proof by induction",
+          "Divisibility notation",
+          "Triangle inequality",
+          "Strong induction",
+          "Inequalities in induction"
+        ],
+        "coverage_ratio": 0.6428571428571429,
+        "difficulty_spearman": 0.3689323936863109
+      },
+      "summary": {
+        "pct_self_contained": 0.4,
+        "avg_faithfulness": 0.7,
+        "pct_front_leaks": 0.0,
+        "pct_atomic": 1.0,
+        "pct_understanding": 1.0,
+        "pct_trivial": 0.0,
+        "duplicate_rate": 0.0,
+        "coverage_ratio": 0.6428571428571429,
+        "difficulty_spearman": 0.3689323936863109,
+        "avg_back_length": 2.8,
+        "card_type_distribution": {
+          "procedure": 0.2,
+          "definition": 0.2,
+          "why_question": 0.2,
+          "method": 0.2,
+          "theorem_condition": 0.2
+        },
+        "count_match": true
+      },
+      "revised_self_contained": {
+        "items": [
+          {
+            "id": 1,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "1. Base Case: Verify the statement for the initial integer n0. 2. Inductive Step: Assume the statement holds for some integer k ≥ n0, and then prove it for k + 1. 3. Conclusion: Conclude that the statement is true for all integers n ≥ n0."
+            },
+            "passes": true
+          },
+          {
+            "id": 2,
+            "result": {
+              "understandable": false,
+              "whats_missing": "Specific definitions or examples of divisibility and induction in the context of integers.",
+              "blind_answer": "For an integer a to divide another integer b means there exists an integer k such that b = ak. In induction, this concept is used to prove statements about divisibility by establishing a base case and an inductive step."
+            },
+            "passes": false
+          },
+          {
+            "id": 3,
+            "result": {
+              "understandable": false,
+              "whats_missing": "The specific induction hypothesis or base case for the sum from i equals 1 to n of 1/i^2.",
+              "blind_answer": "Direct proof by induction requires a clear base case and induction hypothesis, which are not provided here."
+            },
+            "passes": false
+          },
+          {
+            "id": 4,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The triangle inequality states that for any real numbers a_1, a_2, ..., a_n, the inequality |a_1 + a_2 + ... + a_n| ≤ |a_1| + |a_2| + ... + |a_n| holds. To prove this using induction:\n\n1. **Base Case**: For n = 1, |a_1| ≤ |a_1| is trivially true.\n\n2. **Inductive Step**: Assume true for n = k, i.e., |a_1 + a_2 + ... + a_k| ≤ |a_1| + |a_2| + ... + |a_k|. For n = k + 1, consider |a_1 + a_2 + ... + a_k + a_(k+1)|. By the triangle inequality for two terms, we have:\n   \n   |(a_1 + a_2 + ... + a_k) + a_(k+1)| ≤ |a_1 + a_2 + ... + a_k| + |a_(k+1)|.\n\n   By the inductive hypothesis, this is ≤ (|a_1| + |a_2| + ... + |a_k|) + |a_(k+1)|, which completes the proof."
+            },
+            "passes": true
+          },
+          {
+            "id": 5,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "Strong induction differs from ordinary induction in that it allows the assumption of the truth of the statement for all integers up to a certain point (not just the previous integer) when proving the statement for the next integer."
+            },
+            "passes": true
+          }
+        ],
+        "passed": 3,
+        "total": 5
+      }
+    },
+    {
+      "id": "numbers",
+      "topic": "Numbers",
+      "pages": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Definition of an irreducible fraction",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What does it mean for a fraction to be irreducible or in lowest terms?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\) is irreducible, or in lowest terms, if \\(m\\) and \\(n\\) have no common factors greater than 1."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\) is irreducible, or in lowest terms, if \\(m\\) and \\(n\\) have no common factors greater than 1."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 22,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 2,
+          "title": "Existence of irrational numbers",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why is there a real number whose square is 2, and why is it irrational?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "There exists a real number \\(x\\) such that \\(x^2=2\\). This is written as \\(x=\\sqrt{2}\\). Moreover, \\(\\sqrt{2} \\notin \\mathbb{Q}\\); that is, it is irrational."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "The number \\(\\sqrt{2}\\) satisfies \\(x^2=2\\) by Pythagoras' theorem. The irrationality is established since no rational fraction squared equals 2, as proved in the referenced lecture."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "There exists a real number \\(x\\) such that \\(x^2=2\\). This is written as \\(x=\\sqrt{2}\\). Moreover, \\(\\sqrt{2} \\notin \\mathbb{Q}\\); that is, it is irrational."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "The number \\(\\sqrt{2}\\) satisfies \\(x^2=2\\) by Pythagoras' theorem. The irrationality is established since no rational fraction squared equals 2, as proved in the referenced lecture."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 23,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 3,
+          "title": "Between any two rational numbers there is another rational number",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What justifies that between any two distinct rational numbers there is another rational number?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "If \\(a,b \\in \\mathbb{Q}\\) and \\(a < b\\), then the midpoint \\(c=\\frac{a+b}{2}\\) is rational and satisfies \\(a < c < b\\)."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "Taking the average of two rational numbers produces another rational number strictly between them, demonstrating density of rationals in the real numbers."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "If \\(a,b \\in \\mathbb{Q}\\) and \\(a < b\\), then the midpoint \\(c=\\frac{a+b}{2}\\) is rational and satisfies \\(a < c < b\\)."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "Taking the average of two rational numbers produces another rational number strictly between them, demonstrating density of rationals in the real numbers."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 22,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 4,
+          "title": "Meaning of periodic decimals",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What does it mean for a decimal expansion to be periodic?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "A decimal is periodic if, after some finite initial block, a finite block of digits repeats forever."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "A decimal is periodic if, after some finite initial block, a finite block of digits repeats forever."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 26,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "Representation of natural numbers in base b",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What conditions define the unique base-b representation of a natural number?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "For base \\(b \\in \\mathbb{N}, b \\geq 2\\), every natural number \\(m\\) has a unique representation as \\(m = a_k b^k + a_{k-1} b^{k-1} + \\cdots + a_1 b + a_0\\) where \\(0 \\leq a_i < b\\) and \\(a_k \\neq 0\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "For base \\(b \\in \\mathbb{N}, b \\geq 2\\), every natural number \\(m\\) has a unique representation as \\(m = a_k b^k + a_{k-1} b^{k-1} + \\cdots + a_1 b + a_0\\) where \\(0 \\leq a_i < b\\) and \\(a_k \\neq 0\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 27,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "metrics": {
+        "topic": "Numbers",
+        "card_type": "Flashcards",
+        "level": "Level 3",
+        "card_metrics": [
+          {
+            "card_number": 1,
+            "front": "What does it mean for a fraction to be irreducible or in lowest terms?",
+            "back": "From notes\nA fraction \\(\\frac{m}{n}\\) is irreducible, or in lowest terms, if \\(m\\) and \\(n\\) have no common factors greater than 1.",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A fraction is considered irreducible or in lowest terms when the numerator and denominator have no common factors other than 1, meaning they cannot be simplified further.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "A fraction m/n is irreducible if m and n have no common factors greater than 1.",
+                  "status": "supported",
+                  "page": 22,
+                  "quote": "A fraction 𝑚𝑛 is irreducible, or in lowest terms, if𝑚 and 𝑛 have no common factors greater than1.",
+                  "quote_verified": true
+                }
+              ],
+              "supported": 1,
+              "total": 1,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "definition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 1,
+            "difficulty": 1
+          },
+          {
+            "card_number": 2,
+            "front": "Why is there a real number whose square is 2, and why is it irrational?",
+            "back": "From notes\nThere exists a real number \\(x\\) such that \\(x^2=2\\). This is written as \\(x=\\sqrt{2}\\). Moreover, \\(\\sqrt{2} \\notin \\mathbb{Q}\\); that is, it is irrational.\nExplanation\nThe number \\(\\sqrt{2}\\) satisfies \\(x^2=2\\) by Pythagoras' theorem. The irrationality is established since no rational fraction squared equals 2, as proved in the referenced lecture.",
+            "self_contained": {
+              "understandable": false,
+              "whats_missing": "No definition of 'real number' or context for 'square is 2'.",
+              "blind_answer": "There exists a real number whose square is 2, specifically √2, which is irrational because it cannot be expressed as a fraction of two integers.",
+              "blind_answer_matches": true,
+              "passes": false
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "There exists a real number x such that x^2=2.",
+                  "status": "supported",
+                  "page": 22,
+                  "quote": "There is a real number x such that x^2 = 2.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "This is written as x=√2.",
+                  "status": "supported",
+                  "page": 23,
+                  "quote": "Notation: x = √2",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "√2 ∉ ℚ; that is, it is irrational.",
+                  "status": "supported",
+                  "page": 23,
+                  "quote": "√2 ∉ ℚ (Proved last lecture)",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "The number √2 satisfies x^2=2 by Pythagoras' theorem.",
+                  "status": "supported",
+                  "page": 23,
+                  "quote": "By Pythagoras 1 1x 12 + 12 = x^2",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "No rational fraction squared equals 2.",
+                  "status": "unsupported",
+                  "page": null,
+                  "quote": "",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 4,
+              "total": 5,
+              "unsupported": 1,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": false,
+            "card_type_label": "why_question",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 5,
+            "difficulty": 4
+          },
+          {
+            "card_number": 3,
+            "front": "What justifies that between any two distinct rational numbers there is another rational number?",
+            "back": "From notes\nIf \\(a,b \\in \\mathbb{Q}\\) and \\(a < b\\), then the midpoint \\(c=\\frac{a+b}{2}\\) is rational and satisfies \\(a < c < b\\).\nExplanation\nTaking the average of two rational numbers produces another rational number strictly between them, demonstrating density of rationals in the real numbers.",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The property that justifies that between any two distinct rational numbers there is another rational number is known as the density of the rational numbers. Specifically, if you have two distinct rational numbers a/b and c/d (where a, b, c, and d are integers and b, d are not zero), you can find another rational number between them by taking the average: (a/b + c/d) / 2, which is also a rational number.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "If a, b ∈ ℚ and a < b, then the midpoint c = (a + b) / 2 is rational.",
+                  "status": "supported",
+                  "page": 22,
+                  "quote": "If 𝑎,𝑏 ∈ ℚ and 𝑎 < 𝑏, then their midpoint 𝑐 = 𝑎+𝑏2 is rational",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "The midpoint c satisfies a < c < b.",
+                  "status": "supported",
+                  "page": 22,
+                  "quote": "satisfies 𝑎 < 𝑐 < 𝑏",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "Taking the average of two rational numbers produces another rational number.",
+                  "status": "supported",
+                  "page": 22,
+                  "quote": "their midpoint 𝑐 = 𝑎+𝑏2 is rational",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "This demonstrates the density of rationals in the real numbers.",
+                  "status": "unsupported",
+                  "page": null,
+                  "quote": "",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 3,
+              "total": 4,
+              "unsupported": 1,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": false,
+            "card_type_label": "why_question",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 3
+          },
+          {
+            "card_number": 4,
+            "front": "What does it mean for a decimal expansion to be periodic?",
+            "back": "From notes\nA decimal is periodic if, after some finite initial block, a finite block of digits repeats forever.",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A decimal expansion is said to be periodic if, after a certain point, the digits repeat in a fixed cycle. For example, the decimal expansion of 1/3 is 0.333..., where '3' repeats indefinitely.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "A decimal is periodic if, after some finite initial block, a finite block of digits repeats forever.",
+                  "status": "supported",
+                  "page": 26,
+                  "quote": "A decimal is periodic if, after some finite initial block, a finite block of digits repeats forever.",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 1,
+              "total": 1,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "definition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 1,
+            "difficulty": 2
+          },
+          {
+            "card_number": 5,
+            "front": "What conditions define the unique base-b representation of a natural number?",
+            "back": "From notes\nFor base \\(b \\in \\mathbb{N}, b \\geq 2\\), every natural number \\(m\\) has a unique representation as \\(m = a_k b^k + a_{k-1} b^{k-1} + \\cdots + a_1 b + a_0\\) where \\(0 \\leq a_i < b\\) and \\(a_k \\neq 0\\).",
+            "self_contained": {
+              "understandable": false,
+              "whats_missing": "The specific properties of base-b representation are not defined, such as the range of b or the definition of natural numbers in this context.",
+              "blind_answer": "The unique base-b representation of a natural number is defined by the conditions that b must be greater than 1 and that each digit in the representation must be in the range from 0 to b-1.",
+              "blind_answer_matches": true,
+              "passes": false
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "For base b, every natural number m has a unique representation.",
+                  "status": "supported",
+                  "page": 27,
+                  "quote": "Every m∈ ℕ has a unique base-b representation",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "The base b must be a natural number greater than or equal to 2.",
+                  "status": "supported",
+                  "page": 27,
+                  "quote": "b∈ ℕ, b⩾ 2",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "The representation of m is of the form m = a_k b^k + a_{k-1} b^{k-1} + ... + a_1 b + a_0.",
+                  "status": "supported",
+                  "page": 27,
+                  "quote": "m = a_k b^k + ... + a_1 b + a_0",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "Each coefficient a_i must be less than b.",
+                  "status": "supported",
+                  "page": 27,
+                  "quote": "0 ≤ a_i < b",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "The leading coefficient a_k cannot be zero.",
+                  "status": "supported",
+                  "page": 27,
+                  "quote": "a_k ≠ 0",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 5,
+              "total": 5,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": false,
+            "card_type_label": "definition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 1,
+            "difficulty": 3
+          }
+        ],
+        "duplicate_pairs": [],
+        "duplicate_rate": 0.0,
+        "material_type": "mixed",
+        "count_match": true,
+        "coverage_key_concepts": [
+          "standard number systems",
+          "rational numbers",
+          "irrational numbers",
+          "decimal representations",
+          "periodic decimals",
+          "non-unique decimal representations",
+          "positional numeral systems",
+          "base conversions",
+          "theorem of irrational numbers",
+          "properties of fractions",
+          "decimal expansion",
+          "long division method",
+          "unique base representation",
+          "Pythagorean theorem application",
+          "properties of real numbers"
+        ],
+        "coverage_covered": [
+          "rational numbers",
+          "irrational numbers",
+          "periodic decimals",
+          "properties of fractions",
+          "unique base representation"
+        ],
+        "coverage_ratio": 0.3333333333333333,
+        "difficulty_spearman": 0.20519567041703082
+      },
+      "summary": {
+        "pct_self_contained": 0.6,
+        "avg_faithfulness": 0.9099999999999999,
+        "pct_front_leaks": 0.0,
+        "pct_atomic": 0.4,
+        "pct_understanding": 1.0,
+        "pct_trivial": 0.0,
+        "duplicate_rate": 0.0,
+        "coverage_ratio": 0.3333333333333333,
+        "difficulty_spearman": 0.20519567041703082,
+        "avg_back_length": 2.0,
+        "card_type_distribution": {
+          "definition": 0.6,
+          "why_question": 0.4
+        },
+        "count_match": true
+      },
+      "revised_self_contained": {
+        "items": [
+          {
+            "id": 1,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A fraction is irreducible or in lowest terms when the numerator and denominator have no common factors other than 1, meaning they cannot be simplified further."
+            },
+            "passes": true
+          },
+          {
+            "id": 2,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "There exists a real number whose square is 2, specifically √2, because it satisfies the equation x² = 2. It is irrational because it cannot be expressed as a fraction of two integers, which can be shown through a proof by contradiction."
+            },
+            "passes": true
+          },
+          {
+            "id": 3,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The density of rational numbers in the real numbers justifies that between any two distinct rational numbers, there exists another rational number."
+            },
+            "passes": true
+          },
+          {
+            "id": 4,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A decimal expansion is periodic if it has a repeating sequence of digits after the decimal point."
+            },
+            "passes": true
+          },
+          {
+            "id": 5,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The unique base-b representation of a natural number is defined by the conditions that the number must be expressed as a sum of digits multiplied by powers of b, where each digit is an integer from 0 to b-1, and the representation is unique for each natural number."
+            },
+            "passes": true
+          }
+        ],
+        "passed": 5,
+        "total": 5
+      }
+    },
+    {
+      "id": "functions",
+      "topic": "Functions",
+      "pages": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Definition of a function",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the definition of a function from a set X to a set Y?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "A function from \\(X\\) to \\(Y\\) is a relation \\(f \\subset X \\times Y\\) such that, for every \\(x \\in X\\) , there is exactly one \\(y \\in Y\\) with \\((x,y) \\in f\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "A function from \\(X\\) to \\(Y\\) is a relation \\(f \\subset X \\times Y\\) such that, for every \\(x \\in X\\) , there is exactly one \\(y \\in Y\\) with \\((x,y) \\in f\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 63,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 2,
+          "title": "Conditions for a function to be injective, surjective, and bijective",
+          "skill": "conditions",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What are the conditions for a function f from X to Y to be injective, surjective, and bijective?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "\\(f \\text{ is injective if } \\forall x_1,x_2 \\in X, f(x_1)=f(x_2) \\Rightarrow x_1=x_2. \\)"
+            },
+            {
+              "kind": "text",
+              "text": "\\(f \\text{ is surjective if } f(X)=Y.\\)"
+            },
+            {
+              "kind": "text",
+              "text": "The function \\(f\\) is bijective if it is both injective and surjective."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "\\(f \\text{ is injective if } \\forall x_1,x_2 \\in X, f(x_1)=f(x_2) \\Rightarrow x_1=x_2. \\)"
+            },
+            {
+              "kind": "text",
+              "text": "\\(f \\text{ is surjective if } f(X)=Y.\\)"
+            },
+            {
+              "kind": "text",
+              "text": "The function \\(f\\) is bijective if it is both injective and surjective."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 64,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 3,
+          "title": "Inverse function of a bijection",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the inverse function of a bijection f from X to Y, and how is it defined?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "If \\(f : X \\to Y\\) is a bijection, its inverse function \\(f^{-1} : Y \\to X\\) is the inverse relation of \\(f\\) defined by \\(f^{-1}(y) = x \\iff f(x) = y\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "If \\(f : X \\to Y\\) is a bijection, its inverse function \\(f^{-1} : Y \\to X\\) is the inverse relation of \\(f\\) defined by \\(f^{-1}(y) = x \\iff f(x) = y\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 67,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 4,
+          "title": "Effect of composition on injectivity and surjectivity",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why is the composition of two injective functions injective, and the composition of two surjective functions surjective?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "If \\(f : X \\to Y\\) and \\(g : Y \\to Z\\) are functions, then:"
+            },
+            {
+              "kind": "text",
+              "text": "(i) If \\(f\\) and \\(g\\) are injective, then \\(g \\circ f\\) is injective because if \\(g(f(x_1)) = g(f(x_2))\\) then injectivity of \\(g\\) implies \\(f(x_1) = f(x_2)\\) and injectivity of \\(f\\) implies \\(x_1 = x_2\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(ii) If \\(f\\) and \\(g\\) are surjective, then \\(g \\circ f\\) is surjective since for each \\(z \\in Z\\) there is \\(y \\in Y\\) with \\(g(y) = z\\) and for that \\(y\\) there is \\(x \\in X\\) with \\(f(x) = y\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "If \\(f : X \\to Y\\) and \\(g : Y \\to Z\\) are functions, then:"
+            },
+            {
+              "kind": "text",
+              "text": "(i) If \\(f\\) and \\(g\\) are injective, then \\(g \\circ f\\) is injective because if \\(g(f(x_1)) = g(f(x_2))\\) then injectivity of \\(g\\) implies \\(f(x_1) = f(x_2)\\) and injectivity of \\(f\\) implies \\(x_1 = x_2\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(ii) If \\(f\\) and \\(g\\) are surjective, then \\(g \\circ f\\) is surjective since for each \\(z \\in Z\\) there is \\(y \\in Y\\) with \\(g(y) = z\\) and for that \\(y\\) there is \\(x \\in X\\) with \\(f(x) = y\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 66,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "Properties of images and preimages under functions",
+          "skill": "conditions",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What are the key properties of images and preimages of sets under a function f from X to Y?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Let \\(f : X \\to Y\\), and let \\(A, B \\subset X\\), \\(C, D \\subset Y\\). Then:"
+            },
+            {
+              "kind": "text",
+              "text": "(i) \\(f(A \\cap B) \\subset f(A) \\cap f(B)\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(ii) \\(f(A \\cup B) = f(A) \\cup f(B)\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(iii) \\(A \\subset f^{-1}(f(A))\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(iv) \\(f^{-1}(C \\cap D) = f^{-1}(C) \\cap f^{-1}(D)\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(v) \\(f^{-1}(C \\cup D) = f^{-1}(C) \\cup f^{-1}(D)\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(vi) \\(f(f^{-1}(C)) \\subset C\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Let \\(f : X \\to Y\\), and let \\(A, B \\subset X\\), \\(C, D \\subset Y\\). Then:"
+            },
+            {
+              "kind": "text",
+              "text": "(i) \\(f(A \\cap B) \\subset f(A) \\cap f(B)\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(ii) \\(f(A \\cup B) = f(A) \\cup f(B)\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(iii) \\(A \\subset f^{-1}(f(A))\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(iv) \\(f^{-1}(C \\cap D) = f^{-1}(C) \\cap f^{-1}(D)\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(v) \\(f^{-1}(C \\cup D) = f^{-1}(C) \\cup f^{-1}(D)\\)."
+            },
+            {
+              "kind": "text",
+              "text": "(vi) \\(f(f^{-1}(C)) \\subset C\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 69,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "metrics": {
+        "topic": "Functions",
+        "card_type": "Flashcards",
+        "level": "Level 3",
+        "card_metrics": [
+          {
+            "card_number": 1,
+            "front": "What is the definition of a function from a set X to a set Y?",
+            "back": "From notes\nA function from \\(X\\) to \\(Y\\) is a relation \\(f \\subset X \\times Y\\) such that, for every \\(x \\in X\\) , there is exactly one \\(y \\in Y\\) with \\((x,y) \\in f\\).",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A function from a set X to a set Y is a relation that assigns to each element in X exactly one element in Y. Formally, it can be defined as a set of ordered pairs (x, y) where x ∈ X and y ∈ Y, such that for every x in X, there is a unique y in Y.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "A function from X to Y is a relation f ⊂ X × Y.",
+                  "status": "supported",
+                  "page": 63,
+                  "quote": "A function from𝑋 to𝑌 is a relation𝑓⊂ 𝑋×𝑌",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "For every x ∈ X, there is exactly one y ∈ Y with (x,y) ∈ f.",
+                  "status": "supported",
+                  "page": 63,
+                  "quote": "for every𝑥∈ 𝑋, there is exactly one𝑦∈𝑌 with(𝑥,𝑦)∈ 𝑓.",
+                  "quote_verified": true
+                }
+              ],
+              "supported": 2,
+              "total": 2,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "definition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 1,
+            "difficulty": 1
+          },
+          {
+            "card_number": 2,
+            "front": "What are the conditions for a function f from X to Y to be injective, surjective, and bijective?",
+            "back": "From notes\n\\(f \\text{ is injective if } \\forall x_1,x_2 \\in X, f(x_1)=f(x_2) \\Rightarrow x_1=x_2. \\)\n\\(f \\text{ is surjective if } f(X)=Y.\\)\nThe function \\(f\\) is bijective if it is both injective and surjective.",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A function f from set X to set Y is:\n\n1. **Injective (One-to-One)**: For every a1, a2 in X, if f(a1) = f(a2), then a1 = a2. This means no two different elements in X map to the same element in Y.\n\n2. **Surjective (Onto)**: For every element b in Y, there exists at least one element a in X such that f(a) = b. This means every element in Y is covered by the function.\n\n3. **Bijective**: A function is bijective if it is both injective and surjective. This means there is a one-to-one correspondence between elements of X and Y.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "f is injective if ∀x1,x2 ∈ X, f(x1)=f(x2) ⇒ x1=x2.",
+                  "status": "supported",
+                  "page": 64,
+                  "quote": "f is injective (one-to-one) if ∀x1,x2∈X: f(x1) = f(x2) =⇒ x1 = x2.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "f is surjective if f(X)=Y.",
+                  "status": "supported",
+                  "page": 64,
+                  "quote": "f is surjective (onto) if f(X) = Y.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "The function f is bijective if it is both injective and surjective.",
+                  "status": "supported",
+                  "page": 64,
+                  "quote": "f is bijective if f is injective and surjective.",
+                  "quote_verified": true
+                }
+              ],
+              "supported": 3,
+              "total": 3,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": false,
+            "card_type_label": "theorem_condition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 3
+          },
+          {
+            "card_number": 3,
+            "front": "What is the inverse function of a bijection f from X to Y, and how is it defined?",
+            "back": "From notes\nIf \\(f : X \\to Y\\) is a bijection, its inverse function \\(f^{-1} : Y \\to X\\) is the inverse relation of \\(f\\) defined by \\(f^{-1}(y) = x \\iff f(x) = y\\).",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The inverse function of a bijection f from X to Y is a function f^{-1} from Y to X such that for every element y in Y, f^{-1}(f(x)) = x for all x in X, and f(f^{-1}(y)) = y for all y in Y. It is defined as the function that reverses the mapping of f, effectively swapping the roles of the input and output.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "If f : X → Y is a bijection, its inverse function f^{-1} : Y → X is the inverse relation of f.",
+                  "status": "supported",
+                  "page": 67,
+                  "quote": "The inverse function f^{-1} : Y → X is the inverse relation of f.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "f^{-1}(y) = x iff f(x) = y.",
+                  "status": "supported",
+                  "page": 67,
+                  "quote": "f^{-1}(y) = x ⇐⇒ f(x) = y.",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 2,
+              "total": 2,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": true,
+            "card_type_label": "definition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 1,
+            "difficulty": 3
+          },
+          {
+            "card_number": 4,
+            "front": "Why is the composition of two injective functions injective, and the composition of two surjective functions surjective?",
+            "back": "From notes\nIf \\(f : X \\to Y\\) and \\(g : Y \\to Z\\) are functions, then:\n(i) If \\(f\\) and \\(g\\) are injective, then \\(g \\circ f\\) is injective because if \\(g(f(x_1)) = g(f(x_2))\\) then injectivity of \\(g\\) implies \\(f(x_1) = f(x_2)\\) and injectivity of \\(f\\) implies \\(x_1 = x_2\\).\n(ii) If \\(f\\) and \\(g\\) are surjective, then \\(g \\circ f\\) is surjective since for each \\(z \\in Z\\) there is \\(y \\in Y\\) with \\(g(y) = z\\) and for that \\(y\\) there is \\(x \\in X\\) with \\(f(x) = y\\).",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The composition of two injective functions is injective because if f: A → B and g: B → C are both injective, then for any x1, x2 in A, if g(f(x1)) = g(f(x2)), then f(x1) must equal f(x2) (since g is injective), which implies x1 = x2 (since f is injective). Similarly, the composition of two surjective functions is surjective because if f: A → B and g: B → C are both surjective, then for any c in C, there exists a b in B such that g(b) = c, and for that b, there exists an a in A such that f(a) = b, ensuring that for every c in C, there is an a in A such that g(f(a)) = c.",
+              "blind_answer_matches": true,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "If f and g are injective, then g ∘ f is injective.",
+                  "status": "supported",
+                  "page": 66,
+                  "quote": "If f and g are injective, then g◦f is injective.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "If g(f(x1)) = g(f(x2)), then f(x1) = f(x2).",
+                  "status": "supported",
+                  "page": 66,
+                  "quote": "if g(f(x1)) = g(f(x2)) then injectivity of g implies f(x1) = f(x2)",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "If f and g are surjective, then g ∘ f is surjective.",
+                  "status": "supported",
+                  "page": 66,
+                  "quote": "If f and g are surjective, then g◦f is surjective.",
+                  "quote_verified": true
+                },
+                {
+                  "claim": "For each z in Z, there is y in Y with g(y) = z.",
+                  "status": "supported",
+                  "page": 66,
+                  "quote": "for each z ∈ Z there is y ∈ Y with g(y) = z",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "For that y, there is x in X with f(x) = y.",
+                  "status": "supported",
+                  "page": 66,
+                  "quote": "for that y there is x ∈ X with f(x) = y",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 5,
+              "total": 5,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": false,
+            "card_type_label": "why_question",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 2,
+            "difficulty": 4
+          },
+          {
+            "card_number": 5,
+            "front": "What are the key properties of images and preimages of sets under a function f from X to Y?",
+            "back": "From notes\nLet \\(f : X \\to Y\\), and let \\(A, B \\subset X\\), \\(C, D \\subset Y\\). Then:\n(i) \\(f(A \\cap B) \\subset f(A) \\cap f(B)\\).\n(ii) \\(f(A \\cup B) = f(A) \\cup f(B)\\).\n(iii) \\(A \\subset f^{-1}(f(A))\\).\n(iv) \\(f^{-1}(C \\cap D) = f^{-1}(C) \\cap f^{-1}(D)\\).\n(v) \\(f^{-1}(C \\cup D) = f^{-1}(C) \\cup f^{-1}(D)\\).\n(vi) \\(f(f^{-1}(C)) \\subset C\\).",
+            "self_contained": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The key properties of images and preimages of sets under a function f from X to Y include:\n\n1. **Image of a Set**: For any subset A of X, the image of A under f, denoted f(A), is defined as f(A) = { f(x) | x ∈ A }. \n\n2. **Preimage of a Set**: For any subset B of Y, the preimage of B under f, denoted f⁻¹(B), is defined as f⁻¹(B) = { x ∈ X | f(x) ∈ B }.\n\n3. **Image of the Whole Set**: The image of the entire set X is the range of the function, which is a subset of Y.\n\n4. **Preimage of the Empty Set**: The preimage of the empty set is always empty, i.e., f⁻¹(∅) = ∅.\n\n5. **Image of the Empty Set**: The image of the empty set is also empty, i.e., f(∅) = ∅.\n\n6. **Inclusion Properties**: If A ⊆ B, then f(A) ⊆ f(B). Conversely, if f is injective, then f(A) = f(B) implies A = B.\n\n7. **Union and Intersection**: f(A ∪ B) = f(A) ∪ f(B) and f(A ∩ B) ⊆ f(A) ∩ f(B). For preimages, f⁻¹(B ∪ C) = f⁻¹(B) ∪ f⁻¹(C) and f⁻¹(B ∩ C) = f⁻¹(B) ∩ f⁻¹(C).\n\n8. **Composition**: If g: Y → Z is another function, then g(f(A)) = g(f(A)) for any subset A of X.",
+              "blind_answer_matches": false,
+              "passes": true
+            },
+            "faithfulness": {
+              "claims": [
+                {
+                  "claim": "If A and B are subsets of X, then f(A ∩ B) ⊆ f(A) ∩ f(B).",
+                  "status": "supported",
+                  "page": 69,
+                  "quote": "f(A ∩ B) ⊂ f(A) ∩ f(B).",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "If A and B are subsets of X, then f(A ∪ B) = f(A) ∪ f(B).",
+                  "status": "supported",
+                  "page": 69,
+                  "quote": "f(A ∪ B) = f(A) ∪ f(B).",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "A is a subset of f^{-1}(f(A)).",
+                  "status": "supported",
+                  "page": 69,
+                  "quote": "A ⊂ f^{-1}(f(A)).",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "If C and D are subsets of Y, then f^{-1}(C ∩ D) = f^{-1}(C) ∩ f^{-1}(D).",
+                  "status": "supported",
+                  "page": 69,
+                  "quote": "f^{-1}(C ∩ D) = f^{-1}(C) ∩ f^{-1}(D).",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "If C and D are subsets of Y, then f^{-1}(C ∪ D) = f^{-1}(C) ∪ f^{-1}(D).",
+                  "status": "supported",
+                  "page": 69,
+                  "quote": "f^{-1}(C ∪ D) = f^{-1}(C) ∪ f^{-1}(D).",
+                  "quote_verified": false
+                },
+                {
+                  "claim": "f(f^{-1}(C)) is a subset of C.",
+                  "status": "supported",
+                  "page": 69,
+                  "quote": "f(f^{-1}(C)) ⊂ C.",
+                  "quote_verified": false
+                }
+              ],
+              "supported": 6,
+              "total": 6,
+              "unsupported": 0,
+              "contradicts": 0
+            },
+            "front_leaks_answer": false,
+            "atomic": false,
+            "card_type_label": "theorem_condition",
+            "understanding_vs_rote": "understanding",
+            "trivial": false,
+            "back_length_sentences": 7,
+            "difficulty": 4
+          }
+        ],
+        "duplicate_pairs": [],
+        "duplicate_rate": 0.0,
+        "material_type": "mixed",
+        "count_match": true,
+        "coverage_key_concepts": [
+          "Definition of a function",
+          "Domain and codomain",
+          "Injective functions",
+          "Surjective functions",
+          "Bijective functions",
+          "Composition of functions",
+          "Inverse functions",
+          "Graph of a function",
+          "Range and image",
+          "Preimage of a set",
+          "Properties of injective functions",
+          "Properties of surjective functions",
+          "Theorem on composition",
+          "Examples of functions",
+          "Determining function equality"
+        ],
+        "coverage_covered": [
+          "Definition of a function",
+          "Injective functions",
+          "Surjective functions",
+          "Bijective functions",
+          "Composition of functions",
+          "Inverse functions",
+          "Range and image",
+          "Preimage of a set",
+          "Properties of injective functions",
+          "Properties of surjective functions",
+          "Theorem on composition"
+        ],
+        "coverage_ratio": 0.7333333333333333,
+        "difficulty_spearman": 0.9486832980505138
+      },
+      "summary": {
+        "pct_self_contained": 1.0,
+        "avg_faithfulness": 1.0,
+        "pct_front_leaks": 0.0,
+        "pct_atomic": 0.4,
+        "pct_understanding": 1.0,
+        "pct_trivial": 0.0,
+        "duplicate_rate": 0.0,
+        "coverage_ratio": 0.7333333333333333,
+        "difficulty_spearman": 0.9486832980505138,
+        "avg_back_length": 2.6,
+        "card_type_distribution": {
+          "definition": 0.4,
+          "theorem_condition": 0.4,
+          "why_question": 0.2
+        },
+        "count_match": true
+      },
+      "revised_self_contained": {
+        "items": [
+          {
+            "id": 1,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A function from a set X to a set Y is a relation that assigns to each element in X exactly one element in Y."
+            },
+            "passes": true
+          },
+          {
+            "id": 2,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "A function f from X to Y is injective if different elements in X map to different elements in Y. It is surjective if every element in Y is the image of at least one element in X. It is bijective if it is both injective and surjective."
+            },
+            "passes": true
+          },
+          {
+            "id": 3,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The inverse function of a bijection f from X to Y is a function f⁻¹ from Y to X such that for every element y in Y, f⁻¹(y) gives the unique element x in X where f(x) = y. It is defined by the property that f(f⁻¹(y)) = y for all y in Y and f⁻¹(f(x)) = x for all x in X."
+            },
+            "passes": true
+          },
+          {
+            "id": 4,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The composition of two injective functions is injective because if f and g are injective, then f(g(x1)) = f(g(x2)) implies g(x1) = g(x2), which in turn implies x1 = x2. Similarly, the composition of two surjective functions is surjective because for any element in the codomain, there exists an element in the domain that maps to it through both functions."
+            },
+            "passes": true
+          },
+          {
+            "id": 5,
+            "result": {
+              "understandable": true,
+              "whats_missing": "",
+              "blind_answer": "The key properties of images and preimages under a function f from X to Y include:\n\n1. **Image of a Set**: For any subset A of X, the image f(A) is defined as {f(x) | x ∈ A}. \n2. **Preimage of a Set**: For any subset B of Y, the preimage f⁻¹(B) is defined as {x ∈ X | f(x) ∈ B}.\n3. **Image of the Empty Set**: The image of the empty set is always the empty set, i.e., f(∅) = ∅.\n4. **Preimage of the Empty Set**: The preimage of the empty set is also the empty set, i.e., f⁻¹(∅) = ∅.\n5. **Inclusion Relations**: If A ⊆ B, then f(A) ⊆ f(B). Conversely, if f is injective, then f⁻¹(B) ⊆ f⁻¹(A) if B ⊆ A.\n6. **Image of the Whole Set**: The image of the entire set X is f(X), which is a subset of Y.\n7. **Preimage of the Whole Set**: The preimage of the entire set Y is f⁻¹(Y), which is the entire set X if f is surjective."
+            },
+            "passes": true
+          }
+        ],
+        "passed": 5,
+        "total": 5
+      }
+    }
+  ],
+  "calibration": {
+    "items": [
+      {
+        "id": "empty-set",
+        "front": "What is the empty set and how is it different from the set containing the empty set?",
+        "expected": true,
+        "result": {
+          "understandable": true,
+          "whats_missing": "",
+          "blind_answer": "The empty set, denoted as ∅, is a set that contains no elements. The set containing the empty set, denoted as {∅}, is a set that contains one element, which is the empty set itself. Thus, ∅ has zero elements, while {∅} has one element."
+        },
+        "matches": true
+      },
+      {
+        "id": "inverse",
+        "front": "Under what conditions does the inverse relation of a function define an inverse function?",
+        "expected": true,
+        "result": {
+          "understandable": true,
+          "whats_missing": "",
+          "blind_answer": "The inverse relation of a function defines an inverse function if the original function is bijective, meaning it is both injective (one-to-one) and surjective (onto)."
+        },
+        "matches": true
+      },
+      {
+        "id": "injective",
+        "front": "What does injective mean for a function?",
+        "expected": true,
+        "result": {
+          "understandable": true,
+          "whats_missing": "",
+          "blind_answer": "A function is injective (or one-to-one) if different inputs map to different outputs, meaning that if f(a) = f(b), then a must equal b."
+        },
+        "matches": true
+      },
+      {
+        "id": "power-set",
+        "front": "What is the power set of a set?",
+        "expected": true,
+        "result": {
+          "understandable": true,
+          "whats_missing": "",
+          "blind_answer": "The power set of a set is the set of all possible subsets of that set, including the empty set and the set itself."
+        },
+        "matches": true
+      },
+      {
+        "id": "hidden-formula",
+        "front": "What does this formula mean?",
+        "expected": false,
+        "result": {
+          "understandable": false,
+          "whats_missing": "the specific formula being referenced",
+          "blind_answer": "The meaning of a formula depends on its context and the variables involved."
+        },
+        "matches": true
+      },
+      {
+        "id": "hidden-step",
+        "front": "Why does the last step hold?",
+        "expected": false,
+        "result": {
+          "understandable": false,
+          "whats_missing": "the specific last step being referenced",
+          "blind_answer": "The last step holds due to the application of a specific theorem, property, or rule that justifies the transition from one line of reasoning to the next."
+        },
+        "matches": true
+      },
+      {
+        "id": "hidden-function",
+        "front": "Is f injective?",
+        "expected": false,
+        "result": {
+          "understandable": false,
+          "whats_missing": "The definition or specific function f being referenced",
+          "blind_answer": "A function f is injective if different inputs map to different outputs."
+        },
+        "matches": true
+      },
+      {
+        "id": "hidden-sets",
+        "front": "What are the properties of S and T mentioned above?",
+        "expected": false,
+        "result": {
+          "understandable": false,
+          "whats_missing": "The definitions or descriptions of sets S and T",
+          "blind_answer": "The properties of S and T cannot be identified without knowing what S and T are."
+        },
+        "matches": true
+      }
+    ],
+    "matched": 8,
+    "total": 8,
+    "scope": "Eight hand-labelled diagnostics, not independent broad validation.",
+    "overlaps_prompt_examples": true
+  },
+  "manual_review": {
+    "reviewer": "Coding assistant local inspection against cited pages; not an independent expert or a general mathematical verifier.",
+    "items": [
+      {
+        "id": "sets-1",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [
+          "redundant_explanation"
+        ],
+        "note": "The explanation repeats the membership notation already given.",
+        "item_sha256": "47b3ae103722e5344c8d4c1724be0bc64dbdc510263aea17d66407940b4f2943"
+      },
+      {
+        "id": "sets-2",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [
+          "redundant_explanation"
+        ],
+        "note": "The explanation restates the subset definition.",
+        "item_sha256": "1d8da9997b4397cac8691e77411248fee361495bacf39cf31fd716145da169c1"
+      },
+      {
+        "id": "sets-3",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [],
+        "note": "",
+        "item_sha256": "3f4a2c30aa0d9bb61788b2edf77dbc0d8169c08c7e95f28c69d98a684b7e7d29"
+      },
+      {
+        "id": "sets-4",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [
+          "formatting"
+        ],
+        "note": "Punctuation and the word “and” are encoded as inline math parts; inspect the rendered sentence.",
+        "item_sha256": "eff240d5ad1ece126b73a46e8548643f8268c97c49a31fab62715edef5bf587e"
+      },
+      {
+        "id": "sets-5",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [
+          "redundant_explanation"
+        ],
+        "note": "The explanation repeats the power-set definition.",
+        "item_sha256": "37a6cd49b749ea105c03cf7ca163be226bac71ca8c0b7c2db7f89f6b678043cf"
+      },
+      {
+        "id": "induction-1",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [],
+        "note": "",
+        "item_sha256": "b71df7dffe629377570c39d1c26cfe3b908f392803c5dc36311893f78671fb56"
+      },
+      {
+        "id": "induction-2",
+        "atomic": false,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [
+          "multiple_targets",
+          "source_role"
+        ],
+        "note": "Combines the definition of divisibility with its use in induction. The generalized method summary is mixed into From notes.",
+        "item_sha256": "49eb9b8bd2c29a1fdbe6c4319bb1606003161493d93512ae7df26335a1b29f89"
+      },
+      {
+        "id": "induction-3",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [],
+        "note": "",
+        "item_sha256": "6e965149bc5496dbfeafcbd799a5693d4b942ce2b5a8e7a6ff2a885e24dd6e95"
+      },
+      {
+        "id": "induction-4",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [],
+        "note": "",
+        "item_sha256": "d7d6bedca98234e2d3dd0b96493e3913e985141e08015783f6683953668e1463"
+      },
+      {
+        "id": "induction-5",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [],
+        "note": "",
+        "item_sha256": "6a1aed8372334ddd2b1165e4c1c126e1a4f1e398972fdbd9f665dfc2a6c854aa"
+      },
+      {
+        "id": "numbers-1",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [],
+        "note": "",
+        "item_sha256": "5b0565f78f20385f8ee55b26beb4d7392b66f9dae6190492cf275b984fc05255"
+      },
+      {
+        "id": "numbers-2",
+        "atomic": false,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [
+          "multiple_targets",
+          "incomplete_reasoning"
+        ],
+        "note": "Asks both existence and irrationality of sqrt(2). Irrationality is asserted as proved elsewhere, rather than explained; page 23 only points to a previous lecture.",
+        "item_sha256": "3b77fe9e6a263b2b63b1b440cbe951e1f6be59c040cca9600c57445d26e3c017"
+      },
+      {
+        "id": "numbers-3",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [
+          "extra_claim"
+        ],
+        "note": "The explanation calls the midpoint argument density in the reals; proving a rational between two rationals alone does not establish a rational in every real interval.",
+        "item_sha256": "f4e3e10304a8fbd04cab021c7b8780612dceed8c1d9e01fd752a2eaaa4e57511"
+      },
+      {
+        "id": "numbers-4",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [],
+        "note": "",
+        "item_sha256": "3cebf967af035412fd689ec55197f146378faba8ab9b1ff1036a497f90304fb3"
+      },
+      {
+        "id": "numbers-5",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [
+          "wrong_citation"
+        ],
+        "note": "The base-b uniqueness theorem is on original page 26; the generated card cites page 27. Its mathematics is supported elsewhere in the selected pages, but the exact citation is wrong.",
+        "item_sha256": "e293b25bc836157efcdeffe4255ff73719343ae9d22400cea9ef9672a4f06ebe"
+      },
+      {
+        "id": "functions-1",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [],
+        "note": "",
+        "item_sha256": "c9f143946a53ce27a4da84b7b816cbbf2ebb3c9f996aed15c98877859d2f08a5"
+      },
+      {
+        "id": "functions-2",
+        "atomic": false,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [
+          "multiple_targets"
+        ],
+        "note": "Three distinct conditions: injectivity, surjectivity and bijectivity. Split the learning targets.",
+        "item_sha256": "eb0212bbf7d1b9feb3c8bf0b07e129b77ac0a8b17a49e7e984535dbdf02614e1"
+      },
+      {
+        "id": "functions-3",
+        "atomic": true,
+        "self_contained": true,
+        "critical_math_error_found": false,
+        "flags": [],
+        "note": "",
+        "item_sha256": "016add1d500bcc3a80ca9937d1009c2ac89bcedd70acd64a3e49e94a8ab238db"
+      },
+      {
+        "id": "functions-4",
+        "atomic": false,
+        "self_contained": false,
+        "critical_math_error_found": false,
+        "flags": [
+          "multiple_targets",
+          "missing_context"
+        ],
+        "note": "Combines two independent composition proofs. The front should specify composable maps or compatible domain/codomain sets.",
+        "item_sha256": "052971c44a1f21d28038ce48f3991b0c00f54cd321562bda036d90f8fc781b94"
+      },
+      {
+        "id": "functions-5",
+        "atomic": false,
+        "self_contained": false,
+        "critical_math_error_found": false,
+        "flags": [
+          "multiple_targets",
+          "missing_context"
+        ],
+        "note": "A broad request for “key properties” has no defined target list; the back lists six separate image/preimage properties.",
+        "item_sha256": "c0e3aee7ab9469ee1268d83398e05aa9813ae065fa956259231ea1a10f5a91ba"
+      }
+    ],
+    "summary": {
+      "self_contained": 18,
+      "atomic": 15,
+      "critical_math_errors_found": 0,
+      "wrong_citations": 1,
+      "incomplete_reasoning": 1,
+      "total": 20
+    },
+    "regression_scope": "The new sample contains a correctly worded power-of-n subset question, but omits the previous chessboard target. It does not demonstrate that the 2^n→2n failure is fixed.",
+    "decision": "Not ready to promote: five multi-target cards, one wrong citation and an incomplete requested explanation. No critical mathematical error was found in this small inspection; this is not a correctness guarantee."
+  },
+  "metrics": {
+    "cards_generated": 20,
+    "cards_requested": 20,
+    "cards": {
+      "pct_self_contained": 0.7,
+      "avg_faithfulness": 0.8358333333333332,
+      "pct_atomic": 0.7,
+      "pct_front_leaks": 0.0,
+      "pct_understanding": 1.0,
+      "pct_trivial": 0.0,
+      "duplicate_rate": 0.0,
+      "coverage_ratio": 0.49404761904761907
+    },
+    "revised_self_contained": {
+      "passed": 18,
+      "total": 20
+    }
+  },
+  "generation_manifest": {
+    "sets": {
+      "prompt_hashes": {
+        "study-system.md": "12f8ee163d14de5561e44a5631c511a1ffa6ec56494b80a8730a90576660e0d0",
+        "flashcards.md": "c8b70d778d905befcc038c6dd0656f9382e0aa01a4aac11cc8a599c303d95703",
+        "formula-guide.md": "711ce22cc416a533b80ac1fb2d2808b8c059620bfb677237d90f86aa0b038fff",
+        "math-patterns.md": "563258479e3e82c4b3d870e6522fea5b26f069b33aee971d825f80f26b9d10a5",
+        "context.md": "71b2434d229131a2de88b960645d030e9103e48e2986190edc24360cbb8acbc5",
+        "attachment-label.md": "5000f795e2a3873074909a0ab754393877ca157ef5e3697062eee5b5d4b2b570",
+        "comment.md": "c36ba6c5573806c4bd3e737b8ca60e67d247f5519402b1f3586bccd572ef6683",
+        "difficulty.md": "586aa4d81291f5b0cf35f87400f595c720e5b9c10b3ba7b3863e8d82aa27342b"
+      },
+      "source_sha256": "8e46d4b70ca2d50abc27b346abe9994b71c9cf4d350df1662a5c789964a19a0c",
+      "selected_pdf_sha256": "3ecb5c1670d974c7371be6e88012cd90a73d4b77920172b316f95f00e8b185e5",
+      "usage": {
+        "input_tokens": 12052,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 661,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 12713
+      },
+      "cost_usd": 0.005878400000000001,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "site_guards_passed": true
+    },
+    "induction": {
+      "prompt_hashes": {
+        "study-system.md": "12f8ee163d14de5561e44a5631c511a1ffa6ec56494b80a8730a90576660e0d0",
+        "flashcards.md": "c8b70d778d905befcc038c6dd0656f9382e0aa01a4aac11cc8a599c303d95703",
+        "formula-guide.md": "711ce22cc416a533b80ac1fb2d2808b8c059620bfb677237d90f86aa0b038fff",
+        "math-patterns.md": "563258479e3e82c4b3d870e6522fea5b26f069b33aee971d825f80f26b9d10a5",
+        "context.md": "71b2434d229131a2de88b960645d030e9103e48e2986190edc24360cbb8acbc5",
+        "attachment-label.md": "5000f795e2a3873074909a0ab754393877ca157ef5e3697062eee5b5d4b2b570",
+        "comment.md": "c36ba6c5573806c4bd3e737b8ca60e67d247f5519402b1f3586bccd572ef6683",
+        "difficulty.md": "586aa4d81291f5b0cf35f87400f595c720e5b9c10b3ba7b3863e8d82aa27342b"
+      },
+      "source_sha256": "8e46d4b70ca2d50abc27b346abe9994b71c9cf4d350df1662a5c789964a19a0c",
+      "selected_pdf_sha256": "01da4153950a7a419ac0268232c2d615e79cd7b9ad7febc5403abbf1211c7293",
+      "usage": {
+        "input_tokens": 12322,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 734,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 13056
+      },
+      "cost_usd": 0.0061032000000000005,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "site_guards_passed": true
+    },
+    "numbers": {
+      "prompt_hashes": {
+        "study-system.md": "12f8ee163d14de5561e44a5631c511a1ffa6ec56494b80a8730a90576660e0d0",
+        "flashcards.md": "c8b70d778d905befcc038c6dd0656f9382e0aa01a4aac11cc8a599c303d95703",
+        "formula-guide.md": "711ce22cc416a533b80ac1fb2d2808b8c059620bfb677237d90f86aa0b038fff",
+        "math-patterns.md": "563258479e3e82c4b3d870e6522fea5b26f069b33aee971d825f80f26b9d10a5",
+        "context.md": "71b2434d229131a2de88b960645d030e9103e48e2986190edc24360cbb8acbc5",
+        "attachment-label.md": "5000f795e2a3873074909a0ab754393877ca157ef5e3697062eee5b5d4b2b570",
+        "comment.md": "c36ba6c5573806c4bd3e737b8ca60e67d247f5519402b1f3586bccd572ef6683",
+        "difficulty.md": "586aa4d81291f5b0cf35f87400f595c720e5b9c10b3ba7b3863e8d82aa27342b"
+      },
+      "source_sha256": "8e46d4b70ca2d50abc27b346abe9994b71c9cf4d350df1662a5c789964a19a0c",
+      "selected_pdf_sha256": "de75c0065416fa6ab0c093c9c70fc1f7a0bfa95422509108b4c6def31a7d0034",
+      "usage": {
+        "input_tokens": 12847,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 691,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 13538
+      },
+      "cost_usd": 0.006244400000000001,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "site_guards_passed": true
+    },
+    "functions": {
+      "prompt_hashes": {
+        "study-system.md": "12f8ee163d14de5561e44a5631c511a1ffa6ec56494b80a8730a90576660e0d0",
+        "flashcards.md": "c8b70d778d905befcc038c6dd0656f9382e0aa01a4aac11cc8a599c303d95703",
+        "formula-guide.md": "711ce22cc416a533b80ac1fb2d2808b8c059620bfb677237d90f86aa0b038fff",
+        "math-patterns.md": "563258479e3e82c4b3d870e6522fea5b26f069b33aee971d825f80f26b9d10a5",
+        "context.md": "71b2434d229131a2de88b960645d030e9103e48e2986190edc24360cbb8acbc5",
+        "attachment-label.md": "5000f795e2a3873074909a0ab754393877ca157ef5e3697062eee5b5d4b2b570",
+        "comment.md": "c36ba6c5573806c4bd3e737b8ca60e67d247f5519402b1f3586bccd572ef6683",
+        "difficulty.md": "586aa4d81291f5b0cf35f87400f595c720e5b9c10b3ba7b3863e8d82aa27342b"
+      },
+      "source_sha256": "8e46d4b70ca2d50abc27b346abe9994b71c9cf4d350df1662a5c789964a19a0c",
+      "selected_pdf_sha256": "fc8c06c5745c4871ba95a8ebcca738ddbd3eb0997e95f2439495f71844a32994",
+      "usage": {
+        "input_tokens": 17552,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1057,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 18609
+      },
+      "cost_usd": 0.008712,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "site_guards_passed": true
+    }
+  },
+  "calls": [
+    {
+      "name": "generate-sets-flashcards",
+      "digest": "c112bdec0dbf5237f6e395efb6ea23b1d6ec6e2adda4bef646dba5c6f3d1f27b",
+      "reserved_usd": 0.01210244,
+      "status": "completed",
+      "model": "gpt-4.1-mini",
+      "cost_usd": 0.005878400000000001,
+      "usage": {
+        "input_tokens": 12052,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 661,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 12713
+      }
+    },
+    {
+      "name": "generate-induction-flashcards",
+      "digest": "143e6934e50a197a9c615202e0c0339b71bb139974d3e54b43353940d1b9fcca",
+      "reserved_usd": 0.01222168,
+      "status": "completed",
+      "model": "gpt-4.1-mini",
+      "cost_usd": 0.0061032000000000005,
+      "usage": {
+        "input_tokens": 12322,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 734,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 13056
+      }
+    },
+    {
+      "name": "generate-numbers-flashcards",
+      "digest": "f35b76e4cd78ac79e393d6dbc8b737031aa05abd2bb4d21f95501dd3ac6aff41",
+      "reserved_usd": 0.01245268,
+      "status": "completed",
+      "model": "gpt-4.1-mini",
+      "cost_usd": 0.006244400000000001,
+      "usage": {
+        "input_tokens": 12847,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 691,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 13538
+      }
+    },
+    {
+      "name": "generate-functions-flashcards",
+      "digest": "51573643f07fc8cbf694854be641eb854fd79d034d1ce68ae0bc7da3111397ca",
+      "reserved_usd": 0.014522440000000003,
+      "status": "completed",
+      "model": "gpt-4.1-mini",
+      "cost_usd": 0.008712,
+      "usage": {
+        "input_tokens": 17552,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1057,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 18609
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "bc18f279dc5be628e0640b8080af6ec7402aac953288f5a6897585282b92c250",
+      "reserved_usd": 0.0004483125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0001044,
+      "usage": {
+        "input_tokens": 376,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 80,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 456
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "de8572b8d10dd998474e52e90d98849ade4b6ab3ec5385a66c6dbbb83334f883",
+      "reserved_usd": 0.00044775,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.655e-05,
+      "usage": {
+        "input_tokens": 373,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 51,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 424
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "3ece7a9bac58ecf878c9f4e7a6fbc2c0069c886468f679e82cc0981c10e1142f",
+      "reserved_usd": 0.000446625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.565e-05,
+      "usage": {
+        "input_tokens": 367,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 51,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 418
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "8341436e4d74eacda6545eaaf4491c387ad51b6e377ff6cb5300985d5e52d587",
+      "reserved_usd": 0.000446625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.025e-05,
+      "usage": {
+        "input_tokens": 367,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 42,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 409
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "4eb39e5d0f1ee59e5eeae41591c45825a8c2668d0518da816fb3aceef2290aba",
+      "reserved_usd": 0.0004460625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 7.620000000000001e-05,
+      "usage": {
+        "input_tokens": 364,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 36,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 400
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "e2c4b0c8756c8641cf7f70699f416878cf1d1a1faedce314e7073e456b34e2ad",
+      "reserved_usd": 0.00044625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.715e-05,
+      "usage": {
+        "input_tokens": 365,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 54,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 419
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "7367a1f82d981fecb1b3faf2d03116417139dcc43f36ad66d5383cd58473c192",
+      "reserved_usd": 0.000445875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 7.785e-05,
+      "usage": {
+        "input_tokens": 363,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 39,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 402
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "04905f0b06ed2a1aeaaa0778e83b944c3cb630159fd1380331804eedf6c4e02d",
+      "reserved_usd": 0.000447,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.115000000000001e-05,
+      "usage": {
+        "input_tokens": 369,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 43,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 412
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "18f01e4872b9870affb8d36507d59026bc3966040acfe6d885404929b3905a85",
+      "reserved_usd": 0.0004400625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 7.290000000000001e-05,
+      "usage": {
+        "input_tokens": 334,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 38,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 372
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "8ca2e8d81deb5ac3265690e5982d21b60bdc05a51c2bb8ea1767bc737d22c82e",
+      "reserved_usd": 0.00164325,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0004749,
+      "usage": {
+        "input_tokens": 2706,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 115,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2821
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "53061e2f9a84b90b81f29330f2e70076ed07ab12db6a1c88bd415fc091ac13cb",
+      "reserved_usd": 0.00044025,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 7.965000000000001e-05,
+      "usage": {
+        "input_tokens": 335,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 49,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 384
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "85a2182d91c9c008dad7b7db0ef945b37715c8d5307f6e0ab0650925860667b1",
+      "reserved_usd": 0.0016438125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00048719999999999997,
+      "usage": {
+        "input_tokens": 2708,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 135,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2843
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "40b42d0453f7b9818e0f5d727dea1d6fdd6d1c68be6eec56365c06a9bbd30f1f",
+      "reserved_usd": 0.0004404375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 9.84e-05,
+      "usage": {
+        "input_tokens": 336,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 80,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 416
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "01e0c6f86f3f94558b255b643d8eb1a5c5db1799caa8068c139c0256cfa9719a",
+      "reserved_usd": 0.0016494375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00037515,
+      "usage": {
+        "input_tokens": 2741,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2048
+        },
+        "output_tokens": 196,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2937
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "561124f0d63c1195772e6b337abe6b808f556306a762535ff2ea81a0915fc2b5",
+      "reserved_usd": 0.000442125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00010575,
+      "usage": {
+        "input_tokens": 345,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 90,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 435
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "40f0b63d34258d0895d80d9a22850b4dfa56c965bd968562c8ef10e6749916f4",
+      "reserved_usd": 0.0016490625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0004896,
+      "usage": {
+        "input_tokens": 2732,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 133,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2865
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "9a23208aab54396f60afc5cbbb56f623c6595edfe061192597f74fa71d852018",
+      "reserved_usd": 0.0004396875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 7.5e-05,
+      "usage": {
+        "input_tokens": 332,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 42,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 374
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "e39439916a2f6b7f661ffac742d4ca7298709c172a41d9b79195487c6e4533f9",
+      "reserved_usd": 0.0016475625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00051345,
+      "usage": {
+        "input_tokens": 2727,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 174,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2901
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "a0cef68b18fd2c2a84734d3950ae9d054ddbcf65f0601a6eec8204deed8d5a9f",
+      "reserved_usd": 0.0001216875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.29e-05,
+      "usage": {
+        "input_tokens": 254,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 262
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "8c5b96b06b8225155985800222f52a987fe290b31b2437533a73d525f4f6f470",
+      "reserved_usd": 0.0001243125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.4999999999999996e-05,
+      "usage": {
+        "input_tokens": 268,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 276
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "ed3f6fa32f768bee2a5d3d052cdb9b2dba0e1a79d2b08a2789ff79537ee86247",
+      "reserved_usd": 0.0001355625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.459999999999999e-05,
+      "usage": {
+        "input_tokens": 332,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 340
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "b000fa65025251960f7ff89b33213d4b88648d4ebc35d8e4901de25b46a70f9d",
+      "reserved_usd": 0.000130125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.905e-05,
+      "usage": {
+        "input_tokens": 295,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 303
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "6e0d71322eeac7080488ceccb74f432a7ed28c46b5d2e3daf39a3ca793932c00",
+      "reserved_usd": 0.00012675,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.68e-05,
+      "usage": {
+        "input_tokens": 280,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 288
+      }
+    },
+    {
+      "name": "judge-_BatchCardProperties",
+      "digest": "06ba7d3fa027533269c90de5b12e094cda1ec63a02af08dd636800811b83efdd",
+      "reserved_usd": 0.0008180625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00031379999999999993,
+      "usage": {
+        "input_tokens": 960,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 283,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1243
+      }
+    },
+    {
+      "name": "judge-_DifficultyResult",
+      "digest": "647e71e737bb81f2d3b01809926227ef60ad2c809d3a204d6ecb07d6942ebe9a",
+      "reserved_usd": 0.0003384375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0001098,
+      "usage": {
+        "input_tokens": 412,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 80,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 492
+      }
+    },
+    {
+      "name": "duplicates",
+      "digest": "0a820f06ca08ae594a97b61464a4688f8e99eda6ff36ecc4d3c4b81fa148a788",
+      "reserved_usd": 1.2208e-05,
+      "status": "completed",
+      "model": "text-embedding-3-small",
+      "cost_usd": 1.8400000000000002e-06,
+      "usage": {
+        "prompt_tokens": 92,
+        "total_tokens": 92
+      }
+    },
+    {
+      "name": "judge-_MaterialTypeResult",
+      "digest": "3e093302d929501a7ef4672a4dd6f7cd6358bc5cb48dacbf8f9cfa25e65a22c0",
+      "reserved_usd": 0.001468125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00044295,
+      "usage": {
+        "input_tokens": 2477,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 119,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2596
+      }
+    },
+    {
+      "name": "judge-_CoverageResult",
+      "digest": "f2da7a0dfe4565c173c470021a7c9987775d97e954a0fe02ea4a86d9066235df",
+      "reserved_usd": 0.001193625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00032835000000000004,
+      "usage": {
+        "input_tokens": 477,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 428,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 905
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "e4f8f4cb3af1efe238cc322972891d14d727fdf1fbf8509a3376813d1b53e668",
+      "reserved_usd": 0.0004479375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.43e-05,
+      "usage": {
+        "input_tokens": 374,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 47,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 421
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "09ef8ed5520cb1b89af1ab0924dd29808ea1ef0d3615bc5e7c3e76db7cbc5a37",
+      "reserved_usd": 0.000448125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 7.905e-05,
+      "usage": {
+        "input_tokens": 375,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 38,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 413
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "814d4e273ba42d9b8b794a52be996ea5a1cb14fe9752a20ba8ac422976b43862",
+      "reserved_usd": 0.0004483125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00010559999999999999,
+      "usage": {
+        "input_tokens": 376,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 82,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 458
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "a47dbbc3be917d6b061681d1d4b3f85467312016b714f5fabe7a880af626646d",
+      "reserved_usd": 0.00045,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 9.855e-05,
+      "usage": {
+        "input_tokens": 385,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 68,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 453
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "92c40070327e9a10ece40f5c63f9fdfe0ac4aeeaf1c0c842af5ec3aa124dcbb4",
+      "reserved_usd": 0.0004475625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.1e-05,
+      "usage": {
+        "input_tokens": 372,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 42,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 414
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "8aaca59ff4a883f3ab83218b4739f832911b422eeba52e5ee274ad98b35a233b",
+      "reserved_usd": 0.0004419375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00011219999999999999,
+      "usage": {
+        "input_tokens": 344,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 101,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 445
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "72e5881ac072ff3054517bcf16c772c92e73982fe281f22e4c8ea56af91da18f",
+      "reserved_usd": 0.0018181875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0007065,
+      "usage": {
+        "input_tokens": 3702,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 252,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3954
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "0e6ef28fca5ffcfa36dc446918bbf004a71360547a569e3ecdce012079e09549",
+      "reserved_usd": 0.000442125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00010155,
+      "usage": {
+        "input_tokens": 345,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 83,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 428
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "e640fa75c58998d3e7e6933dd00e0a8e65cf0d3f0c82996d367022896a2b54bb",
+      "reserved_usd": 0.00181575,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0006610499999999999,
+      "usage": {
+        "input_tokens": 3691,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 179,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3870
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "710093b292bd9320315da896894dd47946876693002acf904a9baaa02804dd9f",
+      "reserved_usd": 0.000443625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00010875,
+      "usage": {
+        "input_tokens": 353,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 93,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 446
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "7ef9499f5d82c66441f6ffd3a88b9fa4131c666a39cb686643b33fd82601202a",
+      "reserved_usd": 0.001807875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00065265,
+      "usage": {
+        "input_tokens": 3655,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 174,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3829
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "03f570bd10770801635611915fe7df8e8f1667c09c20278b0d56688766693bd8",
+      "reserved_usd": 0.0004400625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00013890000000000002,
+      "usage": {
+        "input_tokens": 334,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 148,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 482
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "496c7260deee1e7948d3eb95f0018c1334ac5b31263dfe605c8d87f925d03dd1",
+      "reserved_usd": 0.0018076875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00065985,
+      "usage": {
+        "input_tokens": 3655,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 186,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3841
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "b63845060e610e0da41eb1ce219b2693bdf78a1b15f99f0202f8cc89c5affa83",
+      "reserved_usd": 0.000441375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00010319999999999999,
+      "usage": {
+        "input_tokens": 340,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 87,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 427
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "7aca647ebca8cfe62cc0a1b34c60ceb7e7abe6838cda83b835500b19067fedba",
+      "reserved_usd": 0.001811625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0006755999999999999,
+      "usage": {
+        "input_tokens": 3672,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 208,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3880
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "928827a36e127379566a05d9d091316d1b57c9de457b3129cc0ce7c0d34a3e45",
+      "reserved_usd": 0.00013425,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.234999999999999e-05,
+      "usage": {
+        "input_tokens": 317,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 325
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "89cb68c59609aeccf02edc2ce88fbd05551b53e15dfce85a798f48e53c126fff",
+      "reserved_usd": 0.0001445625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.9699999999999994e-05,
+      "usage": {
+        "input_tokens": 366,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 374
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "799a793aafb35395f7c147dc3332fab204e2d625c383e2ee94486e55d71039a2",
+      "reserved_usd": 0.0001291875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.9199999999999997e-05,
+      "usage": {
+        "input_tokens": 296,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 304
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "95be3182be49cfc79c5dc4f43eb04f6dbb1270cc3f2028875647563f9b69927a",
+      "reserved_usd": 0.000139875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.8049999999999995e-05,
+      "usage": {
+        "input_tokens": 355,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 363
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "a40f56ad6dda90c8be5f38afe755a74821c53057573ef76acf8ae37768e71497",
+      "reserved_usd": 0.000135375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.37e-05,
+      "usage": {
+        "input_tokens": 326,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 334
+      }
+    },
+    {
+      "name": "judge-_BatchCardProperties",
+      "digest": "d7680e098f1811c413c75a16dea72109f3a3159a47be4c345e1115ff63ecbae1",
+      "reserved_usd": 0.0008323125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00032504999999999996,
+      "usage": {
+        "input_tokens": 1035,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 283,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1318
+      }
+    },
+    {
+      "name": "judge-_DifficultyResult",
+      "digest": "a142810e68b1645d007699b52a930efed7818f2e8a0ba7fae59ee28bc249a950",
+      "reserved_usd": 0.000345,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00011489999999999999,
+      "usage": {
+        "input_tokens": 446,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 80,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 526
+      }
+    },
+    {
+      "name": "duplicates",
+      "digest": "69490eee1fda7a94ea586ee166bef867d72e37649bf38368c0f81a6f48edc9d4",
+      "reserved_usd": 1.3048000000000001e-05,
+      "status": "completed",
+      "model": "text-embedding-3-small",
+      "cost_usd": 2.5400000000000002e-06,
+      "usage": {
+        "prompt_tokens": 127,
+        "total_tokens": 127
+      }
+    },
+    {
+      "name": "judge-_MaterialTypeResult",
+      "digest": "0812c9ae683db17522e771c03295ad61de508cc8412f00cb710ed31b4576ebf8",
+      "reserved_usd": 0.0016321875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00058275,
+      "usage": {
+        "input_tokens": 3421,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 116,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3537
+      }
+    },
+    {
+      "name": "judge-_CoverageResult",
+      "digest": "d3d130d2e939efa092f7206c518dfbb38bec3be13741b9aba5587d56b526b916",
+      "reserved_usd": 0.00119925,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00032114999999999997,
+      "usage": {
+        "input_tokens": 505,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 409,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 914
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "312b62325ed37d279e52b7ec6b93ea9e164b0cf44296b97afda0e3ee70f9c892",
+      "reserved_usd": 0.0004498125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00010559999999999999,
+      "usage": {
+        "input_tokens": 384,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 80,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 464
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "11ded0d31413f852352b8c267b13abf058ea49d41d786ca296ae25300ae6398a",
+      "reserved_usd": 0.00045,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00010334999999999999,
+      "usage": {
+        "input_tokens": 385,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 76,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 461
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "0082b4de6a59e992ffcafec9dfe8430a3b4f0f0cefd87d1b04b47051ad6bbf40",
+      "reserved_usd": 0.0004515,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 9.434999999999999e-05,
+      "usage": {
+        "input_tokens": 393,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 59,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 452
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "2144c8df978772834dae258ec30899597fc807bc5fb1c7a0b14b4d716cbb4528",
+      "reserved_usd": 0.0004479375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00023789999999999998,
+      "usage": {
+        "input_tokens": 374,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 303,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 677
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "62dcaa84ddfdcfe580ef73ece894d66b8130b007eecd2e15cee619b22f2acde4",
+      "reserved_usd": 0.00044925,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 9.18e-05,
+      "usage": {
+        "input_tokens": 380,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 58,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 438
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "5b157486cdbd4340ca7514d821843546cf93aad5059a5fbc1731427dd044bf9c",
+      "reserved_usd": 0.0004400625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 7.905e-05,
+      "usage": {
+        "input_tokens": 335,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 48,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 383
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "44b7162a76841bdfb15b45ca5ef1328f683f7a8126c613dd6d7a23aaa4d6f1fa",
+      "reserved_usd": 0.001873875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00065835,
+      "usage": {
+        "input_tokens": 4009,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 95,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4104
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "423a056853f8307bf63a10e8b4651428f5902db02cad35f32e0669e85727cde1",
+      "reserved_usd": 0.0004404375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.819999999999999e-05,
+      "usage": {
+        "input_tokens": 336,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 63,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 399
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "9623ca5a8d8d219e800a27cc59d0bba7da113d5def1b170d1afe48c683ec65b3",
+      "reserved_usd": 0.0018868125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0007707,
+      "usage": {
+        "input_tokens": 4074,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 266,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4340
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "7c2a6e2f8eae9d660b609a7a288bd9a1bcf4c44634cdd8a97c8502be54d795bf",
+      "reserved_usd": 0.0004400625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0001149,
+      "usage": {
+        "input_tokens": 334,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 108,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 442
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "ce3a3496831eef1e5e732b336eb2a198f433abfaad7d0d4d1d4f788f768f4ba6",
+      "reserved_usd": 0.0018808125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0007635,
+      "usage": {
+        "input_tokens": 4042,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 262,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4304
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "80d2518808e563f2bb9f82a1be9c7d597df34a4453f44612165dbd2a3150e4fc",
+      "reserved_usd": 0.0004393125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.73e-05,
+      "usage": {
+        "input_tokens": 330,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 63,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 393
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "b04467b7abb82dcaf05120c02f9d027aee19cff1a0ab1ada2b3c0bf705c569d5",
+      "reserved_usd": 0.00186975,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0006451499999999999,
+      "usage": {
+        "input_tokens": 3989,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 78,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4067
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "ff4339d9e4fe2d3e5236ce8b0775855b83c635034dc8b16ccf7a6c6a5d654768",
+      "reserved_usd": 0.0004395,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00010065000000000001,
+      "usage": {
+        "input_tokens": 331,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 85,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 416
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "0f944b776b0840d4a6483d8f090bc045a2ffb6dbb0020dad9e45ec592d04729f",
+      "reserved_usd": 0.0018841875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00078705,
+      "usage": {
+        "input_tokens": 4059,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 297,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4356
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "a7f4e1a5950d24196fffe7c5cd065025bd4986808eb944907dbdf8b0a76115e1",
+      "reserved_usd": 0.000123375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.4699999999999996e-05,
+      "usage": {
+        "input_tokens": 266,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 274
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "23930afcc04c2e0bb9c0e4c7e177e2b2e1715eb76feee54f417dcd2a910830fc",
+      "reserved_usd": 0.0001363125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.415e-05,
+      "usage": {
+        "input_tokens": 329,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 337
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "dc45fc891282db35682858a338c2b7b5aa40728b4a3e209f5ed443b42bec80b1",
+      "reserved_usd": 0.0001415625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.8649999999999996e-05,
+      "usage": {
+        "input_tokens": 359,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 367
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "1ebae29fee10cfcbb0b7d3e400d3eda56410b9b45e4e8b61ff10eea4e29b822e",
+      "reserved_usd": 0.00012225,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.395e-05,
+      "usage": {
+        "input_tokens": 261,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 269
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "9a3706e009b3572ea01726f14ee9f55efe56ee4f52d3b6a35216d486c99df2ed",
+      "reserved_usd": 0.0001355625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.37e-05,
+      "usage": {
+        "input_tokens": 326,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 334
+      }
+    },
+    {
+      "name": "judge-_BatchCardProperties",
+      "digest": "b193b07d128bd4c10f6ca330bcaa5aff84914c58a38dc0092c0194e4224b3731",
+      "reserved_usd": 0.0008233125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00031814999999999995,
+      "usage": {
+        "input_tokens": 993,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 282,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1275
+      }
+    },
+    {
+      "name": "judge-_DifficultyResult",
+      "digest": "42bd6a4d95014e246226133af857137d989b7640d91f062b9b01cdd0c0519c18",
+      "reserved_usd": 0.00033525,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00010740000000000001,
+      "usage": {
+        "input_tokens": 396,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 80,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 476
+      }
+    },
+    {
+      "name": "duplicates",
+      "digest": "26d07d08b897eafe5df3817c6365ea607d0c0ff0ab2428d7b50c3ca2813667f2",
+      "reserved_usd": 1.18e-05,
+      "status": "completed",
+      "model": "text-embedding-3-small",
+      "cost_usd": 1.5e-06,
+      "usage": {
+        "prompt_tokens": 75,
+        "total_tokens": 75
+      }
+    },
+    {
+      "name": "judge-_MaterialTypeResult",
+      "digest": "a1d52b633759c41298e63cbbab492ad652fb0e112dd1133b70d945d0699a1e27",
+      "reserved_usd": 0.0016989375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00063645,
+      "usage": {
+        "input_tokens": 3779,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 116,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3895
+      }
+    },
+    {
+      "name": "judge-_CoverageResult",
+      "digest": "a8d06f71eb7a438034752600971a9229395504f90b982f6eae83336ec4bc26b8",
+      "reserved_usd": 0.0011885625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00032355000000000003,
+      "usage": {
+        "input_tokens": 453,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 426,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 879
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "20363f6000dd8c406470bb98c96d82b37f0e329d9af15040d6b57fd5c1cb3620",
+      "reserved_usd": 0.0004479375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.445e-05,
+      "usage": {
+        "input_tokens": 375,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 47,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 422
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "5e139699c420dd9f171436ed1d54788dd91bf2848233746251a1d8bd6a47124b",
+      "reserved_usd": 0.0004483125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 9.659999999999999e-05,
+      "usage": {
+        "input_tokens": 376,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 67,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 443
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "842bfd478a1e8e6e5bff4d743a9961d2ddac9c33551acbe9bdf14b850d94b1b8",
+      "reserved_usd": 0.0004479375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.07e-05,
+      "usage": {
+        "input_tokens": 374,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 41,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 415
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "991f2a5b3cf38c6125881d113e29ae1bad08942cfacf3da8558329b4d2066911",
+      "reserved_usd": 0.0004471875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 7.59e-05,
+      "usage": {
+        "input_tokens": 370,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 34,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 404
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "cb4c1d7365efb29f9998f4ee98fefa53cd8bd56ed705f8bae30abd5fe146da89",
+      "reserved_usd": 0.000447375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 9.825e-05,
+      "usage": {
+        "input_tokens": 371,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 71,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 442
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "30de1f5ee490e76b429dadd554040aed1e233ad61b40ad1847ea80f477bc9600",
+      "reserved_usd": 0.0004400625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00010229999999999999,
+      "usage": {
+        "input_tokens": 334,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 87,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 421
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "00d2ed83ed557c6be8e9cbe95d98fb38da31981942b922339e964165d8cece31",
+      "reserved_usd": 0.002527875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00123255,
+      "usage": {
+        "input_tokens": 7517,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 175,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7692
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "d9538fb3d317911bac163fd82f4ba1e11fa7069af441bf0cf795f4604b25d0dd",
+      "reserved_usd": 0.0004415625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00015389999999999997,
+      "usage": {
+        "input_tokens": 342,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 171,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 513
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "b7cf3743b331e4de1db3100b54450fc7844ca7705907938d8958a09043012591",
+      "reserved_usd": 0.0025310625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0012582,
+      "usage": {
+        "input_tokens": 7536,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 213,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7749
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "b8dbd6e297b42b1ae1bdc7462042d3400a16aed4fb1b57748cdc07eceef03864",
+      "reserved_usd": 0.000441,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00011265,
+      "usage": {
+        "input_tokens": 339,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 103,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 442
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "72350cac1a508734c96953ec6e9712a03f1ee08d52b7210a85e54ca44faa7ef9",
+      "reserved_usd": 0.0025275,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0012143999999999998,
+      "usage": {
+        "input_tokens": 7516,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 145,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7661
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "7a5c41b842e7b6b13bc31d5d45636d489fe991b44cc2ab3f4160a643f0aaa617",
+      "reserved_usd": 0.000441375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00016635,
+      "usage": {
+        "input_tokens": 341,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 192,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 533
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "d1ead8ea16682f18f7c244ad81297c9eb503aace1f1a4f2be2ae721876a0191e",
+      "reserved_usd": 0.002555625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0013494000000000002,
+      "usage": {
+        "input_tokens": 7648,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 337,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7985
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "50d376aa6434a5070197a8604a0f7d08d162168f770b65a33e1508abd09a11c6",
+      "reserved_usd": 0.000441,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00030765,
+      "usage": {
+        "input_tokens": 339,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 428,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 767
+      }
+    },
+    {
+      "name": "judge-_FaithfulnessRaw",
+      "digest": "57313678d4491d237b6b321640b02a6ed271e6f7fa0c715e8488ed2e5d4ec8b2",
+      "reserved_usd": 0.0025490625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0008567999999999999,
+      "usage": {
+        "input_tokens": 7616,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 7296
+        },
+        "output_tokens": 436,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 8052
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "61423fff9beb82df8473214009a4871984a3683d34cadf24e5f3384878f82c7a",
+      "reserved_usd": 0.000135,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.3549999999999994e-05,
+      "usage": {
+        "input_tokens": 325,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 333
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "7749347f4a1b278e5c30396da525cd27cae2761fe6e652f8057860ca6850c42d",
+      "reserved_usd": 0.000154125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 6.809999999999999e-05,
+      "usage": {
+        "input_tokens": 422,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 430
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "5f828d8d9f2690b0521616bd490dcbf48e231576b82bdcf1970db2bc1b2dd135",
+      "reserved_usd": 0.0001378125,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.5799999999999994e-05,
+      "usage": {
+        "input_tokens": 340,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 348
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "3292ceb54ef64e593705cf08d917eb424e8bf78645ffcad304ad2675e9e618f1",
+      "reserved_usd": 0.000182625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.895e-05,
+      "usage": {
+        "input_tokens": 561,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 569
+      }
+    },
+    {
+      "name": "judge-_CompareResult",
+      "digest": "8e639830707fcfa685d893ea7dd917c0f8b563c5ad4febbc3a90bddd7f6c6aaf",
+      "reserved_usd": 0.0002176875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00011714999999999999,
+      "usage": {
+        "input_tokens": 749,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 757
+      }
+    },
+    {
+      "name": "judge-_BatchCardProperties",
+      "digest": "b220e476c9eb66a7fd0dffab33a294cb6fc88fe6c522055182389ac0a49b7049",
+      "reserved_usd": 0.0008765625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00035729999999999996,
+      "usage": {
+        "input_tokens": 1242,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 285,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1527
+      }
+    },
+    {
+      "name": "judge-_DifficultyResult",
+      "digest": "c9eb571e3ddf909248808624923f86ba60c8beac1a6827252847a9998c1e4108",
+      "reserved_usd": 0.000340875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00011175,
+      "usage": {
+        "input_tokens": 425,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 80,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 505
+      }
+    },
+    {
+      "name": "duplicates",
+      "digest": "466ae41fc9e8dbda7054d01da7dbf757ebe7847bacdc31b8a9cef217058c390d",
+      "reserved_usd": 1.252e-05,
+      "status": "completed",
+      "model": "text-embedding-3-small",
+      "cost_usd": 2.1000000000000002e-06,
+      "usage": {
+        "prompt_tokens": 105,
+        "total_tokens": 105
+      }
+    },
+    {
+      "name": "judge-_MaterialTypeResult",
+      "digest": "76d00e905c2790cf248d7d4f87c164045af926bff4e94878c502abcd63cb8757",
+      "reserved_usd": 0.0023484375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00116205,
+      "usage": {
+        "input_tokens": 7267,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 120,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7387
+      }
+    },
+    {
+      "name": "judge-_CoverageResult",
+      "digest": "a044807f5c9255345eed004a76bff6ea2e3c84c08c0284a4a6b3bb72f493c3f6",
+      "reserved_usd": 0.00119625,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00033539999999999997,
+      "usage": {
+        "input_tokens": 492,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 436,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 928
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "f1e7f3cdde9e926e2d5383037e9f85c5ecd3de44a2b39d67146be2c22c6ad197",
+      "reserved_usd": 0.0004479375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 8.13e-05,
+      "usage": {
+        "input_tokens": 374,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 42,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 416
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "25576f39bd723f8016c0faf2c3efc860ada34df54af0875691d96cc637c40342",
+      "reserved_usd": 0.0004494375,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.0001005,
+      "usage": {
+        "input_tokens": 382,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 72,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 454
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "3171ccbde7045e3b25c2642aadf2b3830027ef426d7008b49d6c68f22478a3e2",
+      "reserved_usd": 0.000448875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00011985,
+      "usage": {
+        "input_tokens": 379,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 105,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 484
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "dacce0595717d9df3d1d4a3b2a183c975bd4007735eb45ad67ab87418dc3568a",
+      "reserved_usd": 0.00044925,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00011894999999999999,
+      "usage": {
+        "input_tokens": 381,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 103,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 484
+      }
+    },
+    {
+      "name": "judge-_BlindResult",
+      "digest": "8962f537d1904489e0af2f6609bb768f5ff9576a95ff242493bc8f81624137e8",
+      "reserved_usd": 0.000448875,
+      "status": "completed",
+      "model": "gpt-4o-mini",
+      "cost_usd": 0.00024585,
+      "usage": {
+        "input_tokens": 379,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 315,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 694
+      }
+    }
+  ],
+  "cost_usd": 0.05439118,
+  "cost_by_stage": {
+    "generation": 0.026938,
+    "evaluation": 0.02745318
+  },
+  "source": {
+    "name": "main (13).pdf",
+    "sha256": "8e46d4b70ca2d50abc27b346abe9994b71c9cf4d350df1662a5c789964a19a0c",
+    "full_pdf_uploaded": false
+  },
+  "settings": {
+    "count_per_topic": 5,
+    "difficulty": 3,
+    "budget_usd": 0.15,
+    "baseline_generation_calls": 0,
+    "repair_calls": 0,
+    "retrieval": false
+  },
+  "production_modified": false,
+  "changed_generator_prompts": [
+    "flashcards.md"
+  ],
+  "evaluation_prompt_hashes": {
+    "card_properties.txt": "5fc6a50d3973dbb3a66ac9f3e24cdc65b3ec4cd831408fe10f8adedbaae53a63",
+    "card_properties_batch.txt": "eb4bd63dfbed2e2dda1ed5039b20300bf0c98744241107a82a542bd424008728",
+    "coverage.txt": "acd0a7e4a9f0ec05370014f6b2aa8726ddccf1bf2283a0ba2eb4b55356559fbd",
+    "difficulty_gradient.txt": "232521eb6d3cbdfce18afe7d342c4ac9a15814428a496bfa3aea894e8d031739",
+    "faithfulness.txt": "fda4152640b108f1ddfe8b5e57220f00da6c43d67fc82a15efa9bd192d707f0e",
+    "material_type.txt": "913b0d3afdd105dbf288044bc3703b4d54c41f1dc3feacd65abf7ef950f0b5ec",
+    "self_contained_blind.txt": "fd7c020ad39efd68e24133779954415273204759c489f6caa93c2b8f8529f556",
+    "self_contained_compare.txt": "6b1187421c1012632b4c2dbe462b0b95fd048e6cf9c5e096fcef972e936a0cb8",
+    "trivial.txt": "4c86ba709e8c23665f888caa0adaca5ef77ace0f8b0e99d406d335ac2be9b6d5"
+  },
+  "revised_self_contained_prompt_sha256": "933ce8dd9c1a355612e7af0f73a3b6ed1d0f481067b8e779f5db51c17b8c6205",
+  "limitations": [
+    "20 candidate cards versus the previous 60-card baseline: no paired A/B or causal improvement claim.",
+    "Original card metrics are unchanged. Revised self-containment is a separately labelled diagnostic, never substituted into original scores.",
+    "Calibration uses eight known hand-labelled fronts overlapping examples in the revised rubric. This checks instruction compliance, not held-out accuracy.",
+    "Five cards per topic cannot be compared to fifteen-card topic coverage or duplicate rates as an equal-size experiment.",
+    "Local inspection and technical rendering checks do not certify general mathematical correctness. The chessboard regression target was not generated."
+  ],
+  "rendering": {
+    "items": 20,
+    "math_blocks": 2,
+    "fallbacks": 0,
+    "fallback_texts": [],
+    "errors": [],
+    "widths": {
+      "320": 0,
+      "390": 0,
+      "1440": 0
+    }
+  }
+}

@@ -397,6 +397,45 @@
       "run_id": null,
       "evidence": "experiments/wildflower/result.json",
       "readme": "experiments/wildflower/README.md"
+    },
+    {
+      "id": "clearleaf",
+      "number": 11,
+      "title": "Clearleaf · 20-card prompt pilot",
+      "method": "baseline",
+      "description": "Five cards per topic with an isolated prompt revision. Original metrics plus a separate self-containment diagnostic.",
+      "finding": "Not ready: five multi-target cards and one wrong citation remain.",
+      "date": "2026-10-31",
+      "cost_usd": 0.05439118,
+      "chart_title": "Three separate checks on the same 20 cards",
+      "chart_note": "Original and revised judge rubrics are different. Local atomicity is a third measure. Wildflower had 60 cards; this is not a paired A/B test.",
+      "series": [
+        {
+          "label": "Original judge · self-contained",
+          "value": 14,
+          "total": 20,
+          "tone": "muted",
+          "unit": "ratio"
+        },
+        {
+          "label": "Revised judge · self-contained",
+          "value": 18,
+          "total": 20,
+          "tone": "ink",
+          "unit": "ratio"
+        },
+        {
+          "label": "Local review · atomic",
+          "value": 15,
+          "total": 20,
+          "tone": "clay",
+          "unit": "ratio"
+        }
+      ],
+      "data_script": "clearleaf-data.js",
+      "run_id": null,
+      "evidence": "experiments/clearleaf/result.json",
+      "readme": "experiments/clearleaf/README.md"
     }
   ],
   "flashcard_baseline": {
@@ -466,5 +505,25 @@
         "n": 15
       }
     ]
-  }
+  },
+  "flashcard_candidates": [
+    {
+      "id": "clearleaf",
+      "title": "Clearleaf",
+      "n": 20,
+      "scores": {
+        "sc": 0.7,
+        "faith": 0.8358333333333332,
+        "atomic": 0.7,
+        "coverage": 0.49404761904761907,
+        "dup": 0.0,
+        "leaks": 0.0,
+        "understanding": 1.0,
+        "trivial": 0.0
+      },
+      "judge": "gpt-4o-mini",
+      "difficulty": 3,
+      "source": "main (13).pdf"
+    }
+  ]
 }

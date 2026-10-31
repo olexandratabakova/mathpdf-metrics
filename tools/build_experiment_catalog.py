@@ -11,6 +11,7 @@ def series(label,value,total,tone='sage',unit='ratio'):
 def build():
     out=[]
     baseline=None
+    candidates=[]
     def add(folder,title,method,description,finding,chart_title,chart_note,bars,data,_legacy_renderer,run_id=None):
         raw=read(folder)
         out.append({'id':folder,'number':len(out)+1,'title':title,'method':method,'description':description,'finding':finding,
@@ -78,7 +79,20 @@ def build():
            series('Cards · atomic',round(c['pct_atomic']*60,6),60),
            series('Problems · reviewer accepted',p.get('accept',0),40,'muted')],
           'wildflower-data.js','research.js')
-    return {'schema_version':1,'experiments':out,'flashcard_baseline':baseline}
+    if (ROOT/'experiments/clearleaf/result.json').exists():
+        a=read('clearleaf');m=a['metrics'];local=a['manual_review']['summary']
+        add('clearleaf','Clearleaf · 20-card prompt pilot','baseline',
+          'Five cards per topic with an isolated prompt revision. Original metrics plus a separate self-containment diagnostic.',
+          'Not ready: five multi-target cards and one wrong citation remain.',
+          'Three separate checks on the same 20 cards',
+          'Original and revised judge rubrics are different. Local atomicity is a third measure. Wildflower had 60 cards; this is not a paired A/B test.',
+          [series('Original judge · self-contained',round(m['cards']['pct_self_contained']*20),20,'muted'),
+           series('Revised judge · self-contained',m['revised_self_contained']['passed'],20,'ink'),
+           series('Local review · atomic',local['atomic'],20,'clay')],
+          'clearleaf-data.js','research.js')
+        candidates.append({'id':'clearleaf','title':'Clearleaf','n':20,
+          'scores':{key:m['cards'][value] for key,value in keys.items()},'judge':a['judge'],'difficulty':3,'source':a['source']['name']})
+    return {'schema_version':1,'experiments':out,'flashcard_baseline':baseline,'flashcard_candidates':candidates}
 def main():
     catalog=build()
     (ROOT/'data/experiments.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
