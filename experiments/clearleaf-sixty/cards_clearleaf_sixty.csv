@@ -1,0 +1,61 @@
+set_topic,set_level,card_number,front_preview,self_contained_passes,faithfulness_ratio,atomic,front_leaks_answer,trivial,understanding_vs_rote,difficulty
+Sets,Level 3,1,How do you denote that an object x is an element of a set A?,1,0.5,1,0,0,understanding,1
+Sets,Level 3,2,What does it mean for a set A to be a subset of a set B?,1,1.0,1,0,0,understanding,2
+Sets,Level 3,3,Why does a finite set with n elements have exactly 2 to the power n subsets?,1,1.0,1,0,0,understanding,3
+Sets,Level 3,4,Under what conditions does the equality A intersect the union of B and C equal the union of A intersect B and A intersect C hold?,0,0.5,1,0,0,understanding,4
+Sets,Level 3,5,What is the definition of the power set P of a set A?,1,0.6666666666666666,1,0,0,understanding,2
+Sets,Level 3,6,What is the empty set and how is it denoted?,1,1.0,1,0,0,understanding,1
+Sets,Level 3,7,What is the difference between the empty set and the set containing the empty set?,1,0.5,1,0,0,understanding,3
+Sets,Level 3,8,Under what conditions are two sets A and B equal?,1,0.6666666666666666,1,0,0,understanding,2
+Sets,Level 3,9,"What does the ordered pair (a, b) represent and how does it differ from (b, a)?",1,0.75,1,0,0,understanding,3
+Sets,Level 3,10,What is the Cartesian product of sets A and B?,1,1.0,1,0,0,understanding,3
+Sets,Level 3,11,What is the notation for the power set of A and how is its cardinality related to A's cardinality?,1,1.0,1,0,0,understanding,4
+Sets,Level 3,12,What is the definition of the difference of two sets A and B?,1,1.0,1,0,0,understanding,2
+Sets,Level 3,13,What is the complement of a set A relative to a universal set U and how is it denoted?,1,1.0,1,0,0,understanding,3
+Sets,Level 3,14,How do you denote the sum and product of elements in a finite set A with elements a1 to an?,0,0.6666666666666666,1,0,0,understanding,3
+Sets,Level 3,15,What do the union and intersection of two sets A and B represent?,1,1.0,1,0,0,understanding,2
+Mathematical Induction,Level 3,1,What are the three steps required to prove a statement for all integers greater than or equal to a fixed n0 using mathematical induction?,1,1.0,1,0,0,understanding,3
+Mathematical Induction,Level 3,2,"What does it mean for an integer a to divide another integer b, and how is this used in induction to prove divisibility statements?",0,0.3333333333333333,1,0,0,understanding,3
+Mathematical Induction,Level 3,3,Why is it impossible to prove directly by induction that the sum from i equals 1 to n of 1 divided by i squared is less than or equal to 2?,0,1.0,1,0,0,understanding,4
+Mathematical Induction,Level 3,4,How is the triangle inequality for the sum of n real numbers proved using induction?,0,0.5,1,0,0,understanding,4
+Mathematical Induction,Level 3,5,What distinguishes strong induction from ordinary induction in proving statements for all integers greater than or equal to an initial value?,1,0.6666666666666666,1,0,0,understanding,3
+Mathematical Induction,Level 3,6,What is the role of the base case in a mathematical induction proof starting at an integer n0?,1,0.5,1,0,0,understanding,2
+Mathematical Induction,Level 3,7,"In mathematical induction, what does the induction hypothesis assume when proving for an arbitrary integer n greater than or equal to n0?",1,1.0,1,0,0,understanding,3
+Mathematical Induction,Level 3,8,How is the induction step formulated to prove the statement for integer n plus one once the induction hypothesis is assumed for n?,0,1.0,1,0,0,understanding,3
+Mathematical Induction,Level 3,9,What is the formula for the sum of the squares of the first n natural numbers?,1,1.0,1,0,0,rote,2
+Mathematical Induction,Level 3,10,What is the formal definition of divisibility of an integer b by an integer a?,1,1.0,1,0,0,rote,2
+Mathematical Induction,Level 3,11,What is the formula for the sum of the first n odd numbers?,1,1.0,1,0,0,understanding,2
+Mathematical Induction,Level 3,12,What does the triangle inequality state for the sum of two real numbers x and y?,1,1.0,1,0,0,understanding,2
+Mathematical Induction,Level 3,13,"How is the factorial of a natural number n defined, and what is the value of 0 factorial?",1,1.0,1,0,0,understanding,2
+Mathematical Induction,Level 3,14,How is mathematical induction used to prove that a 2 to the power n by 2 to the power n chessboard with one square removed can be tiled by L-shaped trominoes?,0,1.0,0,0,0,understanding,5
+Mathematical Induction,Level 3,15,What distinguishes strong induction from ordinary induction when proving statements for integers greater than or equal to a base value?,1,1.0,1,0,0,understanding,3
+Numbers,Level 3,1,What does it mean for a fraction to be irreducible or in lowest terms?,1,1.0,1,0,0,understanding,2
+Numbers,Level 3,2,"Why is there a real number whose square is 2, and why is it irrational?",0,0.8,0,0,0,understanding,4
+Numbers,Level 3,3,What justifies that between any two distinct rational numbers there is another rational number?,1,0.75,0,0,0,understanding,3
+Numbers,Level 3,4,What does it mean for a decimal expansion to be periodic?,1,1.0,1,0,0,understanding,2
+Numbers,Level 3,5,What conditions define the unique base-b representation of a natural number?,0,1.0,0,0,0,understanding,3
+Numbers,Level 3,6,What is the definition of irrational numbers within the real numbers?,1,1.0,1,0,0,rote,2
+Numbers,Level 3,7,Can the sum of two irrational numbers ever be rational? Provide an example or reason.,1,1.0,1,0,0,understanding,3
+Numbers,Level 3,8,Can the sum of a rational number and an irrational number be rational?,1,1.0,1,0,0,understanding,2
+Numbers,Level 3,9,Can the product of a nonzero rational number and an irrational number be rational?,1,1.0,1,0,0,understanding,3
+Numbers,Level 3,10,Why is there an irrational number between any two distinct real numbers?,1,1.0,0,0,0,understanding,4
+Numbers,Level 3,11,What does the non-uniqueness of decimal representations mean for certain numbers?,1,1.0,1,0,0,understanding,3
+Numbers,Level 3,12,What form do two different decimal representations of the same real number take?,1,1.0,1,0,0,understanding,3
+Numbers,Level 3,13,What does it mean for a decimal to be eventually periodic?,1,1.0,1,0,0,understanding,3
+Numbers,Level 3,14,Why does every rational number have a decimal representation that is eventually periodic?,1,1.0,1,0,0,understanding,4
+Numbers,Level 3,15,Why does every decimal that is periodic represent a rational number?,1,0.6666666666666666,1,0,0,understanding,4
+Functions,Level 3,1,What is the definition of a function from a set X to a set Y?,1,1.0,1,0,0,understanding,1
+Functions,Level 3,2,"What are the conditions for a function f from X to Y to be injective, surjective, and bijective?",1,1.0,1,0,0,understanding,3
+Functions,Level 3,3,"What is the inverse function of a bijection f from X to Y, and how is it defined?",1,1.0,1,0,0,understanding,3
+Functions,Level 3,4,"Why is the composition of two injective functions injective, and the composition of two surjective functions surjective?",1,1.0,0,0,0,understanding,4
+Functions,Level 3,5,What are the key properties of images and preimages of sets under a function f from X to Y?,1,1.0,0,0,0,understanding,3
+Functions,Level 3,6,"What are the domain, codomain, and range of a function from set X to set Y?",1,1.0,1,0,0,understanding,2
+Functions,Level 3,7,Under what conditions are two functions equal?,0,1.0,1,0,0,understanding,2
+Functions,Level 3,8,What is the identity function on a set X and how is it defined?,1,1.0,1,0,0,understanding,2
+Functions,Level 3,9,What is the inverse relation of a relation from set X to set Y?,1,1.0,1,0,0,understanding,3
+Functions,Level 3,10,Does the inverse relation of a function always define a function? Explain.,0,1.0,1,0,0,understanding,4
+Functions,Level 3,11,Let f be a bijection from X to Y. What is the difference between the compositions f composed with f inverse and f inverse composed with f?,1,1.0,1,0,0,understanding,3
+Functions,Level 3,12,"Why is function composition associative for functions f: A to B, g: B to C, and h: C to D?",1,1.0,1,0,0,understanding,3
+Functions,Level 3,13,"What inequalities relate the cardinalities of finite sets X and Y if there is an injective, surjective, or bijective function from X to Y?",0,1.0,1,0,0,understanding,4
+Functions,Level 3,14,What geometric transformation relates the graph of a bijection f to the graph of its inverse f inverse?,1,1.0,1,0,0,understanding,4
+Functions,Level 3,15,What are the properties of preimages of unions and intersections of sets under a function f?,0,1.0,1,0,0,understanding,4

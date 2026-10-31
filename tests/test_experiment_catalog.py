@@ -14,8 +14,8 @@ def test_catalog_is_reproducible_and_all_detail_targets_exist():
     assert catalog == module.build()
     script=(ROOT/'experiments-catalog.js').read_text(encoding='utf-8')
     assert json.loads(script.removeprefix('window.MATHPDF_EXPERIMENTS = ').strip().removesuffix(';')) == catalog
-    assert len(catalog['experiments']) == 11
-    assert len({x['id'] for x in catalog['experiments']}) == 11
+    assert len(catalog['experiments']) == 12
+    assert len({x['id'] for x in catalog['experiments']}) == 12
     for study in catalog['experiments']:
         raw=json.loads((ROOT/study['evidence']).read_text(encoding='utf-8'))
         assert study['cost_usd'] == raw['cost_usd']
@@ -56,3 +56,6 @@ def test_comparison_baseline_uses_recorded_metrics_not_task_acceptance():
     candidate=catalog['flashcard_candidates'][0]
     assert candidate['id']=='clearleaf' and candidate['n']==20
     assert candidate['scores']['sc']==.7  # Original rubric, not the revised .9 diagnostic.
+    expanded=catalog['flashcard_candidates'][1]
+    assert expanded['id']=='clearleaf-sixty' and expanded['n']==60
+    assert expanded['scores']['sc']==47/60

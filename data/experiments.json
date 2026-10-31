@@ -436,6 +436,52 @@
       "run_id": null,
       "evidence": "experiments/clearleaf/result.json",
       "readme": "experiments/clearleaf/README.md"
+    },
+    {
+      "id": "clearleaf-sixty",
+      "number": 12,
+      "title": "Clearleaf · 60-card comparison",
+      "method": "baseline",
+      "description": "Original 20 cards retained; 40 added. Same source, pages, count and original evaluator as Wildflower.",
+      "finding": "Mixed result: higher source faithfulness, lower atomicity; no overall replacement yet.",
+      "date": "2026-10-31",
+      "cost_usd": 0.07336855,
+      "chart_title": "Original judge · 60 cards in each set",
+      "chart_note": "Wildflower: one 15-card call per topic. Clearleaf: 5 retained + 10 continued with prior cards in context. Equal count, not a clean causal A/B test.",
+      "series": [
+        {
+          "label": "Wildflower · self-contained",
+          "value": 48,
+          "total": 60,
+          "tone": "muted",
+          "unit": "ratio"
+        },
+        {
+          "label": "Clearleaf · self-contained",
+          "value": 47,
+          "total": 60,
+          "tone": "ink",
+          "unit": "ratio"
+        },
+        {
+          "label": "Wildflower · atomic",
+          "value": 58,
+          "total": 60,
+          "tone": "muted",
+          "unit": "ratio"
+        },
+        {
+          "label": "Clearleaf · atomic",
+          "value": 53,
+          "total": 60,
+          "tone": "ink",
+          "unit": "ratio"
+        }
+      ],
+      "data_script": "clearleaf-sixty-data.js",
+      "run_id": null,
+      "evidence": "experiments/clearleaf-sixty/result.json",
+      "readme": "experiments/clearleaf-sixty/README.md"
     }
   ],
   "flashcard_baseline": {
@@ -519,6 +565,24 @@
         "dup": 0.0,
         "leaks": 0.0,
         "understanding": 1.0,
+        "trivial": 0.0
+      },
+      "judge": "gpt-4o-mini",
+      "difficulty": 3,
+      "source": "main (13).pdf"
+    },
+    {
+      "id": "clearleaf-sixty",
+      "title": "Clearleaf 60",
+      "n": 60,
+      "scores": {
+        "sc": 0.7833333333333333,
+        "faith": 0.9077777777777778,
+        "atomic": 0.8833333333333333,
+        "coverage": 0.8309523809523809,
+        "dup": 0.11666666666666667,
+        "leaks": 0.0,
+        "understanding": 0.95,
         "trivial": 0.0
       },
       "judge": "gpt-4o-mini",

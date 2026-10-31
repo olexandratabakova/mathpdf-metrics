@@ -1,0 +1,284 @@
+{
+  "reviewer": "Coding assistant, local reading of all forty added cards and cited source pages. Not independent expert verification.",
+  "added_cards_inspected": 40,
+  "items": [
+    {
+      "id": "sets-6",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "a53bc46e8d3a54a14b349e456b60b40bd63058541a9da3d74c60ec34e8af57dc"
+    },
+    {
+      "id": "sets-7",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "c124c30002ee584e07b13b4e1ce541df2a69c2574812c578f35ef71c3b4a8f9a"
+    },
+    {
+      "id": "sets-8",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "49f5b6c77e93f18ca64c5adc86fc53c4d8960859dfed54537f1d705416e999fc"
+    },
+    {
+      "id": "sets-9",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "337f215a1a269de6e9570a3850ec3ec46f916a2127ec28da943295a109e98daa"
+    },
+    {
+      "id": "sets-10",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "8e868e45eed10facd526b0a574009b6f9be7e6476f4b8af9d9f70bdcde8608aa"
+    },
+    {
+      "id": "sets-11",
+      "flags": [
+        "multiple_targets",
+        "partial_overlap"
+      ],
+      "finding": "Combines power-set notation with its cardinality theorem; overlaps the earlier power-set and subset-count cards.",
+      "item_sha256": "17f713c09ca3540f8f7520be2fcb2a2ba8d4035af19708660815ea05aadb71b8"
+    },
+    {
+      "id": "sets-12",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "9b727664bbcaaf44526f49e7158bc1d538705925a228b3fbd5275863839fc4c2"
+    },
+    {
+      "id": "sets-13",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "59616c4f5dbac64f93ad28fa1b54e41fb465be8fd98b8ed98b0b1225ddd041ff"
+    },
+    {
+      "id": "sets-14",
+      "flags": [
+        "multiple_targets"
+      ],
+      "finding": "Asks for both sum and product notation, two independent operations.",
+      "item_sha256": "bada0b11b3549610d817e08ccab3087b0343cf6307a93e9e10c5e009c114c5a0"
+    },
+    {
+      "id": "sets-15",
+      "flags": [
+        "multiple_targets"
+      ],
+      "finding": "Combines the definitions of union and intersection.",
+      "item_sha256": "3b87905279f0cc91d900888a9a1e231d71c27d96c579a3a0da18fc56e417138d"
+    },
+    {
+      "id": "induction-6",
+      "flags": [
+        "partial_overlap"
+      ],
+      "finding": "The base-case role is already one of the three steps given by Induction 1.",
+      "item_sha256": "a1cc5668b362a325f909b72e5871dc3c69dcb51ebbf0f65ccfd14b94332a511e"
+    },
+    {
+      "id": "induction-7",
+      "flags": [
+        "partial_overlap"
+      ],
+      "finding": "The hypothesis is already included in the three-step induction card.",
+      "item_sha256": "62596a06ab8b984cdce3ec3f4614ff9c65ce7d19889fad621d57efedc8bded70"
+    },
+    {
+      "id": "induction-8",
+      "flags": [
+        "partial_overlap"
+      ],
+      "finding": "The induction step is already included in the three-step induction card.",
+      "item_sha256": "edf562dd9bf6fcedc5a5b893b54e800b390bb10b5ba9aa0caf75fabed1787855"
+    },
+    {
+      "id": "induction-9",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "0350caf7664f1a2c381c38c4c8bac096b5896c46de75ebbb80b2e7ce0b9dea6a"
+    },
+    {
+      "id": "induction-10",
+      "flags": [
+        "partial_overlap"
+      ],
+      "finding": "Repeats the divisibility definition included in Induction 2.",
+      "item_sha256": "51bc30f60d9753204b886ea99aad51242df36888e1f5665f1bba597f39eb19b6"
+    },
+    {
+      "id": "induction-11",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "c8754e1059fc631a249c94f11d7cfeca646d30c003a19c4566793f002501ccc4"
+    },
+    {
+      "id": "induction-12",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "acc821f225a3c312daaaa9d23888b564f8baea5affe8e273831812f4acdf203b"
+    },
+    {
+      "id": "induction-13",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "c0813fe5a1d89875e587b7e6f71d8730d0750fc45f6c5ea5832a87dfb1e3bf6d"
+    },
+    {
+      "id": "induction-14",
+      "flags": [
+        "regression_exercised"
+      ],
+      "finding": "The front now correctly says “2 to the power n by 2 to the power n”. This is one correct occurrence, not a general guarantee.",
+      "item_sha256": "860de363762e55214e80c9eb49c9094f2aa998ed85d6fc9d21f0e3bdb62420c4"
+    },
+    {
+      "id": "induction-15",
+      "flags": [
+        "semantic_duplicate"
+      ],
+      "finding": "Restates the same strong-versus-ordinary induction distinction as Induction 5.",
+      "item_sha256": "48f62e8d2ca40c453f11f32c73ca39334b343ec5fada19ac6d84296913a02a52"
+    },
+    {
+      "id": "numbers-6",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "62a4dab4e9175923afe142d3b08c8e40e5aabbda4f9cdc6d127845dbf40795ba"
+    },
+    {
+      "id": "numbers-7",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "302697e23dd42127ba824321bc573a0b564e7bf5b3b4b1ab0feb1ee45a0486e8"
+    },
+    {
+      "id": "numbers-8",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "085164094a1339a2c4b23bea4303b1c361b506fb772ef43bb0c30d4099349ae7"
+    },
+    {
+      "id": "numbers-9",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "977b4026e9e2eae3c620115e55f0629e2a56c5f09a8cd83f1beb8060d451a23c"
+    },
+    {
+      "id": "numbers-10",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "3efc79eeaaec8c5afa73c3e7a4419f1df0e1cfff6fee1e99a9b792a2d12651f6"
+    },
+    {
+      "id": "numbers-11",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "9bdcfac88e0b6eee1ed582d0fb4fb2908b49f6c727914e8056fe30ea062bed06"
+    },
+    {
+      "id": "numbers-12",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "24073d3f6991ddf5a35ec47fccbfe7be0ab2f36207c1e48cf95e57949f69cd68"
+    },
+    {
+      "id": "numbers-13",
+      "flags": [
+        "semantic_duplicate"
+      ],
+      "finding": "Same eventual-periodicity definition as Numbers 4, with essentially identical answer text.",
+      "item_sha256": "fdb0228696f9cc7a50e6803af207b380d7b9dea61f31283cc815cb9b0f604708"
+    },
+    {
+      "id": "numbers-14",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "b0e7d8332237bdce32286eb185a497124b869b744c7901b184f52af15f2d7513"
+    },
+    {
+      "id": "numbers-15",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "9abeb315ae2bd1951203764a15b033215442af6102bf454eb1d52381e1e43f19"
+    },
+    {
+      "id": "functions-6",
+      "flags": [
+        "multiple_targets"
+      ],
+      "finding": "Three separate definitions: domain, codomain and range.",
+      "item_sha256": "35dbe54311209ded1f45ec2070a4ea05098790aa91319b850261f853b8d150c8"
+    },
+    {
+      "id": "functions-7",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "5ba34d317e916dd510622bb8239b325bb95762a12dca304c4d7c2bfba71017a0"
+    },
+    {
+      "id": "functions-8",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "4f374bd8de76161fb7cb15edb5715e310b159fdb84eb5b136cdc233a79a719b6"
+    },
+    {
+      "id": "functions-9",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "758b94d18a0aa5c84f303f0c5a471815cf2123f5b419777b14bad8009545cba2"
+    },
+    {
+      "id": "functions-10",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "a3c549b4b6d8cecae4f899e9eda44a294d867bf1583361b19bdb19d8f5350f4e"
+    },
+    {
+      "id": "functions-11",
+      "flags": [
+        "source_role"
+      ],
+      "finding": "The identity-composition answer follows from the inverse definition, but page 67 asks this as a question. An inferred answer should be labelled Explanation, not a source quotation.",
+      "item_sha256": "a46737450eb9eafbf491696a6f89302c719ef0135f40fb00d4ecbcf2aa6118df"
+    },
+    {
+      "id": "functions-12",
+      "flags": [],
+      "finding": "",
+      "item_sha256": "f080dbcaae54afb7ab15f67f74e99cc040cafa3fdc8c3589e2134883a3a78d76"
+    },
+    {
+      "id": "functions-13",
+      "flags": [
+        "multiple_targets"
+      ],
+      "finding": "Combines three cardinality consequences for injective, surjective and bijective functions.",
+      "item_sha256": "147b28365e3e5bb01f00821370bcf86e16c1e138dd72da0208a5fb9b26232c38"
+    },
+    {
+      "id": "functions-14",
+      "flags": [
+        "missing_source_condition"
+      ],
+      "finding": "The cited geometric exercise specifies f: R→R. The card omits that real-plane scope; reflection across y=x is not an unrestricted statement about arbitrary bijections.",
+      "item_sha256": "ac2237114fb817761ba6b121191d5e9d4086980abbf4992f64d12db31e055af7"
+    },
+    {
+      "id": "functions-15",
+      "flags": [
+        "multiple_targets",
+        "partial_overlap"
+      ],
+      "finding": "Two preimage identities, already included among the six properties on Functions 5.",
+      "item_sha256": "873e15a59b3d6b3c5d1ac097dea85a4c5d7592bdb6784c8a6a0b83d533e386e5"
+    }
+  ],
+  "summary": {
+    "additional_multiple_target_cards": 6,
+    "definite_additional_semantic_duplicate_cards": 2
+  },
+  "scope": "Flags are local findings, not a full mathematical correctness score. Embedding duplicate rate and manual semantic overlap are distinct measures.",
+  "regression": "Induction 14 exercises the chessboard target and preserves the power-of-n wording. The first twenty cards and their known defects remain unchanged."
+}

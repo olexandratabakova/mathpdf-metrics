@@ -92,6 +92,20 @@ def build():
           'clearleaf-data.js','research.js')
         candidates.append({'id':'clearleaf','title':'Clearleaf','n':20,
           'scores':{key:m['cards'][value] for key,value in keys.items()},'judge':a['judge'],'difficulty':3,'source':a['source']['name']})
+    if (ROOT/'experiments/clearleaf-sixty/result.json').exists():
+        a=read('clearleaf-sixty');c=a['metrics']['cards'];base=a['comparison']['baseline_scores']
+        add('clearleaf-sixty','Clearleaf · 60-card comparison','baseline',
+          'Original 20 cards retained; 40 added. Same source, pages, count and original evaluator as Wildflower.',
+          'Mixed result: higher source faithfulness, lower atomicity; no overall replacement yet.',
+          'Original judge · 60 cards in each set',
+          'Wildflower: one 15-card call per topic. Clearleaf: 5 retained + 10 continued with prior cards in context. Equal count, not a clean causal A/B test.',
+          [series('Wildflower · self-contained',round(base['pct_self_contained']*60),60,'muted'),
+           series('Clearleaf · self-contained',round(c['pct_self_contained']*60),60,'ink'),
+           series('Wildflower · atomic',round(base['pct_atomic']*60),60,'muted'),
+           series('Clearleaf · atomic',round(c['pct_atomic']*60),60,'ink')],
+          'clearleaf-sixty-data.js','research.js')
+        candidates.append({'id':'clearleaf-sixty','title':'Clearleaf 60','n':60,
+          'scores':{key:c[value] for key,value in keys.items()},'judge':a['judge'],'difficulty':3,'source':a['source']['name']})
     return {'schema_version':1,'experiments':out,'flashcard_baseline':baseline,'flashcard_candidates':candidates}
 def main():
     catalog=build()
