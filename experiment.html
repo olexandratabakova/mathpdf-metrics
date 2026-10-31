@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MathPDF Quality Lab: experiments, evidence, prompt versions and mathematical validation.">
+<title>Experiment · MathPDF Quality Lab</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=hub1">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<script src="vendor/katex/katex.min.js" defer></script>
+<script src="vendor/math-renderer.js" defer></script>
+<script src="data.js" defer></script>
+<script src="experiments-catalog.js?v=hub1" defer></script>
+<script src="history-english.js?v=hub1" defer></script>
+<script src="research.js?v=hub1" defer></script>
+<script src="workspace.js?v=hub1" defer></script>
+<script src="app.js?v=hub1" defer></script>
+</head><body>
+<aside class="sidebar">
+<a class="brand" href="index.html#reviews"><span class="brand-mark">m<span>·</span></span><span>MathPDF<small>QUALITY LAB</small></span></a>
+<div class="nav-label">RESEARCH WORKSPACE</div>
+<nav aria-label="Sections">
+<a href="index.html#reviews" data-view="reviews"><span>◇</span> Experiments</a>
+<a href="index.html#overview" data-view="overview"><span>◫</span> Flashcard metrics</a>
+<a href="index.html#versions" data-view="versions"><span>≋</span> Version notebook</a>
+<a href="index.html#cards" data-view="cards"><span>▤</span> Cards</a>
+<a href="index.html#issues" data-view="issues"><span>⊙</span> Manual findings <b id="issue-count"></b></a>
+<a href="index.html#guide" data-view="guide"><span>⌁</span> Methods & guide</a>
+</nav>
+<div class="sidebar-bottom"><div class="live-dot"></div><strong>A record of what we learned.</strong><p>Compare the methods.<br>Follow the evidence.</p><a href="https://github.com/olexandratabakova/mathpdf-metrics" target="_blank" rel="noreferrer">Repository ↗</a></div>
+</aside>
+<div class="workspace"><header class="topbar"><span>MathPDF <span class="slash">/</span> <b id="breadcrumb">Experiments</b></span><div class="top-actions"><span class="storage-label" id="storage-label">Saved in this browser</span><button id="backup" class="quiet">Export JSON ↗</button><button id="import-backup" class="quiet">Import</button><button id="new-run" class="primary">+ New version</button></div></header>
+<main id="main" tabindex="-1"></main><footer class="page-footer"><span>MathPDF Quality Lab</span><span>Evidence supports decisions. A passing check has a defined scope.</span></footer></div>
+    <dialog id="version-dialog" aria-labelledby="version-title">
+      <form id="version-form">
+        <div class="modal-heading">
+          <div>
+            <span class="eyebrow">EXPERIMENT HISTORY</span>
+            <h2 id="version-title">New version</h2>
+          </div>
+          <button type="button" class="icon" data-close aria-label="Close">
+            ×
+          </button>
+        </div>
+        <div class="form-body">
+          <div class="two-col">
+            <label
+              >Version ID<input
+                name="id"
+                required
+                maxlength="40"
+                placeholder="v5" /></label
+            ><label>Date<input name="date" type="date" required /></label>
+          </div>
+          <label
+            >Short title<input
+              name="title"
+              required
+              maxlength="160"
+              placeholder="For example: more precise task statements" /></label
+          ><label
+            >Status<select name="status">
+              <option value="draft">Draft</option>
+              <option value="review">In review</option>
+              <option value="accepted">Accepted</option>
+            </select></label
+          ><label
+            >Changes, hypothesis and conclusions<textarea
+              name="notes"
+              rows="3"
+              maxlength="12000"
+              placeholder="Hypothesis, changes, conclusion…"
+            ></textarea></label
+          ><label
+            >Prompt snapshot <span class="muted">optional</span
+            ><textarea
+              name="prompt"
+              rows="5"
+              maxlength="100000"
+              placeholder="Paste the exact prompt for this version"
+            ></textarea></label
+          ><label
+            >Evaluation results CSV <span class="muted">optional</span
+            ><input name="csv" type="file" accept=".csv,text/csv"
+          /></label>
+          <div id="set-scopes"></div>
+          <p class="hint">
+            Attach cards_*.csv from the evaluator. A version without CSV adds no invented scores. Storage is local; export JSON to move or back up your data.
+          </p>
+          <p id="form-error" class="error" role="alert" hidden></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="quiet" data-close>Cancel</button
+          ><button class="primary" type="submit">Save version</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="card-dialog" aria-labelledby="card-title">
+      <div class="modal-heading">
+        <h2 id="card-title">Card</h2>
+        <button class="icon" data-close aria-label="Close card">×</button>
+      </div>
+      <div id="card-detail" class="form-body"></div>
+    </dialog>
+    <dialog id="issue-dialog" aria-labelledby="issue-title">
+      <form id="issue-form">
+        <div class="modal-heading">
+          <h2 id="issue-title">New finding</h2>
+          <button
+            type="button"
+            class="icon"
+            data-close
+            aria-label="Close finding"
+          >
+            ×
+          </button>
+        </div>
+        <div class="form-body">
+          <div class="two-col">
+            <label>Version<select name="version"></select></label
+            ><label
+              >Severity<select name="severity">
+                <option>Significant</option>
+                <option>Critical</option>
+                <option>Formatting</option>
+              </select></label
+            >
+          </div>
+          <label
+            >Topic<input
+              name="topic"
+              required
+              maxlength="200"
+              placeholder="For example: functions, tasks"
+          /></label>
+          <div class="two-col">
+            <label
+              >Location<input
+                name="location"
+                required
+                maxlength="200"
+                placeholder="Task 3, PDF page 2" /></label
+            ><label
+              >Category<input
+                name="category"
+                required
+                maxlength="100"
+                placeholder="False premise"
+            /></label>
+          </div>
+          <label
+            >What went wrong<textarea
+              name="description"
+              required
+              rows="3"
+              maxlength="8000"
+            ></textarea></label
+          ><label
+            >Evidence or counterexample<textarea
+              name="evidence"
+              rows="2"
+              maxlength="8000"
+            ></textarea></label
+          ><label
+            >Next step<input
+              name="next"
+              maxlength="2000"
+              placeholder="What needs to be retested"
+          /></label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="quiet" data-close>Cancel</button
+          ><button class="primary" type="submit">Add finding</button>
+        </div>
+      </form>
+    </dialog>
+    <input
+      id="backup-file"
+      type="file"
+      accept=".json,application/json"
+      hidden
+    />
+    <div id="toast" role="status" hidden></div>
+    <noscript>Enable JavaScript to open the dashboard.</noscript>
+  </body>
+</html>

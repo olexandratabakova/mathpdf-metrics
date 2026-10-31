@@ -1,231 +1,176 @@
 <!doctype html>
-<html lang="uk">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta
-      name="description"
-      content="MathPDF quality lab — історія експериментів, порівняння промптів і перевірка якості."
-    />
-    <title>MathPDF · Quality Lab</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style.css?v=0a6ea2b9e6" />
-    <link rel="stylesheet" href="vendor/katex/katex.min.css" />
-    <script src="vendor/katex/katex.min.js" defer></script>
-    <script src="vendor/math-renderer.js" defer></script>
-    <script src="data.js" defer></script>
-    <script src="reviews-data.js?v=50bae56eaa16" defer></script>
-    <script src="comparison-data.js?v=1b5b2393372c" defer></script>
-    <script src="comparison.js?v=4f91b72d594e" defer></script>
-    <script src="cycle-data.js?v=1b6c73787d5d" defer></script>
-    <script src="cycle.js?v=994ebeee829e" defer></script>
-    <script src="parameterized-data.js?v=c4c274a906df" defer></script>
-    <script src="parameterized.js?v=ad9ceaa62173" defer></script>
-    <script src="seventy-data.js?v=160d4d391a5d" defer></script>
-    <script src="seventy.js?v=f689a25ebb45" defer></script>
-    <script src="symbolic-data.js?v=3a4f0dd57a64" defer></script>
-    <script src="symbolic.js?v=9edf44b6d737" defer></script>
-    <script src="rag-data.js?v=317dd92dd111" defer></script>
-    <script src="rag.js?v=aa219f4c2660" defer></script>
-    <script src="hundred-data.js?v=072670d8719c" defer></script>
-    <script src="hundred.js?v=4291d17c9a18" defer></script>
-    <script src="reviews.js?v=ecb73910accd" defer></script>
-    <script src="app.js?v=41768dd50a" defer></script>
-  </head>
-  <body>
-    <aside class="sidebar">
-      <a class="brand" href="#overview"
-        ><span class="brand-mark">m<span>·</span></span
-        ><span>MathPDF<small>QUALITY LAB</small></span></a
-      >
-      <div class="nav-label">РОБОЧИЙ ПРОСТІР</div>
-      <nav aria-label="Розділи">
-        <a href="#overview" data-view="overview"><span>◫</span> Огляд</a
-        ><a href="#versions" data-view="versions"
-          ><span>≋</span> Версії та промпти</a
-        ><a href="#cards" data-view="cards"><span>▤</span> Картки</a
-        ><a href="#issues" data-view="issues"
-          ><span>⊙</span> Ручна перевірка <b id="issue-count"></b></a
-        ><a href="#reviews" data-view="reviews"><span>◇</span> Експерименти</a
-        ><a href="#guide" data-view="guide"><span>⌁</span> Як це працює</a>
-      </nav>
-      <div class="sidebar-bottom">
-        <div class="live-dot"></div>
-        <strong>Ваш простір експериментів</strong>
-        <p>Порівнюйте. Перевіряйте.<br />Покращуйте з доказами.</p>
-        <a
-          href="https://github.com/olexandratabakova/mathpdf-metrics"
-          target="_blank"
-          rel="noreferrer"
-          >Репозиторій ↗</a
-        >
-      </div>
-    </aside>
-    <div class="workspace">
-      <header class="topbar">
-        <span
-          >MathPDF <span class="slash">/</span>
-          <b id="breadcrumb">Огляд якості</b></span
-        >
-        <div class="top-actions">
-          <span class="storage-label" id="storage-label"
-            >Дані у цьому браузері</span
-          ><button id="backup" class="quiet">Експорт JSON ↗</button
-          ><button id="import-backup" class="quiet">Імпорт</button
-          ><button id="new-run" class="primary">＋ Нова версія</button>
-        </div>
-      </header>
-      <main id="main" tabindex="-1"></main>
-      <footer class="page-footer">
-        <span>MathPDF Quality Lab</span
-        ><span
-          >Оцінки допомагають перевіряти якість, але не замінюють математичну
-          перевірку.</span
-        >
-      </footer>
-    </div>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MathPDF Quality Lab: experiments, evidence, prompt versions and mathematical validation.">
+<title>MathPDF · Quality Lab</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=hub1">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<script src="vendor/katex/katex.min.js" defer></script>
+<script src="vendor/math-renderer.js" defer></script>
+<script src="data.js" defer></script>
+<script src="experiments-catalog.js?v=hub1" defer></script>
+<script src="history-english.js?v=hub1" defer></script>
+<script src="research.js?v=hub1" defer></script>
+<script src="workspace.js?v=hub1" defer></script>
+<script src="app.js?v=hub1" defer></script>
+</head><body>
+<aside class="sidebar">
+<a class="brand" href="#reviews"><span class="brand-mark">m<span>·</span></span><span>MathPDF<small>QUALITY LAB</small></span></a>
+<div class="nav-label">RESEARCH WORKSPACE</div>
+<nav aria-label="Sections">
+<a href="#reviews" data-view="reviews"><span>◇</span> Experiments</a>
+<a href="#overview" data-view="overview"><span>◫</span> Flashcard metrics</a>
+<a href="#versions" data-view="versions"><span>≋</span> Version notebook</a>
+<a href="#cards" data-view="cards"><span>▤</span> Cards</a>
+<a href="#issues" data-view="issues"><span>⊙</span> Manual findings <b id="issue-count"></b></a>
+<a href="#guide" data-view="guide"><span>⌁</span> Methods & guide</a>
+</nav>
+<div class="sidebar-bottom"><div class="live-dot"></div><strong>A record of what we learned.</strong><p>Compare the methods.<br>Follow the evidence.</p><a href="https://github.com/olexandratabakova/mathpdf-metrics" target="_blank" rel="noreferrer">Repository ↗</a></div>
+</aside>
+<div class="workspace"><header class="topbar"><span>MathPDF <span class="slash">/</span> <b id="breadcrumb">Experiments</b></span><div class="top-actions"><span class="storage-label" id="storage-label">Saved in this browser</span><button id="backup" class="quiet">Export JSON ↗</button><button id="import-backup" class="quiet">Import</button><button id="new-run" class="primary">+ New version</button></div></header>
+<main id="main" tabindex="-1"></main><footer class="page-footer"><span>MathPDF Quality Lab</span><span>Evidence supports decisions. A passing check has a defined scope.</span></footer></div>
     <dialog id="version-dialog" aria-labelledby="version-title">
       <form id="version-form">
         <div class="modal-heading">
           <div>
-            <span class="eyebrow">ІСТОРІЯ ЕКСПЕРИМЕНТІВ</span>
-            <h2 id="version-title">Нова версія</h2>
+            <span class="eyebrow">EXPERIMENT HISTORY</span>
+            <h2 id="version-title">New version</h2>
           </div>
-          <button type="button" class="icon" data-close aria-label="Закрити">
+          <button type="button" class="icon" data-close aria-label="Close">
             ×
           </button>
         </div>
         <div class="form-body">
           <div class="two-col">
             <label
-              >Назва версії<input
+              >Version ID<input
                 name="id"
                 required
                 maxlength="40"
                 placeholder="v5" /></label
-            ><label>Дата<input name="date" type="date" required /></label>
+            ><label>Date<input name="date" type="date" required /></label>
           </div>
           <label
-            >Коротка назва<input
+            >Short title<input
               name="title"
               required
               maxlength="160"
-              placeholder="Наприклад: точніші умови задач" /></label
+              placeholder="For example: more precise task statements" /></label
           ><label
-            >Статус<select name="status">
-              <option value="draft">Чернетка</option>
-              <option value="review">На перевірці</option>
-              <option value="accepted">Прийнято</option>
+            >Status<select name="status">
+              <option value="draft">Draft</option>
+              <option value="review">In review</option>
+              <option value="accepted">Accepted</option>
             </select></label
           ><label
-            >Що змінилося та що перевіряємо<textarea
+            >Changes, hypothesis and conclusions<textarea
               name="notes"
               rows="3"
               maxlength="12000"
-              placeholder="Гіпотеза, зміни, висновок…"
+              placeholder="Hypothesis, changes, conclusion…"
             ></textarea></label
           ><label
-            >Знімок промпту <span class="muted">необов’язково</span
+            >Prompt snapshot <span class="muted">optional</span
             ><textarea
               name="prompt"
               rows="5"
               maxlength="100000"
-              placeholder="Вставте точний текст промпту для цієї версії"
+              placeholder="Paste the exact prompt for this version"
             ></textarea></label
           ><label
-            >Результати оцінювання CSV <span class="muted">необов’язково</span
+            >Evaluation results CSV <span class="muted">optional</span
             ><input name="csv" type="file" accept=".csv,text/csv"
           /></label>
           <div id="set-scopes"></div>
           <p class="hint">
-            Файл cards_*.csv з evaluate. Запис версії без CSV не створює
-            вигаданих оцінок. Зберігання локальне; для перенесення
-            використовуйте експорт JSON.
+            Attach cards_*.csv from the evaluator. A version without CSV adds no invented scores. Storage is local; export JSON to move or back up your data.
           </p>
           <p id="form-error" class="error" role="alert" hidden></p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="quiet" data-close>Скасувати</button
-          ><button class="primary" type="submit">Зберегти версію</button>
+          <button type="button" class="quiet" data-close>Cancel</button
+          ><button class="primary" type="submit">Save version</button>
         </div>
       </form>
     </dialog>
     <dialog id="card-dialog" aria-labelledby="card-title">
       <div class="modal-heading">
-        <h2 id="card-title">Картка</h2>
-        <button class="icon" data-close aria-label="Закрити картку">×</button>
+        <h2 id="card-title">Card</h2>
+        <button class="icon" data-close aria-label="Close card">×</button>
       </div>
       <div id="card-detail" class="form-body"></div>
     </dialog>
     <dialog id="issue-dialog" aria-labelledby="issue-title">
       <form id="issue-form">
         <div class="modal-heading">
-          <h2 id="issue-title">Нове зауваження</h2>
+          <h2 id="issue-title">New finding</h2>
           <button
             type="button"
             class="icon"
             data-close
-            aria-label="Закрити зауваження"
+            aria-label="Close finding"
           >
             ×
           </button>
         </div>
         <div class="form-body">
           <div class="two-col">
-            <label>Версія<select name="version"></select></label
+            <label>Version<select name="version"></select></label
             ><label
-              >Серйозність<select name="severity">
-                <option>Суттєва</option>
-                <option>Критична</option>
-                <option>Форматування</option>
+              >Severity<select name="severity">
+                <option>Significant</option>
+                <option>Critical</option>
+                <option>Formatting</option>
               </select></label
             >
           </div>
           <label
-            >Тема<input
+            >Topic<input
               name="topic"
               required
               maxlength="200"
-              placeholder="Наприклад: функції, задачі"
+              placeholder="For example: functions, tasks"
           /></label>
           <div class="two-col">
             <label
-              >Де саме<input
+              >Location<input
                 name="location"
                 required
                 maxlength="200"
-                placeholder="Задача 3, PDF стор. 2" /></label
+                placeholder="Task 3, PDF page 2" /></label
             ><label
-              >Категорія<input
+              >Category<input
                 name="category"
                 required
                 maxlength="100"
-                placeholder="Хибна умова"
+                placeholder="False premise"
             /></label>
           </div>
           <label
-            >Що не працює<textarea
+            >What went wrong<textarea
               name="description"
               required
               rows="3"
               maxlength="8000"
             ></textarea></label
           ><label
-            >Доказ або контрприклад<textarea
+            >Evidence or counterexample<textarea
               name="evidence"
               rows="2"
               maxlength="8000"
             ></textarea></label
           ><label
-            >Наступний крок<input
+            >Next step<input
               name="next"
               maxlength="2000"
-              placeholder="Що має пройти повторну перевірку"
+              placeholder="What needs to be retested"
           /></label>
         </div>
         <div class="modal-footer">
-          <button type="button" class="quiet" data-close>Скасувати</button
-          ><button class="primary" type="submit">Додати зауваження</button>
+          <button type="button" class="quiet" data-close>Cancel</button
+          ><button class="primary" type="submit">Add finding</button>
         </div>
       </form>
     </dialog>
@@ -236,6 +181,6 @@
       hidden
     />
     <div id="toast" role="status" hidden></div>
-    <noscript>Увімкніть JavaScript, щоб відкрити панель.</noscript>
+    <noscript>Enable JavaScript to open the dashboard.</noscript>
   </body>
 </html>
