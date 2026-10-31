@@ -8,6 +8,31 @@ ROOT=Path(__file__).resolve().parents[1]
 def read(folder):return json.loads((ROOT/'experiments'/folder/'result.json').read_text(encoding='utf-8'))
 def series(label,value,total,tone='sage',unit='ratio'):
     return {'label':label,'value':value,'total':total,'tone':tone,'unit':unit}
+
+def flashcard_direction(baseline,candidates):
+    history=json.loads((ROOT/'data/history.json').read_text(encoding='utf-8'))
+    scores={}
+    for version in ['v1','v2','v3','v4']:
+        rows=[r for r in history['records'] if r['version']==version]
+        scores[version]={}
+        for key in ['sc','faith','atomic','coverage','dup']:
+            valid=[r for r in rows if type(r.get(key)) in (int,float)]
+            scores[version][key]=sum(r[key]*r['n'] for r in valid)/sum(r['n'] for r in valid) if valid else None
+    newest=next(c for c in candidates if c['id']=='clearleaf-sixty')
+    examples=[next(c for c in history['cards'] if c['id']==id) for id in ['card-100','card-276','card-345']]
+    return {'primary':'wildflower','selected_by':'user','scope':'Primary research baseline for flashcards; no production prompt change or mathematical certification.',
+      'historical_scores':scores,
+      'borrow_candidates':[
+        {'source':'v1','metric':'dup','signal':scores['v1']['dup'],'label':'Enforce distinct targets','proposal':'Use explicit target slots and audit semantic overlap after generation, including repeats hidden inside broad cards.'},
+        {'source':'v2','metric':'coverage','signal':scores['v2']['coverage'],'label':'Check source coverage','proposal':'Map emitted cards to a source-concept checklist. Fill uncovered slots without widening each answer.'},
+        {'source':'v3','metric':'sc','signal':scores['v3']['sc'],'label':'Check fronts in isolation','proposal':'Check named concepts and required givens without seeing the back. Do not demand the expected definition as missing input.'},
+        {'source':'clearleaf-sixty','metric':'faith','signal':newest['scores']['faith'],'label':'Audit source and added claims','proposal':'Check exact citations and source/explanation roles. Keep added reasoning only when needed to answer the question fully.'},
+        {'source':'v4','metric':'atomic','signal':scores['v4']['atomic'],'label':'No separate change selected','proposal':'Its observed atomicity is below Wildflower’s. Keep the current single-target emphasis; historical samples are different.'}
+      ],
+      'examples':[{'id':c['id'],'version':c['version'],'front':c['front']} for c in examples],
+      'existing_rules_note':'Wildflower already requests these behaviors. Proposed changes target enforcement and checks, not more repeated prompt instructions.',
+      'limitation':'Descriptive signals, not proven transferable prompt effects. Historical prompts and full answer snapshots were not retained. Front examples are previews, not full quality certification.',
+      'decision':'Keep Wildflower unchanged as primary. Test the proposed additions in a separate candidate before adopting them.'}
 def build():
     out=[]
     baseline=None
@@ -106,7 +131,8 @@ def build():
           'clearleaf-sixty-data.js','research.js')
         candidates.append({'id':'clearleaf-sixty','title':'Clearleaf 60','n':60,
           'scores':{key:c[value] for key,value in keys.items()},'judge':a['judge'],'difficulty':3,'source':a['source']['name']})
-    return {'schema_version':1,'experiments':out,'flashcard_baseline':baseline,'flashcard_candidates':candidates}
+    return {'schema_version':1,'experiments':out,'flashcard_baseline':baseline,'flashcard_candidates':candidates,
+            'primary_flashcard_version':'wildflower','flashcard_direction':flashcard_direction(baseline,candidates)}
 def main():
     catalog=build()
     (ROOT/'data/experiments.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

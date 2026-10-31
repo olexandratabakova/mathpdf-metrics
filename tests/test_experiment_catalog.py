@@ -59,3 +59,16 @@ def test_comparison_baseline_uses_recorded_metrics_not_task_acceptance():
     expanded=catalog['flashcard_candidates'][1]
     assert expanded['id']=='clearleaf-sixty' and expanded['n']==60
     assert expanded['scores']['sc']==47/60
+
+
+def test_primary_choice_and_borrowing_notes_do_not_relabel_experiment_results():
+    catalog=json.loads((ROOT/'data/experiments.json').read_text(encoding='utf-8'))
+    assert catalog['primary_flashcard_version']=='wildflower'
+    direction=catalog['flashcard_direction']
+    assert direction['selected_by']=='user' and direction['primary']=='wildflower'
+    assert direction['historical_scores']['v1']['dup']<.02
+    assert direction['historical_scores']['v2']['coverage']>.87
+    assert direction['historical_scores']['v3']['sc']>.93
+    assert {x['source'] for x in direction['borrow_candidates']}=={'v1','v2','v3','v4','clearleaf-sixty'}
+    assert 'separate candidate' in direction['decision']
+    assert all(e['cost_usd']==json.loads((ROOT/e['evidence']).read_text(encoding='utf-8'))['cost_usd'] for e in catalog['experiments'])

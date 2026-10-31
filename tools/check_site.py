@@ -31,6 +31,7 @@ async def check(url, chrome):
         await page.wait_for_selector('.experiment-card')
         assert await page.locator('.experiment-card').count() == 12
         assert await page.locator('.history-tile').count() == 4
+        assert await page.locator('a', has_text='Primary: Wildflower').count() == 1
         assert await page.locator('.task-evidence').count() == 0
         scripts = await page.locator('script[src]').evaluate_all('(els)=>els.map(e=>e.getAttribute("src"))')
         assert not any('-data.js' in x for x in scripts), scripts
@@ -50,6 +51,8 @@ async def check(url, chrome):
         await page.wait_for_selector('#version-comparison')
         assert await page.locator('#version-comparison tbody tr').count() == 7
         assert await page.locator('#method-comparison tbody tr').count() == 12
+        assert await page.locator('[data-primary-version]').count() == 1
+        assert await page.locator('#borrow-comparison tbody tr').count() == 5
         assert await page.locator('#version-comparison tbody tr').filter(has=page.locator('a[href="experiment.html?id=wildflower"]')).locator('td').nth(1).inner_text() == '80.0%'
         scripts = await page.locator('script[src]').evaluate_all('(els)=>els.map(e=>e.getAttribute("src"))')
         assert not any('-data.js' in x for x in scripts)
@@ -69,6 +72,7 @@ async def check(url, chrome):
             await page.goto(url + '/experiment.html?id=' + slug)
             await page.wait_for_selector('.task-evidence')
             assert await page.locator('.task-evidence').count() == count, slug
+            assert await page.locator('[data-primary-study]').count() == (1 if slug == 'wildflower' else 0)
             assert await page.locator('.math-fallback').count() == 0, slug
             scripts = await page.locator('script[src]').evaluate_all('(els)=>els.map(e=>e.getAttribute("src"))')
             assert sum('-data.js' in x for x in scripts) == 1, scripts

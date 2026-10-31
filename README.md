@@ -25,6 +25,14 @@ The overview gives each attempt a short description, a chart explaining its scop
 
 Costs describe these recorded runs, not current price quotes or forecasts. The SymPy total includes two exploratory pilots; the main 55-task sample cost $0.0353724. Requests, outputs, usage and limitations are retained under [experiments/](experiments/).
 
+## Primary flashcard baseline: Wildflower
+
+**Wildflower remains primary by user decision.** This selects a research baseline; it does not certify correctness, alter browser version statuses or change production MathPDF prompts.
+
+Potential additions for an isolated successor: distinct target slots (v1's low duplicate signal), balanced source coverage (v2), explicit front context (v3), and restrained added claims (Clearleaf 60). Historical signals come from different samples and incomplete judge settings; exact historical prompts/full answer snapshots are unavailable. These are hypotheses, not recovered prompt components or proven gains. Wildflower already contains these rules; test explicit target slots and post-generation checks instead of repeating instructions. Preserve its atomicity and complete reasoning while testing one addition at a time.
+
+See [comparison and borrowing notes](https://olexandratabakova.github.io/mathpdf-metrics/#comparison).
+
 ## Cross-version comparison and next steps
 
 The [comparison page](https://olexandratabakova.github.io/mathpdf-metrics/#comparison) shows v1–v4, Wildflower and Clearleaf card metrics side by side, a selectable descriptive chart, all twelve studies, and the proposed next experiment. Custom browser-local versions also appear, with missing metrics preserved.
@@ -175,7 +183,7 @@ uv run evaluate run --help
 
 See [evaluator instructions](docs/evaluator.md) for the separate paid CLI. Opening or testing the static site does not invoke it. Experiment folders retain prompts, seeds, usage, checks and reproduction scripts where available. Rerunning a model generation is a separate paid operation and need not reproduce the exact output; historical exports have the provenance limitations described above.
 
-The current revision passes **105 Python tests**. With Playwright available in your Python environment and a local server running, the optional browser regression check is:
+The current revision passes **106 Python tests**. With Playwright available in your Python environment and a local server running, the optional browser regression check is:
 
 ```sh
 python tools/check_site.py --url http://127.0.0.1:8894 --chrome "/path/to/chrome"
