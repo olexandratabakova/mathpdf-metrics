@@ -1,0 +1,4188 @@
+{
+  "id": "problems-v5-seventy-2026-10-31",
+  "date": "2026-10-31",
+  "version": "v5",
+  "kind": "multi_topic_parameterized",
+  "summary": "70 числових варіантів у 7 темах: 40 підтримуваних сімейств, по 10 задач на тему. Математику будує й перевіряє програма; другої моделі немає.",
+  "topics": [
+    {
+      "id": "sets",
+      "name": "Множини",
+      "count": 10,
+      "families": 5
+    },
+    {
+      "id": "functions",
+      "name": "Функції",
+      "count": 10,
+      "families": 10
+    },
+    {
+      "id": "counting",
+      "name": "Комбінаторика",
+      "count": 10,
+      "families": 5
+    },
+    {
+      "id": "pigeonhole",
+      "name": "Принцип Діріхле",
+      "count": 10,
+      "families": 5
+    },
+    {
+      "id": "integers",
+      "name": "Числа й подільність",
+      "count": 10,
+      "families": 5
+    },
+    {
+      "id": "congruences",
+      "name": "Конгруенції",
+      "count": 10,
+      "families": 5
+    },
+    {
+      "id": "induction",
+      "name": "Математична індукція",
+      "count": 10,
+      "families": 5
+    }
+  ],
+  "verified": 70,
+  "families": 40,
+  "items": [
+    {
+      "template_id": "sets_ops",
+      "topic": "sets",
+      "title": "Set operations",
+      "parameters": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "A": [
+          2,
+          3,
+          5
+        ],
+        "B": [
+          1,
+          2
+        ],
+        "C": [
+          3,
+          4,
+          5
+        ]
+      },
+      "source": {
+        "page": 6,
+        "reference": "Definition 1.10–1.11"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Compute the union, intersection and difference of these sets."
+        },
+        {
+          "kind": "math",
+          "latex": "A=\\{2,3,5\\},\\quad B=\\{1,2\\}",
+          "display": true,
+          "source": {
+            "page": 6
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Include elements according to the definitions of each operation."
+        },
+        {
+          "kind": "math",
+          "latex": "A\\cup B=\\{1,2,3,5\\},\\quad A\\cap B=\\{2\\},\\quad A\\setminus B=\\{3,5\\}",
+          "display": true,
+          "source": {
+            "page": 6
+          }
+        }
+      ],
+      "checks": [
+        "Exhaustive universe membership for all operations"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 1
+    },
+    {
+      "template_id": "sets_ops",
+      "topic": "sets",
+      "title": "Set operations",
+      "parameters": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "A": [
+          4,
+          7,
+          8
+        ],
+        "B": [
+          4,
+          8
+        ],
+        "C": [
+          4,
+          5,
+          7
+        ]
+      },
+      "source": {
+        "page": 6,
+        "reference": "Definition 1.10–1.11"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Compute the union, intersection and difference of these sets."
+        },
+        {
+          "kind": "math",
+          "latex": "A=\\{4,7,8\\},\\quad B=\\{4,8\\}",
+          "display": true,
+          "source": {
+            "page": 6
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Include elements according to the definitions of each operation."
+        },
+        {
+          "kind": "math",
+          "latex": "A\\cup B=\\{4,7,8\\},\\quad A\\cap B=\\{4,8\\},\\quad A\\setminus B=\\{7\\}",
+          "display": true,
+          "source": {
+            "page": 6
+          }
+        }
+      ],
+      "checks": [
+        "Exhaustive universe membership for all operations"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 2
+    },
+    {
+      "template_id": "sets_complement",
+      "topic": "sets",
+      "title": "Relative complement",
+      "parameters": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "A": [
+          5,
+          6,
+          8
+        ],
+        "B": [
+          4,
+          7
+        ],
+        "C": [
+          2,
+          3,
+          4
+        ]
+      },
+      "source": {
+        "page": 7,
+        "reference": "Definition 1.12"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find the complement relative to the stated universe."
+        },
+        {
+          "kind": "math",
+          "latex": "U=\\{1,2,3,4,5,6,7,8\\},\\quad A=\\{5,6,8\\}",
+          "display": true,
+          "source": {
+            "page": 7
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Retain exactly the universe elements that are not in the subset."
+        },
+        {
+          "kind": "math",
+          "latex": "A^c=U\\setminus A=\\{1,2,3,4,7\\}",
+          "display": true,
+          "source": {
+            "page": 7
+          }
+        }
+      ],
+      "checks": [
+        "Complement partitions the entire universe"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 3
+    },
+    {
+      "template_id": "sets_complement",
+      "topic": "sets",
+      "title": "Relative complement",
+      "parameters": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "A": [
+          2,
+          3,
+          5
+        ],
+        "B": [
+          3,
+          5
+        ],
+        "C": [
+          1,
+          3,
+          4
+        ]
+      },
+      "source": {
+        "page": 7,
+        "reference": "Definition 1.12"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find the complement relative to the stated universe."
+        },
+        {
+          "kind": "math",
+          "latex": "U=\\{1,2,3,4,5\\},\\quad A=\\{2,3,5\\}",
+          "display": true,
+          "source": {
+            "page": 7
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Retain exactly the universe elements that are not in the subset."
+        },
+        {
+          "kind": "math",
+          "latex": "A^c=U\\setminus A=\\{1,4\\}",
+          "display": true,
+          "source": {
+            "page": 7
+          }
+        }
+      ],
+      "checks": [
+        "Complement partitions the entire universe"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 4
+    },
+    {
+      "template_id": "sets_product",
+      "topic": "sets",
+      "title": "Cartesian product",
+      "parameters": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "A": [
+          1,
+          4,
+          5
+        ],
+        "B": [
+          2,
+          3
+        ],
+        "C": [
+          2,
+          4,
+          6
+        ]
+      },
+      "source": {
+        "page": 5,
+        "reference": "Definition 1.5"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "List the Cartesian product and determine its cardinality."
+        },
+        {
+          "kind": "math",
+          "latex": "A=\\{1,4,5\\},\\quad B=\\{2,3\\}",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Choose the first coordinate from the first set and the second from the second set."
+        },
+        {
+          "kind": "math",
+          "latex": "A\\times B=\\{(1,2),(1,3),(4,2),(4,3),(5,2),(5,3)\\}",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "|A\\times B|=3\\cdot 2=6",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        }
+      ],
+      "checks": [
+        "Complete distinct Cartesian enumeration"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 5
+    },
+    {
+      "template_id": "sets_product",
+      "topic": "sets",
+      "title": "Cartesian product",
+      "parameters": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "A": [
+          1,
+          5,
+          6
+        ],
+        "B": [
+          4,
+          5
+        ],
+        "C": [
+          3,
+          5,
+          6
+        ]
+      },
+      "source": {
+        "page": 5,
+        "reference": "Definition 1.5"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "List the Cartesian product and determine its cardinality."
+        },
+        {
+          "kind": "math",
+          "latex": "A=\\{1,5,6\\},\\quad B=\\{4,5\\}",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Choose the first coordinate from the first set and the second from the second set."
+        },
+        {
+          "kind": "math",
+          "latex": "A\\times B=\\{(1,4),(1,5),(5,4),(5,5),(6,4),(6,5)\\}",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "|A\\times B|=3\\cdot 2=6",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        }
+      ],
+      "checks": [
+        "Complete distinct Cartesian enumeration"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 6
+    },
+    {
+      "template_id": "sets_power",
+      "topic": "sets",
+      "title": "Power set",
+      "parameters": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "A": [
+          2,
+          3,
+          5
+        ],
+        "B": [
+          1,
+          4
+        ],
+        "C": [
+          1,
+          2,
+          3
+        ]
+      },
+      "source": {
+        "page": 5,
+        "reference": "Theorem 1.7 and Definition 1.9, p. 6"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "List the power set and its cardinality."
+        },
+        {
+          "kind": "math",
+          "latex": "A=\\{2,3,5\\}",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "List all subsets, including the empty set and the set itself."
+        },
+        {
+          "kind": "math",
+          "latex": "\\mathcal P(A)=\\{\\varnothing,\\{2\\},\\{3\\},\\{5\\},\\{2,3\\},\\{2,5\\},\\{3,5\\},\\{2,3,5\\}\\}",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "|\\mathcal P(A)|=2^{3}=8",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        }
+      ],
+      "checks": [
+        "Every distinct subset counted; total matches binary choices"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 7
+    },
+    {
+      "template_id": "sets_power",
+      "topic": "sets",
+      "title": "Power set",
+      "parameters": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "A": [
+          2,
+          4,
+          5
+        ],
+        "B": [
+          5,
+          6
+        ],
+        "C": [
+          1,
+          5,
+          6
+        ]
+      },
+      "source": {
+        "page": 5,
+        "reference": "Theorem 1.7 and Definition 1.9, p. 6"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "List the power set and its cardinality."
+        },
+        {
+          "kind": "math",
+          "latex": "A=\\{2,4,5\\}",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "List all subsets, including the empty set and the set itself."
+        },
+        {
+          "kind": "math",
+          "latex": "\\mathcal P(A)=\\{\\varnothing,\\{2\\},\\{4\\},\\{5\\},\\{2,4\\},\\{2,5\\},\\{4,5\\},\\{2,4,5\\}\\}",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "|\\mathcal P(A)|=2^{3}=8",
+          "display": true,
+          "source": {
+            "page": 5
+          }
+        }
+      ],
+      "checks": [
+        "Every distinct subset counted; total matches binary choices"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 8
+    },
+    {
+      "template_id": "sets_distribute",
+      "topic": "sets",
+      "title": "Distributive set identity",
+      "parameters": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "A": [
+          2,
+          4,
+          5
+        ],
+        "B": [
+          5,
+          7
+        ],
+        "C": [
+          1,
+          3,
+          4
+        ]
+      },
+      "source": {
+        "page": 6,
+        "reference": "Distributive identity and proof"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Verify the distributive identity for these concrete sets by computing both sides."
+        },
+        {
+          "kind": "math",
+          "latex": "A=\\{2,4,5\\},\\quad B=\\{5,7\\},\\quad C=\\{1,3,4\\}",
+          "display": true,
+          "source": {
+            "page": 6
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Compute each side independently from membership."
+        },
+        {
+          "kind": "math",
+          "latex": "A\\cap(B\\cup C)=\\{4,5\\}",
+          "display": true,
+          "source": {
+            "page": 6
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(A\\cap B)\\cup(A\\cap C)=\\{4,5\\}",
+          "display": true,
+          "source": {
+            "page": 6
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The resulting sets coincide for these specified sets. This computation alone is not a proof for arbitrary sets."
+        }
+      ],
+      "checks": [
+        "Exhaustive concrete distributive identity"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 9
+    },
+    {
+      "template_id": "sets_distribute",
+      "topic": "sets",
+      "title": "Distributive set identity",
+      "parameters": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "A": [
+          2,
+          5,
+          6
+        ],
+        "B": [
+          1,
+          2
+        ],
+        "C": [
+          2,
+          3,
+          6
+        ]
+      },
+      "source": {
+        "page": 6,
+        "reference": "Distributive identity and proof"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Verify the distributive identity for these concrete sets by computing both sides."
+        },
+        {
+          "kind": "math",
+          "latex": "A=\\{2,5,6\\},\\quad B=\\{1,2\\},\\quad C=\\{2,3,6\\}",
+          "display": true,
+          "source": {
+            "page": 6
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Compute each side independently from membership."
+        },
+        {
+          "kind": "math",
+          "latex": "A\\cap(B\\cup C)=\\{2,6\\}",
+          "display": true,
+          "source": {
+            "page": 6
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(A\\cap B)\\cup(A\\cap C)=\\{2,6\\}",
+          "display": true,
+          "source": {
+            "page": 6
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The resulting sets coincide for these specified sets. This computation alone is not a proof for arbitrary sets."
+        }
+      ],
+      "checks": [
+        "Exhaustive concrete distributive identity"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 10
+    },
+    {
+      "template_id": "relation_missing",
+      "title": "Relation Missing",
+      "parameters": {
+        "a": 2,
+        "b": 4,
+        "c": 1
+      },
+      "source": {
+        "page": 63,
+        "reference": "Example 12.2(a)"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Does the following relation define a function from integers to integers?"
+        },
+        {
+          "kind": "math",
+          "latex": "R=\\{(x,y)\\in \\mathbb Z\\times \\mathbb Z: 2x+4y=1\\}",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "No. For input zero the only rational candidate is not an integer, so existence fails."
+        },
+        {
+          "kind": "math",
+          "latex": "x=0\\implies y=\\frac{1}{4}\\notin \\mathbb Z",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "checks": [
+        "Nonzero coefficients",
+        "x=0 has no integer output"
+      ],
+      "status": "verified_for_supported_template",
+      "topic": "functions",
+      "id": 11
+    },
+    {
+      "template_id": "relation_total",
+      "title": "Relation Total",
+      "parameters": {
+        "a": 4,
+        "b": 1,
+        "c": 4
+      },
+      "source": {
+        "page": 63,
+        "reference": "Example 12.2(b)"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Does the following relation define a function from integers to integers?"
+        },
+        {
+          "kind": "math",
+          "latex": "R=\\{(x,y)\\in \\mathbb Z\\times \\mathbb Z: 4x+1y=4\\}",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Yes. For every integer input the equation has exactly one output, and it is an integer."
+        },
+        {
+          "kind": "math",
+          "latex": "y=4-4x\\in \\mathbb Z",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "checks": [
+        "Coefficient of output is one: unique integer solution",
+        "Nonzero input coefficient"
+      ],
+      "status": "verified_for_supported_template",
+      "topic": "functions",
+      "id": 12
+    },
+    {
+      "template_id": "finite_range",
+      "title": "Finite Range",
+      "parameters": {
+        "domain": [
+          0,
+          2,
+          4
+        ],
+        "shift": 7
+      },
+      "source": {
+        "page": 63,
+        "reference": "Exercise 12.5(1)"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Determine the domain, codomain and image of this function."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\{0,2,4\\}\\to \\mathbb Z,\\qquad f(x)=x^2-7",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "The stated finite set is the domain; the integers are the codomain. Evaluate every domain element:"
+        },
+        {
+          "kind": "math",
+          "latex": "f(0)=-7",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "f(2)=-3",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "f(4)=9",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Removing repeated values gives the image:"
+        },
+        {
+          "kind": "math",
+          "latex": "f(\\{0,2,4\\})=\\{-7,-3,9\\}",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "checks": [
+        "Finite nonempty integer domain",
+        "No duplicate domain entries",
+        "Every output belongs to integer codomain"
+      ],
+      "status": "verified_for_supported_template",
+      "topic": "functions",
+      "id": 13
+    },
+    {
+      "template_id": "equal_rational",
+      "title": "Equal Rational",
+      "parameters": {
+        "a": 4
+      },
+      "source": {
+        "page": 64,
+        "reference": "Example 12.7"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Are these functions equal? Account for their domains."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb R\\setminus\\{4\\}\\to \\mathbb R,\\quad f(x)=x+4",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "g:\\mathbb R\\setminus\\{4\\}\\to \\mathbb R,\\quad g(x)=\\frac{x^2-16}{x-4}",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Yes. Their domains and codomains coincide. The denominator is nonzero everywhere on that domain, so factorization gives equal values at every allowed input:"
+        },
+        {
+          "kind": "math",
+          "latex": "\\frac{x^2-16}{x-4}=\\frac{(x-4)(x+4)}{x-4}=x+4\\quad(x\\ne 4)",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "checks": [
+        "Nonzero excluded point",
+        "Exact polynomial coefficient identity"
+      ],
+      "status": "verified_for_supported_template",
+      "topic": "functions",
+      "id": 14
+    },
+    {
+      "template_id": "square_real",
+      "title": "Square Real",
+      "parameters": {
+        "k": 2
+      },
+      "source": {
+        "page": 64,
+        "reference": "Example 12.9"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Determine whether this function is injective and whether it is surjective."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb R\\to \\mathbb R,\\qquad f(x)=2x^2",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "It is not injective: two distinct inputs give the same output."
+        },
+        {
+          "kind": "math",
+          "latex": "f(1)=f(-1)=2",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        },
+        {
+          "kind": "text",
+          "text": "It is not surjective: all outputs are nonnegative, so minus one has no real preimage."
+        },
+        {
+          "kind": "math",
+          "latex": "2x^2\\geq0>-1\\qquad(x\\in \\mathbb R)",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "checks": [
+        "Positive square coefficient; square-root construction stays nonnegative"
+      ],
+      "status": "verified_for_supported_template",
+      "topic": "functions",
+      "id": 15
+    },
+    {
+      "template_id": "square_nonnegative",
+      "title": "Square Nonnegative",
+      "parameters": {
+        "k": 5
+      },
+      "source": {
+        "page": 64,
+        "reference": "Example 12.9, restriction"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove that this function is bijective."
+        },
+        {
+          "kind": "math",
+          "latex": "f:[0,\\infty)\\to[0,\\infty),\\qquad f(x)=5x^2",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "All outputs are nonnegative. For nonnegative inputs, equality of outputs implies equal squares and then equal inputs:"
+        },
+        {
+          "kind": "math",
+          "latex": "5u^2=5v^2\\implies u^2=v^2\\implies u=v\\quad(u,v\\geq0)",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        },
+        {
+          "kind": "text",
+          "text": "For every nonnegative target choose a nonnegative input as follows. Substitution verifies surjectivity, hence bijectivity."
+        },
+        {
+          "kind": "math",
+          "latex": "x=\\sqrt{y/5}\\geq0,\\qquad f(x)=5(\\sqrt{y/5})^2=y\\quad(y\\geq0)",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "checks": [
+        "Positive square coefficient; square-root construction stays nonnegative"
+      ],
+      "status": "verified_for_supported_template",
+      "topic": "functions",
+      "id": 16
+    },
+    {
+      "template_id": "reciprocal_not_onto",
+      "title": "Reciprocal Not Onto",
+      "parameters": {
+        "a": 6,
+        "b": 4
+      },
+      "source": {
+        "page": 65,
+        "reference": "Example 12.10(1)"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Determine whether this function is injective and whether it is surjective onto the stated codomain."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb R\\setminus\\{0\\}\\to \\mathbb R,\\qquad f(x)=\\frac{6}x+4",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "The rule is defined on every allowed input. It is injective: equal outputs imply equal inputs, using nonzero inputs and numerator."
+        },
+        {
+          "kind": "math",
+          "latex": "\\frac{6}u+4=\\frac{6}v+4\\implies 6v=6u\\implies v=u\\quad(u,v\\ne0)",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "text",
+          "text": "It is not surjective onto the reals: the shift itself has no preimage."
+        },
+        {
+          "kind": "math",
+          "latex": "f(x)=4\\implies \\frac{6}x=0\\quad\\text{impossible for }x\\ne0",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "checks": [
+        "Nonzero numerator: output never equals shift",
+        "Exact inverse cancellation coefficient"
+      ],
+      "status": "verified_for_supported_template",
+      "topic": "functions",
+      "id": 17
+    },
+    {
+      "template_id": "reciprocal_bijection",
+      "title": "Reciprocal Bijection",
+      "parameters": {
+        "a": 5,
+        "b": 6
+      },
+      "source": {
+        "page": 65,
+        "reference": "Example 12.10(2)"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Determine whether this function is injective and whether it is surjective onto the stated codomain."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb R\\setminus\\{0\\}\\to \\mathbb R\\setminus\\{6\\},\\qquad f(x)=\\frac{5}x+6",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "The rule is defined on every allowed input. It is injective: equal outputs imply equal inputs, using nonzero inputs and numerator."
+        },
+        {
+          "kind": "math",
+          "latex": "\\frac{5}u+6=\\frac{5}v+6\\implies 5v=5u\\implies v=u\\quad(u,v\\ne0)",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The output cannot equal the excluded shift. For every allowed target the following preimage exists and is nonzero. Substitution proves surjectivity; therefore the function is bijective."
+        },
+        {
+          "kind": "math",
+          "latex": "y\\ne 6,\\quad x=\\frac{5}{y-6}\\ne0",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "f\\left(\\frac{5}{y-6}\\right)=\\frac{5}{5/(y-6)}+6=y",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "checks": [
+        "Nonzero numerator: output never equals shift",
+        "Exact inverse cancellation coefficient"
+      ],
+      "status": "verified_for_supported_template",
+      "topic": "functions",
+      "id": 18
+    },
+    {
+      "template_id": "integer_pair_bijection",
+      "title": "Integer Pair Bijection",
+      "parameters": {
+        "k": 6
+      },
+      "source": {
+        "page": 65,
+        "reference": "Example 12.10(3)"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove that this function is bijective by constructing and verifying integer preimages."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb Z^2\\to \\mathbb Z^2,\\qquad f(m,n)=(m+6n,m+7n)",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "All outputs are integer pairs. To prove injectivity, equal outputs give these two equations:"
+        },
+        {
+          "kind": "math",
+          "latex": "m+6n=r+6s,\\qquad m+7n=r+7s",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Subtracting the first equation from the second gives equal second coordinates; substitution gives equal first coordinates."
+        },
+        {
+          "kind": "math",
+          "latex": "n=s,\\qquad m=r",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "text",
+          "text": "For any integer target pair choose the following integer input. Both coordinates substitute to the target, so the function is surjective and hence bijective."
+        },
+        {
+          "kind": "math",
+          "latex": "n=v-u,\\qquad m=7u-6v",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "m+6n=(7u-6v)+6(v-u)=u",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "m+7n=(7u-6v)+7(v-u)=v",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "checks": [
+        "Integer matrix determinant one",
+        "Exact inverse matrix product is identity",
+        "Exact inverse matrix product is identity"
+      ],
+      "status": "verified_for_supported_template",
+      "topic": "functions",
+      "id": 19
+    },
+    {
+      "template_id": "composition_order",
+      "title": "Composition Order",
+      "parameters": {
+        "a": 5,
+        "b": 5
+      },
+      "source": {
+        "page": 66,
+        "reference": "Definition 12.11 and noncommutativity question"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Compute both compositions and decide whether they are equal."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb R\\to \\mathbb R,\\quad f(x)=x+5",
+          "display": true,
+          "source": {
+            "page": 66
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "g:\\mathbb R\\to \\mathbb R,\\quad g(x)=5x",
+          "display": true,
+          "source": {
+            "page": 66
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Both compositions have real domain and codomain. Substitute in the stated order:"
+        },
+        {
+          "kind": "math",
+          "latex": "(g\\circ f)(x)=5(x+5)=5x+25",
+          "display": true,
+          "source": {
+            "page": 66
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(f\\circ g)(x)=5x+5",
+          "display": true,
+          "source": {
+            "page": 66
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Their constant terms differ, so they are not equal functions."
+        },
+        {
+          "kind": "math",
+          "latex": "25\\ne 5\\implies g\\circ f\\ne f\\circ g",
+          "display": true,
+          "source": {
+            "page": 66
+          }
+        }
+      ],
+      "checks": [
+        "Scaling and translation do not commute",
+        "Distinct constant coefficients in compositions"
+      ],
+      "status": "verified_for_supported_template",
+      "topic": "functions",
+      "id": 20
+    },
+    {
+      "template_id": "count_routes",
+      "topic": "counting",
+      "title": "Counting routes",
+      "parameters": {
+        "a": 7,
+        "b": 2,
+        "c": 2,
+        "d": 2
+      },
+      "source": {
+        "page": 38,
+        "reference": "Roads example, sum/product rules"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "There are 7 distinct roads from A to B and 2 from B to C; also 2 from A to D and 2 from D to C. Only these roads may be used. Count routes from A to C using exactly two roads, through either B or D."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Multiply independent choices on each route and add the mutually exclusive intermediate-city cases."
+        },
+        {
+          "kind": "math",
+          "latex": "7\\cdot 2+2\\cdot 2=18",
+          "display": true,
+          "source": {
+            "page": 38
+          }
+        }
+      ],
+      "checks": [
+        "Explicit disjoint route enumeration"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 21
+    },
+    {
+      "template_id": "count_routes",
+      "topic": "counting",
+      "title": "Counting routes",
+      "parameters": {
+        "a": 7,
+        "b": 5,
+        "c": 3,
+        "d": 6
+      },
+      "source": {
+        "page": 38,
+        "reference": "Roads example, sum/product rules"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "There are 7 distinct roads from A to B and 5 from B to C; also 3 from A to D and 6 from D to C. Only these roads may be used. Count routes from A to C using exactly two roads, through either B or D."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Multiply independent choices on each route and add the mutually exclusive intermediate-city cases."
+        },
+        {
+          "kind": "math",
+          "latex": "7\\cdot 5+3\\cdot 6=53",
+          "display": true,
+          "source": {
+            "page": 38
+          }
+        }
+      ],
+      "checks": [
+        "Explicit disjoint route enumeration"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 22
+    },
+    {
+      "template_id": "count_permutations",
+      "topic": "counting",
+      "title": "Ordering distinct objects",
+      "parameters": {
+        "n": 5
+      },
+      "source": {
+        "page": 39,
+        "reference": "Theorem 8.4"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "In how many ways can 5 distinct objects be arranged in a row, using each once?"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "There are successively fewer choices for each position. Multiply the choices."
+        },
+        {
+          "kind": "math",
+          "latex": "5!=5\\cdot4\\cdot3\\cdot2\\cdot1=120",
+          "display": true,
+          "source": {
+            "page": 39
+          }
+        }
+      ],
+      "checks": [
+        "Full distinct permutation enumeration"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 23
+    },
+    {
+      "template_id": "count_permutations",
+      "topic": "counting",
+      "title": "Ordering distinct objects",
+      "parameters": {
+        "n": 4
+      },
+      "source": {
+        "page": 39,
+        "reference": "Theorem 8.4"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "In how many ways can 4 distinct objects be arranged in a row, using each once?"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "There are successively fewer choices for each position. Multiply the choices."
+        },
+        {
+          "kind": "math",
+          "latex": "4!=4\\cdot3\\cdot2\\cdot1=24",
+          "display": true,
+          "source": {
+            "page": 39
+          }
+        }
+      ],
+      "checks": [
+        "Full distinct permutation enumeration"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 24
+    },
+    {
+      "template_id": "count_combinations",
+      "topic": "counting",
+      "title": "Choosing an unordered committee",
+      "parameters": {
+        "n": 6,
+        "k": 4
+      },
+      "source": {
+        "page": 39,
+        "reference": "Theorem 8.6"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Choose an unordered committee of 4 distinct people from 6 people, with no repetition or other restrictions. How many committees are possible?"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Ordered selections overcount each committee by the factorial of its size. Divide out that order."
+        },
+        {
+          "kind": "math",
+          "latex": "\\binom{6}{4}=\\frac{6!}{4!(6-4)!}=15",
+          "display": true,
+          "source": {
+            "page": 39
+          }
+        }
+      ],
+      "checks": [
+        "Full unordered subset enumeration"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 25
+    },
+    {
+      "template_id": "count_combinations",
+      "topic": "counting",
+      "title": "Choosing an unordered committee",
+      "parameters": {
+        "n": 7,
+        "k": 2
+      },
+      "source": {
+        "page": 39,
+        "reference": "Theorem 8.6"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Choose an unordered committee of 2 distinct people from 7 people, with no repetition or other restrictions. How many committees are possible?"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Ordered selections overcount each committee by the factorial of its size. Divide out that order."
+        },
+        {
+          "kind": "math",
+          "latex": "\\binom{7}{2}=\\frac{7!}{2!(7-2)!}=21",
+          "display": true,
+          "source": {
+            "page": 39
+          }
+        }
+      ],
+      "checks": [
+        "Full unordered subset enumeration"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 26
+    },
+    {
+      "template_id": "count_stars",
+      "topic": "counting",
+      "title": "Nonnegative integer solutions",
+      "parameters": {
+        "n": 10
+      },
+      "source": {
+        "page": 42,
+        "reference": "Sticks and stones, continued p. 43"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Count ordered triples of nonnegative integers satisfying the equation; zero is allowed."
+        },
+        {
+          "kind": "math",
+          "latex": "x+y+z=10,\\quad x,y,z\\in\\mathbb Z_{\\geq0}",
+          "display": true,
+          "source": {
+            "page": 42
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Represent the total by stones and insert two separators. Empty groups are allowed; the separator positions determine the triple uniquely."
+        },
+        {
+          "kind": "math",
+          "latex": "\\binom{10+2}2=\\binom{12}2=66",
+          "display": true,
+          "source": {
+            "page": 42
+          }
+        }
+      ],
+      "checks": [
+        "Complete bounded triple enumeration"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 27
+    },
+    {
+      "template_id": "count_stars",
+      "topic": "counting",
+      "title": "Nonnegative integer solutions",
+      "parameters": {
+        "n": 12
+      },
+      "source": {
+        "page": 42,
+        "reference": "Sticks and stones, continued p. 43"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Count ordered triples of nonnegative integers satisfying the equation; zero is allowed."
+        },
+        {
+          "kind": "math",
+          "latex": "x+y+z=12,\\quad x,y,z\\in\\mathbb Z_{\\geq0}",
+          "display": true,
+          "source": {
+            "page": 42
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Represent the total by stones and insert two separators. Empty groups are allowed; the separator positions determine the triple uniquely."
+        },
+        {
+          "kind": "math",
+          "latex": "\\binom{12+2}2=\\binom{14}2=91",
+          "display": true,
+          "source": {
+            "page": 42
+          }
+        }
+      ],
+      "checks": [
+        "Complete bounded triple enumeration"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 28
+    },
+    {
+      "template_id": "count_binomial",
+      "topic": "counting",
+      "title": "A binomial coefficient",
+      "parameters": {
+        "n": 7,
+        "k": 3,
+        "c": 4
+      },
+      "source": {
+        "page": 41,
+        "reference": "Theorem 8.12 and Example 8.13"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find the coefficient of the specified power."
+        },
+        {
+          "kind": "math",
+          "latex": "[x^{3}](x+4)^{7}",
+          "display": true,
+          "source": {
+            "page": 41
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Choose which factors supply the variable; the remaining factors supply the constant."
+        },
+        {
+          "kind": "math",
+          "latex": "[x^{3}](x+4)^{7}=\\binom{7}{3}4^{4}=8960",
+          "display": true,
+          "source": {
+            "page": 41
+          }
+        }
+      ],
+      "checks": [
+        "Independent exact polynomial multiplication coefficient"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 29
+    },
+    {
+      "template_id": "count_binomial",
+      "topic": "counting",
+      "title": "A binomial coefficient",
+      "parameters": {
+        "n": 9,
+        "k": 2,
+        "c": 4
+      },
+      "source": {
+        "page": 41,
+        "reference": "Theorem 8.12 and Example 8.13"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find the coefficient of the specified power."
+        },
+        {
+          "kind": "math",
+          "latex": "[x^{2}](x+4)^{9}",
+          "display": true,
+          "source": {
+            "page": 41
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Choose which factors supply the variable; the remaining factors supply the constant."
+        },
+        {
+          "kind": "math",
+          "latex": "[x^{2}](x+4)^{9}=\\binom{9}{2}4^{7}=589824",
+          "display": true,
+          "source": {
+            "page": 41
+          }
+        }
+      ],
+      "checks": [
+        "Independent exact polynomial multiplication coefficient"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 30
+    },
+    {
+      "template_id": "ph_birthdays",
+      "topic": "pigeonhole",
+      "title": "Birthdays in one month",
+      "parameters": {
+        "n": 74
+      },
+      "source": {
+        "page": 60,
+        "reference": "Example 11.3"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Among 74 students, what is the largest number of birthdays in one month that is always guaranteed? Show the guarantee is sharp. Months may contain any number of students."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Use the twelve months as boxes. If each held at most one less than the proposed guarantee, there would be too few students."
+        },
+        {
+          "kind": "math",
+          "latex": "\\left\\lceil\\frac{74}{12}\\right\\rceil=7,\\qquad 12\\cdot 6<74",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        },
+        {
+          "kind": "text",
+          "text": "For sharpness, distribute the students as evenly as possible across the twelve months; no month needs more than this many."
+        }
+      ],
+      "checks": [
+        "Contradiction bound and explicit balanced extremal distribution"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 31
+    },
+    {
+      "template_id": "ph_birthdays",
+      "topic": "pigeonhole",
+      "title": "Birthdays in one month",
+      "parameters": {
+        "n": 102
+      },
+      "source": {
+        "page": 60,
+        "reference": "Example 11.3"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Among 102 students, what is the largest number of birthdays in one month that is always guaranteed? Show the guarantee is sharp. Months may contain any number of students."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Use the twelve months as boxes. If each held at most one less than the proposed guarantee, there would be too few students."
+        },
+        {
+          "kind": "math",
+          "latex": "\\left\\lceil\\frac{102}{12}\\right\\rceil=9,\\qquad 12\\cdot 8<102",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        },
+        {
+          "kind": "text",
+          "text": "For sharpness, distribute the students as evenly as possible across the twelve months; no month needs more than this many."
+        }
+      ],
+      "checks": [
+        "Contradiction bound and explicit balanced extremal distribution"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 32
+    },
+    {
+      "template_id": "ph_boxes",
+      "topic": "pigeonhole",
+      "title": "A sharp occupancy threshold",
+      "parameters": {
+        "boxes": 8,
+        "target": 7
+      },
+      "source": {
+        "page": 60,
+        "reference": "Theorem 11.2"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "What is the smallest number of objects that guarantees at least 7 in one of 8 boxes, regardless of placement? Prove minimality."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "One fewer objects can be distributed equally with no box reaching the target. An additional object makes that avoidance impossible."
+        },
+        {
+          "kind": "math",
+          "latex": "N=8(7-1)+1=49",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "8(7-1)=48<N",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        }
+      ],
+      "checks": [
+        "Matching avoidance construction and forced-occupancy bound"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 33
+    },
+    {
+      "template_id": "ph_boxes",
+      "topic": "pigeonhole",
+      "title": "A sharp occupancy threshold",
+      "parameters": {
+        "boxes": 3,
+        "target": 7
+      },
+      "source": {
+        "page": 60,
+        "reference": "Theorem 11.2"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "What is the smallest number of objects that guarantees at least 7 in one of 3 boxes, regardless of placement? Prove minimality."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "One fewer objects can be distributed equally with no box reaching the target. An additional object makes that avoidance impossible."
+        },
+        {
+          "kind": "math",
+          "latex": "N=3(7-1)+1=19",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "3(7-1)=18<N",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        }
+      ],
+      "checks": [
+        "Matching avoidance construction and forced-occupancy bound"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 34
+    },
+    {
+      "template_id": "ph_remainders",
+      "topic": "pigeonhole",
+      "title": "Equal remainders",
+      "parameters": {
+        "m": 5
+      },
+      "source": {
+        "page": 60,
+        "reference": "Theorem 11.1, residue application pp. 61–62"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove that among any 6 distinct integers there are two whose difference is divisible by 5."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Assign each integer its least nonnegative remainder. Two distinct selected integers must share a remainder because there are more integers than remainder classes."
+        },
+        {
+          "kind": "math",
+          "latex": "\\{0,1,\\ldots,4\\}\\quad\\text{has }5\\text{ classes}",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Write the two integers using that common remainder and subtract."
+        },
+        {
+          "kind": "math",
+          "latex": "u=5a+r,\\quad v=5b+r\\implies u-v=5(a-b)",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        }
+      ],
+      "checks": [
+        "Pigeon count and symbolic cancellation of common remainder"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 35
+    },
+    {
+      "template_id": "ph_remainders",
+      "topic": "pigeonhole",
+      "title": "Equal remainders",
+      "parameters": {
+        "m": 6
+      },
+      "source": {
+        "page": 60,
+        "reference": "Theorem 11.1, residue application pp. 61–62"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove that among any 7 distinct integers there are two whose difference is divisible by 6."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Assign each integer its least nonnegative remainder. Two distinct selected integers must share a remainder because there are more integers than remainder classes."
+        },
+        {
+          "kind": "math",
+          "latex": "\\{0,1,\\ldots,5\\}\\quad\\text{has }6\\text{ classes}",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Write the two integers using that common remainder and subtract."
+        },
+        {
+          "kind": "math",
+          "latex": "u=6a+r,\\quad v=6b+r\\implies u-v=6(a-b)",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        }
+      ],
+      "checks": [
+        "Pigeon count and symbolic cancellation of common remainder"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 36
+    },
+    {
+      "template_id": "ph_square",
+      "topic": "pigeonhole",
+      "title": "Points in a square",
+      "parameters": {
+        "side": 5,
+        "q": 5
+      },
+      "source": {
+        "page": 60,
+        "reference": "Example 11.4, continued p. 61"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "There are 26 points in a square of side length 5. Prove that two have distance at most the following bound."
+        },
+        {
+          "kind": "math",
+          "latex": "\\frac{5\\sqrt2}{5}",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Divide the square into a 5-by-5 grid. Assign boundary points consistently to one adjacent cell. There are more points than cells, so two share a cell. Their distance is at most its diagonal."
+        },
+        {
+          "kind": "math",
+          "latex": "\\text{cells}=5^2=25<26,\\qquad d\\leq\\sqrt{(5/5)^2+(5/5)^2}=\\frac{5\\sqrt2}{5}",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        }
+      ],
+      "checks": [
+        "Exact cell count and squared-diagonal identity"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 37
+    },
+    {
+      "template_id": "ph_square",
+      "topic": "pigeonhole",
+      "title": "Points in a square",
+      "parameters": {
+        "side": 7,
+        "q": 3
+      },
+      "source": {
+        "page": 60,
+        "reference": "Example 11.4, continued p. 61"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "There are 10 points in a square of side length 7. Prove that two have distance at most the following bound."
+        },
+        {
+          "kind": "math",
+          "latex": "\\frac{7\\sqrt2}{3}",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Divide the square into a 3-by-3 grid. Assign boundary points consistently to one adjacent cell. There are more points than cells, so two share a cell. Their distance is at most its diagonal."
+        },
+        {
+          "kind": "math",
+          "latex": "\\text{cells}=3^2=9<10,\\qquad d\\leq\\sqrt{(7/3)^2+(7/3)^2}=\\frac{7\\sqrt2}{3}",
+          "display": true,
+          "source": {
+            "page": 60
+          }
+        }
+      ],
+      "checks": [
+        "Exact cell count and squared-diagonal identity"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 38
+    },
+    {
+      "template_id": "ph_repunit",
+      "topic": "pigeonhole",
+      "title": "A divisible repunit",
+      "parameters": {
+        "m": 13
+      },
+      "source": {
+        "page": 61,
+        "reference": "Example 11.8, continued p. 62"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove that some positive integer made only of decimal digit ones is divisible by 13, and provide one such length."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Consider the first 13 repunits. If one has remainder zero we are done. Otherwise their 13 nonzero remainders occupy only 12 classes, so two coincide. Their difference is a shorter repunit times a power of ten."
+        },
+        {
+          "kind": "math",
+          "latex": "R_j-R_i=10^i R_{j-i},\\quad\\gcd(13,10)=1",
+          "display": true,
+          "source": {
+            "page": 61
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The modulus is coprime to that power of ten, so it divides the shorter repunit. Iterating remainders also supplies this explicit witness:"
+        },
+        {
+          "kind": "math",
+          "latex": "r_0=0,\\quad r_{k+1}=(10r_k+1)\\bmod 13,\\qquad r_{6}=0",
+          "display": true,
+          "source": {
+            "page": 61
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "R_{6}=\\frac{10^{6}-1}9,\\qquad 13\\mid R_{6}",
+          "display": true,
+          "source": {
+            "page": 61
+          }
+        }
+      ],
+      "checks": [
+        "Constructive zero remainder, exact repunit divisibility and coprimality"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 39
+    },
+    {
+      "template_id": "ph_repunit",
+      "topic": "pigeonhole",
+      "title": "A divisible repunit",
+      "parameters": {
+        "m": 11
+      },
+      "source": {
+        "page": 61,
+        "reference": "Example 11.8, continued p. 62"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove that some positive integer made only of decimal digit ones is divisible by 11, and provide one such length."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Consider the first 11 repunits. If one has remainder zero we are done. Otherwise their 11 nonzero remainders occupy only 10 classes, so two coincide. Their difference is a shorter repunit times a power of ten."
+        },
+        {
+          "kind": "math",
+          "latex": "R_j-R_i=10^i R_{j-i},\\quad\\gcd(11,10)=1",
+          "display": true,
+          "source": {
+            "page": 61
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The modulus is coprime to that power of ten, so it divides the shorter repunit. Iterating remainders also supplies this explicit witness:"
+        },
+        {
+          "kind": "math",
+          "latex": "r_0=0,\\quad r_{k+1}=(10r_k+1)\\bmod 11,\\qquad r_{2}=0",
+          "display": true,
+          "source": {
+            "page": 61
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "R_{2}=\\frac{10^{2}-1}9,\\qquad 11\\mid R_{2}",
+          "display": true,
+          "source": {
+            "page": 61
+          }
+        }
+      ],
+      "checks": [
+        "Constructive zero remainder, exact repunit divisibility and coprimality"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 40
+    },
+    {
+      "template_id": "int_division",
+      "topic": "integers",
+      "title": "Quotient and remainder",
+      "parameters": {
+        "a": -133,
+        "b": 13
+      },
+      "source": {
+        "page": 28,
+        "reference": "Theorem 6.2"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find the unique quotient and nonnegative remainder in division by the positive divisor."
+        },
+        {
+          "kind": "math",
+          "latex": "a=-133,\\quad b=13",
+          "display": true,
+          "source": {
+            "page": 28
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "math",
+          "latex": "-133=13\\cdot(-11)+10,\\quad 0\\leq 10<13",
+          "display": true,
+          "source": {
+            "page": 28
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The displayed equality and remainder bounds verify the division; the division algorithm gives uniqueness."
+        }
+      ],
+      "checks": [
+        "Exact division and Euclidean remainder bounds"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 41
+    },
+    {
+      "template_id": "int_division",
+      "topic": "integers",
+      "title": "Quotient and remainder",
+      "parameters": {
+        "a": 154,
+        "b": 7
+      },
+      "source": {
+        "page": 28,
+        "reference": "Theorem 6.2"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find the unique quotient and nonnegative remainder in division by the positive divisor."
+        },
+        {
+          "kind": "math",
+          "latex": "a=154,\\quad b=7",
+          "display": true,
+          "source": {
+            "page": 28
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "math",
+          "latex": "154=7\\cdot(22)+0,\\quad 0\\leq 0<7",
+          "display": true,
+          "source": {
+            "page": 28
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The displayed equality and remainder bounds verify the division; the division algorithm gives uniqueness."
+        }
+      ],
+      "checks": [
+        "Exact division and Euclidean remainder bounds"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 42
+    },
+    {
+      "template_id": "int_gcd",
+      "topic": "integers",
+      "title": "Euclidean algorithm",
+      "parameters": {
+        "a": 50,
+        "b": 12
+      },
+      "source": {
+        "page": 29,
+        "reference": "Euclid algorithm, Theorem 6.7"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Compute the greatest common divisor using the Euclidean algorithm."
+        },
+        {
+          "kind": "math",
+          "latex": "a=50,\\quad b=12",
+          "display": true,
+          "source": {
+            "page": 29
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "math",
+          "latex": "50=4\\cdot 12+2",
+          "display": true,
+          "source": {
+            "page": 29
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "12=6\\cdot 2+0",
+          "display": true,
+          "source": {
+            "page": 29
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "\\gcd(50,12)=2",
+          "display": true,
+          "source": {
+            "page": 29
+          }
+        }
+      ],
+      "checks": [
+        "Euclid, independent divisor enumeration and exact Bezout identity"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 43
+    },
+    {
+      "template_id": "int_gcd",
+      "topic": "integers",
+      "title": "Euclidean algorithm",
+      "parameters": {
+        "a": 34,
+        "b": 37
+      },
+      "source": {
+        "page": 29,
+        "reference": "Euclid algorithm, Theorem 6.7"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Compute the greatest common divisor using the Euclidean algorithm."
+        },
+        {
+          "kind": "math",
+          "latex": "a=34,\\quad b=37",
+          "display": true,
+          "source": {
+            "page": 29
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "math",
+          "latex": "34=0\\cdot 37+34",
+          "display": true,
+          "source": {
+            "page": 29
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "37=1\\cdot 34+3",
+          "display": true,
+          "source": {
+            "page": 29
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "34=11\\cdot 3+1",
+          "display": true,
+          "source": {
+            "page": 29
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "3=3\\cdot 1+0",
+          "display": true,
+          "source": {
+            "page": 29
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "\\gcd(34,37)=1",
+          "display": true,
+          "source": {
+            "page": 29
+          }
+        }
+      ],
+      "checks": [
+        "Euclid, independent divisor enumeration and exact Bezout identity"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 44
+    },
+    {
+      "template_id": "int_bezout",
+      "topic": "integers",
+      "title": "Bezout coefficients",
+      "parameters": {
+        "a": 110,
+        "b": 39
+      },
+      "source": {
+        "page": 30,
+        "reference": "Theorem 6.9"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Compute the greatest common divisor and find integer Bezout coefficients."
+        },
+        {
+          "kind": "math",
+          "latex": "a=110,\\quad b=39",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "math",
+          "latex": "110=2\\cdot 39+32",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "39=1\\cdot 32+7",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "32=4\\cdot 7+4",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "7=1\\cdot 4+3",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "4=1\\cdot 3+1",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "3=3\\cdot 1+0",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "\\gcd(110,39)=1",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The following integer coefficients give the gcd; direct substitution verifies them."
+        },
+        {
+          "kind": "math",
+          "latex": "110\\cdot(11)+39\\cdot(-31)=1",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        }
+      ],
+      "checks": [
+        "Euclid, independent divisor enumeration and exact Bezout identity"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 45
+    },
+    {
+      "template_id": "int_bezout",
+      "topic": "integers",
+      "title": "Bezout coefficients",
+      "parameters": {
+        "a": 27,
+        "b": 54
+      },
+      "source": {
+        "page": 30,
+        "reference": "Theorem 6.9"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Compute the greatest common divisor and find integer Bezout coefficients."
+        },
+        {
+          "kind": "math",
+          "latex": "a=27,\\quad b=54",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "math",
+          "latex": "27=0\\cdot 54+27",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "54=2\\cdot 27+0",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "\\gcd(27,54)=27",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The following integer coefficients give the gcd; direct substitution verifies them."
+        },
+        {
+          "kind": "math",
+          "latex": "27\\cdot(1)+54\\cdot(0)=27",
+          "display": true,
+          "source": {
+            "page": 30
+          }
+        }
+      ],
+      "checks": [
+        "Euclid, independent divisor enumeration and exact Bezout identity"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 46
+    },
+    {
+      "template_id": "int_factor",
+      "topic": "integers",
+      "title": "Prime factorization",
+      "parameters": {
+        "n": 3969
+      },
+      "source": {
+        "page": 31,
+        "reference": "Theorem 6.16 and Example 6.18"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find the prime factorization."
+        },
+        {
+          "kind": "math",
+          "latex": "3969",
+          "display": true,
+          "source": {
+            "page": 31
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Divide repeatedly by prime divisors. Each displayed base is prime; multiplying the factors recovers the integer."
+        },
+        {
+          "kind": "math",
+          "latex": "3969=3^{4}\\cdot7^{2}",
+          "display": true,
+          "source": {
+            "page": 31
+          }
+        }
+      ],
+      "checks": [
+        "Exact reconstruction and trial-division primality for every factor"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 47
+    },
+    {
+      "template_id": "int_factor",
+      "topic": "integers",
+      "title": "Prime factorization",
+      "parameters": {
+        "n": 189
+      },
+      "source": {
+        "page": 31,
+        "reference": "Theorem 6.16 and Example 6.18"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find the prime factorization."
+        },
+        {
+          "kind": "math",
+          "latex": "189",
+          "display": true,
+          "source": {
+            "page": 31
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Divide repeatedly by prime divisors. Each displayed base is prime; multiplying the factors recovers the integer."
+        },
+        {
+          "kind": "math",
+          "latex": "189=3^{3}\\cdot7^{1}",
+          "display": true,
+          "source": {
+            "page": 31
+          }
+        }
+      ],
+      "checks": [
+        "Exact reconstruction and trial-division primality for every factor"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 48
+    },
+    {
+      "template_id": "int_base",
+      "topic": "integers",
+      "title": "Positional number notation",
+      "parameters": {
+        "n": 54,
+        "base": 2
+      },
+      "source": {
+        "page": 27,
+        "reference": "Section 4, positional notation"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Convert this decimal integer into the stated base."
+        },
+        {
+          "kind": "math",
+          "latex": "n=54,\\quad b=2",
+          "display": true,
+          "source": {
+            "page": 27
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Repeated division by the base gives digits from right to left. Verify them by positional expansion:"
+        },
+        {
+          "kind": "math",
+          "latex": "(110110)_{2}=1\\cdot 2^{5}+1\\cdot 2^{4}+0\\cdot 2^{3}+1\\cdot 2^{2}+1\\cdot 2^{1}+0\\cdot 2^{0}=54",
+          "display": true,
+          "source": {
+            "page": 27
+          }
+        }
+      ],
+      "checks": [
+        "Digit bounds and exact positional reconstruction"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 49
+    },
+    {
+      "template_id": "int_base",
+      "topic": "integers",
+      "title": "Positional number notation",
+      "parameters": {
+        "n": 41,
+        "base": 8
+      },
+      "source": {
+        "page": 27,
+        "reference": "Section 4, positional notation"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Convert this decimal integer into the stated base."
+        },
+        {
+          "kind": "math",
+          "latex": "n=41,\\quad b=8",
+          "display": true,
+          "source": {
+            "page": 27
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Repeated division by the base gives digits from right to left. Verify them by positional expansion:"
+        },
+        {
+          "kind": "math",
+          "latex": "(51)_{8}=5\\cdot 8^{1}+1\\cdot 8^{0}=41",
+          "display": true,
+          "source": {
+            "page": 27
+          }
+        }
+      ],
+      "checks": [
+        "Digit bounds and exact positional reconstruction"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 50
+    },
+    {
+      "template_id": "mod_compare",
+      "topic": "congruences",
+      "title": "Testing congruence",
+      "parameters": {
+        "a": 13,
+        "b": 52,
+        "m": 9
+      },
+      "source": {
+        "page": 33,
+        "reference": "Definition 7.1 and Lemma 7.3"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Decide whether the following congruence holds."
+        },
+        {
+          "kind": "math",
+          "latex": "13\\equiv 52\\pmod{9}",
+          "display": true,
+          "source": {
+            "page": 33
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "It does not hold."
+        },
+        {
+          "kind": "math",
+          "latex": "(13)-(52)=-39,\\quad (-39)\\bmod 9=6",
+          "display": true,
+          "source": {
+            "page": 33
+          }
+        }
+      ],
+      "checks": [
+        "Divisibility criterion agrees with equality of remainders"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 51
+    },
+    {
+      "template_id": "mod_compare",
+      "topic": "congruences",
+      "title": "Testing congruence",
+      "parameters": {
+        "a": 28,
+        "b": -12,
+        "m": 9
+      },
+      "source": {
+        "page": 33,
+        "reference": "Definition 7.1 and Lemma 7.3"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Decide whether the following congruence holds."
+        },
+        {
+          "kind": "math",
+          "latex": "28\\equiv -12\\pmod{9}",
+          "display": true,
+          "source": {
+            "page": 33
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "It does not hold."
+        },
+        {
+          "kind": "math",
+          "latex": "(28)-(-12)=40,\\quad (40)\\bmod 9=4",
+          "display": true,
+          "source": {
+            "page": 33
+          }
+        }
+      ],
+      "checks": [
+        "Divisibility criterion agrees with equality of remainders"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 52
+    },
+    {
+      "template_id": "mod_power",
+      "topic": "congruences",
+      "title": "Remainder of a power",
+      "parameters": {
+        "a": 12,
+        "n": 38,
+        "m": 7
+      },
+      "source": {
+        "page": 34,
+        "reference": "Corollary 7.10"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find the least nonnegative residue of this power."
+        },
+        {
+          "kind": "math",
+          "latex": "12^{38}\\pmod{7}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Start with residue one for exponent zero and multiply by the base, reducing after every step. The recurrence and full residue list through the required exponent are:"
+        },
+        {
+          "kind": "math",
+          "latex": "r_0=1,\\quad r_{j+1}\\equiv 12r_j\\pmod{7}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(r_{1},\\ldots,r_{7})=(5,4,6,2,3,1,5)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(r_{8},\\ldots,r_{14})=(4,6,2,3,1,5,4)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(r_{15},\\ldots,r_{21})=(6,2,3,1,5,4,6)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(r_{22},\\ldots,r_{28})=(2,3,1,5,4,6,2)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(r_{29},\\ldots,r_{35})=(3,1,5,4,6,2,3)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(r_{36},\\ldots,r_{38})=(1,5,4)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "12^{38}\\equiv 4\\pmod{7}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        }
+      ],
+      "checks": [
+        "Iterative modular recurrence agrees with exact exponentiation"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 53
+    },
+    {
+      "template_id": "mod_power",
+      "topic": "congruences",
+      "title": "Remainder of a power",
+      "parameters": {
+        "a": 3,
+        "n": 15,
+        "m": 8
+      },
+      "source": {
+        "page": 34,
+        "reference": "Corollary 7.10"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find the least nonnegative residue of this power."
+        },
+        {
+          "kind": "math",
+          "latex": "3^{15}\\pmod{8}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Start with residue one for exponent zero and multiply by the base, reducing after every step. The recurrence and full residue list through the required exponent are:"
+        },
+        {
+          "kind": "math",
+          "latex": "r_0=1,\\quad r_{j+1}\\equiv 3r_j\\pmod{8}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(r_{1},\\ldots,r_{7})=(3,1,3,1,3,1,3)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(r_{8},\\ldots,r_{14})=(1,3,1,3,1,3,1)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(r_{15},\\ldots,r_{15})=(3)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "3^{15}\\equiv 3\\pmod{8}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        }
+      ],
+      "checks": [
+        "Iterative modular recurrence agrees with exact exponentiation"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 54
+    },
+    {
+      "template_id": "mod_linear",
+      "topic": "congruences",
+      "title": "Solving a congruence",
+      "parameters": {
+        "a": 8,
+        "b": 18,
+        "m": 12
+      },
+      "source": {
+        "page": 34,
+        "reference": "Theorem 7.7; finite residue search"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find all integer solutions, expressed as residue classes."
+        },
+        {
+          "kind": "math",
+          "latex": "8x\\equiv 18\\pmod{12}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Evaluate every residue. Reduction modulo the modulus preserves the equation, so this covers every integer."
+        },
+        {
+          "kind": "math",
+          "latex": "(8r\\bmod 12)_{r=0}^{11}=(0,8,4,0,8,4,0,8,4,0,8,4)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "x\\bmod 12\\in \\varnothing",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        }
+      ],
+      "checks": [
+        "Exhaustive residue search agrees with gcd solvability and count"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 55
+    },
+    {
+      "template_id": "mod_linear",
+      "topic": "congruences",
+      "title": "Solving a congruence",
+      "parameters": {
+        "a": 5,
+        "b": 5,
+        "m": 14
+      },
+      "source": {
+        "page": 34,
+        "reference": "Theorem 7.7; finite residue search"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Find all integer solutions, expressed as residue classes."
+        },
+        {
+          "kind": "math",
+          "latex": "5x\\equiv 5\\pmod{14}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Evaluate every residue. Reduction modulo the modulus preserves the equation, so this covers every integer."
+        },
+        {
+          "kind": "math",
+          "latex": "(5r\\bmod 14)_{r=0}^{13}=(0,5,10,1,6,11,2,7,12,3,8,13,4,9)",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "x\\bmod 14\\in \\{1\\}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        }
+      ],
+      "checks": [
+        "Exhaustive residue search agrees with gcd solvability and count"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 56
+    },
+    {
+      "template_id": "mod_impossible",
+      "topic": "congruences",
+      "title": "A parity obstruction",
+      "parameters": {
+        "a": 27,
+        "b": 7
+      },
+      "source": {
+        "page": 34,
+        "reference": "Example 7.9"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Determine whether this equation has an integer solution using parity."
+        },
+        {
+          "kind": "math",
+          "latex": "x^2-27x-7=0",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "There is no integer solution. The two parity classes give a nonzero remainder in both cases:"
+        },
+        {
+          "kind": "math",
+          "latex": "x\\equiv0\\pmod2\\implies x^2-27x-7\\equiv 1\\pmod2",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "x\\equiv1\\pmod2\\implies x^2-27x-7\\equiv 1\\pmod2",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Every integer is in one of these two classes, whereas zero would have remainder zero."
+        }
+      ],
+      "checks": [
+        "Complete parity classes exclude an integer root"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 57
+    },
+    {
+      "template_id": "mod_impossible",
+      "topic": "congruences",
+      "title": "A parity obstruction",
+      "parameters": {
+        "a": 21,
+        "b": 9
+      },
+      "source": {
+        "page": 34,
+        "reference": "Example 7.9"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Determine whether this equation has an integer solution using parity."
+        },
+        {
+          "kind": "math",
+          "latex": "x^2-21x-9=0",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "There is no integer solution. The two parity classes give a nonzero remainder in both cases:"
+        },
+        {
+          "kind": "math",
+          "latex": "x\\equiv0\\pmod2\\implies x^2-21x-9\\equiv 1\\pmod2",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "x\\equiv1\\pmod2\\implies x^2-21x-9\\equiv 1\\pmod2",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Every integer is in one of these two classes, whereas zero would have remainder zero."
+        }
+      ],
+      "checks": [
+        "Complete parity classes exclude an integer root"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 58
+    },
+    {
+      "template_id": "mod_clock",
+      "topic": "congruences",
+      "title": "Clock arithmetic",
+      "parameters": {
+        "hour": 0,
+        "elapsed": 101
+      },
+      "source": {
+        "page": 34,
+        "reference": "Example 7.5"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "On a twenty-four-hour clock it is 00:00. What hour will it be after 101 whole hours?"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Reduce the total hour count modulo twenty-four."
+        },
+        {
+          "kind": "math",
+          "latex": "0+101=101\\equiv 5\\pmod{24}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The resulting time is 05:00."
+        }
+      ],
+      "checks": [
+        "Clock bounds and exact day-cycle congruence"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 59
+    },
+    {
+      "template_id": "mod_clock",
+      "topic": "congruences",
+      "title": "Clock arithmetic",
+      "parameters": {
+        "hour": 9,
+        "elapsed": 45
+      },
+      "source": {
+        "page": 34,
+        "reference": "Example 7.5"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "On a twenty-four-hour clock it is 09:00. What hour will it be after 45 whole hours?"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Reduce the total hour count modulo twenty-four."
+        },
+        {
+          "kind": "math",
+          "latex": "9+45=54\\equiv 6\\pmod{24}",
+          "display": true,
+          "source": {
+            "page": 34
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The resulting time is 06:00."
+        }
+      ],
+      "checks": [
+        "Clock bounds and exact day-cycle congruence"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 60
+    },
+    {
+      "template_id": "ind_squares",
+      "topic": "induction",
+      "title": "Induction for a square sum",
+      "parameters": {
+        "c": 6
+      },
+      "source": {
+        "page": 14,
+        "reference": "Example 3.1, continued p. 15"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove the following statement for every integer n at least one by mathematical induction."
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^n 6i^2=\\frac{6n(n+1)(2n+1)}6",
+          "display": true,
+          "source": {
+            "page": 14
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Base case n equals one holds. Assume the assertion for an arbitrary integer n at least one; prove it for n plus one."
+        },
+        {
+          "kind": "math",
+          "latex": "6=\\frac{6\\cdot1\\cdot2\\cdot3}6",
+          "display": true,
+          "source": {
+            "page": 14
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Add the next term and use the induction hypothesis:"
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^{n+1}6i^2=\\frac{6n(n+1)(2n+1)}6+6(n+1)^2",
+          "display": true,
+          "source": {
+            "page": 14
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "=\\frac{6(n+1)(n+2)(2n+3)}6",
+          "display": true,
+          "source": {
+            "page": 14
+          }
+        },
+        {
+          "kind": "text",
+          "text": "This establishes the induction step. Together with the base case, induction proves the statement for every integer n at least one."
+        }
+      ],
+      "checks": [
+        "Base case and exact polynomial/rational induction-step certificate"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 61
+    },
+    {
+      "template_id": "ind_squares",
+      "topic": "induction",
+      "title": "Induction for a square sum",
+      "parameters": {
+        "c": 3
+      },
+      "source": {
+        "page": 14,
+        "reference": "Example 3.1, continued p. 15"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove the following statement for every integer n at least one by mathematical induction."
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^n 3i^2=\\frac{3n(n+1)(2n+1)}6",
+          "display": true,
+          "source": {
+            "page": 14
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Base case n equals one holds. Assume the assertion for an arbitrary integer n at least one; prove it for n plus one."
+        },
+        {
+          "kind": "math",
+          "latex": "3=\\frac{3\\cdot1\\cdot2\\cdot3}6",
+          "display": true,
+          "source": {
+            "page": 14
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Add the next term and use the induction hypothesis:"
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^{n+1}3i^2=\\frac{3n(n+1)(2n+1)}6+3(n+1)^2",
+          "display": true,
+          "source": {
+            "page": 14
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "=\\frac{3(n+1)(n+2)(2n+3)}6",
+          "display": true,
+          "source": {
+            "page": 14
+          }
+        },
+        {
+          "kind": "text",
+          "text": "This establishes the induction step. Together with the base case, induction proves the statement for every integer n at least one."
+        }
+      ],
+      "checks": [
+        "Base case and exact polynomial/rational induction-step certificate"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 62
+    },
+    {
+      "template_id": "ind_odd",
+      "topic": "induction",
+      "title": "Induction for an odd sum",
+      "parameters": {
+        "c": 7
+      },
+      "source": {
+        "page": 15,
+        "reference": "Example 3.3"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove the following statement for every integer n at least one by mathematical induction."
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^n 7(2i-1)=7n^2",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Base case n equals one holds. Assume the assertion for an arbitrary integer n at least one; prove it for n plus one."
+        },
+        {
+          "kind": "math",
+          "latex": "7(2\\cdot1-1)=7\\cdot1^2",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^{n+1}7(2i-1)=7n^2+7(2n+1)=7(n+1)^2",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        },
+        {
+          "kind": "text",
+          "text": "This establishes the induction step. Together with the base case, induction proves the statement for every integer n at least one."
+        }
+      ],
+      "checks": [
+        "Base case and exact polynomial/rational induction-step certificate"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 63
+    },
+    {
+      "template_id": "ind_odd",
+      "topic": "induction",
+      "title": "Induction for an odd sum",
+      "parameters": {
+        "c": 2
+      },
+      "source": {
+        "page": 15,
+        "reference": "Example 3.3"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove the following statement for every integer n at least one by mathematical induction."
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^n 2(2i-1)=2n^2",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Base case n equals one holds. Assume the assertion for an arbitrary integer n at least one; prove it for n plus one."
+        },
+        {
+          "kind": "math",
+          "latex": "2(2\\cdot1-1)=2\\cdot1^2",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^{n+1}2(2i-1)=2n^2+2(2n+1)=2(n+1)^2",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        },
+        {
+          "kind": "text",
+          "text": "This establishes the induction step. Together with the base case, induction proves the statement for every integer n at least one."
+        }
+      ],
+      "checks": [
+        "Base case and exact polynomial/rational induction-step certificate"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 64
+    },
+    {
+      "template_id": "ind_factorial",
+      "topic": "induction",
+      "title": "Induction for a factorial sum",
+      "parameters": {
+        "c": 3
+      },
+      "source": {
+        "page": 17,
+        "reference": "Exercise 3.9"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove the following statement for every integer n at least one by mathematical induction."
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^n 3i\\,i!=3((n+1)!-1)",
+          "display": true,
+          "source": {
+            "page": 17
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Base case n equals one holds. Assume the assertion for an arbitrary integer n at least one; prove it for n plus one."
+        },
+        {
+          "kind": "math",
+          "latex": "3\\cdot1\\cdot1!=3(2!-1)",
+          "display": true,
+          "source": {
+            "page": 17
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^{n+1}3i\\,i!=3((n+1)!-1)+3(n+1)(n+1)!",
+          "display": true,
+          "source": {
+            "page": 17
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "=3((n+2)(n+1)!-1)=3((n+2)!-1)",
+          "display": true,
+          "source": {
+            "page": 17
+          }
+        },
+        {
+          "kind": "text",
+          "text": "This establishes the induction step. Together with the base case, induction proves the statement for every integer n at least one."
+        }
+      ],
+      "checks": [
+        "Base case and exact polynomial/rational induction-step certificate"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 65
+    },
+    {
+      "template_id": "ind_factorial",
+      "topic": "induction",
+      "title": "Induction for a factorial sum",
+      "parameters": {
+        "c": 4
+      },
+      "source": {
+        "page": 17,
+        "reference": "Exercise 3.9"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove the following statement for every integer n at least one by mathematical induction."
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^n 4i\\,i!=4((n+1)!-1)",
+          "display": true,
+          "source": {
+            "page": 17
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Base case n equals one holds. Assume the assertion for an arbitrary integer n at least one; prove it for n plus one."
+        },
+        {
+          "kind": "math",
+          "latex": "4\\cdot1\\cdot1!=4(2!-1)",
+          "display": true,
+          "source": {
+            "page": 17
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^{n+1}4i\\,i!=4((n+1)!-1)+4(n+1)(n+1)!",
+          "display": true,
+          "source": {
+            "page": 17
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "=4((n+2)(n+1)!-1)=4((n+2)!-1)",
+          "display": true,
+          "source": {
+            "page": 17
+          }
+        },
+        {
+          "kind": "text",
+          "text": "This establishes the induction step. Together with the base case, induction proves the statement for every integer n at least one."
+        }
+      ],
+      "checks": [
+        "Base case and exact polynomial/rational induction-step certificate"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 66
+    },
+    {
+      "template_id": "ind_divisible",
+      "topic": "induction",
+      "title": "Induction and divisibility",
+      "parameters": {
+        "c": 2
+      },
+      "source": {
+        "page": 15,
+        "reference": "Example 3.2"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove the following statement for every integer n at least one by mathematical induction."
+        },
+        {
+          "kind": "math",
+          "latex": "12\\mid 2n^3+10n",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Base case n equals one holds. Assume the assertion for an arbitrary integer n at least one; prove it for n plus one."
+        },
+        {
+          "kind": "math",
+          "latex": "2\\cdot1^3+10\\cdot1=12",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Expand the next expression. The hypothesis covers the first bracket. Consecutive integers have an even product, so every remaining term is divisible by the required divisor."
+        },
+        {
+          "kind": "math",
+          "latex": "2(n+1)^3+10(n+1)=(2n^3+10n)+6n(n+1)+12",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        },
+        {
+          "kind": "text",
+          "text": "This establishes the induction step. Together with the base case, induction proves the statement for every integer n at least one."
+        }
+      ],
+      "checks": [
+        "Base case and exact polynomial/rational induction-step certificate"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 67
+    },
+    {
+      "template_id": "ind_divisible",
+      "topic": "induction",
+      "title": "Induction and divisibility",
+      "parameters": {
+        "c": 6
+      },
+      "source": {
+        "page": 15,
+        "reference": "Example 3.2"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove the following statement for every integer n at least one by mathematical induction."
+        },
+        {
+          "kind": "math",
+          "latex": "36\\mid 6n^3+30n",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Base case n equals one holds. Assume the assertion for an arbitrary integer n at least one; prove it for n plus one."
+        },
+        {
+          "kind": "math",
+          "latex": "6\\cdot1^3+30\\cdot1=36",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Expand the next expression. The hypothesis covers the first bracket. Consecutive integers have an even product, so every remaining term is divisible by the required divisor."
+        },
+        {
+          "kind": "math",
+          "latex": "6(n+1)^3+30(n+1)=(6n^3+30n)+18n(n+1)+36",
+          "display": true,
+          "source": {
+            "page": 15
+          }
+        },
+        {
+          "kind": "text",
+          "text": "This establishes the induction step. Together with the base case, induction proves the statement for every integer n at least one."
+        }
+      ],
+      "checks": [
+        "Base case and exact polynomial/rational induction-step certificate"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 68
+    },
+    {
+      "template_id": "ind_harmonic",
+      "topic": "induction",
+      "title": "Induction for a reciprocal-square bound",
+      "parameters": {
+        "c": 3
+      },
+      "source": {
+        "page": 16,
+        "reference": "Example 3.5"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove the following statement for every integer n at least one by mathematical induction."
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^n\\frac{3}{i^2}\\leq 3\\left(2-\\frac1n\\right)",
+          "display": true,
+          "source": {
+            "page": 16
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Base case n equals one holds. Assume the assertion for an arbitrary integer n at least one; prove it for n plus one."
+        },
+        {
+          "kind": "math",
+          "latex": "3=3(2-1)",
+          "display": true,
+          "source": {
+            "page": 16
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^{n+1}\\frac{3}{i^2}\\leq 3(2-1/n)+\\frac{3}{(n+1)^2}",
+          "display": true,
+          "source": {
+            "page": 16
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The desired upper bound exceeds this last expression by a nonnegative quantity:"
+        },
+        {
+          "kind": "math",
+          "latex": "3\\left(2-\\frac1{n+1}\\right)-\\left[3(2-1/n)+\\frac{3}{(n+1)^2}\\right]=\\frac{3}{n(n+1)^2}\\geq0",
+          "display": true,
+          "source": {
+            "page": 16
+          }
+        },
+        {
+          "kind": "text",
+          "text": "This establishes the induction step. Together with the base case, induction proves the statement for every integer n at least one."
+        }
+      ],
+      "checks": [
+        "Base case and exact polynomial/rational induction-step certificate"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 69
+    },
+    {
+      "template_id": "ind_harmonic",
+      "topic": "induction",
+      "title": "Induction for a reciprocal-square bound",
+      "parameters": {
+        "c": 8
+      },
+      "source": {
+        "page": 16,
+        "reference": "Example 3.5"
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove the following statement for every integer n at least one by mathematical induction."
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^n\\frac{8}{i^2}\\leq 8\\left(2-\\frac1n\\right)",
+          "display": true,
+          "source": {
+            "page": 16
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Base case n equals one holds. Assume the assertion for an arbitrary integer n at least one; prove it for n plus one."
+        },
+        {
+          "kind": "math",
+          "latex": "8=8(2-1)",
+          "display": true,
+          "source": {
+            "page": 16
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "\\sum_{i=1}^{n+1}\\frac{8}{i^2}\\leq 8(2-1/n)+\\frac{8}{(n+1)^2}",
+          "display": true,
+          "source": {
+            "page": 16
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The desired upper bound exceeds this last expression by a nonnegative quantity:"
+        },
+        {
+          "kind": "math",
+          "latex": "8\\left(2-\\frac1{n+1}\\right)-\\left[8(2-1/n)+\\frac{8}{(n+1)^2}\\right]=\\frac{8}{n(n+1)^2}\\geq0",
+          "display": true,
+          "source": {
+            "page": 16
+          }
+        },
+        {
+          "kind": "text",
+          "text": "This establishes the induction step. Together with the base case, induction proves the statement for every integer n at least one."
+        }
+      ],
+      "checks": [
+        "Base case and exact polynomial/rational induction-step certificate"
+      ],
+      "status": "verified_for_supported_template",
+      "id": 70
+    }
+  ],
+  "rendering": {
+    "status": "passed",
+    "tasks": 70,
+    "topics": 7,
+    "math_blocks": 201,
+    "rendered_math_blocks": 201,
+    "fallbacks": 0,
+    "page_errors": [],
+    "external_requests": [],
+    "mobile_widths": [
+      320,
+      390
+    ],
+    "history_cards": 505,
+    "raw_TeX_in_prose": false
+  },
+  "generation_calls": 1,
+  "reviewer_calls": 0,
+  "cost_usd": 0.00021440000000000003,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "usage": {
+    "input_tokens": 428,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 27,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 455
+  },
+  "seed": 50770,
+  "plan": {
+    "topic_order": [
+      "sets",
+      "functions",
+      "counting",
+      "pigeonhole",
+      "integers",
+      "congruences",
+      "induction"
+    ]
+  },
+  "raw_output": "{\"topic_order\":[\"sets\",\"functions\",\"counting\",\"pigeonhole\",\"integers\",\"congruences\",\"induction\"]}",
+  "prompt_sha256": "9ed23f1410298dbf9544a2492a655d7d19f2428ba4dc1d0d105d0ff28c9dd3e5",
+  "input_sha256": "d7b15fc592081b2d587c867acc46058e5b762cab1332165be94656bf0121daed",
+  "method": "Кураторські шаблони з main (12).pdf: множини (5–7), індукція (14–17), числа (27–31), конгруенції (33–34), комбінаторика (38–43), принцип Діріхле (60–62), функції (63–66). Один виклик mini обрав лише порядок тем. Числа, формули, умови й повні розв’язки створено програмою, seed 50770. Для шести нових тем — по 5 сімейств і 2 числових варіанти, для функцій — 10 сімейств.",
+  "validation": "Точна арифметика цілих і раціональних чисел; повний скінченний перебір множин, залишків, виборів і розподілів; незалежне множення поліномів; перевірка оберненої цілої матриці. Індукція: база та алгебраїчні сертифікати переходів, а не лише перші значення. Для принципу Діріхле — перевірені кураторські доведення, межі, екстремальні конструкції та обчислені свідки. Структура артефакту відхиляє сторонні зміни формул. Універсальний математичний текст не перевіряється.",
+  "limitations": "70 варіантів — не 70 різних типів і не вимірювання точності довільної LLM-генерації. Шаблони підготовлено й переглянуто вручну; помилка у шаблоні все ще можлива. Це не формально перевірені Lean/Coq-доведення. Новизна, рівень складності й педагогічна якість не оцінювались. Непідтримувані типи відхиляються. MathPDF і його промпти не змінено.",
+  "review_notes": "Переглянуто всі 40 сімейств, джерела й 70 наборів параметрів. Довгі списки залишків розбито на короткі формульні рядки. Виявлену неточність номера теореми факторизації виправлено локально до публікації; математичні відповіді не змінювалися й повторного API-виклику не було.",
+  "source": {
+    "name": "main (12).pdf",
+    "pages": [
+      5,
+      6,
+      7,
+      14,
+      15,
+      16,
+      17,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      38,
+      39,
+      41,
+      42,
+      60,
+      61,
+      63,
+      64,
+      65,
+      66
+    ],
+    "sha256": "e2d70968abd271d398481280873e158dd06e03084038f8f9816addd9cc98ca01"
+  },
+  "engine_sha256": "6158bf36718ba81dc5919dd62fc06194b4835116ad2f507fad37cd270d9ea549",
+  "reused_engine_sha256": "40c47c8ee16ea50c8d75e5be4b66cb248298578c289de84bf5f143b5a867a308"
+}

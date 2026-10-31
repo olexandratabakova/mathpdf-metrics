@@ -85,4 +85,5 @@ window.renderReviews = function () {
   window.renderComparison?.();
   window.renderCycle?.();
   window.renderParameterized?.();
+  window.renderSeventy?.();
 };
