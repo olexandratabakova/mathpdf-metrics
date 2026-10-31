@@ -1,0 +1,802 @@
+{
+  "id": "problems-v5-2026-10-31",
+  "date": "2026-10-31",
+  "version": "v5",
+  "kind": "parameterized_problems",
+  "summary": "Математика належить програмі: 10 числових варіантів підтримуваних типів. Формули й розв’язки побудовано детерміновано; друга модель не перевіряє.",
+  "method": "Кураторський каталог із 10 типів на основі main (12).pdf, стор. 63–66. Mini одним запитом обрала порядок і назви, не отримувала права змінювати формули. Програма з фіксованим seed підставила допустимі числа, побудувала умови, кодомени та повні розв’язки. Виконано точні перевірки обмежень, коефіцієнтів, скінченних образів та оберненої цілої матриці. Контракт артефакту відхиляє зміни формул після побудови.",
+  "limitations": "Це закриті, вручну підготовлені й переглянуті шаблони, а не довільні задачі з будь-якого PDF. Частина типів — спеціалізації або перекомбінації прикладів, не механічна заміна кожного числа. Складність і новизна не оцінювались. Програмні перевірки не є універсальним доведенням довільного тексту. Помилка в самому шаблоні можлива. MathPDF і його промпти не змінено; v5 існує тільки як експеримент на метриках.",
+  "findings": "На відміну від попереднього циклу, LLM не може вивести формули у звичайний текст чи самовільно змінити кодомен: ці поля створює програма. Усі 10 артефактів пройшли перевірки підтримуваних сімейств. Це інша схема генерації, тому її 10/10 не можна напряму порівнювати з оцінками LLM або вважати доведеною загальною точністю.",
+  "validation_summary": "Тести включають відмову для недопустимих параметрів, невідомих типів і навмисно змінених формул/кодоменів. Усі 10 фінальних задач переглянуто вручну; друга модель не викликалася.",
+  "verified": 10,
+  "reviewer_calls": 0,
+  "generation_calls": 1,
+  "items": [
+    {
+      "id": 1,
+      "template_id": "relation_missing",
+      "title": "Integer linear relation missing integer output",
+      "parameters": {
+        "a": 4,
+        "b": 2,
+        "c": 1
+      },
+      "source": {
+        "id": "relation_missing",
+        "page": 63,
+        "reference": "Example 12.2(a)",
+        "method": "Integer linear relation; choose coefficients making x=0 have no integer output."
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Does the following relation define a function from integers to integers?"
+        },
+        {
+          "kind": "math",
+          "latex": "R=\\{(x,y)\\in \\mathbb Z\\times \\mathbb Z: 4x+2y=1\\}",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "No. For input zero the only rational candidate is not an integer, so existence fails."
+        },
+        {
+          "kind": "math",
+          "latex": "x=0\\implies y=\\frac{1}{2}\\notin \\mathbb Z",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "checks": [
+        "Nonzero coefficients",
+        "x=0 has no integer output"
+      ],
+      "status": "verified_for_supported_template"
+    },
+    {
+      "id": 2,
+      "template_id": "relation_total",
+      "title": "Integer linear relation with unique integer output",
+      "parameters": {
+        "a": 2,
+        "b": 1,
+        "c": 3
+      },
+      "source": {
+        "id": "relation_total",
+        "page": 63,
+        "reference": "Example 12.2(b)",
+        "method": "Integer linear relation with coefficient one on output; unique integer output for every input."
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Does the following relation define a function from integers to integers?"
+        },
+        {
+          "kind": "math",
+          "latex": "R=\\{(x,y)\\in \\mathbb Z\\times \\mathbb Z: 2x+1y=3\\}",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Yes. For every integer input the equation has exactly one output, and it is an integer."
+        },
+        {
+          "kind": "math",
+          "latex": "y=3-2x\\in \\mathbb Z",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "checks": [
+        "Coefficient of output is one: unique integer solution",
+        "Nonzero input coefficient"
+      ],
+      "status": "verified_for_supported_template"
+    },
+    {
+      "id": 3,
+      "template_id": "finite_range",
+      "title": "Square minus integer on finite domain with exact image",
+      "parameters": {
+        "domain": [
+          0,
+          2,
+          4
+        ],
+        "shift": 2
+      },
+      "source": {
+        "id": "finite_range",
+        "page": 63,
+        "reference": "Exercise 12.5(1)",
+        "method": "Square minus an integer on a finite integer domain; enumerate exact image."
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Determine the domain, codomain and image of this function."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\{0,2,4\\}\\to \\mathbb Z,\\qquad f(x)=x^2-2",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "The stated finite set is the domain; the integers are the codomain. Evaluate every domain element:"
+        },
+        {
+          "kind": "math",
+          "latex": "f(0)=-2",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "f(2)=2",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "f(4)=14",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Removing repeated values gives the image:"
+        },
+        {
+          "kind": "math",
+          "latex": "f(\\{0,2,4\\})=\\{-2,2,14\\}",
+          "display": true,
+          "source": {
+            "page": 63
+          }
+        }
+      ],
+      "checks": [
+        "Finite nonempty integer domain",
+        "No duplicate domain entries",
+        "Every output belongs to integer codomain"
+      ],
+      "status": "verified_for_supported_template"
+    },
+    {
+      "id": 4,
+      "template_id": "equal_rational",
+      "title": "Factorization and comparison of rational and affine rules",
+      "parameters": {
+        "a": 7
+      },
+      "source": {
+        "id": "equal_rational",
+        "page": 64,
+        "reference": "Example 12.7",
+        "method": "Factor x squared minus a squared; compare rational rule with affine rule on the same excluded-point domain."
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Are these functions equal? Account for their domains."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb R\\setminus\\{7\\}\\to \\mathbb R,\\quad f(x)=x+7",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "g:\\mathbb R\\setminus\\{7\\}\\to \\mathbb R,\\quad g(x)=\\frac{x^2-49}{x-7}",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Yes. Their domains and codomains coincide. The denominator is nonzero everywhere on that domain, so factorization gives equal values at every allowed input:"
+        },
+        {
+          "kind": "math",
+          "latex": "\\frac{x^2-49}{x-7}=\\frac{(x-7)(x+7)}{x-7}=x+7\\quad(x\\ne 7)",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "checks": [
+        "Nonzero excluded point",
+        "Exact polynomial coefficient identity"
+      ],
+      "status": "verified_for_supported_template"
+    },
+    {
+      "id": 5,
+      "template_id": "square_real",
+      "title": "Positive multiple of square on reals with injectivity and surjectivity failure",
+      "parameters": {
+        "k": 3
+      },
+      "source": {
+        "id": "square_real",
+        "page": 64,
+        "reference": "Example 12.9",
+        "method": "Positive multiple of square on reals; witnesses for failure of injectivity and surjectivity."
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Determine whether this function is injective and whether it is surjective."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb R\\to \\mathbb R,\\qquad f(x)=3x^2",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "It is not injective: two distinct inputs give the same output."
+        },
+        {
+          "kind": "math",
+          "latex": "f(1)=f(-1)=3",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        },
+        {
+          "kind": "text",
+          "text": "It is not surjective: all outputs are nonnegative, so minus one has no real preimage."
+        },
+        {
+          "kind": "math",
+          "latex": "3x^2\\geq0>-1\\qquad(x\\in \\mathbb R)",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "checks": [
+        "Positive square coefficient; square-root construction stays nonnegative"
+      ],
+      "status": "verified_for_supported_template"
+    },
+    {
+      "id": 6,
+      "template_id": "square_nonnegative",
+      "title": "Positive multiple of square on nonnegative reals with injectivity and surjectivity",
+      "parameters": {
+        "k": 3
+      },
+      "source": {
+        "id": "square_nonnegative",
+        "page": 64,
+        "reference": "Example 12.9, restriction",
+        "method": "Positive multiple of square on nonnegative reals; injectivity and constructive surjectivity."
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove that this function is bijective."
+        },
+        {
+          "kind": "math",
+          "latex": "f:[0,\\infty)\\to[0,\\infty),\\qquad f(x)=3x^2",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "All outputs are nonnegative. For nonnegative inputs, equality of outputs implies equal squares and then equal inputs:"
+        },
+        {
+          "kind": "math",
+          "latex": "3u^2=3v^2\\implies u^2=v^2\\implies u=v\\quad(u,v\\geq0)",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        },
+        {
+          "kind": "text",
+          "text": "For every nonnegative target choose a nonnegative input as follows. Substitution verifies surjectivity, hence bijectivity."
+        },
+        {
+          "kind": "math",
+          "latex": "x=\\sqrt{y/3}\\geq0,\\qquad f(x)=3(\\sqrt{y/3})^2=y\\quad(y\\geq0)",
+          "display": true,
+          "source": {
+            "page": 64
+          }
+        }
+      ],
+      "checks": [
+        "Positive square coefficient; square-root construction stays nonnegative"
+      ],
+      "status": "verified_for_supported_template"
+    },
+    {
+      "id": 7,
+      "template_id": "reciprocal_not_onto",
+      "title": "Reciprocal function missing a value in codomain",
+      "parameters": {
+        "a": 3,
+        "b": 5
+      },
+      "source": {
+        "id": "reciprocal_not_onto",
+        "page": 65,
+        "reference": "Example 12.10(1)",
+        "method": "Nonzero integer numerator over x plus integer shift, codomain all reals; missing shift value."
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Determine whether this function is injective and whether it is surjective onto the stated codomain."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb R\\setminus\\{0\\}\\to \\mathbb R,\\qquad f(x)=\\frac{3}x+5",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "The rule is defined on every allowed input. It is injective: equal outputs imply equal inputs, using nonzero inputs and numerator."
+        },
+        {
+          "kind": "math",
+          "latex": "\\frac{3}u+5=\\frac{3}v+5\\implies 3v=3u\\implies v=u\\quad(u,v\\ne0)",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "text",
+          "text": "It is not surjective onto the reals: the shift itself has no preimage."
+        },
+        {
+          "kind": "math",
+          "latex": "f(x)=5\\implies \\frac{3}x=0\\quad\\text{impossible for }x\\ne0",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "checks": [
+        "Nonzero numerator: output never equals shift",
+        "Exact inverse cancellation coefficient"
+      ],
+      "status": "verified_for_supported_template"
+    },
+    {
+      "id": 8,
+      "template_id": "reciprocal_bijection",
+      "title": "Reciprocal function bijection excluding shift value",
+      "parameters": {
+        "a": 2,
+        "b": 4
+      },
+      "source": {
+        "id": "reciprocal_bijection",
+        "page": 65,
+        "reference": "Example 12.10(2)",
+        "method": "Same reciprocal family, codomain excludes shift; check inverse denominator and domain."
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Determine whether this function is injective and whether it is surjective onto the stated codomain."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb R\\setminus\\{0\\}\\to \\mathbb R\\setminus\\{4\\},\\qquad f(x)=\\frac{2}x+4",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "The rule is defined on every allowed input. It is injective: equal outputs imply equal inputs, using nonzero inputs and numerator."
+        },
+        {
+          "kind": "math",
+          "latex": "\\frac{2}u+4=\\frac{2}v+4\\implies 2v=2u\\implies v=u\\quad(u,v\\ne0)",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "text",
+          "text": "The output cannot equal the excluded shift. For every allowed target the following preimage exists and is nonzero. Substitution proves surjectivity; therefore the function is bijective."
+        },
+        {
+          "kind": "math",
+          "latex": "y\\ne 4,\\quad x=\\frac{2}{y-4}\\ne0",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "f\\left(\\frac{2}{y-4}\\right)=\\frac{2}{2/(y-4)}+4=y",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "checks": [
+        "Nonzero numerator: output never equals shift",
+        "Exact inverse cancellation coefficient"
+      ],
+      "status": "verified_for_supported_template"
+    },
+    {
+      "id": 9,
+      "template_id": "integer_pair_bijection",
+      "title": "Integer pair map with determinant one and inverse",
+      "parameters": {
+        "k": 7
+      },
+      "source": {
+        "id": "integer_pair_bijection",
+        "page": 65,
+        "reference": "Example 12.10(3)",
+        "method": "Map (m+k n,m+(k+1)n) on integer pairs; determinant one and exact integer inverse."
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Prove that this function is bijective by constructing and verifying integer preimages."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb Z^2\\to \\mathbb Z^2,\\qquad f(m,n)=(m+7n,m+8n)",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "All outputs are integer pairs. To prove injectivity, equal outputs give these two equations:"
+        },
+        {
+          "kind": "math",
+          "latex": "m+7n=r+7s,\\qquad m+8n=r+8s",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Subtracting the first equation from the second gives equal second coordinates; substitution gives equal first coordinates."
+        },
+        {
+          "kind": "math",
+          "latex": "n=s,\\qquad m=r",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "text",
+          "text": "For any integer target pair choose the following integer input. Both coordinates substitute to the target, so the function is surjective and hence bijective."
+        },
+        {
+          "kind": "math",
+          "latex": "n=v-u,\\qquad m=8u-7v",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "m+7n=(8u-7v)+7(v-u)=u",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "m+8n=(8u-7v)+8(v-u)=v",
+          "display": true,
+          "source": {
+            "page": 65
+          }
+        }
+      ],
+      "checks": [
+        "Integer matrix determinant one",
+        "Exact inverse matrix product is identity",
+        "Exact inverse matrix product is identity"
+      ],
+      "status": "verified_for_supported_template"
+    },
+    {
+      "id": 10,
+      "template_id": "composition_order",
+      "title": "Composition of translation and scaling showing noncommutativity",
+      "parameters": {
+        "a": 3,
+        "b": 5
+      },
+      "source": {
+        "id": "composition_order",
+        "page": 66,
+        "reference": "Definition 12.11 and noncommutativity question",
+        "method": "Numerical specialization: translation and nonidentity scaling; compute both compositions."
+      },
+      "question": [
+        {
+          "kind": "text",
+          "text": "Compute both compositions and decide whether they are equal."
+        },
+        {
+          "kind": "math",
+          "latex": "f:\\mathbb R\\to \\mathbb R,\\quad f(x)=x+5",
+          "display": true,
+          "source": {
+            "page": 66
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "g:\\mathbb R\\to \\mathbb R,\\quad g(x)=3x",
+          "display": true,
+          "source": {
+            "page": 66
+          }
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "text": "Both compositions have real domain and codomain. Substitute in the stated order:"
+        },
+        {
+          "kind": "math",
+          "latex": "(g\\circ f)(x)=3(x+5)=3x+15",
+          "display": true,
+          "source": {
+            "page": 66
+          }
+        },
+        {
+          "kind": "math",
+          "latex": "(f\\circ g)(x)=3x+5",
+          "display": true,
+          "source": {
+            "page": 66
+          }
+        },
+        {
+          "kind": "text",
+          "text": "Their constant terms differ, so they are not equal functions."
+        },
+        {
+          "kind": "math",
+          "latex": "15\\ne 5\\implies g\\circ f\\ne f\\circ g",
+          "display": true,
+          "source": {
+            "page": 66
+          }
+        }
+      ],
+      "checks": [
+        "Scaling and translation do not commute",
+        "Distinct constant coefficients in compositions"
+      ],
+      "status": "verified_for_supported_template"
+    }
+  ],
+  "rendering": {
+    "status": "passed",
+    "tasks": 10,
+    "math_blocks": 36,
+    "rendered_math_blocks": 36,
+    "fallbacks": 0,
+    "page_errors": [],
+    "mobile_widths": [
+      320,
+      390
+    ],
+    "history_cards": 505,
+    "raw_TeX_in_prose": false
+  },
+  "cost_usd": 0.0006556,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "usage": {
+    "input_tokens": 807,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 208,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 1015
+  },
+  "seed": 50110,
+  "plan": {
+    "items": [
+      {
+        "template_id": "relation_missing",
+        "title": "Integer linear relation missing integer output"
+      },
+      {
+        "template_id": "relation_total",
+        "title": "Integer linear relation with unique integer output"
+      },
+      {
+        "template_id": "finite_range",
+        "title": "Square minus integer on finite domain with exact image"
+      },
+      {
+        "template_id": "equal_rational",
+        "title": "Factorization and comparison of rational and affine rules"
+      },
+      {
+        "template_id": "square_real",
+        "title": "Positive multiple of square on reals with injectivity and surjectivity failure"
+      },
+      {
+        "template_id": "square_nonnegative",
+        "title": "Positive multiple of square on nonnegative reals with injectivity and surjectivity"
+      },
+      {
+        "template_id": "reciprocal_not_onto",
+        "title": "Reciprocal function missing a value in codomain"
+      },
+      {
+        "template_id": "reciprocal_bijection",
+        "title": "Reciprocal function bijection excluding shift value"
+      },
+      {
+        "template_id": "integer_pair_bijection",
+        "title": "Integer pair map with determinant one and inverse"
+      },
+      {
+        "template_id": "composition_order",
+        "title": "Composition of translation and scaling showing noncommutativity"
+      }
+    ]
+  },
+  "raw_output": "{\"items\":[{\"template_id\":\"relation_missing\",\"title\":\"Integer linear relation missing integer output\"},{\"template_id\":\"relation_total\",\"title\":\"Integer linear relation with unique integer output\"},{\"template_id\":\"finite_range\",\"title\":\"Square minus integer on finite domain with exact image\"},{\"template_id\":\"equal_rational\",\"title\":\"Factorization and comparison of rational and affine rules\"},{\"template_id\":\"square_real\",\"title\":\"Positive multiple of square on reals with injectivity and surjectivity failure\"},{\"template_id\":\"square_nonnegative\",\"title\":\"Positive multiple of square on nonnegative reals with injectivity and surjectivity\"},{\"template_id\":\"reciprocal_not_onto\",\"title\":\"Reciprocal function missing a value in codomain\"},{\"template_id\":\"reciprocal_bijection\",\"title\":\"Reciprocal function bijection excluding shift value\"},{\"template_id\":\"integer_pair_bijection\",\"title\":\"Integer pair map with determinant one and inverse\"},{\"template_id\":\"composition_order\",\"title\":\"Composition of translation and scaling showing noncommutativity\"}]}",
+  "prompt_sha256": "56d63a478af0f2aaa7745e0577385c4dca4f69350b5fd0da47a0ec14a7dbc593",
+  "catalog_sha256": "1f1f8d198446d3c694606f9d103267f027a7978c91aa596040f29cc701894272",
+  "source": {
+    "name": "main (12).pdf",
+    "pages": [
+      63,
+      64,
+      65,
+      66
+    ],
+    "sha256": "e2d70968abd271d398481280873e158dd06e03084038f8f9816addd9cc98ca01"
+  },
+  "engine_sha256": "40c47c8ee16ea50c8d75e5be4b66cb248298578c289de84bf5f143b5a867a308",
+  "offline_validation_note": "Initial 80-character title guard rejected one benign title. Bound raised to 120; original titles and raw response preserved. No repeated API call.",
+  "manual_review": {
+    "scope": "Human-style local mathematical review by the coding assistant, not a second model API call or an independent statistical gold standard.",
+    "items": [
+      {
+        "id": 1,
+        "correct": true,
+        "reason": "4x+2y=1: x=0 gives y=1/2 outside integers. Not a total integer function."
+      },
+      {
+        "id": 2,
+        "correct": true,
+        "reason": "2x+y=3: y=3-2x is the unique integer output for every integer x."
+      },
+      {
+        "id": 3,
+        "correct": true,
+        "reason": "On {0,2,4}, x²-2 has exactly the image {-2,2,14}; all values are integers."
+      },
+      {
+        "id": 4,
+        "correct": true,
+        "reason": "Both domains exclude 7; (x²-49)/(x-7)=x+7 on every allowed input, so functions are equal."
+      },
+      {
+        "id": 5,
+        "correct": true,
+        "reason": "3x² on R has collision at -1 and 1; negative target -1 cannot be attained."
+      },
+      {
+        "id": 6,
+        "correct": true,
+        "reason": "3x² on nonnegative reals is injective; sqrt(y/3) is a valid nonnegative preimage for every y≥0."
+      },
+      {
+        "id": 7,
+        "correct": true,
+        "reason": "3/x+5 on nonzero reals is injective and never equals 5, so is not onto all reals."
+      },
+      {
+        "id": 8,
+        "correct": true,
+        "reason": "2/x+4 maps nonzero reals into reals excluding 4. For every y≠4, 2/(y-4) is nonzero and maps to y; injectivity proof valid."
+      },
+      {
+        "id": 9,
+        "correct": true,
+        "reason": "(m+7n,m+8n) has determinant one; n=v-u, m=8u-7v gives integer preimages and both compositions are identity. Elimination proves injectivity."
+      },
+      {
+        "id": 10,
+        "correct": true,
+        "reason": "f(x)=x+5 and g(x)=3x: g∘f=3x+15 while f∘g=3x+5, distinct on R."
+      }
+    ],
+    "pedagogical_limits": "Numerical variants, not a novelty benchmark. Model titles are verbose and sometimes reveal the requested property. This run evaluates bounded mathematics and rendering, not overall teaching quality."
+  }
+}

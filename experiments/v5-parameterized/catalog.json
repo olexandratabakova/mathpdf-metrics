@@ -1,0 +1,12 @@
+[
+ {"id":"relation_missing","page":63,"reference":"Example 12.2(a)","method":"Integer linear relation; choose coefficients making x=0 have no integer output."},
+ {"id":"relation_total","page":63,"reference":"Example 12.2(b)","method":"Integer linear relation with coefficient one on output; unique integer output for every input."},
+ {"id":"finite_range","page":63,"reference":"Exercise 12.5(1)","method":"Square minus an integer on a finite integer domain; enumerate exact image."},
+ {"id":"equal_rational","page":64,"reference":"Example 12.7","method":"Factor x squared minus a squared; compare rational rule with affine rule on the same excluded-point domain."},
+ {"id":"square_real","page":64,"reference":"Example 12.9","method":"Positive multiple of square on reals; witnesses for failure of injectivity and surjectivity."},
+ {"id":"square_nonnegative","page":64,"reference":"Example 12.9, restriction","method":"Positive multiple of square on nonnegative reals; injectivity and constructive surjectivity."},
+ {"id":"reciprocal_not_onto","page":65,"reference":"Example 12.10(1)","method":"Nonzero integer numerator over x plus integer shift, codomain all reals; missing shift value."},
+ {"id":"reciprocal_bijection","page":65,"reference":"Example 12.10(2)","method":"Same reciprocal family, codomain excludes shift; check inverse denominator and domain."},
+ {"id":"integer_pair_bijection","page":65,"reference":"Example 12.10(3)","method":"Map (m+k n,m+(k+1)n) on integer pairs; determinant one and exact integer inverse."},
+ {"id":"composition_order","page":66,"reference":"Definition 12.11 and noncommutativity question","method":"Numerical specialization: translation and nonidentity scaling; compute both compositions."}
+]

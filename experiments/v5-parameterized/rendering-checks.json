@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "tasks": 10,
+  "math_blocks": 36,
+  "rendered_math_blocks": 36,
+  "fallbacks": 0,
+  "page_errors": [],
+  "mobile_widths": [
+    320,
+    390
+  ],
+  "history_cards": 505,
+  "raw_TeX_in_prose": false
+}

@@ -1,0 +1,16 @@
+{
+ "scope":"Human-style local mathematical review by the coding assistant, not a second model API call or an independent statistical gold standard.",
+ "items":[
+  {"id":1,"correct":true,"reason":"4x+2y=1: x=0 gives y=1/2 outside integers. Not a total integer function."},
+  {"id":2,"correct":true,"reason":"2x+y=3: y=3-2x is the unique integer output for every integer x."},
+  {"id":3,"correct":true,"reason":"On {0,2,4}, x²-2 has exactly the image {-2,2,14}; all values are integers."},
+  {"id":4,"correct":true,"reason":"Both domains exclude 7; (x²-49)/(x-7)=x+7 on every allowed input, so functions are equal."},
+  {"id":5,"correct":true,"reason":"3x² on R has collision at -1 and 1; negative target -1 cannot be attained."},
+  {"id":6,"correct":true,"reason":"3x² on nonnegative reals is injective; sqrt(y/3) is a valid nonnegative preimage for every y≥0."},
+  {"id":7,"correct":true,"reason":"3/x+5 on nonzero reals is injective and never equals 5, so is not onto all reals."},
+  {"id":8,"correct":true,"reason":"2/x+4 maps nonzero reals into reals excluding 4. For every y≠4, 2/(y-4) is nonzero and maps to y; injectivity proof valid."},
+  {"id":9,"correct":true,"reason":"(m+7n,m+8n) has determinant one; n=v-u, m=8u-7v gives integer preimages and both compositions are identity. Elimination proves injectivity."},
+  {"id":10,"correct":true,"reason":"f(x)=x+5 and g(x)=3x: g∘f=3x+15 while f∘g=3x+5, distinct on R."}
+ ],
+ "pedagogical_limits":"Numerical variants, not a novelty benchmark. Model titles are verbose and sometimes reveal the requested property. This run evaluates bounded mathematics and rendering, not overall teaching quality."
+}

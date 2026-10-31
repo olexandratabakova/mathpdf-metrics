@@ -1,0 +1,17 @@
+# Problems v5: source templates and program-owned parameters
+
+Isolated experiment, 2026-10-31. **Production MathPDF and its prompts are unchanged.** This is the published v5 problems experiment; earlier scratch research in v5-problems is not promoted.
+
+The v5 prompt no longer lets a language model invent formula coefficients, domains, codomains or proofs. One GPT-4.1 mini call selects/orders ten catalog IDs and supplies plain English titles. The catalog was curated from main (12).pdf, original pages 63–66. It contains numerical generalizations/specializations of examples, not an automatic arbitrary-PDF extraction system. A deterministic program with seed 50110 chooses valid coefficients, computes exact answers and constructs complete structured formula blocks and worked proofs. No second LLM checks or repairs anything. Repetition of source methods is intentional in this version.
+
+Ten supported families: integer relation missing an output; total integer relation; finite image; equality of factored rational and affine functions on identical restricted domains; square map on reals; square map on nonnegative reals; reciprocal map not onto reals; reciprocal bijection with correct excluded shift; integer-pair bijection with determinant one; order of composition of scaling and translation.
+
+Verification uses integer/Fraction arithmetic, coefficient identities, full finite-domain evaluation, parameter conditions and both exact inverse-matrix products. Mathematical proofs for these closed templates were reviewed locally. Artifact validation recomputes complete program-owned fields and rejects tampering. It does not verify arbitrary mathematical prose. Unsupported families fail closed. Tests cover inadmissible parameters, wrong formulas/codomains, duplicate finite domains, deterministic seeding and inverse matrices over 41 integer coefficients.
+
+Result: **10/10 supported artifacts pass program checks**, 36 structured formula blocks all render with KaTeX, zero fallbacks and zero raw TeX in prose. This is not comparable to an LLM reviewer's 10/10 on untrusted arbitrary tasks and not a universal correctness guarantee. Template bugs remain possible. The exact ten tasks were also inspected locally; see manual-review.json. Titles can be verbose or reveal a property; pedagogical quality, difficulty and substantive novelty are not established.
+
+One paid call, **$0.0006556** from actual usage, budget $0.01. No PDF was sent to the model, only curated catalog metadata. Initial local validation rejected a benign title exceeding an overly narrow 80-character guard. The same stored response was processed offline after raising that bound to 120. Original titles and raw output are preserved; **no additional API call** was made. `run.py --finalize-only` never contacts the provider.
+
+Files: prompt.md is the new v5 planning prompt; catalog.json contains source provenance; engine.py owns all math; run.py performs the single budget-reserved call with no retries; publish.py creates sanitized public result.json and parameterized-data.js. output/ is private and ignored; no key or source PDF is published. Source page citations refer to methods, not literal quotations of generated expressions.
+
+[Official mini pricing](https://developers.openai.com/api/docs/models/gpt-4.1-mini): $0.40/M input, $0.10/M cached input, $1.60/M output tokens. Token usage, seed and SHA-256 hashes are recorded in result.json. Browser QA checked desktop and 320/390px widths and preservation of the existing 505-card history.
