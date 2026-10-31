@@ -398,5 +398,73 @@
       "evidence": "experiments/wildflower/result.json",
       "readme": "experiments/wildflower/README.md"
     }
-  ]
+  ],
+  "flashcard_baseline": {
+    "id": "wildflower",
+    "title": "Wildflower",
+    "n": 60,
+    "scores": {
+      "sc": 0.8,
+      "faith": 0.8466666666666666,
+      "atomic": 0.9666666666666667,
+      "coverage": 0.8333333333333334,
+      "dup": 0.11666666666666667,
+      "leaks": 0.0,
+      "understanding": 0.9666666666666667,
+      "trivial": 0.0
+    },
+    "judge": "gpt-4o-mini",
+    "difficulty": 3,
+    "source": "main (13).pdf",
+    "topics": [
+      {
+        "topic": "Sets",
+        "pages": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "n": 15
+      },
+      {
+        "topic": "Mathematical Induction",
+        "pages": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "n": 15
+      },
+      {
+        "topic": "Numbers",
+        "pages": [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "n": 15
+      },
+      {
+        "topic": "Functions",
+        "pages": [
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70
+        ],
+        "n": 15
+      }
+    ]
+  }
 }

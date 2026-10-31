@@ -10,6 +10,7 @@ def series(label,value,total,tone='sage',unit='ratio'):
     return {'label':label,'value':value,'total':total,'tone':tone,'unit':unit}
 def build():
     out=[]
+    baseline=None
     def add(folder,title,method,description,finding,chart_title,chart_note,bars,data,_legacy_renderer,run_id=None):
         raw=read(folder)
         out.append({'id':folder,'number':len(out)+1,'title':title,'method':method,'description':description,'finding':finding,
@@ -63,6 +64,11 @@ def build():
       'hundred-data.js','hundred.js')
     if (ROOT/'experiments/wildflower/result.json').exists():
         a=read('wildflower');c=a['metrics']['cards'];p=a['metrics']['problem_decisions']
+        keys={'sc':'pct_self_contained','faith':'avg_faithfulness','atomic':'pct_atomic','coverage':'coverage_ratio','dup':'duplicate_rate','leaks':'pct_front_leaks','understanding':'pct_understanding','trivial':'pct_trivial'}
+        baseline={'id':'wildflower','title':'Wildflower','n':a['metrics']['cards_generated'],
+                  'scores':{key:c[value] for key,value in keys.items()},'judge':a['judge'],
+                  'difficulty':a['settings']['difficulty'],'source':a['source']['name'],
+                  'topics':[{'topic':s['topic'],'pages':s['pages'],'n':len(s['items'])} for s in a['card_sets']]}
         add('wildflower','Wildflower · ordinary generation','baseline',
           'Sixty flashcards and forty problems from unchanged MathPDF prompts, evaluated with the original card metrics and a task audit.',
           'Card self-containedness is 80%. The judge accepts 36/40 problems, but separate checks expose missed errors and false rejections.',
@@ -72,7 +78,7 @@ def build():
            series('Cards · atomic',round(c['pct_atomic']*60,6),60),
            series('Problems · reviewer accepted',p.get('accept',0),40,'muted')],
           'wildflower-data.js','research.js')
-    return {'schema_version':1,'experiments':out}
+    return {'schema_version':1,'experiments':out,'flashcard_baseline':baseline}
 def main():
     catalog=build()
     (ROOT/'data/experiments.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

@@ -42,3 +42,14 @@ def test_home_shell_does_not_eagerly_load_experiment_payloads():
         assert '-data.js' not in shell
         assert 'experiments-catalog.js' in shell
     assert (ROOT/'experiment.html').is_file()
+
+
+def test_comparison_baseline_uses_recorded_metrics_not_task_acceptance():
+    catalog=json.loads((ROOT/'data/experiments.json').read_text(encoding='utf-8'))
+    baseline=catalog['flashcard_baseline']
+    raw=json.loads((ROOT/'experiments/wildflower/result.json').read_text(encoding='utf-8'))
+    assert baseline['n']==raw['metrics']['cards_generated']==60
+    assert baseline['scores']['sc']==raw['metrics']['cards']['pct_self_contained']==.8
+    assert baseline['scores']['faith']==raw['metrics']['cards']['avg_faithfulness']
+    assert baseline['scores']['sc']!=raw['metrics']['problem_decisions']['accept']/40
+    assert sum(t['n'] for t in baseline['topics'])==60

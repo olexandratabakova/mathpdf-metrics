@@ -46,6 +46,25 @@ async def check(url, chrome):
             if width == 390:
                 await page.screenshot(path=str(output / 'overview-mobile.png'))
 
+        await page.goto(url + '/#comparison')
+        await page.wait_for_selector('#version-comparison')
+        assert await page.locator('#version-comparison tbody tr').count() == 5
+        assert await page.locator('#method-comparison tbody tr').count() == 10
+        assert await page.locator('#version-comparison tbody tr').last.locator('td').nth(1).inner_text() == '80.0%'
+        scripts = await page.locator('script[src]').evaluate_all('(els)=>els.map(e=>e.getAttribute("src"))')
+        assert not any('-data.js' in x for x in scripts)
+        await page.locator('#comparison-metric').select_option('faith')
+        assert await page.locator('#comparison-bars strong').last.inner_text() == '84.7%'
+        for width in [320, 390, 1440]:
+            await page.set_viewport_size({'width': width, 'height': 900})
+            assert await page.evaluate('document.documentElement.scrollWidth <= innerWidth'), ('comparison', width)
+        await page.screenshot(path=str(output / 'comparison-desktop.png'))
+        # A browser-only version without scores must stay missing, not become zero.
+        await page.evaluate('db.versions.push({id:"qa-missing",title:"Local version",notes:"",date:"2026-10-31",status:"draft",prompt:""}); render()')
+        assert await page.locator('#version-comparison tbody tr').count() == 6
+        assert await page.locator('#version-comparison tbody tr').nth(4).locator('td').nth(1).inner_text() == '—'
+        await page.evaluate('db.versions.pop(); render()')
+
         for slug, count in COUNTS.items():
             await page.goto(url + '/experiment.html?id=' + slug)
             await page.wait_for_selector('.task-evidence')
