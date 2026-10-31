@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "tasks": 55,
+  "groups": [
+    40,
+    15
+  ],
+  "math_fallbacks": 0,
+  "page_errors": [],
+  "mobile_widths": [
+    320,
+    390
+  ],
+  "history_cards": 505
+}

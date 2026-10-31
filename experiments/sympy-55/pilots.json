@@ -1,0 +1,1071 @@
+{
+  "near": {
+    "group": "near",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "cost_usd": 0.0211392,
+    "usage": {
+      "input_tokens": 18844,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 8501,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 27345
+    },
+    "raw_output": "{\"items\":[{\"id\":1,\"topic\":\"Sets\",\"source_page\":5,\"title\":\"Cartesian product of two sets\",\"question\":\"Let \\\\( A = \\\\{3, 4\\\\} \\\\) and \\\\( B = \\\\{x, y\\\\} \\\\). What is the Cartesian product \\\\( A \\\\times B \\\\)?\",\"solution\":\"The Cartesian product \\\\( A \\\\times B \\\\) consists of all ordered pairs \\\\( (a,b) \\\\) where \\\\( a \\\\in A \\\\) and \\\\( b \\\\in B \\\\). Thus, \\\\( A \\\\times B = \\\\{(3,x), (3,y), (4,x), (4,y)\\\\} \\\\).\",\"condition_change\":\"\",\"kind\":\"finite_set\",\"params_json\":\"{\\\"A\\\":[3,4],\\\"B\\\":[],\\\"U\\\":[],\\\"operation\\\":\\\"cartesian\\\"}\",\"answer\":\"FiniteSet((3,\\\"x\\\"),(3,\\\"y\\\"),(4,\\\"x\\\"),(4,\\\"y\\\"))\",\"steps\":[{\"left\":\"A \\\\times B\",\"right\":\"\\\\{(3,x),(3,y),(4,x),(4,y)\\\\}\"}]},{\"id\":2,\"topic\":\"Sets\",\"source_page\":6,\"title\":\"Subset and power set size\",\"question\":\"Let \\\\( S = \\\\{1, 2, 3\\\\} \\\\). How many subsets does \\\\( S \\\\) have? What is the size of the power set \\\\( P(S) \\\\)?\",\"solution\":\"A set with \\\\( n \\\\) elements has \\\\( 2^n \\\\) subsets. Since \\\\( |S| = 3 \\\\), the number of subsets is \\\\( 2^3 = 8 \\\\). The power set \\\\( P(S) \\\\) is the set of all subsets, so \\\\( |P(S)| = 8 \\\\).\",\"condition_change\":\"\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"2**3\\\",\\\"domain\\\":\\\"Integers\\\"}\",\"answer\":\"8\",\"steps\":[{\"left\":\"|P(S)|\",\"right\":\"2^{3}\"},{\"left\":\"2^{3}\",\"right\":\"8\"}]},{\"id\":3,\"topic\":\"Sets\",\"source_page\":6,\"title\":\"Set operations: union, intersection, difference\",\"question\":\"Given \\\\( A = \\\\{1, 2, 3, 4\\\\} \\\\) and \\\\( B = \\\\{2, 5\\\\} \\\\), find \\\\( A \\\\cup B \\\\), \\\\( A \\\\cap B \\\\), \\\\( A \\\\setminus B \\\\), and \\\\( B \\\\setminus A \\\\).\",\"solution\":\"\\\\( A \\\\cup B = \\\\{1, 2, 3, 4, 5\\\\} \\\\) (all elements in either set). \\\\( A \\\\cap B = \\\\{2\\\\} \\\\) (elements in both). \\\\( A \\\\setminus B = \\\\{1, 3, 4\\\\} \\\\) (elements in \\\\( A \\\\) not in \\\\( B \\\\)). \\\\( B \\\\setminus A = \\\\{5\\\\} \\\\) (elements in \\\\( B \\\\) not in \\\\( A \\\\)).\",\"condition_change\":\"\",\"kind\":\"finite_set\",\"params_json\":\"{\\\"A\\\":[1,2,3,4],\\\"B\\\":[2,5],\\\"U\\\":[],\\\"operation\\\":\\\"union\\\"}\",\"answer\":\"FiniteSet(1,2,3,4,5)\",\"steps\":[{\"left\":\"A \\\\cup B\",\"right\":\"\\\\{1,2,3,4,5\\\\}\"},{\"left\":\"A \\\\cap B\",\"right\":\"\\\\{2\\\\}\"},{\"left\":\"A \\\\setminus B\",\"right\":\"\\\\{1,3,4\\\\}\"},{\"left\":\"B \\\\setminus A\",\"right\":\"\\\\{5\\\\}\"}]},{\"id\":4,\"topic\":\"Sets\",\"source_page\":7,\"title\":\"Complement of a set\",\"question\":\"Let \\\\( U = \\\\mathbb{N} \\\\) and \\\\( E \\\\) be the set of even natural numbers. What is the complement \\\\( E^c \\\\) in \\\\( U \\\\)?\",\"solution\":\"The complement \\\\( E^c = U \\\\setminus E \\\\) is the set of natural numbers that are not even, i.e., the odd natural numbers. So \\\\( E^c = \\\\{1, 3, 5, 7, \\\\ldots\\\\} \\\\).\",\"condition_change\":\"\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"\\\\{n \\\\in \\\\mathbb{N} : n \\\\% 2 = 1\\\\}\\\",\\\"domain\\\":\\\"\\\\mathbb{N}\\\"}\",\"answer\":\"\\\\{n \\\\in \\\\mathbb{N} : n \\\\% 2 = 1\\\\}\",\"steps\":[{\"left\":\"E^c\",\"right\":\"U \\\\setminus E\"},{\"left\":\"E^c\",\"right\":\"\\\\{\\\\text{odd natural numbers}\\\\}\"}]},{\"id\":5,\"topic\":\"Sets\",\"source_page\":6,\"title\":\"Union of multiple sets\",\"question\":\"Let \\\\( A_1 = \\\\{1, 2\\\\}, A_2 = \\\\{2, 3\\\\}, A_3 = \\\\{3, 4\\\\} \\\\). Find \\\\( A_1 \\\\cup A_2 \\\\cup A_3 \\\\).\",\"solution\":\"The union is all elements in any of the sets: \\\\( \\\\{1, 2\\\\} \\\\cup \\\\{2, 3\\\\} \\\\cup \\\\{3, 4\\\\} = \\\\{1, 2, 3, 4\\\\} \\\\).\",\"condition_change\":\"\",\"kind\":\"finite_set\",\"params_json\":\"{\\\"A\\\":[1,2],\\\"B\\\":[2,3],\\\"U\\\":[],\\\"operation\\\":\\\"union\\\"}\",\"answer\":\"FiniteSet(1,2,3,4)\",\"steps\":[{\"left\":\"A_1 \\\\cup A_2 \\\\cup A_3\",\"right\":\"\\\\{1,2,3,4\\\\}\"}]},{\"id\":6,\"topic\":\"Induction\",\"source_page\":14,\"title\":\"Sum of squares formula by induction\",\"question\":\"Prove by induction that for every natural number \\\\( n \\\\), \\\\[ 1^2 + 2^2 + \\\\cdots + n^2 = \\\\frac{n(n+1)(2n+1)}{6}. \\\\]\",\"solution\":\"Base case \\\\( n=1 \\\\): \\\\( 1^2 = 1 = \\\\frac{1 \\\\cdot 2 \\\\cdot 3}{6} = 1 \\\\). Assume true for \\\\( n \\\\). Then for \\\\( n+1 \\\\), sum is \\\\( \\\\frac{n(n+1)(2n+1)}{6} + (n+1)^2 = (n+1)\\\\left(\\\\frac{n(2n+1)}{6} + n+1\\\\right) = \\\\frac{(n+1)(n+2)(2n+3)}{6} \\\\), completing the induction.\",\"condition_change\":\"\",\"kind\":\"induction\",\"params_json\":\"{\\\"term\\\":\\\"k**2\\\",\\\"lower\\\":1,\\\"upper\\\":\\\"n\\\"}\",\"answer\":\"n*(n+1)*(2*n+1)/6\",\"steps\":[{\"left\":\"1^2\",\"right\":\"1\"},{\"left\":\"\\\\sum_{k=1}^n k^2\",\"right\":\"\\\\frac{n(n+1)(2n+1)}{6}\"},{\"left\":\"\\\\sum_{k=1}^{n+1} k^2\",\"right\":\"\\\\frac{(n+1)(n+2)(2n+3)}{6}\"}]},{\"id\":7,\"topic\":\"Induction\",\"source_page\":14,\"title\":\"Divisibility by 6 of a cubic expression\",\"question\":\"Prove by induction that for every natural number \\\\( n \\\\), \\\\( 6 \\\\mid n^3 + 5n \\\\).\",\"solution\":\"Base case \\\\( n=1 \\\\): \\\\( 1^3 + 5 \\\\cdot 1 = 6 \\\\), divisible by 6. Assume true for \\\\( n \\\\). For \\\\( n+1 \\\\), \\\\( (n+1)^3 + 5(n+1) = (n^3 + 5n) + 3n^2 + 3n + 6 \\\\). By induction hypothesis, \\\\( n^3 + 5n \\\\) divisible by 6, and \\\\( 3n^2 + 3n = 3n(n+1) \\\\) divisible by 6 since product of two consecutive integers is even. Hence divisible by 6.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"6 divides n^3 + 5n for all n in Naturals\\\"}\",\"answer\":\"True by induction using base case and step with factorization\",\"steps\":[]},{\"id\":8,\"topic\":\"Induction\",\"source_page\":15,\"title\":\"Sum of first odd numbers equals square\",\"question\":\"Prove by induction that for every natural number \\\\( n \\\\), \\\\[ 1 + 3 + 5 + \\\\cdots + (2n - 1) = n^2. \\\\]\",\"solution\":\"Base case \\\\( n=1 \\\\): sum is 1, equals \\\\( 1^2 \\\\). Assume true for \\\\( n \\\\). Then for \\\\( n+1 \\\\), sum is \\\\( n^2 + (2(n+1) - 1) = n^2 + 2n + 1 = (n+1)^2 \\\\).\",\"condition_change\":\"\",\"kind\":\"induction\",\"params_json\":\"{\\\"term\\\":\\\"2*k - 1\\\",\\\"lower\\\":1,\\\"upper\\\":\\\"n\\\"}\",\"answer\":\"n**2\",\"steps\":[{\"left\":\"1\",\"right\":\"1^2\"},{\"left\":\"\\\\sum_{k=1}^n (2k-1)\",\"right\":\"n^2\"},{\"left\":\"\\\\sum_{k=1}^{n+1} (2k-1)\",\"right\":\"(n+1)^2\"}]},{\"id\":9,\"topic\":\"Induction\",\"source_page\":15,\"title\":\"Inequality involving sum of reciprocals of squares\",\"question\":\"Prove by induction that for every natural number \\\\( n \\\\), \\\\[ \\\\sum_{i=1}^n \\\\frac{1}{i^2} \\\\leq 2 - \\\\frac{1}{n}. \\\\]\",\"solution\":\"Base case \\\\( n=1 \\\\): \\\\( 1 \\\\leq 2 - 1 = 1 \\\\). Assume true for \\\\( n \\\\). Then \\\\( \\\\sum_{i=1}^{n+1} \\\\frac{1}{i^2} = \\\\sum_{i=1}^n \\\\frac{1}{i^2} + \\\\frac{1}{(n+1)^2} \\\\leq 2 - \\\\frac{1}{n} + \\\\frac{1}{(n+1)^2} \\\\). It suffices to show \\\\( 2 - \\\\frac{1}{n} + \\\\frac{1}{(n+1)^2} \\\\leq 2 - \\\\frac{1}{n+1} \\\\), equivalent to \\\\( \\\\frac{1}{(n+1)^2} \\\\leq \\\\frac{1}{n} - \\\\frac{1}{n+1} = \\\\frac{1}{n(n+1)} \\\\), which holds since \\\\( (n+1)^2 \\\\geq n(n+1) \\\\).\",\"condition_change\":\"\",\"kind\":\"induction\",\"params_json\":\"{\\\"term\\\":\\\"1/(i**2)\\\",\\\"lower\\\":1,\\\"upper\\\":\\\"n\\\"}\",\"answer\":\"2 - 1/n\",\"steps\":[{\"left\":\"\\\\sum_{i=1}^1 1/i^2\",\"right\":\"1\"},{\"left\":\"\\\\sum_{i=1}^n 1/i^2\",\"right\":\"\\\\leq 2 - 1/n\"},{\"left\":\"\\\\sum_{i=1}^{n+1} 1/i^2\",\"right\":\"\\\\leq 2 - 1/(n+1)\"}]},{\"id\":10,\"topic\":\"Induction\",\"source_page\":16,\"title\":\"Triangle inequality for two numbers\",\"question\":\"Prove that for all real numbers \\\\( x, y \\\\), \\\\[ |x + y| \\\\leq |x| + |y|. \\\\]\",\"solution\":\"Square both sides: \\\\( |x+y|^2 = (x+y)^2 = x^2 + 2xy + y^2 \\\\leq x^2 + 2|x||y| + y^2 = (|x| + |y|)^2 \\\\). Taking square roots preserves inequality since both sides nonnegative. Hence, \\\\( |x+y| \\\\leq |x| + |y| \\\\).\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"For all real x,y, |x+y| <= |x| + |y|\\\"}\",\"answer\":\"True by squaring and comparing\",\"steps\":[]},{\"id\":11,\"topic\":\"Integers\",\"source_page\":28,\"title\":\"Division algorithm uniqueness\",\"question\":\"For integers \\\\( a \\\\) and positive integer \\\\( b \\\\), prove that there exist unique integers \\\\( q, r \\\\) such that \\\\( a = bq + r \\\\) with \\\\( 0 \\\\leq r < b \\\\).\",\"solution\":\"Existence: choose \\\\( q = \\\\lfloor a/b \\\\rfloor \\\\), then \\\\( r = a - bq \\\\) satisfies \\\\( 0 \\\\leq r < b \\\\). Uniqueness: if \\\\( a = bq + r = bq' + r' \\\\) with \\\\( 0 \\\\leq r, r' < b \\\\), then \\\\( b(q - q') = r' - r \\\\). Since \\\\( |r' - r| < b \\\\), \\\\( q = q' \\\\) and \\\\( r = r' \\\\).\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"Existence and uniqueness of q,r with a = bq + r and 0 <= r < b\\\"}\",\"answer\":\"True by floor division and contradiction\",\"steps\":[]},{\"id\":12,\"topic\":\"Integers\",\"source_page\":29,\"title\":\"Euclid's algorithm for gcd\",\"question\":\"Compute \\\\( \\\\gcd(56, 15) \\\\) using Euclid's algorithm.\",\"solution\":\"Divide 56 by 15: 56 = 3*15 + 11. Divide 15 by 11: 15 = 1*11 + 4. Divide 11 by 4: 11 = 2*4 + 3. Divide 4 by 3: 4 = 1*3 + 1. Divide 3 by 1: 3 = 3*1 + 0. The last nonzero remainder is 1, so \\\\( \\\\gcd(56, 15) = 1 \\\\).\",\"condition_change\":\"\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"gcd(56,15)\\\",\\\"domain\\\":\\\"Integers\\\"}\",\"answer\":\"1\",\"steps\":[{\"left\":\"56\",\"right\":\"3*15 + 11\"},{\"left\":\"15\",\"right\":\"1*11 + 4\"},{\"left\":\"11\",\"right\":\"2*4 + 3\"},{\"left\":\"4\",\"right\":\"1*3 + 1\"},{\"left\":\"3\",\"right\":\"3*1 + 0\"}]},{\"id\":13,\"topic\":\"Integers\",\"source_page\":30,\"title\":\"Bézout's identity example\",\"question\":\"Find integers \\\\( x, y \\\\) such that \\\\( 56x + 15y = \\\\gcd(56, 15) \\\\).\",\"solution\":\"From Euclid's algorithm, \\\\( \\\\gcd(56,15) = 1 \\\\). Back-substitute: 1 = 4 - 1*3; 3 = 11 - 2*4; 4 = 15 - 1*11; 11 = 56 - 3*15. Substitute stepwise to express 1 as linear combination of 56 and 15: 1 = 56* -2 + 15*7.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"Existence of x,y in integers with 56x + 15y = 1\\\"}\",\"answer\":\"x = -2, y = 7\",\"steps\":[]},{\"id\":14,\"topic\":\"Integers\",\"source_page\":31,\"title\":\"Coprime characterization\",\"question\":\"Show that integers \\\\( a = 7 \\\\) and \\\\( b = 20 \\\\) are coprime and find integers \\\\( x, y \\\\) such that \\\\( 7x + 20y = 1 \\\\).\",\"solution\":\"Since \\\\( \\\\gcd(7,20) = 1 \\\\), they are coprime. Using extended Euclid: 20 = 2*7 + 6; 7 = 1*6 + 1; 6 = 6*1 + 0. Back-substitute: 1 = 7 - 1*6 = 7 - 1*(20 - 2*7) = 3*7 - 1*20. So \\\\( x=3, y=-1 \\\\).\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"7 and 20 are coprime and 7x + 20y = 1 for some integers x,y\\\"}\",\"answer\":\"x=3, y=-1\",\"steps\":[]},{\"id\":15,\"topic\":\"Congruences\",\"source_page\":33,\"title\":\"Congruence definition and example\",\"question\":\"Check if \\\\( 17 \\\\equiv 7 \\\\pmod{5} \\\\) and explain why.\",\"solution\":\"Compute remainders: 17 mod 5 is 2, 7 mod 5 is 2. Since remainders are equal, \\\\( 17 \\\\equiv 7 \\\\pmod{5} \\\\) holds.\",\"condition_change\":\"\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"(17 - 7) % 5\\\",\\\"domain\\\":\\\"Integers\\\"}\",\"answer\":\"0\",\"steps\":[{\"left\":\"17 mod 5\",\"right\":\"2\"},{\"left\":\"7 mod 5\",\"right\":\"2\"},{\"left\":\"17 - 7\",\"right\":\"10\"},{\"left\":\"10 mod 5\",\"right\":\"0\"}]},{\"id\":16,\"topic\":\"Congruences\",\"source_page\":34,\"title\":\"Addition and multiplication modulo\",\"question\":\"Given \\\\( a \\\\equiv c \\\\pmod{4} \\\\) and \\\\( b \\\\equiv d \\\\pmod{4} \\\\), prove that \\\\( a+b \\\\equiv c+d \\\\pmod{4} \\\\) and \\\\( ab \\\\equiv cd \\\\pmod{4} \\\\).\",\"solution\":\"Since \\\\( 4 \\\\mid a-c \\\\) and \\\\( 4 \\\\mid b-d \\\\), then \\\\( 4 \\\\mid (a+b)-(c+d) \\\\) and \\\\( 4 \\\\mid ab - cd \\\\) by distributive properties. Hence, \\\\( a+b \\\\equiv c+d \\\\pmod{4} \\\\) and \\\\( ab \\\\equiv cd \\\\pmod{4} \\\\).\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"If a ≡ c mod 4 and b ≡ d mod 4, then a+b ≡ c+d mod 4 and ab ≡ cd mod 4\\\"}\",\"answer\":\"True by modular arithmetic properties\",\"steps\":[]},{\"id\":17,\"topic\":\"Counting\",\"source_page\":39,\"title\":\"Number of 3-digit numbers\",\"question\":\"How many 3-digit numbers are there?\",\"solution\":\"The first digit can be from 1 to 9 (9 options), the second and third digits from 0 to 9 (10 options each). Total numbers: \\\\( 9 \\\\times 10 \\\\times 10 = 900 \\\\).\",\"condition_change\":\"\",\"kind\":\"counting\",\"params_json\":\"{\\\"expression\\\":\\\"9*10*10\\\"}\",\"answer\":\"900\",\"steps\":[{\"left\":\"Number of 3-digit numbers\",\"right\":\"9*10*10\"},{\"left\":\"9*10*10\",\"right\":\"900\"}]},{\"id\":18,\"topic\":\"Counting\",\"source_page\":39,\"title\":\"Number of 6-digit numbers divisible by 5\",\"question\":\"How many 6-digit numbers are divisible by 5?\",\"solution\":\"Last digit must be 0 or 5 (2 options). First digit 1-9 (9 options). Other four digits 0-9 (10 options each). Total: \\\\( 9 \\\\times 10^4 \\\\times 2 = 180000 \\\\).\",\"condition_change\":\"\",\"kind\":\"counting\",\"params_json\":\"{\\\"expression\\\":\\\"9*10**4*2\\\"}\",\"answer\":\"180000\",\"steps\":[{\"left\":\"Number of 6-digit numbers divisible by 5\",\"right\":\"9*10^4*2\"},{\"left\":\"9*10^4*2\",\"right\":\"180000\"}]},{\"id\":19,\"topic\":\"Counting\",\"source_page\":41,\"title\":\"Binomial coefficient calculation\",\"question\":\"What is the binomial coefficient \\\\( \\\\binom{10}{3} \\\\)?\",\"solution\":\"\\\\( \\\\binom{10}{3} = \\\\frac{10!}{3!7!} = \\\\frac{10 \\\\times 9 \\\\times 8}{3 \\\\times 2 \\\\times 1} = 120. \\\\)\",\"condition_change\":\"\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"factorial(10)/(factorial(3)*factorial(7))\\\",\\\"domain\\\":\\\"Naturals\\\"}\",\"answer\":\"120\",\"steps\":[{\"left\":\"\\\\binom{10}{3}\",\"right\":\"\\\\frac{10!}{3!7!}\"},{\"left\":\"\\\\frac{10!}{3!7!}\",\"right\":\"120\"}]},{\"id\":20,\"topic\":\"Counting\",\"source_page\":42,\"title\":\"Number of solutions to x+y+z=10 in nonnegative integers\",\"question\":\"How many solutions are there to \\\\( x + y + z = 10 \\\\) with \\\\( x,y,z \\\\geq 0 \\\\)?\",\"solution\":\"Using stars and bars, number of solutions is \\\\( \\\\binom{10+3-1}{3-1} = \\\\binom{12}{2} = 66. \\\\)\",\"condition_change\":\"\",\"kind\":\"counting\",\"params_json\":\"{\\\"expression\\\":\\\"binomial(12,2)\\\"}\",\"answer\":\"66\",\"steps\":[{\"left\":\"Number of solutions\",\"right\":\"\\\\binom{12}{2}\"},{\"left\":\"\\\\binom{12}{2}\",\"right\":\"66\"}]},{\"id\":21,\"topic\":\"Counting\",\"source_page\":43,\"title\":\"Inclusion-exclusion for two sets\",\"question\":\"If \\\\( |A| = 180 \\\\), \\\\( |B| = 110 \\\\), and \\\\( |A \\\\cap B| = 70 \\\\), find \\\\( |A \\\\cup B| \\\\) and the number of elements not in \\\\( A \\\\cup B \\\\) given \\\\( |U| = 250 \\\\).\",\"solution\":\"\\\\( |A \\\\cup B| = 180 + 110 - 70 = 220 \\\\). Elements not in \\\\( A \\\\cup B \\\\) are \\\\( 250 - 220 = 30 \\\\).\",\"condition_change\":\"\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"180 + 110 - 70\\\"}\",\"answer\":\"220\",\"steps\":[{\"left\":\"|A \\\\cup B|\",\"right\":\"|A| + |B| - |A \\\\cap B|\"},{\"left\":\"|A \\\\cup B|\",\"right\":\"220\"},{\"left\":\"|U| - |A \\\\cup B|\",\"right\":\"30\"}]},{\"id\":22,\"topic\":\"Pigeonhole Principle\",\"source_page\":60,\"title\":\"Pigeonhole principle basic\",\"question\":\"If 13 pigeons are placed into 12 pigeonholes, prove that at least one pigeonhole contains at least two pigeons.\",\"solution\":\"If each pigeonhole had at most one pigeon, total pigeons would be at most 12, contradicting 13 pigeons. Hence, at least one pigeonhole has at least two pigeons.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"If 13 pigeons in 12 holes, some hole has at least 2 pigeons\\\"}\",\"answer\":\"True by pigeonhole principle\",\"steps\":[]},{\"id\":23,\"topic\":\"Pigeonhole Principle\",\"source_page\":60,\"title\":\"Birthday month pigeonhole\",\"question\":\"There are 80 students and 12 months. Prove that at least one month has at least 7 birthdays.\",\"solution\":\"By generalized pigeonhole principle, with \\\\( n=12 \\\\) and \\\\( k=6 \\\\), since \\\\( 80 = 12 \\\\times 6 + 8 \\\\geq 12 \\\\times 6 + 1 \\\\), at least one month has \\\\( 6+1=7 \\\\) birthdays.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"Among 80 students, some month has at least 7 birthdays\\\"}\",\"answer\":\"True by generalized pigeonhole principle\",\"steps\":[]},{\"id\":24,\"topic\":\"Pigeonhole Principle\",\"source_page\":61,\"title\":\"Distance between points in unit square\",\"question\":\"Five points lie inside a unit square. Prove that two points are at distance at most \\\\( \\\\sqrt{2}/2 \\\\).\",\"solution\":\"Divide square into 4 smaller squares of side length 1/2. By pigeonhole principle, two points lie in the same smaller square. Max distance in smaller square is diagonal \\\\( \\\\sqrt{2}/2 \\\\).\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"Among 5 points in unit square, two are at distance ≤ sqrt(2)/2\\\"}\",\"answer\":\"True by pigeonhole principle and geometry\",\"steps\":[]},{\"id\":25,\"topic\":\"Pigeonhole Principle\",\"source_page\":61,\"title\":\"Antipodal points on Earth\",\"question\":\"If 70% of Earth's surface is water, prove there exist two antipodal points both in water.\",\"solution\":\"Group points into antipodal pairs. If no pair both in water, antipode of water point is land. Land area ≥ water area, contradicting 30% land. Hence, such pair exists.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"Exist two antipodal points both in water if water covers 70%\\\"}\",\"answer\":\"True by area and pigeonhole argument\",\"steps\":[]},{\"id\":26,\"topic\":\"Pigeonhole Principle\",\"source_page\":61,\"title\":\"Same number of friends in group\",\"question\":\"In any group of \\\\( n \\\\geq 2 \\\\) people, prove two have the same number of friends within the group.\",\"solution\":\"Possible friend counts are 0 to \\\\( n-1 \\\\). 0 and \\\\( n-1 \\\\) cannot both occur. So at most \\\\( n-1 \\\\) distinct friend counts for \\\\( n \\\\) people. By pigeonhole principle, two share same count.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"In group of n≥2, two people have same number of friends\\\"}\",\"answer\":\"True by pigeonhole principle\",\"steps\":[]},{\"id\":27,\"topic\":\"Functions\",\"source_page\":63,\"title\":\"Function domain, codomain, range\",\"question\":\"For \\\\( f: \\\\{1,2,3\\\\} \\\\to \\\\mathbb{Z} \\\\) defined by \\\\( f(x) = x^2 - 4 \\\\), find domain, codomain, and range.\",\"solution\":\"Domain is \\\\( \\\\{1,2,3\\\\} \\\\). Codomain is \\\\( \\\\mathbb{Z} \\\\). Range is \\\\( \\\\{f(1), f(2), f(3)\\\\} = \\\\{-3, 0, 5\\\\} \\\\).\",\"condition_change\":\"\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"{x**2 - 4 for x in {1,2,3}}\\\",\\\"domain\\\":\\\"{1,2,3}\\\"}\",\"answer\":\"FiniteSet(-3,0,5)\",\"steps\":[{\"left\":\"Domain\",\"right\":\"\\\\{1,2,3\\\\}\"},{\"left\":\"Codomain\",\"right\":\"\\\\mathbb{Z}\"},{\"left\":\"Range\",\"right\":\"\\\\{-3,0,5\\\\}\"}]},{\"id\":28,\"topic\":\"Functions\",\"source_page\":64,\"title\":\"Equality of functions with different domains\",\"question\":\"Are \\\\( f_1: \\\\mathbb{R} \\\\to \\\\mathbb{R}, f_1(x) = x+2 \\\\) and \\\\( f_2: \\\\mathbb{R} \\\\setminus \\\\{2\\\\} \\\\to \\\\mathbb{R}, f_2(x) = x+2 \\\\) equal?\",\"solution\":\"No, because their domains differ. Functions are equal only if domains and values agree. Here, domains differ, so \\\\( f_1 \\\\neq f_2 \\\\).\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"f1 and f2 equal iff domains equal and values equal\\\"}\",\"answer\":\"False, domains differ\",\"steps\":[]},{\"id\":29,\"topic\":\"Functions\",\"source_page\":65,\"title\":\"Injectivity and surjectivity of rational function\",\"question\":\"Is \\\\( f: \\\\mathbb{R} \\\\setminus \\\\{0\\\\} \\\\to \\\\mathbb{R} \\\\setminus \\\\{1\\\\} \\\\) given by \\\\( f(x) = \\\\frac{1}{x} + 1 \\\\) injective and surjective?\",\"solution\":\"\\\\( f \\\\) is injective since \\\\( 1/x \\\\) is strictly decreasing on each interval and ranges do not overlap. It is surjective onto \\\\( \\\\mathbb{R} \\\\setminus \\\\{1\\\\} \\\\) because for any \\\\( y \\\\neq 1 \\\\), \\\\( x = 1/(y-1) \\\\) is in domain. Hence, \\\\( f \\\\) is bijective.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"f is bijection from R\\\\{0} to R\\\\{1} defined by f(x)=1/x+1\\\"}\",\"answer\":\"True, f is bijection\",\"steps\":[]},{\"id\":30,\"topic\":\"Functions\",\"source_page\":65,\"title\":\"Injectivity of linear map on integer pairs\",\"question\":\"Is \\\\( f: \\\\mathbb{Z}^2 \\\\to \\\\mathbb{Z}^2 \\\\) given by \\\\( f(m,n) = (m+n, m+2n) \\\\) injective?\",\"solution\":\"Suppose \\\\( f(m,n) = f(a,b) \\\\). Then \\\\( m+n = a+b \\\\) and \\\\( m+2n = a+2b \\\\). Subtracting, \\\\( n = b \\\\), then \\\\( m = a \\\\). Hence, \\\\( f \\\\) is injective.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"f is injective\\\"}\",\"answer\":\"True by solving linear system\",\"steps\":[]},{\"id\":31,\"topic\":\"Functions\",\"source_page\":65,\"title\":\"Surjectivity of linear map on integer pairs\",\"question\":\"Is \\\\( f: \\\\mathbb{Z}^2 \\\\to \\\\mathbb{Z}^2 \\\\) given by \\\\( f(m,n) = (m+n, m+2n) \\\\) surjective?\",\"solution\":\"Given \\\\( (a,b) \\\\), solve \\\\( m+n = a \\\\), \\\\( m+2n = b \\\\). Subtract: \\\\( n = b - a \\\\), \\\\( m = 2a - b \\\\), both integers. So \\\\( f \\\\) is surjective.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"f is surjective\\\"}\",\"answer\":\"True by solving linear system\",\"steps\":[]},{\"id\":32,\"topic\":\"Functions\",\"source_page\":65,\"title\":\"Bijectivity of linear map on integer pairs\",\"question\":\"Is \\\\( f: \\\\mathbb{Z}^2 \\\\to \\\\mathbb{Z}^2 \\\\) given by \\\\( f(m,n) = (m+n, m+2n) \\\\) bijective?\",\"solution\":\"Since \\\\( f \\\\) is both injective and surjective, it is bijective.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"f is bijection\\\"}\",\"answer\":\"True\",\"steps\":[]},{\"id\":33,\"topic\":\"Functions\",\"source_page\":65,\"title\":\"Composition preserves injectivity\",\"question\":\"If \\\\( f: X \\\\to Y \\\\) and \\\\( g: Y \\\\to Z \\\\) are injective, prove \\\\( g \\\\circ f \\\\) is injective.\",\"solution\":\"If \\\\( (g \\\\circ f)(x_1) = (g \\\\circ f)(x_2) \\\\), then \\\\( g(f(x_1)) = g(f(x_2)) \\\\). Since \\\\( g \\\\) injective, \\\\( f(x_1) = f(x_2) \\\\). Since \\\\( f \\\\) injective, \\\\( x_1 = x_2 \\\\).\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"Composition of injective functions is injective\\\"}\",\"answer\":\"True by definition\",\"steps\":[]},{\"id\":34,\"topic\":\"Functions\",\"source_page\":65,\"title\":\"Composition preserves surjectivity\",\"question\":\"If \\\\( f: X \\\\to Y \\\\) and \\\\( g: Y \\\\to Z \\\\) are surjective, prove \\\\( g \\\\circ f \\\\) is surjective.\",\"solution\":\"For any \\\\( z \\\\in Z \\\\), since \\\\( g \\\\) surjective, \\\\( \\\\exists y \\\\in Y \\\\) with \\\\( g(y) = z \\\\). Since \\\\( f \\\\) surjective, \\\\( \\\\exists x \\\\in X \\\\) with \\\\( f(x) = y \\\\). Then \\\\( (g \\\\circ f)(x) = z \\\\).\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"Composition of surjective functions is surjective\\\"}\",\"answer\":\"True by definition\",\"steps\":[]},{\"id\":35,\"topic\":\"Functions\",\"source_page\":66,\"title\":\"Injective function implies domain size ≤ codomain size\",\"question\":\"Let \\\\( f: X \\\\to Y \\\\) be injective with finite sets \\\\( X, Y \\\\). Prove \\\\( |X| \\\\leq |Y| \\\\).\",\"solution\":\"Since \\\\( f \\\\) is injective, distinct elements of \\\\( X \\\\) map to distinct elements of \\\\( Y \\\\). Hence, \\\\( X \\\\) injects into \\\\( Y \\\\), so \\\\( |X| \\\\leq |Y| \\\\).\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"Injective function implies |X| ≤ |Y|\\\"}\",\"answer\":\"True by injectivity\",\"steps\":[]},{\"id\":36,\"topic\":\"Sets\",\"source_page\":5,\"title\":\"Subset membership true or false\",\"question\":\"Determine which statements are true for \\\\( S = \\\\{1, \\\\{1\\\\}\\\\} \\\\): (1) \\\\( 1 \\\\in S \\\\), (2) \\\\( 1 \\\\subset S \\\\), (3) \\\\( \\\\{1\\\\} \\\\in S \\\\), (4) \\\\( \\\\{1\\\\} \\\\subset S \\\\).\",\"solution\":\"(1) True, 1 is an element of S. (2) False, 1 is not a set, so cannot be subset. (3) True, \\\\( \\\\{1\\\\} \\\\) is an element of S. (4) True, all elements of \\\\( \\\\{1\\\\} \\\\) (which is 1) are in S.\",\"condition_change\":\"\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"Truth values of membership and subset statements\\\"}\",\"answer\":\"(1) True, (2) False, (3) True, (4) True\",\"steps\":[]},{\"id\":37,\"topic\":\"Sets\",\"source_page\":6,\"title\":\"Power set of a set with nested elements\",\"question\":\"Find the power set \\\\( P(\\\\{2, \\\\{3,4\\\\}\\\\}) \\\\).\",\"solution\":\"The set has two elements: 2 and \\\\( \\\\{3,4\\\\} \\\\). Its subsets are: \\\\( \\\\emptyset, \\\\{2\\\\}, \\\\{\\\\{3,4\\\\}\\\\}, \\\\{2, \\\\{3,4\\\\}\\\\} \\\\).\",\"condition_change\":\"\",\"kind\":\"finite_set\",\"params_json\":\"{\\\"A\\\":[2,\\\"{3,4}\\\"],\\\"B\\\":[],\\\"U\\\":[],\\\"operation\\\":\\\"power_set\\\"}\",\"answer\":\"FiniteSet(FiniteSet(),FiniteSet(2),FiniteSet({3,4}),FiniteSet(2,{3,4}))\",\"steps\":[]},{\"id\":38,\"topic\":\"Counting\",\"source_page\":41,\"title\":\"Sum of binomial coefficients\",\"question\":\"Compute \\\\( \\\\sum_{k=0}^5 \\\\binom{5}{k} \\\\).\",\"solution\":\"By binomial theorem with \\\\( x = y = 1 \\\\), sum is \\\\( 2^5 = 32 \\\\).\",\"condition_change\":\"\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"sum(binomial(5,k) for k in range(6))\\\",\\\"domain\\\":\\\"Naturals\\\"}\",\"answer\":\"32\",\"steps\":[{\"left\":\"\\\\sum_{k=0}^5 \\\\binom{5}{k}\",\"right\":\"2^5\"},{\"left\":\"2^5\",\"right\":\"32\"}]},{\"id\":39,\"topic\":\"Counting\",\"source_page\":42,\"title\":\"Number of nondecreasing sequences\",\"question\":\"How many nondecreasing sequences of length 4 can be made using only numbers 1, 2, 3?\",\"solution\":\"Number of nondecreasing sequences of length \\\\( n \\\\) from \\\\( m \\\\) numbers is \\\\( \\\\binom{n+m-1}{n} \\\\). Here, \\\\( n=4, m=3 \\\\), so \\\\( \\\\binom{6}{4} = 15 \\\\).\",\"condition_change\":\"\",\"kind\":\"counting\",\"params_json\":\"{\\\"expression\\\":\\\"binomial(6,4)\\\"}\",\"answer\":\"15\",\"steps\":[{\"left\":\"Number of sequences\",\"right\":\"\\\\binom{6}{4}\"},{\"left\":\"\\\\binom{6}{4}\",\"right\":\"15\"}]},{\"id\":40,\"topic\":\"Counting\",\"source_page\":43,\"title\":\"Inclusion-exclusion for three sets\",\"question\":\"Given \\\\( |A|=100, |B|=80, |C|=60, |A \\\\cap B|=30, |A \\\\cap C|=20, |B \\\\cap C|=15, |A \\\\cap B \\\\cap C|=5 \\\\), find \\\\( |A \\\\cup B \\\\cup C| \\\\).\",\"solution\":\"By inclusion-exclusion: \\\\( 100 + 80 + 60 - 30 - 20 - 15 + 5 = 180. \\\\)\",\"condition_change\":\"\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"100 + 80 + 60 - 30 - 20 - 15 + 5\\\"}\",\"answer\":\"180\",\"steps\":[{\"left\":\"|A \\\\cup B \\\\cup C|\",\"right\":\"|A| + |B| + |C| - |A \\\\cap B| - |A \\\\cap C| - |B \\\\cap C| + |A \\\\cap B \\\\cap C|\"},{\"left\":\"Sum\",\"right\":\"180\"}]}]}",
+    "parsed": {
+      "items": [
+        {
+          "id": 1,
+          "topic": "Sets",
+          "source_page": 5,
+          "title": "Cartesian product of two sets",
+          "question": "Let \\( A = \\{3, 4\\} \\) and \\( B = \\{x, y\\} \\). What is the Cartesian product \\( A \\times B \\)?",
+          "solution": "The Cartesian product \\( A \\times B \\) consists of all ordered pairs \\( (a,b) \\) where \\( a \\in A \\) and \\( b \\in B \\). Thus, \\( A \\times B = \\{(3,x), (3,y), (4,x), (4,y)\\} \\).",
+          "condition_change": "",
+          "kind": "finite_set",
+          "params_json": "{\"A\":[3,4],\"B\":[],\"U\":[],\"operation\":\"cartesian\"}",
+          "answer": "FiniteSet((3,\"x\"),(3,\"y\"),(4,\"x\"),(4,\"y\"))",
+          "steps": [
+            {
+              "left": "A \\times B",
+              "right": "\\{(3,x),(3,y),(4,x),(4,y)\\}"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "topic": "Sets",
+          "source_page": 6,
+          "title": "Subset and power set size",
+          "question": "Let \\( S = \\{1, 2, 3\\} \\). How many subsets does \\( S \\) have? What is the size of the power set \\( P(S) \\)?",
+          "solution": "A set with \\( n \\) elements has \\( 2^n \\) subsets. Since \\( |S| = 3 \\), the number of subsets is \\( 2^3 = 8 \\). The power set \\( P(S) \\) is the set of all subsets, so \\( |P(S)| = 8 \\).",
+          "condition_change": "",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"2**3\",\"domain\":\"Integers\"}",
+          "answer": "8",
+          "steps": [
+            {
+              "left": "|P(S)|",
+              "right": "2^{3}"
+            },
+            {
+              "left": "2^{3}",
+              "right": "8"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "topic": "Sets",
+          "source_page": 6,
+          "title": "Set operations: union, intersection, difference",
+          "question": "Given \\( A = \\{1, 2, 3, 4\\} \\) and \\( B = \\{2, 5\\} \\), find \\( A \\cup B \\), \\( A \\cap B \\), \\( A \\setminus B \\), and \\( B \\setminus A \\).",
+          "solution": "\\( A \\cup B = \\{1, 2, 3, 4, 5\\} \\) (all elements in either set). \\( A \\cap B = \\{2\\} \\) (elements in both). \\( A \\setminus B = \\{1, 3, 4\\} \\) (elements in \\( A \\) not in \\( B \\)). \\( B \\setminus A = \\{5\\} \\) (elements in \\( B \\) not in \\( A \\)).",
+          "condition_change": "",
+          "kind": "finite_set",
+          "params_json": "{\"A\":[1,2,3,4],\"B\":[2,5],\"U\":[],\"operation\":\"union\"}",
+          "answer": "FiniteSet(1,2,3,4,5)",
+          "steps": [
+            {
+              "left": "A \\cup B",
+              "right": "\\{1,2,3,4,5\\}"
+            },
+            {
+              "left": "A \\cap B",
+              "right": "\\{2\\}"
+            },
+            {
+              "left": "A \\setminus B",
+              "right": "\\{1,3,4\\}"
+            },
+            {
+              "left": "B \\setminus A",
+              "right": "\\{5\\}"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "topic": "Sets",
+          "source_page": 7,
+          "title": "Complement of a set",
+          "question": "Let \\( U = \\mathbb{N} \\) and \\( E \\) be the set of even natural numbers. What is the complement \\( E^c \\) in \\( U \\)?",
+          "solution": "The complement \\( E^c = U \\setminus E \\) is the set of natural numbers that are not even, i.e., the odd natural numbers. So \\( E^c = \\{1, 3, 5, 7, \\ldots\\} \\).",
+          "condition_change": "",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"\\{n \\in \\mathbb{N} : n \\% 2 = 1\\}\",\"domain\":\"\\mathbb{N}\"}",
+          "answer": "\\{n \\in \\mathbb{N} : n \\% 2 = 1\\}",
+          "steps": [
+            {
+              "left": "E^c",
+              "right": "U \\setminus E"
+            },
+            {
+              "left": "E^c",
+              "right": "\\{\\text{odd natural numbers}\\}"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "topic": "Sets",
+          "source_page": 6,
+          "title": "Union of multiple sets",
+          "question": "Let \\( A_1 = \\{1, 2\\}, A_2 = \\{2, 3\\}, A_3 = \\{3, 4\\} \\). Find \\( A_1 \\cup A_2 \\cup A_3 \\).",
+          "solution": "The union is all elements in any of the sets: \\( \\{1, 2\\} \\cup \\{2, 3\\} \\cup \\{3, 4\\} = \\{1, 2, 3, 4\\} \\).",
+          "condition_change": "",
+          "kind": "finite_set",
+          "params_json": "{\"A\":[1,2],\"B\":[2,3],\"U\":[],\"operation\":\"union\"}",
+          "answer": "FiniteSet(1,2,3,4)",
+          "steps": [
+            {
+              "left": "A_1 \\cup A_2 \\cup A_3",
+              "right": "\\{1,2,3,4\\}"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "topic": "Induction",
+          "source_page": 14,
+          "title": "Sum of squares formula by induction",
+          "question": "Prove by induction that for every natural number \\( n \\), \\[ 1^2 + 2^2 + \\cdots + n^2 = \\frac{n(n+1)(2n+1)}{6}. \\]",
+          "solution": "Base case \\( n=1 \\): \\( 1^2 = 1 = \\frac{1 \\cdot 2 \\cdot 3}{6} = 1 \\). Assume true for \\( n \\). Then for \\( n+1 \\), sum is \\( \\frac{n(n+1)(2n+1)}{6} + (n+1)^2 = (n+1)\\left(\\frac{n(2n+1)}{6} + n+1\\right) = \\frac{(n+1)(n+2)(2n+3)}{6} \\), completing the induction.",
+          "condition_change": "",
+          "kind": "induction",
+          "params_json": "{\"term\":\"k**2\",\"lower\":1,\"upper\":\"n\"}",
+          "answer": "n*(n+1)*(2*n+1)/6",
+          "steps": [
+            {
+              "left": "1^2",
+              "right": "1"
+            },
+            {
+              "left": "\\sum_{k=1}^n k^2",
+              "right": "\\frac{n(n+1)(2n+1)}{6}"
+            },
+            {
+              "left": "\\sum_{k=1}^{n+1} k^2",
+              "right": "\\frac{(n+1)(n+2)(2n+3)}{6}"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "topic": "Induction",
+          "source_page": 14,
+          "title": "Divisibility by 6 of a cubic expression",
+          "question": "Prove by induction that for every natural number \\( n \\), \\( 6 \\mid n^3 + 5n \\).",
+          "solution": "Base case \\( n=1 \\): \\( 1^3 + 5 \\cdot 1 = 6 \\), divisible by 6. Assume true for \\( n \\). For \\( n+1 \\), \\( (n+1)^3 + 5(n+1) = (n^3 + 5n) + 3n^2 + 3n + 6 \\). By induction hypothesis, \\( n^3 + 5n \\) divisible by 6, and \\( 3n^2 + 3n = 3n(n+1) \\) divisible by 6 since product of two consecutive integers is even. Hence divisible by 6.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"6 divides n^3 + 5n for all n in Naturals\"}",
+          "answer": "True by induction using base case and step with factorization",
+          "steps": []
+        },
+        {
+          "id": 8,
+          "topic": "Induction",
+          "source_page": 15,
+          "title": "Sum of first odd numbers equals square",
+          "question": "Prove by induction that for every natural number \\( n \\), \\[ 1 + 3 + 5 + \\cdots + (2n - 1) = n^2. \\]",
+          "solution": "Base case \\( n=1 \\): sum is 1, equals \\( 1^2 \\). Assume true for \\( n \\). Then for \\( n+1 \\), sum is \\( n^2 + (2(n+1) - 1) = n^2 + 2n + 1 = (n+1)^2 \\).",
+          "condition_change": "",
+          "kind": "induction",
+          "params_json": "{\"term\":\"2*k - 1\",\"lower\":1,\"upper\":\"n\"}",
+          "answer": "n**2",
+          "steps": [
+            {
+              "left": "1",
+              "right": "1^2"
+            },
+            {
+              "left": "\\sum_{k=1}^n (2k-1)",
+              "right": "n^2"
+            },
+            {
+              "left": "\\sum_{k=1}^{n+1} (2k-1)",
+              "right": "(n+1)^2"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "topic": "Induction",
+          "source_page": 15,
+          "title": "Inequality involving sum of reciprocals of squares",
+          "question": "Prove by induction that for every natural number \\( n \\), \\[ \\sum_{i=1}^n \\frac{1}{i^2} \\leq 2 - \\frac{1}{n}. \\]",
+          "solution": "Base case \\( n=1 \\): \\( 1 \\leq 2 - 1 = 1 \\). Assume true for \\( n \\). Then \\( \\sum_{i=1}^{n+1} \\frac{1}{i^2} = \\sum_{i=1}^n \\frac{1}{i^2} + \\frac{1}{(n+1)^2} \\leq 2 - \\frac{1}{n} + \\frac{1}{(n+1)^2} \\). It suffices to show \\( 2 - \\frac{1}{n} + \\frac{1}{(n+1)^2} \\leq 2 - \\frac{1}{n+1} \\), equivalent to \\( \\frac{1}{(n+1)^2} \\leq \\frac{1}{n} - \\frac{1}{n+1} = \\frac{1}{n(n+1)} \\), which holds since \\( (n+1)^2 \\geq n(n+1) \\).",
+          "condition_change": "",
+          "kind": "induction",
+          "params_json": "{\"term\":\"1/(i**2)\",\"lower\":1,\"upper\":\"n\"}",
+          "answer": "2 - 1/n",
+          "steps": [
+            {
+              "left": "\\sum_{i=1}^1 1/i^2",
+              "right": "1"
+            },
+            {
+              "left": "\\sum_{i=1}^n 1/i^2",
+              "right": "\\leq 2 - 1/n"
+            },
+            {
+              "left": "\\sum_{i=1}^{n+1} 1/i^2",
+              "right": "\\leq 2 - 1/(n+1)"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "topic": "Induction",
+          "source_page": 16,
+          "title": "Triangle inequality for two numbers",
+          "question": "Prove that for all real numbers \\( x, y \\), \\[ |x + y| \\leq |x| + |y|. \\]",
+          "solution": "Square both sides: \\( |x+y|^2 = (x+y)^2 = x^2 + 2xy + y^2 \\leq x^2 + 2|x||y| + y^2 = (|x| + |y|)^2 \\). Taking square roots preserves inequality since both sides nonnegative. Hence, \\( |x+y| \\leq |x| + |y| \\).",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"For all real x,y, |x+y| <= |x| + |y|\"}",
+          "answer": "True by squaring and comparing",
+          "steps": []
+        },
+        {
+          "id": 11,
+          "topic": "Integers",
+          "source_page": 28,
+          "title": "Division algorithm uniqueness",
+          "question": "For integers \\( a \\) and positive integer \\( b \\), prove that there exist unique integers \\( q, r \\) such that \\( a = bq + r \\) with \\( 0 \\leq r < b \\).",
+          "solution": "Existence: choose \\( q = \\lfloor a/b \\rfloor \\), then \\( r = a - bq \\) satisfies \\( 0 \\leq r < b \\). Uniqueness: if \\( a = bq + r = bq' + r' \\) with \\( 0 \\leq r, r' < b \\), then \\( b(q - q') = r' - r \\). Since \\( |r' - r| < b \\), \\( q = q' \\) and \\( r = r' \\).",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"Existence and uniqueness of q,r with a = bq + r and 0 <= r < b\"}",
+          "answer": "True by floor division and contradiction",
+          "steps": []
+        },
+        {
+          "id": 12,
+          "topic": "Integers",
+          "source_page": 29,
+          "title": "Euclid's algorithm for gcd",
+          "question": "Compute \\( \\gcd(56, 15) \\) using Euclid's algorithm.",
+          "solution": "Divide 56 by 15: 56 = 3*15 + 11. Divide 15 by 11: 15 = 1*11 + 4. Divide 11 by 4: 11 = 2*4 + 3. Divide 4 by 3: 4 = 1*3 + 1. Divide 3 by 1: 3 = 3*1 + 0. The last nonzero remainder is 1, so \\( \\gcd(56, 15) = 1 \\).",
+          "condition_change": "",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"gcd(56,15)\",\"domain\":\"Integers\"}",
+          "answer": "1",
+          "steps": [
+            {
+              "left": "56",
+              "right": "3*15 + 11"
+            },
+            {
+              "left": "15",
+              "right": "1*11 + 4"
+            },
+            {
+              "left": "11",
+              "right": "2*4 + 3"
+            },
+            {
+              "left": "4",
+              "right": "1*3 + 1"
+            },
+            {
+              "left": "3",
+              "right": "3*1 + 0"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "topic": "Integers",
+          "source_page": 30,
+          "title": "Bézout's identity example",
+          "question": "Find integers \\( x, y \\) such that \\( 56x + 15y = \\gcd(56, 15) \\).",
+          "solution": "From Euclid's algorithm, \\( \\gcd(56,15) = 1 \\). Back-substitute: 1 = 4 - 1*3; 3 = 11 - 2*4; 4 = 15 - 1*11; 11 = 56 - 3*15. Substitute stepwise to express 1 as linear combination of 56 and 15: 1 = 56* -2 + 15*7.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"Existence of x,y in integers with 56x + 15y = 1\"}",
+          "answer": "x = -2, y = 7",
+          "steps": []
+        },
+        {
+          "id": 14,
+          "topic": "Integers",
+          "source_page": 31,
+          "title": "Coprime characterization",
+          "question": "Show that integers \\( a = 7 \\) and \\( b = 20 \\) are coprime and find integers \\( x, y \\) such that \\( 7x + 20y = 1 \\).",
+          "solution": "Since \\( \\gcd(7,20) = 1 \\), they are coprime. Using extended Euclid: 20 = 2*7 + 6; 7 = 1*6 + 1; 6 = 6*1 + 0. Back-substitute: 1 = 7 - 1*6 = 7 - 1*(20 - 2*7) = 3*7 - 1*20. So \\( x=3, y=-1 \\).",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"7 and 20 are coprime and 7x + 20y = 1 for some integers x,y\"}",
+          "answer": "x=3, y=-1",
+          "steps": []
+        },
+        {
+          "id": 15,
+          "topic": "Congruences",
+          "source_page": 33,
+          "title": "Congruence definition and example",
+          "question": "Check if \\( 17 \\equiv 7 \\pmod{5} \\) and explain why.",
+          "solution": "Compute remainders: 17 mod 5 is 2, 7 mod 5 is 2. Since remainders are equal, \\( 17 \\equiv 7 \\pmod{5} \\) holds.",
+          "condition_change": "",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"(17 - 7) % 5\",\"domain\":\"Integers\"}",
+          "answer": "0",
+          "steps": [
+            {
+              "left": "17 mod 5",
+              "right": "2"
+            },
+            {
+              "left": "7 mod 5",
+              "right": "2"
+            },
+            {
+              "left": "17 - 7",
+              "right": "10"
+            },
+            {
+              "left": "10 mod 5",
+              "right": "0"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "topic": "Congruences",
+          "source_page": 34,
+          "title": "Addition and multiplication modulo",
+          "question": "Given \\( a \\equiv c \\pmod{4} \\) and \\( b \\equiv d \\pmod{4} \\), prove that \\( a+b \\equiv c+d \\pmod{4} \\) and \\( ab \\equiv cd \\pmod{4} \\).",
+          "solution": "Since \\( 4 \\mid a-c \\) and \\( 4 \\mid b-d \\), then \\( 4 \\mid (a+b)-(c+d) \\) and \\( 4 \\mid ab - cd \\) by distributive properties. Hence, \\( a+b \\equiv c+d \\pmod{4} \\) and \\( ab \\equiv cd \\pmod{4} \\).",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"If a ≡ c mod 4 and b ≡ d mod 4, then a+b ≡ c+d mod 4 and ab ≡ cd mod 4\"}",
+          "answer": "True by modular arithmetic properties",
+          "steps": []
+        },
+        {
+          "id": 17,
+          "topic": "Counting",
+          "source_page": 39,
+          "title": "Number of 3-digit numbers",
+          "question": "How many 3-digit numbers are there?",
+          "solution": "The first digit can be from 1 to 9 (9 options), the second and third digits from 0 to 9 (10 options each). Total numbers: \\( 9 \\times 10 \\times 10 = 900 \\).",
+          "condition_change": "",
+          "kind": "counting",
+          "params_json": "{\"expression\":\"9*10*10\"}",
+          "answer": "900",
+          "steps": [
+            {
+              "left": "Number of 3-digit numbers",
+              "right": "9*10*10"
+            },
+            {
+              "left": "9*10*10",
+              "right": "900"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "topic": "Counting",
+          "source_page": 39,
+          "title": "Number of 6-digit numbers divisible by 5",
+          "question": "How many 6-digit numbers are divisible by 5?",
+          "solution": "Last digit must be 0 or 5 (2 options). First digit 1-9 (9 options). Other four digits 0-9 (10 options each). Total: \\( 9 \\times 10^4 \\times 2 = 180000 \\).",
+          "condition_change": "",
+          "kind": "counting",
+          "params_json": "{\"expression\":\"9*10**4*2\"}",
+          "answer": "180000",
+          "steps": [
+            {
+              "left": "Number of 6-digit numbers divisible by 5",
+              "right": "9*10^4*2"
+            },
+            {
+              "left": "9*10^4*2",
+              "right": "180000"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "topic": "Counting",
+          "source_page": 41,
+          "title": "Binomial coefficient calculation",
+          "question": "What is the binomial coefficient \\( \\binom{10}{3} \\)?",
+          "solution": "\\( \\binom{10}{3} = \\frac{10!}{3!7!} = \\frac{10 \\times 9 \\times 8}{3 \\times 2 \\times 1} = 120. \\)",
+          "condition_change": "",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"factorial(10)/(factorial(3)*factorial(7))\",\"domain\":\"Naturals\"}",
+          "answer": "120",
+          "steps": [
+            {
+              "left": "\\binom{10}{3}",
+              "right": "\\frac{10!}{3!7!}"
+            },
+            {
+              "left": "\\frac{10!}{3!7!}",
+              "right": "120"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "topic": "Counting",
+          "source_page": 42,
+          "title": "Number of solutions to x+y+z=10 in nonnegative integers",
+          "question": "How many solutions are there to \\( x + y + z = 10 \\) with \\( x,y,z \\geq 0 \\)?",
+          "solution": "Using stars and bars, number of solutions is \\( \\binom{10+3-1}{3-1} = \\binom{12}{2} = 66. \\)",
+          "condition_change": "",
+          "kind": "counting",
+          "params_json": "{\"expression\":\"binomial(12,2)\"}",
+          "answer": "66",
+          "steps": [
+            {
+              "left": "Number of solutions",
+              "right": "\\binom{12}{2}"
+            },
+            {
+              "left": "\\binom{12}{2}",
+              "right": "66"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "topic": "Counting",
+          "source_page": 43,
+          "title": "Inclusion-exclusion for two sets",
+          "question": "If \\( |A| = 180 \\), \\( |B| = 110 \\), and \\( |A \\cap B| = 70 \\), find \\( |A \\cup B| \\) and the number of elements not in \\( A \\cup B \\) given \\( |U| = 250 \\).",
+          "solution": "\\( |A \\cup B| = 180 + 110 - 70 = 220 \\). Elements not in \\( A \\cup B \\) are \\( 250 - 220 = 30 \\).",
+          "condition_change": "",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"180 + 110 - 70\"}",
+          "answer": "220",
+          "steps": [
+            {
+              "left": "|A \\cup B|",
+              "right": "|A| + |B| - |A \\cap B|"
+            },
+            {
+              "left": "|A \\cup B|",
+              "right": "220"
+            },
+            {
+              "left": "|U| - |A \\cup B|",
+              "right": "30"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "topic": "Pigeonhole Principle",
+          "source_page": 60,
+          "title": "Pigeonhole principle basic",
+          "question": "If 13 pigeons are placed into 12 pigeonholes, prove that at least one pigeonhole contains at least two pigeons.",
+          "solution": "If each pigeonhole had at most one pigeon, total pigeons would be at most 12, contradicting 13 pigeons. Hence, at least one pigeonhole has at least two pigeons.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"If 13 pigeons in 12 holes, some hole has at least 2 pigeons\"}",
+          "answer": "True by pigeonhole principle",
+          "steps": []
+        },
+        {
+          "id": 23,
+          "topic": "Pigeonhole Principle",
+          "source_page": 60,
+          "title": "Birthday month pigeonhole",
+          "question": "There are 80 students and 12 months. Prove that at least one month has at least 7 birthdays.",
+          "solution": "By generalized pigeonhole principle, with \\( n=12 \\) and \\( k=6 \\), since \\( 80 = 12 \\times 6 + 8 \\geq 12 \\times 6 + 1 \\), at least one month has \\( 6+1=7 \\) birthdays.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"Among 80 students, some month has at least 7 birthdays\"}",
+          "answer": "True by generalized pigeonhole principle",
+          "steps": []
+        },
+        {
+          "id": 24,
+          "topic": "Pigeonhole Principle",
+          "source_page": 61,
+          "title": "Distance between points in unit square",
+          "question": "Five points lie inside a unit square. Prove that two points are at distance at most \\( \\sqrt{2}/2 \\).",
+          "solution": "Divide square into 4 smaller squares of side length 1/2. By pigeonhole principle, two points lie in the same smaller square. Max distance in smaller square is diagonal \\( \\sqrt{2}/2 \\).",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"Among 5 points in unit square, two are at distance ≤ sqrt(2)/2\"}",
+          "answer": "True by pigeonhole principle and geometry",
+          "steps": []
+        },
+        {
+          "id": 25,
+          "topic": "Pigeonhole Principle",
+          "source_page": 61,
+          "title": "Antipodal points on Earth",
+          "question": "If 70% of Earth's surface is water, prove there exist two antipodal points both in water.",
+          "solution": "Group points into antipodal pairs. If no pair both in water, antipode of water point is land. Land area ≥ water area, contradicting 30% land. Hence, such pair exists.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"Exist two antipodal points both in water if water covers 70%\"}",
+          "answer": "True by area and pigeonhole argument",
+          "steps": []
+        },
+        {
+          "id": 26,
+          "topic": "Pigeonhole Principle",
+          "source_page": 61,
+          "title": "Same number of friends in group",
+          "question": "In any group of \\( n \\geq 2 \\) people, prove two have the same number of friends within the group.",
+          "solution": "Possible friend counts are 0 to \\( n-1 \\). 0 and \\( n-1 \\) cannot both occur. So at most \\( n-1 \\) distinct friend counts for \\( n \\) people. By pigeonhole principle, two share same count.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"In group of n≥2, two people have same number of friends\"}",
+          "answer": "True by pigeonhole principle",
+          "steps": []
+        },
+        {
+          "id": 27,
+          "topic": "Functions",
+          "source_page": 63,
+          "title": "Function domain, codomain, range",
+          "question": "For \\( f: \\{1,2,3\\} \\to \\mathbb{Z} \\) defined by \\( f(x) = x^2 - 4 \\), find domain, codomain, and range.",
+          "solution": "Domain is \\( \\{1,2,3\\} \\). Codomain is \\( \\mathbb{Z} \\). Range is \\( \\{f(1), f(2), f(3)\\} = \\{-3, 0, 5\\} \\).",
+          "condition_change": "",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"{x**2 - 4 for x in {1,2,3}}\",\"domain\":\"{1,2,3}\"}",
+          "answer": "FiniteSet(-3,0,5)",
+          "steps": [
+            {
+              "left": "Domain",
+              "right": "\\{1,2,3\\}"
+            },
+            {
+              "left": "Codomain",
+              "right": "\\mathbb{Z}"
+            },
+            {
+              "left": "Range",
+              "right": "\\{-3,0,5\\}"
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "topic": "Functions",
+          "source_page": 64,
+          "title": "Equality of functions with different domains",
+          "question": "Are \\( f_1: \\mathbb{R} \\to \\mathbb{R}, f_1(x) = x+2 \\) and \\( f_2: \\mathbb{R} \\setminus \\{2\\} \\to \\mathbb{R}, f_2(x) = x+2 \\) equal?",
+          "solution": "No, because their domains differ. Functions are equal only if domains and values agree. Here, domains differ, so \\( f_1 \\neq f_2 \\).",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"f1 and f2 equal iff domains equal and values equal\"}",
+          "answer": "False, domains differ",
+          "steps": []
+        },
+        {
+          "id": 29,
+          "topic": "Functions",
+          "source_page": 65,
+          "title": "Injectivity and surjectivity of rational function",
+          "question": "Is \\( f: \\mathbb{R} \\setminus \\{0\\} \\to \\mathbb{R} \\setminus \\{1\\} \\) given by \\( f(x) = \\frac{1}{x} + 1 \\) injective and surjective?",
+          "solution": "\\( f \\) is injective since \\( 1/x \\) is strictly decreasing on each interval and ranges do not overlap. It is surjective onto \\( \\mathbb{R} \\setminus \\{1\\} \\) because for any \\( y \\neq 1 \\), \\( x = 1/(y-1) \\) is in domain. Hence, \\( f \\) is bijective.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"f is bijection from R\\{0} to R\\{1} defined by f(x)=1/x+1\"}",
+          "answer": "True, f is bijection",
+          "steps": []
+        },
+        {
+          "id": 30,
+          "topic": "Functions",
+          "source_page": 65,
+          "title": "Injectivity of linear map on integer pairs",
+          "question": "Is \\( f: \\mathbb{Z}^2 \\to \\mathbb{Z}^2 \\) given by \\( f(m,n) = (m+n, m+2n) \\) injective?",
+          "solution": "Suppose \\( f(m,n) = f(a,b) \\). Then \\( m+n = a+b \\) and \\( m+2n = a+2b \\). Subtracting, \\( n = b \\), then \\( m = a \\). Hence, \\( f \\) is injective.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"f is injective\"}",
+          "answer": "True by solving linear system",
+          "steps": []
+        },
+        {
+          "id": 31,
+          "topic": "Functions",
+          "source_page": 65,
+          "title": "Surjectivity of linear map on integer pairs",
+          "question": "Is \\( f: \\mathbb{Z}^2 \\to \\mathbb{Z}^2 \\) given by \\( f(m,n) = (m+n, m+2n) \\) surjective?",
+          "solution": "Given \\( (a,b) \\), solve \\( m+n = a \\), \\( m+2n = b \\). Subtract: \\( n = b - a \\), \\( m = 2a - b \\), both integers. So \\( f \\) is surjective.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"f is surjective\"}",
+          "answer": "True by solving linear system",
+          "steps": []
+        },
+        {
+          "id": 32,
+          "topic": "Functions",
+          "source_page": 65,
+          "title": "Bijectivity of linear map on integer pairs",
+          "question": "Is \\( f: \\mathbb{Z}^2 \\to \\mathbb{Z}^2 \\) given by \\( f(m,n) = (m+n, m+2n) \\) bijective?",
+          "solution": "Since \\( f \\) is both injective and surjective, it is bijective.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"f is bijection\"}",
+          "answer": "True",
+          "steps": []
+        },
+        {
+          "id": 33,
+          "topic": "Functions",
+          "source_page": 65,
+          "title": "Composition preserves injectivity",
+          "question": "If \\( f: X \\to Y \\) and \\( g: Y \\to Z \\) are injective, prove \\( g \\circ f \\) is injective.",
+          "solution": "If \\( (g \\circ f)(x_1) = (g \\circ f)(x_2) \\), then \\( g(f(x_1)) = g(f(x_2)) \\). Since \\( g \\) injective, \\( f(x_1) = f(x_2) \\). Since \\( f \\) injective, \\( x_1 = x_2 \\).",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"Composition of injective functions is injective\"}",
+          "answer": "True by definition",
+          "steps": []
+        },
+        {
+          "id": 34,
+          "topic": "Functions",
+          "source_page": 65,
+          "title": "Composition preserves surjectivity",
+          "question": "If \\( f: X \\to Y \\) and \\( g: Y \\to Z \\) are surjective, prove \\( g \\circ f \\) is surjective.",
+          "solution": "For any \\( z \\in Z \\), since \\( g \\) surjective, \\( \\exists y \\in Y \\) with \\( g(y) = z \\). Since \\( f \\) surjective, \\( \\exists x \\in X \\) with \\( f(x) = y \\). Then \\( (g \\circ f)(x) = z \\).",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"Composition of surjective functions is surjective\"}",
+          "answer": "True by definition",
+          "steps": []
+        },
+        {
+          "id": 35,
+          "topic": "Functions",
+          "source_page": 66,
+          "title": "Injective function implies domain size ≤ codomain size",
+          "question": "Let \\( f: X \\to Y \\) be injective with finite sets \\( X, Y \\). Prove \\( |X| \\leq |Y| \\).",
+          "solution": "Since \\( f \\) is injective, distinct elements of \\( X \\) map to distinct elements of \\( Y \\). Hence, \\( X \\) injects into \\( Y \\), so \\( |X| \\leq |Y| \\).",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"Injective function implies |X| ≤ |Y|\"}",
+          "answer": "True by injectivity",
+          "steps": []
+        },
+        {
+          "id": 36,
+          "topic": "Sets",
+          "source_page": 5,
+          "title": "Subset membership true or false",
+          "question": "Determine which statements are true for \\( S = \\{1, \\{1\\}\\} \\): (1) \\( 1 \\in S \\), (2) \\( 1 \\subset S \\), (3) \\( \\{1\\} \\in S \\), (4) \\( \\{1\\} \\subset S \\).",
+          "solution": "(1) True, 1 is an element of S. (2) False, 1 is not a set, so cannot be subset. (3) True, \\( \\{1\\} \\) is an element of S. (4) True, all elements of \\( \\{1\\} \\) (which is 1) are in S.",
+          "condition_change": "",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"Truth values of membership and subset statements\"}",
+          "answer": "(1) True, (2) False, (3) True, (4) True",
+          "steps": []
+        },
+        {
+          "id": 37,
+          "topic": "Sets",
+          "source_page": 6,
+          "title": "Power set of a set with nested elements",
+          "question": "Find the power set \\( P(\\{2, \\{3,4\\}\\}) \\).",
+          "solution": "The set has two elements: 2 and \\( \\{3,4\\} \\). Its subsets are: \\( \\emptyset, \\{2\\}, \\{\\{3,4\\}\\}, \\{2, \\{3,4\\}\\} \\).",
+          "condition_change": "",
+          "kind": "finite_set",
+          "params_json": "{\"A\":[2,\"{3,4}\"],\"B\":[],\"U\":[],\"operation\":\"power_set\"}",
+          "answer": "FiniteSet(FiniteSet(),FiniteSet(2),FiniteSet({3,4}),FiniteSet(2,{3,4}))",
+          "steps": []
+        },
+        {
+          "id": 38,
+          "topic": "Counting",
+          "source_page": 41,
+          "title": "Sum of binomial coefficients",
+          "question": "Compute \\( \\sum_{k=0}^5 \\binom{5}{k} \\).",
+          "solution": "By binomial theorem with \\( x = y = 1 \\), sum is \\( 2^5 = 32 \\).",
+          "condition_change": "",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"sum(binomial(5,k) for k in range(6))\",\"domain\":\"Naturals\"}",
+          "answer": "32",
+          "steps": [
+            {
+              "left": "\\sum_{k=0}^5 \\binom{5}{k}",
+              "right": "2^5"
+            },
+            {
+              "left": "2^5",
+              "right": "32"
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "topic": "Counting",
+          "source_page": 42,
+          "title": "Number of nondecreasing sequences",
+          "question": "How many nondecreasing sequences of length 4 can be made using only numbers 1, 2, 3?",
+          "solution": "Number of nondecreasing sequences of length \\( n \\) from \\( m \\) numbers is \\( \\binom{n+m-1}{n} \\). Here, \\( n=4, m=3 \\), so \\( \\binom{6}{4} = 15 \\).",
+          "condition_change": "",
+          "kind": "counting",
+          "params_json": "{\"expression\":\"binomial(6,4)\"}",
+          "answer": "15",
+          "steps": [
+            {
+              "left": "Number of sequences",
+              "right": "\\binom{6}{4}"
+            },
+            {
+              "left": "\\binom{6}{4}",
+              "right": "15"
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "topic": "Counting",
+          "source_page": 43,
+          "title": "Inclusion-exclusion for three sets",
+          "question": "Given \\( |A|=100, |B|=80, |C|=60, |A \\cap B|=30, |A \\cap C|=20, |B \\cap C|=15, |A \\cap B \\cap C|=5 \\), find \\( |A \\cup B \\cup C| \\).",
+          "solution": "By inclusion-exclusion: \\( 100 + 80 + 60 - 30 - 20 - 15 + 5 = 180. \\)",
+          "condition_change": "",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"100 + 80 + 60 - 30 - 20 - 15 + 5\"}",
+          "answer": "180",
+          "steps": [
+            {
+              "left": "|A \\cup B \\cup C|",
+              "right": "|A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|"
+            },
+            {
+              "left": "Sum",
+              "right": "180"
+            }
+          ]
+        }
+      ]
+    },
+    "prompt_sha256": "b5552f124ba03a03179275bebc83e28b52dafdf6b1200dc8ae571b3150df3424"
+  },
+  "transfer": {
+    "group": "transfer",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "cost_usd": 0.013518800000000001,
+    "usage": {
+      "input_tokens": 18849,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 3737,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 22586
+    },
+    "raw_output": "{\"items\":[{\"id\":1,\"topic\":\"Sets\",\"source_page\":5,\"title\":\"Cartesian product with empty set\",\"question\":\"Let \\\\(A = \\\\{1, 2\\\\}\\\\) and \\\\(B = \\\\emptyset\\\\). What is the Cartesian product \\\\(A \\\\times B\\\\)?\",\"solution\":\"Since \\\\(B\\\\) is empty, there are no elements \\\\(b \\\\in B\\\\). Therefore, \\\\(A \\\\times B = \\\\{(a,b) : a \\\\in A, b \\\\in B\\\\} = \\\\emptyset\\\\).\",\"condition_change\":\"Original condition: Cartesian product of two nonempty sets. New condition: one set is empty.\",\"kind\":\"finite_set\",\"params_json\":\"{\\\"A\\\":[1,2],\\\"B\\\":[],\\\"U\\\":[],\\\"operation\\\":\\\"cartesian\\\"}\",\"answer\":\"FiniteSet()\",\"steps\":[{\"left\":\"A \\\\times B\",\"right\":\"\\\\emptyset\"}]},{\"id\":2,\"topic\":\"Sets\",\"source_page\":6,\"title\":\"Power set of a singleton\",\"question\":\"Find the power set \\\\(P(\\\\{3\\\\})\\\\).\",\"solution\":\"The power set of a set with one element \\\\(\\\\{3\\\\}\\\\) consists of the empty set and the set itself: \\\\(P(\\\\{3\\\\}) = \\\\{\\\\emptyset, \\\\{3\\\\}\\\\}\\\\).\",\"condition_change\":\"Original condition: power set of a set with two elements. New condition: power set of a singleton set.\",\"kind\":\"finite_set\",\"params_json\":\"{\\\"A\\\":[3],\\\"B\\\":[],\\\"U\\\":[],\\\"operation\\\":\\\"power_set\\\"}\",\"answer\":\"FiniteSet(FiniteSet(), FiniteSet(3))\",\"steps\":[{\"left\":\"P(\\\\{3\\\\})\",\"right\":\"\\\\{\\\\emptyset, \\\\{3\\\\}\\\\}\"}]},{\"id\":3,\"topic\":\"Induction\",\"source_page\":14,\"title\":\"Sum of first n odd numbers starting at 3\",\"question\":\"Prove by induction that for every \\\\(n \\\\in \\\\mathbb{N}\\\\), \\\\(3 + 5 + 7 + \\\\cdots + (2n + 1) = n^2 + 2n\\\\).\",\"solution\":\"Base case \\\\(n=1\\\\): \\\\(3 = 1^2 + 2 \\\\cdot 1 = 3\\\\), true. Assume true for \\\\(n\\\\). Then for \\\\(n+1\\\\), sum is \\\\(n^2 + 2n + (2(n+1) + 1) = n^2 + 2n + 2n + 3 = n^2 + 4n + 3 = (n+1)^2 + 2(n+1)\\\\). Hence true by induction.\",\"condition_change\":\"Original condition: sum of first n odd numbers starting at 1. New condition: sum starting at 3.\",\"kind\":\"induction\",\"params_json\":\"{\\\"term\\\":\\\"2*k + 1\\\",\\\"lower\\\":1,\\\"upper\\\":\\\"n\\\"}\",\"answer\":\"n**2 + 2*n\",\"steps\":[{\"left\":\"3 + 5 + \\\\cdots + (2n + 1)\",\"right\":\"n**2 + 2*n\"},{\"left\":\"(3 + 5 + \\\\cdots + (2n + 1)) + (2(n+1) + 1)\",\"right\":\"(n+1)**2 + 2*(n+1)\"}]},{\"id\":4,\"topic\":\"Induction\",\"source_page\":15,\"title\":\"Sum of factorial multiples with shifted start\",\"question\":\"Prove by induction that for every \\\\(n \\\\in \\\\mathbb{N}\\\\), \\\\(2 \\\\cdot 2! + 3 \\\\cdot 3! + \\\\cdots + n \\\\cdot n! = (n+1)! - 2\\\\).\",\"solution\":\"Base case \\\\(n=2\\\\): LHS = \\\\(2 \\\\cdot 2! = 4\\\\), RHS = \\\\(3! - 2 = 6 - 2 = 4\\\\), true. Assume true for \\\\(n\\\\). Then for \\\\(n+1\\\\), sum is \\\\((n+1)! - 2 + (n+1) \\\\cdot (n+1)! = (n+1)! - 2 + (n+1)(n+1)! = (n+2)! - 2\\\\). Hence true by induction.\",\"condition_change\":\"Original condition: sum from 1 to n. New condition: sum from 2 to n.\",\"kind\":\"induction\",\"params_json\":\"{\\\"term\\\":\\\"k * factorial(k)\\\",\\\"lower\\\":2,\\\"upper\\\":\\\"n\\\"}\",\"answer\":\"factorial(n+1) - 2\",\"steps\":[{\"left\":\"2*2!\",\"right\":\"4\"},{\"left\":\"Sum_{k=2}^n k*k!\",\"right\":\"(n+1)! - 2\"},{\"left\":\"Sum_{k=2}^{n+1} k*k!\",\"right\":\"(n+2)! - 2\"}]},{\"id\":5,\"topic\":\"Integers\",\"source_page\":28,\"title\":\"Division algorithm with zero remainder\",\"question\":\"Find the quotient and remainder when dividing \\\\(a = 100\\\\) by \\\\(b = 15\\\\) according to the division algorithm.\",\"solution\":\"Divide 100 by 15: \\\\(100 = 15 \\\\times 6 + 10\\\\). Quotient \\\\(q = 6\\\\), remainder \\\\(r = 10\\\\), with \\\\(0 \\\\leq r < 15\\\\).\",\"condition_change\":\"Original condition: general division algorithm. New condition: specific numbers with remainder nonzero.\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"100 = 15*q + r\\\",\\\"domain\\\":\\\"Integers\\\"}\",\"answer\":\"q=6, r=10\",\"steps\":[{\"left\":\"100\",\"right\":\"15*6 + 10\"}]},{\"id\":6,\"topic\":\"Integers\",\"source_page\":30,\"title\":\"GCD of non-coprime numbers\",\"question\":\"Find \\\\(\\\\gcd(56, 98)\\\\).\",\"solution\":\"Using Euclid's algorithm: \\\\(98 = 56 \\\\times 1 + 42\\\\), \\\\(56 = 42 \\\\times 1 + 14\\\\), \\\\(42 = 14 \\\\times 3 + 0\\\\). So \\\\(\\\\gcd(56, 98) = 14\\\\).\",\"condition_change\":\"Original condition: gcd of coprime numbers. New condition: gcd of non-coprime numbers.\",\"kind\":\"expression\",\"params_json\":\"{\\\"expr\\\":\\\"gcd(56,98)\\\",\\\"domain\\\":\\\"Integers\\\"}\",\"answer\":\"14\",\"steps\":[{\"left\":\"98\",\"right\":\"56*1 + 42\"},{\"left\":\"56\",\"right\":\"42*1 + 14\"},{\"left\":\"42\",\"right\":\"14*3 + 0\"}]},{\"id\":7,\"topic\":\"Congruences\",\"source_page\":33,\"title\":\"Solve linear congruence with non-coprime modulus\",\"question\":\"Find all integer solutions \\\\(x\\\\) to \\\\(6x \\\\equiv 9 \\\\pmod{15}\\\\).\",\"solution\":\"\\\\(\\\\gcd(6,15) = 3\\\\) divides 9, so solutions exist. Divide equation by 3: \\\\(2x \\\\equiv 3 \\\\pmod{5}\\\\). Since 2 and 5 are coprime, multiply both sides by inverse of 2 mod 5, which is 3: \\\\(x \\\\equiv 3 \\\\times 3 = 9 \\\\equiv 4 \\\\pmod{5}\\\\). Solutions are \\\\(x \\\\equiv 4 \\\\pmod{5}\\\\), i.e., \\\\(x = 4 + 5k, k \\\\in \\\\mathbb{Z}\\\\).\",\"condition_change\":\"Original condition: modulus coprime to coefficient. New condition: modulus not coprime.\",\"kind\":\"congruence\",\"params_json\":\"{\\\"a\\\":6,\\\"b\\\":9,\\\"modulus\\\":15}\",\"answer\":\"FiniteSet(4,9,14)\",\"steps\":[{\"left\":\"6x \\\\equiv 9 \\\\pmod{15}\",\"right\":\"2x \\\\equiv 3 \\\\pmod{5}\"},{\"left\":\"x \\\\equiv 4 \\\\pmod{5}\",\"right\":\"x = 4 + 5k\"}]},{\"id\":8,\"topic\":\"Counting\",\"source_page\":39,\"title\":\"Count 4-digit numbers with no zero digits\",\"question\":\"How many 4-digit numbers have digits from 1 to 9 only?\",\"solution\":\"Each digit can be chosen from 1 to 9 (9 choices). For 4 digits, total numbers are \\\\(9^4 = 6561\\\\).\",\"condition_change\":\"Original condition: digits 0-9 allowed. New condition: digits 1-9 only, no zero.\",\"kind\":\"counting\",\"params_json\":\"{\\\"expression\\\":\\\"9**4\\\"}\",\"answer\":\"6561\",\"steps\":[{\"left\":\"Number of 4-digit numbers with digits 1-9\",\"right\":\"9*9*9*9 = 9^4\"}]},{\"id\":9,\"topic\":\"Counting\",\"source_page\":41,\"title\":\"Number of solutions to sum with nonnegative integers\",\"question\":\"How many solutions are there to \\\\(x + y + z = 8\\\\) with \\\\(x,y,z \\\\geq 0\\\\)?\",\"solution\":\"Number of solutions is \\\\(\\\\binom{8+3-1}{3-1} = \\\\binom{10}{2} = 45\\\\).\",\"condition_change\":\"Original condition: sum equals 10. New condition: sum equals 8.\",\"kind\":\"counting\",\"params_json\":\"{\\\"expression\\\":\\\"binomial(10,2)\\\"}\",\"answer\":\"45\",\"steps\":[{\"left\":\"Number of solutions\",\"right\":\"\\\\binom{10}{2} = 45\"}]},{\"id\":10,\"topic\":\"Pigeonhole Principle\",\"source_page\":60,\"title\":\"Pigeonhole with fewer holes than pigeons\",\"question\":\"There are 25 socks in 4 drawers. Prove that at least one drawer contains at least 7 socks.\",\"solution\":\"By generalized pigeonhole principle, with \\\\(n=4\\\\) drawers and \\\\(k=6\\\\), if \\\\(4 \\\\times 6 + 1 = 25\\\\) socks, then at least one drawer has \\\\(6+1=7\\\\) socks.\",\"condition_change\":\"Original condition: 80 pigeons in 12 holes. New condition: 25 pigeons in 4 holes.\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"If 25 socks are placed into 4 drawers, then at least one drawer contains at least 7 socks.\\\"}\",\"answer\":\"True\",\"steps\":[]},{\"id\":11,\"topic\":\"Functions\",\"source_page\":63,\"title\":\"Function with domain excluding zero\",\"question\":\"Is the function \\\\(f: \\\\mathbb{R} \\\\setminus \\\\{0\\\\} \\\\to \\\\mathbb{R}\\\\) defined by \\\\(f(x) = \\\\frac{1}{x} + 1\\\\) surjective onto \\\\(\\\\mathbb{R}\\\\)?\",\"solution\":\"No. Since \\\\(f(x) = \\\\frac{1}{x} + 1\\\\), \\\\(f(x) = 1\\\\) has no solution (would require \\\\(1/x=0\\\\)). So 1 is not in the image. Hence not surjective onto \\\\(\\\\mathbb{R}\\\\).\",\"condition_change\":\"Original condition: domain \\\\(\\\\mathbb{R} \\\\setminus \\\\{0\\\\}\\\\), codomain \\\\(\\\\mathbb{R}\\\\). New condition: codomain \\\\(\\\\mathbb{R}\\\\) (not excluding 1).\",\"kind\":\"function\",\"params_json\":\"{\\\"expr\\\":\\\"1/x + 1\\\",\\\"domain\\\":\\\"Reals \\\\setminus \\\\{0\\\\}\\\",\\\"codomain\\\":\\\"Reals\\\",\\\"property\\\":\\\"surjective\\\"}\",\"answer\":\"False\",\"steps\":[{\"left\":\"f(x) = 1/x + 1\",\"right\":\"No x with f(x) = 1\"}]},{\"id\":12,\"topic\":\"Functions\",\"source_page\":65,\"title\":\"Injectivity of a function on restricted domain\",\"question\":\"Is the function \\\\(f: \\\\mathbb{R} \\\\setminus \\\\{0\\\\} \\\\to \\\\mathbb{R} \\\\setminus \\\\{1\\\\}\\\\) given by \\\\(f(x) = \\\\frac{1}{x} + 1\\\\) bijective?\",\"solution\":\"Yes. \\\\(f\\\\) is injective since \\\\(1/x\\\\) is strictly decreasing on each interval \\\\((-\\u001e,0)\\\\) and \\\\((0,\\\\infty)\\\\). It is surjective onto \\\\(\\\\mathbb{R} \\\\setminus \\\\{1\\\\}\\\\) because for any \\\\(y \\\\neq 1\\\\), \\\\(x = 1/(y-1)\\\\) is in domain and \\\\(f(x) = y\\\\). Hence bijective.\",\"condition_change\":\"Original condition: codomain \\\\(\\\\mathbb{R}\\\\). New condition: codomain \\\\(\\\\mathbb{R} \\\\setminus \\\\{1\\\\}\\\\).\",\"kind\":\"function\",\"params_json\":\"{\\\"expr\\\":\\\"1/x + 1\\\",\\\"domain\\\":\\\"Reals \\\\setminus \\\\{0\\\\}\\\",\\\"codomain\\\":\\\"Reals \\\\setminus \\\\{1\\\\}\\\",\\\"property\\\":\\\"bijective\\\"}\",\"answer\":\"True\",\"steps\":[{\"left\":\"For y \\\\neq 1, x = 1/(y-1)\",\"right\":\"f(x) = y\"}]},{\"id\":13,\"topic\":\"Functions\",\"source_page\":65,\"title\":\"Surjectivity failure due to codomain restriction\",\"question\":\"Is the function \\\\(g: \\\\mathbb{Z} \\\\times \\\\mathbb{Z} \\\\to \\\\mathbb{Z} \\\\times \\\\mathbb{Z}\\\\) defined by \\\\(g(m,n) = (m+n, m+2n)\\\\) surjective?\",\"solution\":\"Yes. For any \\\\((a,b) \\\\in \\\\mathbb{Z}^2\\\\), solve \\\\(m+n=a\\\\), \\\\(m+2n=b\\\\). Subtracting gives \\\\(n=b-a\\\\), then \\\\(m=2a-b\\\\), both integers. So \\\\(g\\\\) is surjective.\",\"condition_change\":\"Original condition: function from \\\\(\\\\mathbb{Z}^2\\\\) to \\\\(\\\\mathbb{Z}^2\\\\). New condition: same domain and codomain, explicit surjectivity check.\",\"kind\":\"function\",\"params_json\":\"{\\\"expr\\\":\\\"(m+n, m+2*n)\\\",\\\"domain\\\":\\\"Integers \\\\times Integers\\\",\\\"codomain\\\":\\\"Integers \\\\times Integers\\\",\\\"property\\\":\\\"surjective\\\"}\",\"answer\":\"True\",\"steps\":[{\"left\":\"m+n = a\",\"right\":\"m = 2a - b\"},{\"left\":\"m+2n = b\",\"right\":\"n = b - a\"}]},{\"id\":14,\"topic\":\"Functions\",\"source_page\":64,\"title\":\"Equality of functions with different domains\",\"question\":\"Are the functions \\\\(f_1: \\\\mathbb{R} \\\\to \\\\mathbb{R}\\\\), \\\\(f_1(x) = x + 2\\\\) and \\\\(f_2: \\\\mathbb{R} \\\\setminus \\\\{2\\\\} \\\\to \\\\mathbb{R}\\\\), \\\\(f_2(x) = x + 2\\\\) equal?\",\"solution\":\"No. Their domains differ: \\\\(\\\\mathbb{R}\\\\) vs. \\\\(\\\\mathbb{R} \\\\setminus \\\\{2\\\\}\\\\). Functions are equal only if domains and values agree everywhere. Hence \\\\(f_1 \\\\neq f_2\\\\).\",\"condition_change\":\"Original condition: functions with same domain. New condition: functions with different domains.\",\"kind\":\"function\",\"params_json\":\"{\\\"expr\\\":\\\"x + 2\\\",\\\"domain\\\":\\\"Reals\\\",\\\"codomain\\\":\\\"Reals\\\",\\\"property\\\":\\\"equality\\\"}\",\"answer\":\"False\",\"steps\":[{\"left\":\"Domain(f_1)\",\"right\":\"\\\\mathbb{R}\"},{\"left\":\"Domain(f_2)\",\"right\":\"\\\\mathbb{R} \\\\setminus \\\\{2\\\\}\"}]},{\"id\":15,\"topic\":\"Congruences\",\"source_page\":34,\"title\":\"Disprove converse of power congruence\",\"question\":\"Is it true that if \\\\(a^n \\\\equiv b^n \\\\pmod{m}\\\\), then \\\\(a \\\\equiv b \\\\pmod{m}\\\\) for all integers \\\\(a,b,m,n\\\\)?\",\"solution\":\"No. Counterexample: modulo 8, \\\\(2^2 = 4 \\\\equiv 4 = 6^2 \\\\pmod{8}\\\\), but \\\\(2 \\\\not\\\\equiv 6 \\\\pmod{8}\\\\). So the converse does not hold in general.\",\"condition_change\":\"Original condition: if \\\\(a \\\\equiv b \\\\pmod{m}\\\\), then \\\\(a^n \\\\equiv b^n \\\\pmod{m}\\\\). New condition: converse implication tested.\",\"kind\":\"proof\",\"params_json\":\"{\\\"claim\\\":\\\"If a^n \\\\equiv b^n (mod m), then a \\\\equiv b (mod m)\\\"}\",\"answer\":\"False\",\"steps\":[]}]}",
+    "parsed": {
+      "items": [
+        {
+          "id": 1,
+          "topic": "Sets",
+          "source_page": 5,
+          "title": "Cartesian product with empty set",
+          "question": "Let \\(A = \\{1, 2\\}\\) and \\(B = \\emptyset\\). What is the Cartesian product \\(A \\times B\\)?",
+          "solution": "Since \\(B\\) is empty, there are no elements \\(b \\in B\\). Therefore, \\(A \\times B = \\{(a,b) : a \\in A, b \\in B\\} = \\emptyset\\).",
+          "condition_change": "Original condition: Cartesian product of two nonempty sets. New condition: one set is empty.",
+          "kind": "finite_set",
+          "params_json": "{\"A\":[1,2],\"B\":[],\"U\":[],\"operation\":\"cartesian\"}",
+          "answer": "FiniteSet()",
+          "steps": [
+            {
+              "left": "A \\times B",
+              "right": "\\emptyset"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "topic": "Sets",
+          "source_page": 6,
+          "title": "Power set of a singleton",
+          "question": "Find the power set \\(P(\\{3\\})\\).",
+          "solution": "The power set of a set with one element \\(\\{3\\}\\) consists of the empty set and the set itself: \\(P(\\{3\\}) = \\{\\emptyset, \\{3\\}\\}\\).",
+          "condition_change": "Original condition: power set of a set with two elements. New condition: power set of a singleton set.",
+          "kind": "finite_set",
+          "params_json": "{\"A\":[3],\"B\":[],\"U\":[],\"operation\":\"power_set\"}",
+          "answer": "FiniteSet(FiniteSet(), FiniteSet(3))",
+          "steps": [
+            {
+              "left": "P(\\{3\\})",
+              "right": "\\{\\emptyset, \\{3\\}\\}"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "topic": "Induction",
+          "source_page": 14,
+          "title": "Sum of first n odd numbers starting at 3",
+          "question": "Prove by induction that for every \\(n \\in \\mathbb{N}\\), \\(3 + 5 + 7 + \\cdots + (2n + 1) = n^2 + 2n\\).",
+          "solution": "Base case \\(n=1\\): \\(3 = 1^2 + 2 \\cdot 1 = 3\\), true. Assume true for \\(n\\). Then for \\(n+1\\), sum is \\(n^2 + 2n + (2(n+1) + 1) = n^2 + 2n + 2n + 3 = n^2 + 4n + 3 = (n+1)^2 + 2(n+1)\\). Hence true by induction.",
+          "condition_change": "Original condition: sum of first n odd numbers starting at 1. New condition: sum starting at 3.",
+          "kind": "induction",
+          "params_json": "{\"term\":\"2*k + 1\",\"lower\":1,\"upper\":\"n\"}",
+          "answer": "n**2 + 2*n",
+          "steps": [
+            {
+              "left": "3 + 5 + \\cdots + (2n + 1)",
+              "right": "n**2 + 2*n"
+            },
+            {
+              "left": "(3 + 5 + \\cdots + (2n + 1)) + (2(n+1) + 1)",
+              "right": "(n+1)**2 + 2*(n+1)"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "topic": "Induction",
+          "source_page": 15,
+          "title": "Sum of factorial multiples with shifted start",
+          "question": "Prove by induction that for every \\(n \\in \\mathbb{N}\\), \\(2 \\cdot 2! + 3 \\cdot 3! + \\cdots + n \\cdot n! = (n+1)! - 2\\).",
+          "solution": "Base case \\(n=2\\): LHS = \\(2 \\cdot 2! = 4\\), RHS = \\(3! - 2 = 6 - 2 = 4\\), true. Assume true for \\(n\\). Then for \\(n+1\\), sum is \\((n+1)! - 2 + (n+1) \\cdot (n+1)! = (n+1)! - 2 + (n+1)(n+1)! = (n+2)! - 2\\). Hence true by induction.",
+          "condition_change": "Original condition: sum from 1 to n. New condition: sum from 2 to n.",
+          "kind": "induction",
+          "params_json": "{\"term\":\"k * factorial(k)\",\"lower\":2,\"upper\":\"n\"}",
+          "answer": "factorial(n+1) - 2",
+          "steps": [
+            {
+              "left": "2*2!",
+              "right": "4"
+            },
+            {
+              "left": "Sum_{k=2}^n k*k!",
+              "right": "(n+1)! - 2"
+            },
+            {
+              "left": "Sum_{k=2}^{n+1} k*k!",
+              "right": "(n+2)! - 2"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "topic": "Integers",
+          "source_page": 28,
+          "title": "Division algorithm with zero remainder",
+          "question": "Find the quotient and remainder when dividing \\(a = 100\\) by \\(b = 15\\) according to the division algorithm.",
+          "solution": "Divide 100 by 15: \\(100 = 15 \\times 6 + 10\\). Quotient \\(q = 6\\), remainder \\(r = 10\\), with \\(0 \\leq r < 15\\).",
+          "condition_change": "Original condition: general division algorithm. New condition: specific numbers with remainder nonzero.",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"100 = 15*q + r\",\"domain\":\"Integers\"}",
+          "answer": "q=6, r=10",
+          "steps": [
+            {
+              "left": "100",
+              "right": "15*6 + 10"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "topic": "Integers",
+          "source_page": 30,
+          "title": "GCD of non-coprime numbers",
+          "question": "Find \\(\\gcd(56, 98)\\).",
+          "solution": "Using Euclid's algorithm: \\(98 = 56 \\times 1 + 42\\), \\(56 = 42 \\times 1 + 14\\), \\(42 = 14 \\times 3 + 0\\). So \\(\\gcd(56, 98) = 14\\).",
+          "condition_change": "Original condition: gcd of coprime numbers. New condition: gcd of non-coprime numbers.",
+          "kind": "expression",
+          "params_json": "{\"expr\":\"gcd(56,98)\",\"domain\":\"Integers\"}",
+          "answer": "14",
+          "steps": [
+            {
+              "left": "98",
+              "right": "56*1 + 42"
+            },
+            {
+              "left": "56",
+              "right": "42*1 + 14"
+            },
+            {
+              "left": "42",
+              "right": "14*3 + 0"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "topic": "Congruences",
+          "source_page": 33,
+          "title": "Solve linear congruence with non-coprime modulus",
+          "question": "Find all integer solutions \\(x\\) to \\(6x \\equiv 9 \\pmod{15}\\).",
+          "solution": "\\(\\gcd(6,15) = 3\\) divides 9, so solutions exist. Divide equation by 3: \\(2x \\equiv 3 \\pmod{5}\\). Since 2 and 5 are coprime, multiply both sides by inverse of 2 mod 5, which is 3: \\(x \\equiv 3 \\times 3 = 9 \\equiv 4 \\pmod{5}\\). Solutions are \\(x \\equiv 4 \\pmod{5}\\), i.e., \\(x = 4 + 5k, k \\in \\mathbb{Z}\\).",
+          "condition_change": "Original condition: modulus coprime to coefficient. New condition: modulus not coprime.",
+          "kind": "congruence",
+          "params_json": "{\"a\":6,\"b\":9,\"modulus\":15}",
+          "answer": "FiniteSet(4,9,14)",
+          "steps": [
+            {
+              "left": "6x \\equiv 9 \\pmod{15}",
+              "right": "2x \\equiv 3 \\pmod{5}"
+            },
+            {
+              "left": "x \\equiv 4 \\pmod{5}",
+              "right": "x = 4 + 5k"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "topic": "Counting",
+          "source_page": 39,
+          "title": "Count 4-digit numbers with no zero digits",
+          "question": "How many 4-digit numbers have digits from 1 to 9 only?",
+          "solution": "Each digit can be chosen from 1 to 9 (9 choices). For 4 digits, total numbers are \\(9^4 = 6561\\).",
+          "condition_change": "Original condition: digits 0-9 allowed. New condition: digits 1-9 only, no zero.",
+          "kind": "counting",
+          "params_json": "{\"expression\":\"9**4\"}",
+          "answer": "6561",
+          "steps": [
+            {
+              "left": "Number of 4-digit numbers with digits 1-9",
+              "right": "9*9*9*9 = 9^4"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "topic": "Counting",
+          "source_page": 41,
+          "title": "Number of solutions to sum with nonnegative integers",
+          "question": "How many solutions are there to \\(x + y + z = 8\\) with \\(x,y,z \\geq 0\\)?",
+          "solution": "Number of solutions is \\(\\binom{8+3-1}{3-1} = \\binom{10}{2} = 45\\).",
+          "condition_change": "Original condition: sum equals 10. New condition: sum equals 8.",
+          "kind": "counting",
+          "params_json": "{\"expression\":\"binomial(10,2)\"}",
+          "answer": "45",
+          "steps": [
+            {
+              "left": "Number of solutions",
+              "right": "\\binom{10}{2} = 45"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "topic": "Pigeonhole Principle",
+          "source_page": 60,
+          "title": "Pigeonhole with fewer holes than pigeons",
+          "question": "There are 25 socks in 4 drawers. Prove that at least one drawer contains at least 7 socks.",
+          "solution": "By generalized pigeonhole principle, with \\(n=4\\) drawers and \\(k=6\\), if \\(4 \\times 6 + 1 = 25\\) socks, then at least one drawer has \\(6+1=7\\) socks.",
+          "condition_change": "Original condition: 80 pigeons in 12 holes. New condition: 25 pigeons in 4 holes.",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"If 25 socks are placed into 4 drawers, then at least one drawer contains at least 7 socks.\"}",
+          "answer": "True",
+          "steps": []
+        },
+        {
+          "id": 11,
+          "topic": "Functions",
+          "source_page": 63,
+          "title": "Function with domain excluding zero",
+          "question": "Is the function \\(f: \\mathbb{R} \\setminus \\{0\\} \\to \\mathbb{R}\\) defined by \\(f(x) = \\frac{1}{x} + 1\\) surjective onto \\(\\mathbb{R}\\)?",
+          "solution": "No. Since \\(f(x) = \\frac{1}{x} + 1\\), \\(f(x) = 1\\) has no solution (would require \\(1/x=0\\)). So 1 is not in the image. Hence not surjective onto \\(\\mathbb{R}\\).",
+          "condition_change": "Original condition: domain \\(\\mathbb{R} \\setminus \\{0\\}\\), codomain \\(\\mathbb{R}\\). New condition: codomain \\(\\mathbb{R}\\) (not excluding 1).",
+          "kind": "function",
+          "params_json": "{\"expr\":\"1/x + 1\",\"domain\":\"Reals \\setminus \\{0\\}\",\"codomain\":\"Reals\",\"property\":\"surjective\"}",
+          "answer": "False",
+          "steps": [
+            {
+              "left": "f(x) = 1/x + 1",
+              "right": "No x with f(x) = 1"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "topic": "Functions",
+          "source_page": 65,
+          "title": "Injectivity of a function on restricted domain",
+          "question": "Is the function \\(f: \\mathbb{R} \\setminus \\{0\\} \\to \\mathbb{R} \\setminus \\{1\\}\\) given by \\(f(x) = \\frac{1}{x} + 1\\) bijective?",
+          "solution": "Yes. \\(f\\) is injective since \\(1/x\\) is strictly decreasing on each interval \\((-\u001e,0)\\) and \\((0,\\infty)\\). It is surjective onto \\(\\mathbb{R} \\setminus \\{1\\}\\) because for any \\(y \\neq 1\\), \\(x = 1/(y-1)\\) is in domain and \\(f(x) = y\\). Hence bijective.",
+          "condition_change": "Original condition: codomain \\(\\mathbb{R}\\). New condition: codomain \\(\\mathbb{R} \\setminus \\{1\\}\\).",
+          "kind": "function",
+          "params_json": "{\"expr\":\"1/x + 1\",\"domain\":\"Reals \\setminus \\{0\\}\",\"codomain\":\"Reals \\setminus \\{1\\}\",\"property\":\"bijective\"}",
+          "answer": "True",
+          "steps": [
+            {
+              "left": "For y \\neq 1, x = 1/(y-1)",
+              "right": "f(x) = y"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "topic": "Functions",
+          "source_page": 65,
+          "title": "Surjectivity failure due to codomain restriction",
+          "question": "Is the function \\(g: \\mathbb{Z} \\times \\mathbb{Z} \\to \\mathbb{Z} \\times \\mathbb{Z}\\) defined by \\(g(m,n) = (m+n, m+2n)\\) surjective?",
+          "solution": "Yes. For any \\((a,b) \\in \\mathbb{Z}^2\\), solve \\(m+n=a\\), \\(m+2n=b\\). Subtracting gives \\(n=b-a\\), then \\(m=2a-b\\), both integers. So \\(g\\) is surjective.",
+          "condition_change": "Original condition: function from \\(\\mathbb{Z}^2\\) to \\(\\mathbb{Z}^2\\). New condition: same domain and codomain, explicit surjectivity check.",
+          "kind": "function",
+          "params_json": "{\"expr\":\"(m+n, m+2*n)\",\"domain\":\"Integers \\times Integers\",\"codomain\":\"Integers \\times Integers\",\"property\":\"surjective\"}",
+          "answer": "True",
+          "steps": [
+            {
+              "left": "m+n = a",
+              "right": "m = 2a - b"
+            },
+            {
+              "left": "m+2n = b",
+              "right": "n = b - a"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "topic": "Functions",
+          "source_page": 64,
+          "title": "Equality of functions with different domains",
+          "question": "Are the functions \\(f_1: \\mathbb{R} \\to \\mathbb{R}\\), \\(f_1(x) = x + 2\\) and \\(f_2: \\mathbb{R} \\setminus \\{2\\} \\to \\mathbb{R}\\), \\(f_2(x) = x + 2\\) equal?",
+          "solution": "No. Their domains differ: \\(\\mathbb{R}\\) vs. \\(\\mathbb{R} \\setminus \\{2\\}\\). Functions are equal only if domains and values agree everywhere. Hence \\(f_1 \\neq f_2\\).",
+          "condition_change": "Original condition: functions with same domain. New condition: functions with different domains.",
+          "kind": "function",
+          "params_json": "{\"expr\":\"x + 2\",\"domain\":\"Reals\",\"codomain\":\"Reals\",\"property\":\"equality\"}",
+          "answer": "False",
+          "steps": [
+            {
+              "left": "Domain(f_1)",
+              "right": "\\mathbb{R}"
+            },
+            {
+              "left": "Domain(f_2)",
+              "right": "\\mathbb{R} \\setminus \\{2\\}"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "topic": "Congruences",
+          "source_page": 34,
+          "title": "Disprove converse of power congruence",
+          "question": "Is it true that if \\(a^n \\equiv b^n \\pmod{m}\\), then \\(a \\equiv b \\pmod{m}\\) for all integers \\(a,b,m,n\\)?",
+          "solution": "No. Counterexample: modulo 8, \\(2^2 = 4 \\equiv 4 = 6^2 \\pmod{8}\\), but \\(2 \\not\\equiv 6 \\pmod{8}\\). So the converse does not hold in general.",
+          "condition_change": "Original condition: if \\(a \\equiv b \\pmod{m}\\), then \\(a^n \\equiv b^n \\pmod{m}\\). New condition: converse implication tested.",
+          "kind": "proof",
+          "params_json": "{\"claim\":\"If a^n \\equiv b^n (mod m), then a \\equiv b (mod m)\"}",
+          "answer": "False",
+          "steps": []
+        }
+      ]
+    },
+    "prompt_sha256": "b5552f124ba03a03179275bebc83e28b52dafdf6b1200dc8ae571b3150df3424"
+  }
+}

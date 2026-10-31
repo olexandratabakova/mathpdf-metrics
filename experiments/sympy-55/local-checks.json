@@ -1,0 +1,57 @@
+{
+  "birthday_counts": [
+    5,
+    5,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "square_points": [
+    [
+      "1/100",
+      "1/100"
+    ],
+    [
+      "1/100",
+      "1/2"
+    ],
+    [
+      "1/100",
+      "99/100"
+    ],
+    [
+      "1/2",
+      "1/100"
+    ],
+    [
+      "1/2",
+      "99/100"
+    ],
+    [
+      "99/100",
+      "1/100"
+    ],
+    [
+      "99/100",
+      "1/2"
+    ]
+  ],
+  "minimum_squared_distance": "2401/10000",
+  "claimed_squared_bound": "2/9",
+  "transfer_4_n_2": {
+    "left": 2,
+    "right": 4
+  },
+  "near_7_formal_n_1": {
+    "left": 18,
+    "right": 4
+  },
+  "limits": "These are specific exact counterexamples, not an automatic general proof reader."
+}
