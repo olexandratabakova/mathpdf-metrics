@@ -15,7 +15,7 @@ from playwright.async_api import async_playwright
 ROOT = Path(__file__).resolve().parents[1]
 COUNTS = {'review-four': 4, 'review-mini-four': 4, 'compare-ten': 10,
           'cycle-fifteen': 15, 'v5-parameterized': 10, 'v5-seventy': 70,
-          'sympy-55': 55, 'rag-fifteen': 15, 'rag-hundred': 100}
+          'sympy-55': 55, 'rag-fifteen': 15, 'rag-hundred': 100, 'wildflower': 100}
 
 
 async def check(url, chrome):
@@ -29,7 +29,7 @@ async def check(url, chrome):
         page.on('pageerror', lambda e: errors.append(str(e)))
         await page.goto(url + '/')
         await page.wait_for_selector('.experiment-card')
-        assert await page.locator('.experiment-card').count() == 9
+        assert await page.locator('.experiment-card').count() == 10
         assert await page.locator('.history-tile').count() == 4
         assert await page.locator('.task-evidence').count() == 0
         scripts = await page.locator('script[src]').evaluate_all('(els)=>els.map(e=>e.getAttribute("src"))')
@@ -165,7 +165,7 @@ async def check(url, chrome):
         assert await page.locator('.task-evidence').count() == 10
         assert not errors, errors
         await browser.close()
-    report={'status':'passed','task_experiments':9,'historical_versions':4,'page_errors':errors,
+    report={'status':'passed','task_experiments':10,'historical_versions':4,'page_errors':errors,
             'widths':[320,390,1440],'persistence_import_export_csv':'passed','direct_file_open':'passed'}
     (output/'report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps(report))

@@ -14,8 +14,8 @@ def test_catalog_is_reproducible_and_all_detail_targets_exist():
     assert catalog == module.build()
     script=(ROOT/'experiments-catalog.js').read_text(encoding='utf-8')
     assert json.loads(script.removeprefix('window.MATHPDF_EXPERIMENTS = ').strip().removesuffix(';')) == catalog
-    assert len(catalog['experiments']) == 9
-    assert len({x['id'] for x in catalog['experiments']}) == 9
+    assert len(catalog['experiments']) == 10
+    assert len({x['id'] for x in catalog['experiments']}) == 10
     for study in catalog['experiments']:
         raw=json.loads((ROOT/study['evidence']).read_text(encoding='utf-8'))
         assert study['cost_usd'] == raw['cost_usd']

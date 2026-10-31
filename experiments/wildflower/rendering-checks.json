@@ -1,0 +1,12 @@
+{
+  "tasks": 100,
+  "math_blocks": 45,
+  "fallbacks": 0,
+  "fallback_texts": [],
+  "errors": [],
+  "widths": {
+    "320": 0,
+    "390": 0,
+    "1440": 0
+  }
+}

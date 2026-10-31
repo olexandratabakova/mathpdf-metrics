@@ -1,0 +1,172 @@
+{
+  "scope": "Targeted deterministic witnesses and statement inspection, supplemented by human reading. This does not label all other tasks correct.",
+  "summary": "Separate local review identifies false claims, invalid reasoning and incomplete statements. These findings must not be replaced by model acceptance counts.",
+  "items": [
+    {
+      "id": "problem-sets-5",
+      "kind": "incorrect_solution",
+      "finding": "The answer declares {1} not a subset of A={1,{1}}, although its only element, 1, belongs to A. It is even a proper subset.",
+      "witness": {
+        "singleton_is_subset": true,
+        "singleton_is_proper_subset": true
+      },
+      "item_sha256": "c5d9c74e1db70324e051f28440dd5e132ecaffa059c77ec6d8f999b80a44f82b"
+    },
+    {
+      "id": "problem-sets-10",
+      "kind": "invalid_counterexample",
+      "finding": "The proposed counterexample A={1,{2}} does not refute the requested implication: 1 belongs to A and {1} is a proper subset of A. The answer confuses subset with membership.",
+      "witness": {
+        "hypothesis": true,
+        "claimed_failed_conclusion_actually_true": true
+      },
+      "item_sha256": "2d2a910eb78a57eb4567cc68b011d34e9f8c37c82c851e26ea3d01f60e363bf5"
+    },
+    {
+      "id": "problem-sets-9",
+      "kind": "ill_typed_statement",
+      "finding": "The question equates the number of subsets with both the number 2^n and the set 2^S. It should distinguish a power set from its cardinality. The solution silently supplies the cardinality interpretation.",
+      "witness": {
+        "scope": "Statement/type inspection, not a numerical refutation."
+      },
+      "item_sha256": "a72ef28a57e97662740b3392e933a6909b4405863eb88eecefc272494454f788"
+    },
+    {
+      "id": "problem-induction-1",
+      "kind": "missing_statement_formula",
+      "finding": "The question asks to prove a formula/identity but does not state it. The required formula appears only in the answer, so the front is incomplete.",
+      "witness": {
+        "question_math_blocks": 0,
+        "question_text": "Prove, for every integer \\( n \\geq 1 \\), that the sum of the first \\( n \\) cubes satisfies the formula"
+      },
+      "item_sha256": "acfad201ec981b27fb9fb0f006411b0941852faeaf650cf151e1f03e38d45d04"
+    },
+    {
+      "id": "problem-induction-4",
+      "kind": "missing_statement_formula",
+      "finding": "The question asks to prove a formula/identity but does not state it. The required formula appears only in the answer, so the front is incomplete.",
+      "witness": {
+        "question_math_blocks": 0,
+        "question_text": "Prove by induction that for every integer \\( n \\geq 1 \\), the following identity holds:"
+      },
+      "item_sha256": "463592143da6b9f8100eed9d497add198971d790549d6d6a0879c21d4efffafe"
+    },
+    {
+      "id": "problem-induction-2",
+      "kind": "false_theorem",
+      "finding": "The claim 12 divides n^3−n for all n≥1 is false: n=2 gives 6. The proof incorrectly treats an even multiple of 6 as necessarily divisible by 12.",
+      "witness": {
+        "n": 2,
+        "expression": 6,
+        "remainder_mod_12": 6
+      },
+      "item_sha256": "97d9b74b4143dec23c24324c8baa67fae2c19592343e3c7ab6649b86e3a8f307"
+    },
+    {
+      "id": "problem-induction-6",
+      "kind": "invalid_proof",
+      "finding": "The proposed bound 2−1/4^n is weaker than S_n≤1 and cannot establish that goal. Its displayed equality is also false: for n=1 the sides are 29/16 and 31/16.",
+      "witness": {
+        "n": 1,
+        "left": "29/16",
+        "right": "31/16",
+        "claimed_bound_at_1": "7/4 > 1"
+      },
+      "item_sha256": "86ecc548b18dd8ce73f99d5454bb6f2f7e488d0522e73068d4ae394c31ad24ad"
+    },
+    {
+      "id": "problem-functions-5",
+      "kind": "false_requested_surjectivity",
+      "finding": "The task asks for surjectivity of (m,n)↦(2m−n,m+4n) on Z². Target (1,0) requires (4/9,−1/9), so has no integer preimage. The solution notices the restriction but does not make the positive proof request valid.",
+      "witness": {
+        "target": [
+          1,
+          0
+        ],
+        "unique_rational_preimage": [
+          "4/9",
+          "-1/9"
+        ],
+        "determinant": 9
+      },
+      "item_sha256": "431c49fd1ec763b6443f6e02cd9dbe60b83a58c2402b6258a831dcd7882d3749"
+    },
+    {
+      "id": "problem-induction-3",
+      "kind": "model_false_rejection",
+      "finding": "The reviewer rejects the correct sum S_n=3n², then proposes exactly the same formula as its correction. The displayed induction is valid: base S_1=3 and 3n²+(6n+3)=3(n+1)².",
+      "witness": {
+        "base": 3,
+        "left_polynomial_coefficients": [
+          3,
+          6,
+          3
+        ],
+        "right_polynomial_coefficients": [
+          3,
+          6,
+          3
+        ]
+      },
+      "item_sha256": "cdf43fe14d00e9aee3f0c43c108a40ea65b2c0e513feb01bc82465abe0b52435"
+    },
+    {
+      "id": "problem-induction-8",
+      "kind": "model_false_rejection",
+      "finding": "The question explicitly asks to disprove the claim. Its n=1 counterexample gives 5, not divisible by 6, exactly as required. The reviewer repeats that valid disproof while labelling the solution incorrect.",
+      "witness": {
+        "counterexample_n": 1,
+        "value": 5,
+        "remainder_mod_6": 5
+      },
+      "item_sha256": "6ef080f289ac8496dfb81e91b7ac41f0d96fdef2ee99fbde53b05476468fb990"
+    },
+    {
+      "id": "problem-numbers-3",
+      "kind": "model_false_rejection",
+      "finding": "The standard lowest-terms proof that sqrt(3) is irrational is valid: 3 divides m² implies 3 divides m; substitution forces 3 to divide n, contradicting coprimality. The reviewer incorrectly demands an additional even/even case already excluded by lowest terms.",
+      "witness": {
+        "squares_mod_3": [
+          0,
+          1,
+          1
+        ],
+        "coprimality_assumption_present": true
+      },
+      "item_sha256": "ee494ae881a46a586ed62b3031c3d0b9f52e3da5f1b06cd9b5c0f748a5f6438b"
+    },
+    {
+      "id": "card-induction-15",
+      "kind": "front_changes_theorem",
+      "finding": "The front says a 2n×2n board, rather than the source theorem’s 2^n×2^n board. For literal n=3, a 6×6 board minus one square has 35 squares, which cannot be tiled by area-three trominoes. This is a semantic formula-to-prose failure despite zero renderer fallbacks.",
+      "witness": {
+        "n": 3,
+        "remaining_area": 35,
+        "remainder_mod_3": 2
+      },
+      "item_sha256": "6b4e133001912f724e4f58009a718b0269bd7d2d05fac2b18409dc9c54c47074"
+    },
+    {
+      "id": "card-sets-3",
+      "kind": "self_contained_judge_error",
+      "finding": "The judge supplies a matching blind answer but rejects the front for omitting the definition/conditions that the question is explicitly asking the learner to recall. Requiring that answer on the front conflicts with the recall task. The original failure and aggregate score are preserved.",
+      "witness": {
+        "blind_answer_matches": true,
+        "passes": false,
+        "original_missing_reason": "The question lacks definitions for 'empty set' and 'set containing the empty set'."
+      },
+      "item_sha256": "79f5e74f575f61ed054685c7da1aa497eefff30c825237c8841fcf4228c4ea36"
+    },
+    {
+      "id": "card-functions-13",
+      "kind": "self_contained_judge_error",
+      "finding": "The judge supplies a matching blind answer but rejects the front for omitting the definition/conditions that the question is explicitly asking the learner to recall. Requiring that answer on the front conflicts with the recall task. The original failure and aggregate score are preserved.",
+      "witness": {
+        "blind_answer_matches": true,
+        "passes": false,
+        "original_missing_reason": "The specific conditions or properties required for a function to have an inverse are not stated (e.g., injectivity, surjectivity)."
+      },
+      "item_sha256": "e6c89e861ecf959c2f75a8ed52b752ede818b7b8c2a78b6dc407207196b5b25d"
+    }
+  ]
+}

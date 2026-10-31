@@ -61,6 +61,17 @@ def build():
       'Context admission and family checks','The first two bars measure context admission, not mathematics. One hundred variants are not one hundred distinct families.',
       [series('Context · initial',m['first_pass_task_accepts'],100,'muted'),series('Context · after retry',m['final_generated'],100,'ink'),series('Family checks',m['program_verified'],100)],
       'hundred-data.js','hundred.js')
+    if (ROOT/'experiments/wildflower/result.json').exists():
+        a=read('wildflower');c=a['metrics']['cards'];p=a['metrics']['problem_decisions']
+        add('wildflower','Wildflower · ordinary generation','baseline',
+          'Sixty flashcards and forty problems from unchanged MathPDF prompts, evaluated with the original card metrics and a task audit.',
+          'Card self-containedness is 80%. The judge accepts 36/40 problems, but separate checks expose missed errors and false rejections.',
+          'Card quality signals and task reviewer decisions',
+          'Card scores are weighted judge metrics on 60 cards. Task acceptance is a separate model judgement on 40 problems, not mathematical proof. This is not a paired historical comparison.',
+          [series('Cards · self-contained',round(c['pct_self_contained']*60,6),60),
+           series('Cards · atomic',round(c['pct_atomic']*60,6),60),
+           series('Problems · reviewer accepted',p.get('accept',0),40,'muted')],
+          'wildflower-data.js','research.js')
     return {'schema_version':1,'experiments':out}
 def main():
     catalog=build()

@@ -358,6 +358,45 @@
       "run_id": null,
       "evidence": "experiments/rag-hundred/result.json",
       "readme": "experiments/rag-hundred/README.md"
+    },
+    {
+      "id": "wildflower",
+      "number": 10,
+      "title": "Wildflower · ordinary generation",
+      "method": "baseline",
+      "description": "Sixty flashcards and forty problems from unchanged MathPDF prompts, evaluated with the original card metrics and a task audit.",
+      "finding": "Card self-containedness is 80%. The judge accepts 36/40 problems, but separate checks expose missed errors and false rejections.",
+      "date": "2026-10-31",
+      "cost_usd": 0.14484367,
+      "chart_title": "Card quality signals and task reviewer decisions",
+      "chart_note": "Card scores are weighted judge metrics on 60 cards. Task acceptance is a separate model judgement on 40 problems, not mathematical proof. This is not a paired historical comparison.",
+      "series": [
+        {
+          "label": "Cards · self-contained",
+          "value": 48.0,
+          "total": 60,
+          "tone": "sage",
+          "unit": "ratio"
+        },
+        {
+          "label": "Cards · atomic",
+          "value": 58.0,
+          "total": 60,
+          "tone": "sage",
+          "unit": "ratio"
+        },
+        {
+          "label": "Problems · reviewer accepted",
+          "value": 36,
+          "total": 40,
+          "tone": "muted",
+          "unit": "ratio"
+        }
+      ],
+      "data_script": "wildflower-data.js",
+      "run_id": null,
+      "evidence": "experiments/wildflower/result.json",
+      "readme": "experiments/wildflower/README.md"
     }
   ]
 }

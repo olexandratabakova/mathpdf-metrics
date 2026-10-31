@@ -19,8 +19,17 @@ The overview gives each attempt a short description, a chart explaining its scop
 | [07 · SymPy](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=sympy-55) | Actual LLM generation; 40 close + 15 changed-condition requests | 16 formal records confirmed, 30 partial, 1 encoding refuted, 8 unsupported | $0.070030 |
 | [08 · Theory-only RAG](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=rag-fifteen) | 15 goals → retrieval → family choice → compilation | Expected top-1 14/15, top-3 15/15; supported variants passed checks | $0.007815 |
 | [09 · Two-PDF RAG](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=rag-hundred) | 50 goals, 50 families, 100 numeric variants | 98 initially admitted; 100 after a retrieval fix and short retry | $0.027301 |
+| [10 · Wildflower](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=wildflower) | Ordinary site generation: 60 cards + 40 problems | Cards: 80% self-contained, 84.7% faithfulness; task judge approval is contradicted by local findings | $0.144844 |
 
 Costs describe these recorded runs, not current price quotes or forecasts. The SymPy total includes two exploratory pilots; the main 55-task sample cost $0.0353724. Requests, outputs, usage and limitations are retained under [experiments/](experiments/).
+
+## Latest baseline: Wildflower
+
+[Wildflower study](https://olexandratabakova.github.io/mathpdf-metrics/experiment.html?id=wildflower) · [Method and reproduction](experiments/wildflower/README.md) · [60-card metrics CSV](experiments/wildflower/cards_wildflower.csv)
+
+Four topics at difficulty 3: Sets, Mathematical Induction, Numbers and Functions. Unchanged site prompts and normal model generation produce 15 cards and 10 problems per topic. No RAG, code-owned mathematical templates or repair is applied. The original card evaluator functions and prompts are reused with the configured `gpt-4o-mini` judge.
+
+Card scores: **80.0% self-contained**, **84.7% source faithfulness**, **96.7% atomic**, **83.3% coverage**, **11.7% involved in within-topic embedding duplicate pairs**. These are judge/embedding signals, not verified truth. The task reviewer accepts 36/40, but local checks expose missed errors and three erroneous rejections of mathematically valid solutions. The original approvals and contradictions are preserved separately. This is a new baseline, not a paired comparison with v1–v4. Total usage-based cost: approximately **$0.145**.
 
 ## Methods used
 
@@ -140,10 +149,10 @@ uv run evaluate run --help
 
 See [evaluator instructions](docs/evaluator.md) for the separate paid CLI. Opening or testing the static site does not invoke it. Experiment folders retain prompts, seeds, usage, checks and reproduction scripts where available. Rerunning a model generation is a separate paid operation and need not reproduce the exact output; historical exports have the provenance limitations described above.
 
-The current revision passes **91 Python tests**. With Playwright available in your Python environment and a local server running, the optional browser regression check is:
+The current revision passes **96 Python tests**. With Playwright available in your Python environment and a local server running, the optional browser regression check is:
 
 ```sh
 python tools/check_site.py --url http://127.0.0.1:8894 --chrome "/path/to/chrome"
 ```
 
-It covers all nine task studies and four historical versions, lazy evidence loading, formula rendering, English page text, 320/390/1440-pixel layouts, preservation of existing browser data, version editing, JSON import/export, CSV import and direct file opening. Reports and screenshots are written to ignored `output/site-checks/`.
+It covers all ten studies and four historical versions, lazy evidence loading, formula rendering, English page text, 320/390/1440-pixel layouts, preservation of existing browser data, version editing, JSON import/export, CSV import and direct file opening. Reports and screenshots are written to ignored `output/site-checks/`.
