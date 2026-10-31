@@ -87,4 +87,5 @@ window.renderReviews = function () {
   window.renderParameterized?.();
   window.renderSeventy?.();
   window.renderSymbolic?.();
+  window.renderRag?.();
 };
