@@ -113,13 +113,13 @@ function renderHistoricalDetail(id){
  const e={chart_title:'Saved LLM evaluation scores',chart_note:'Card-count-weighted averages of available scores. These are source and learning-quality judgements, not verified mathematical correctness. Missing metrics remain missing.',series:bars.filter(b=>b.value!==null)};
  $('main').innerHTML=`<a class="text-button back-link" href="index.html#reviews">← All experiments</a>`+title(`FLASHCARD HISTORY · ${esc(v.id)}`,esc(historical(v,'title')),esc(historical(v,'notes')))+`<section class="panel study-section">${experimentChart(e)}<p>${sum(rows)} cards across ${rows.length} sets · ${esc(v.date)}</p><p>Exact historical generation prompts and all judge configurations were not retained. This study is separate from task V5.</p><a href="index.html?version=${encodeURIComponent(v.id)}#overview">Compare matching sets →</a> · <a href="index.html?version=${encodeURIComponent(v.id)}#cards">Browse original cards →</a> · <a href="data/history.json">Original history JSON ↗</a></section><section class="panel table-scroll"><table><thead><tr><th>Topic</th><th>Level</th><th>Source</th><th>Pages</th><th>Cards</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(name(r.topic))}</td><td>${esc(r.level)}</td><td>${esc(r.document)}</td><td>${esc(r.pages)}</td><td>${r.n}</td></tr>`).join('')}</tbody></table></section>`;
 }
-function renderMissing(){document.title='Study not found · MathPDF';$('main').innerHTML=title('EXPERIMENT NOTEBOOK','Study not found.','Choose an experiment from the catalogue.')+'<a class="primary" href="index.html#reviews">Back to experiments</a>'}
+function renderMissing(){document.title='Study not found · Acadence Metrics';$('main').innerHTML=title('EXPERIMENT NOTEBOOK','Study not found.','Choose an experiment from the catalogue.')+'<a class="primary" href="index.html#reviews">Back to experiments</a>'}
 window.renderReviews=async function(){
  if(!location.pathname.endsWith('experiment.html'))return renderHub();
  const rev=++detailRevision,id=new URLSearchParams(location.search).get('id');
  if(id?.startsWith('cards-'))return renderHistoricalDetail(id.slice(6));
  const e=window.MATHPDF_EXPERIMENTS.experiments.find(e=>e.id===id);if(!e)return renderMissing();
- document.title=`${e.title} · MathPDF Quality Lab`;
+ document.title=`${e.title} · Acadence Metrics`;
  $('main').innerHTML=title('LOADING STUDY',esc(e.title),'Loading the selected evidence…');
  try{
   let a=await loadBundle(e.data_script);if(rev!==detailRevision||view!=='reviews')return;if(e.run_id)a=a.find(x=>x.id===e.run_id);

@@ -1,10 +1,10 @@
-# MathPDF · Quality Lab
+# Acadence Metrics
 
 A public notebook for mathematical task generation, formula rendering and flashcard evaluation. **The interface and editorial explanations are in English.** Original model responses are preserved unchanged in the evidence files.
 
 **[Compare all versions & next steps](https://olexandratabakova.github.io/mathpdf-metrics/#comparison)** · **[Explore the experiments](https://olexandratabakova.github.io/mathpdf-metrics/#reviews)** · [Flashcard metrics](https://olexandratabakova.github.io/mathpdf-metrics/#overview) · [Methods & guide](https://olexandratabakova.github.io/mathpdf-metrics/#guide)
 
-The overview gives each attempt a short description, a chart explaining its scope and one main finding. Each study has a separate detail page with its method, limitations, tasks and original evidence. Opening the site makes **no AI-provider calls** and spends no API credit. This repository is separate from production MathPDF.
+The overview gives each attempt a short description, a chart explaining its scope and one main finding. Each study has a separate detail page with its method, limitations, tasks and original evidence. Opening the site makes **no AI-provider calls** and spends no API credit. This repository is separate from production Acadence.
 
 ## Experiment map
 
@@ -27,7 +27,7 @@ Costs describe these recorded runs, not current price quotes or forecasts. The S
 
 ## Primary flashcard baseline: Wildflower
 
-**Wildflower remains primary by user decision.** This selects a research baseline; it does not certify correctness, alter browser version statuses or change production MathPDF prompts.
+**Wildflower remains primary by user decision.** This selects a research baseline; it does not certify correctness, alter browser version statuses or change production Acadence prompts.
 
 Potential additions for an isolated successor: distinct target slots (v1's low duplicate signal), balanced source coverage (v2), explicit front context (v3), and restrained added claims (Clearleaf 60). Historical signals come from different samples and incomplete judge settings; exact historical prompts/full answer snapshots are unavailable. These are hypotheses, not recovered prompt components or proven gains. Wildflower already contains these rules; test explicit target slots and post-generation checks instead of repeating instructions. Preserve its atomicity and complete reasoning while testing one addition at a time.
 
@@ -55,7 +55,7 @@ Additional cost **$0.07337**; Clearleaf cumulative **$0.12776**. Sixty-four exac
 
 20 new cards, five per topic. Original judge: self-contained **70%**, source faithfulness **83.6%**, atomicity **70%**. A separate revised self-containment diagnostic gives **18/20**, after matching eight known controls. Local inspection finds **15/20 atomic cards**, one incorrect page citation and one incomplete explanation. **Not ready to promote.** Cost: approximately **$0.0544**.
 
-Only the isolated flashcard prompt changed; production MathPDF and the original evaluator remain unchanged. Wildflower has 60 cards, so this is not a paired improvement test. The previous chessboard exponent regression was not generated and remains untested. Website summaries are shorter; methods, detailed evidence and original mistakes remain accessible in expandable sections and linked records.
+Only the isolated flashcard prompt changed; production Acadence and the original evaluator remain unchanged. Wildflower has 60 cards, so this is not a paired improvement test. The previous chessboard exponent regression was not generated and remains untested. Website summaries are shorter; methods, detailed evidence and original mistakes remain accessible in expandable sections and linked records.
 
 ## Baseline: Wildflower
 
@@ -136,7 +136,7 @@ Open `http://127.0.0.1:8894`. Directly opening `index.html` also works through l
 
 ## Your version notebook
 
-1. Generate and evaluate separately from production MathPDF.
+1. Generate and evaluate separately from production Acadence.
 2. Choose **New version**; save the hypothesis and exact prompt, and attach evaluator `cards_*.csv` if available.
 3. Specify source filenames and page ranges.
 4. Compare matching sets, inspect cards and record manual findings.
@@ -190,3 +190,7 @@ python tools/check_site.py --url http://127.0.0.1:8894 --chrome "/path/to/chrome
 ```
 
 It covers all twelve studies, the cross-version comparison and four historical versions, lazy evidence loading, formula rendering, English page text, 320/390/1440-pixel layouts, preservation of existing browser data, version editing, JSON import/export, CSV import and direct file opening. Reports and screenshots are written to ignored `output/site-checks/`.
+
+## Branding and repository rename
+
+The project is **Acadence Metrics**. The current repository and Pages links deliberately retain `mathpdf-metrics` until the owner manually renames the repository to `acadence-metrics`. See [branding audit and rename checklist](docs/rebranding.md) for affected files, URL changes and browser-storage precautions. Historical evidence and evaluator identifiers are unchanged.
