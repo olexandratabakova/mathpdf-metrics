@@ -35,7 +35,7 @@ See [comparison and borrowing notes](https://olexandratabakova.github.io/mathpdf
 
 ## Cross-version comparison and next steps
 
-The [comparison page](https://olexandratabakova.github.io/mathpdf-metrics/#comparison) shows v1–v4, Wildflower and Clearleaf card metrics side by side, a selectable descriptive chart, all twelve studies, and the proposed next experiment. Custom browser-local versions also appear, with missing metrics preserved.
+The [comparison page](https://olexandratabakova.github.io/mathpdf-metrics/#comparison) shows the retained flashcard versions side by side, selectable descriptive charts, all twelve studies, and the proposed next experiment. Custom browser-local versions also appear, with missing metrics preserved.
 
 The recommendation is to calibrate evaluation first, target semantic formula errors, then run a small paired baseline/candidate pilot with fixed source pages, counts, difficulty, model settings and rubric. Keep controlled retrieval/compilation as a separate supported route. Reserve unseen pages/documents for follow-up; do not treat a small zero-error pilot as a reliability guarantee. No production changes or paid calls are made by this comparison.
 
@@ -194,3 +194,8 @@ It covers all twelve studies, the cross-version comparison and four historical v
 ## Branding and repository rename
 
 The project is **Acadence Metrics**. The current repository and Pages links deliberately retain `mathpdf-metrics` until the owner manually renames the repository to `acadence-metrics`. See [branding audit and rename checklist](docs/rebranding.md) for affected files, URL changes and browser-storage precautions. Historical evidence and evaluator identifiers are unchanged.
+
+
+## Version history charts
+
+The version notebook shows the recorded prompt changes and separate descriptive charts for self-containment, source faithfulness, atomicity, coverage and duplicate signals. Only versions with a retained prompt and original-evaluator results appear in these charts; older v1–v4 and unscored Briefleaf prompts are excluded and the latter are archived. The connectors are descriptive only and do not establish a causal prompt effect. The refined Briefleaf run is included; earlier Briefleaf runs have no model-evaluator scores.
