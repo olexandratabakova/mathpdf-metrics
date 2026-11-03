@@ -1,0 +1,162 @@
+{
+  "reviewer": "Coding assistant inspection, not independent expert verification. Targeted source text checked on pages 14,16,26,27,69; remaining citations not exhaustively verified.",
+  "items": [
+    {
+      "id": "sets-1",
+      "item_sha256": "cd6bd52fb101ffb13f3d872a122b1c4d21c23d879da8040812071359d87933ae",
+      "flags": [
+        "redundant_formula"
+      ],
+      "note": "Central membership formula repeats in From notes."
+    },
+    {
+      "id": "sets-2",
+      "item_sha256": "693eccf9c29c175d9278a85d6eeb264db38b1b0cf38479a1f77d29cf794525f0",
+      "flags": [
+        "recall_mislabeled",
+        "punctuation_as_math"
+      ],
+      "note": "Definition is labelled meaning; a period is encoded as math."
+    },
+    {
+      "id": "sets-3",
+      "item_sha256": "ac14976d8bd58f3a546e5f16d1f1437f8f72f994d81b308e2edcbdc1d40a8820",
+      "flags": [],
+      "note": ""
+    },
+    {
+      "id": "sets-4",
+      "item_sha256": "12d5b4bdb2ee65c2c1621079a688048595c3c28f8ffeefd7bd174f6d8846e5ab",
+      "flags": [
+        "recall_mislabeled"
+      ],
+      "note": "No concrete sets are supplied; this asks for a definition rather than application."
+    },
+    {
+      "id": "sets-5",
+      "item_sha256": "807c55106fcda6c61593aac7ea98cd02ff1105d41a4adbf59a5c4da09f094f21",
+      "flags": [],
+      "note": ""
+    },
+    {
+      "id": "induction-1",
+      "item_sha256": "d23c7f8597ddb7e16c089bf65a95a07e75e5284d060e4e3a48dfd76a599797bd",
+      "flags": [
+        "raw_math_in_prose"
+      ],
+      "note": "P(n), n_0 and P(n+1) are ordinary strings instead of math objects."
+    },
+    {
+      "id": "induction-2",
+      "item_sha256": "4a6ec90f6d77ec7b973a1e4e10f690401c92c180d3feb804eeafce128bd3e6aa",
+      "flags": [
+        "incomplete_proof",
+        "raw_math_in_prose",
+        "source_not_literal",
+        "answer_leakage"
+      ],
+      "note": "Says add and simplify without showing the induction algebra. Front states the formula it asks to prove. Central sigma notation differs from the printed explicit sum on page 14."
+    },
+    {
+      "id": "induction-3",
+      "item_sha256": "5c812b5a5abd0df0414d198fe54a401663c3ce25f35bd1f3463020dbac19777e",
+      "flags": [
+        "overstatement",
+        "redundant_explanation"
+      ],
+      "note": "Repeats source page 16 phrasing that direct induction is impossible; source faithfulness conflicts with the narrower mathematical claim. Should ask why the naive estimate does not close, or select another target. Explanation paraphrases the first block."
+    },
+    {
+      "id": "induction-4",
+      "item_sha256": "c6a2bd978e02bf48f6d5085881f554d7356d82e839e84c51d18db2bd9a653269",
+      "flags": [
+        "quota_violation"
+      ],
+      "note": "Second explicitly labelled recall in the same five-card induction set; maximum requested was one."
+    },
+    {
+      "id": "induction-5",
+      "item_sha256": "42b2bc743450cf6b2e5843a82e424f83d9dd40454281eae5ca16e4274ed343e3",
+      "flags": [],
+      "note": ""
+    },
+    {
+      "id": "numbers-1",
+      "item_sha256": "50f79ebda4472428498e6e94eb4733b6b7b6fe9aff631ac1243611b70eda2bf6",
+      "flags": [],
+      "note": ""
+    },
+    {
+      "id": "numbers-2",
+      "item_sha256": "f465543abcc7430f299f407828ed24ee3b2db843891cb52da4cdbfa122b251f2",
+      "flags": [
+        "unfinished_front"
+      ],
+      "note": "Question ends without punctuation, but its mathematical request is recoverable. Construction itself supplies both rational/irrational cases."
+    },
+    {
+      "id": "numbers-3",
+      "item_sha256": "d16e56c38cc6ee8d46c2e425fab6234757b6f8c7f2b11171d2396e93e848d620",
+      "flags": [
+        "incomplete_reasoning"
+      ],
+      "note": "Decimal uniqueness explanation asserts the decisive tail bound rather than deriving it."
+    },
+    {
+      "id": "numbers-4",
+      "item_sha256": "ccfd45bac4a61de3417b4537e1ecfc34af0c8974dea18508d323746a7a87d8a2",
+      "flags": [],
+      "note": ""
+    },
+    {
+      "id": "numbers-5",
+      "item_sha256": "17031910988a8a7f0492935bba42e57e10f31b7aad7ca05a205d84b02c9eb302",
+      "flags": [
+        "wrong_citation",
+        "boundary_condition"
+      ],
+      "note": "Base-b theorem is on page 26, not cited 27. Nonzero leading digit excludes zero if natural numbers include zero; retain source convention or specify positive integer."
+    },
+    {
+      "id": "functions-1",
+      "item_sha256": "6c2181be7ae28e5952a8d9377523a542844a894b290f54b884e8540cb8d46b4b",
+      "flags": [],
+      "note": ""
+    },
+    {
+      "id": "functions-2",
+      "item_sha256": "773015171e7e0b71576c178064a74954b0c8b515cb66f800b2eaa85bf842fb1c",
+      "flags": [
+        "recall_mislabeled"
+      ],
+      "note": "Asks for injectivity definition, not an actual condition decision on a given case."
+    },
+    {
+      "id": "functions-3",
+      "item_sha256": "5cc67a6349191412c7c222f2d0d12f17fa092c2db482f52e94f0fa49d8c1f621",
+      "flags": [
+        "method_recall_mislabeled",
+        "redundant_explanation"
+      ],
+      "note": "Asks for a general proof strategy, not application to specified givens; explanation largely restates existence of a preimage."
+    },
+    {
+      "id": "functions-4",
+      "item_sha256": "329f9b12b20cab335d1ae17e67ef411426f2cb681881b8103380471fb1d586e2",
+      "flags": [
+        "recall_mislabeled"
+      ],
+      "note": "Inverse definition labelled meaning."
+    },
+    {
+      "id": "functions-5",
+      "item_sha256": "747e452fbd82f27dc9ed42815d03006ba836539f3125c1f3a34681224ee0e0e9",
+      "flags": [
+        "missing_reasoning",
+        "redundant_explanation"
+      ],
+      "note": "Range [-1,1] is correct and appears on page 69, but explanation simply repeats the result. It does not show the bound or that every intermediate value is attained."
+    }
+  ],
+  "decision": "Not ready to promote. Prompt-only clarification did not ensure typed mathematics, level quotas or complete reasoning. No automatic repair applied."
+}

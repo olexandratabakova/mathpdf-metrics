@@ -1,0 +1,1849 @@
+{
+  "id": "briefleaf-technical",
+  "generator": "gpt-4.1-mini",
+  "judge": null,
+  "status": "generated_not_promoted",
+  "cost_usd": 0.0232544,
+  "mechanical_summary": {
+    "cards": 20,
+    "nonempty_legacy_answer": 0,
+    "nonempty_explanation": 11,
+    "cards_with_control_characters": 0,
+    "front_words_mean": 14.9
+  },
+  "card_sets": [
+    {
+      "id": "sets",
+      "topic": "Sets",
+      "pages": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "compact": {
+        "status": "completed",
+        "items": [
+          {
+            "title": "Set membership notation",
+            "formula": {
+              "latex": "x \\in A",
+              "page": 4,
+              "variant": null
+            },
+            "skill": "recall",
+            "question": [
+              "How is it written that an object x is an element of a set A?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "We write ",
+                  {
+                    "math": "x \\in A"
+                  },
+                  " when ",
+                  {
+                    "math": "x"
+                  },
+                  " is an element of ",
+                  {
+                    "math": "A"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Definition of the Cartesian product of two sets",
+            "formula": {
+              "page": 5
+            },
+            "skill": "meaning",
+            "question": [
+              "What is the Cartesian product of two sets A and B?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "The Cartesian product ",
+                  {
+                    "math": "A \\times B"
+                  },
+                  " is the set of all ordered pairs ",
+                  {
+                    "math": "(a,b)"
+                  },
+                  ", where ",
+                  {
+                    "math": "a \\in A"
+                  },
+                  " and ",
+                  {
+                    "math": "b \\in B"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Cardinality of power set of a finite set",
+            "formula": {
+              "page": 5
+            },
+            "skill": "why_justification",
+            "question": [
+              "Why does a finite set S with n elements have exactly 2 to the power n subsets?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "If a finite set ",
+                  {
+                    "math": "S = \\{x_1, \\ldots, x_n\\}"
+                  },
+                  " has ",
+                  {
+                    "math": "n"
+                  },
+                  " elements, each element can either be included or not in a subset, giving ",
+                  {
+                    "math": "2^n"
+                  },
+                  " subsets."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "Each element ",
+                  {
+                    "math": "x_i"
+                  },
+                  " has two independent choices: include it or exclude it. Multiplying these for all ",
+                  {
+                    "math": "n"
+                  },
+                  " elements gives ",
+                  {
+                    "math": "2^n"
+                  },
+                  " subsets in total."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Definition of union and intersection of sets A and B",
+            "formula": {
+              "page": 6
+            },
+            "skill": "meaning",
+            "question": [
+              "How are the union and intersection of sets A and B defined?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "The union ",
+                  {
+                    "math": "A \\cup B"
+                  },
+                  " is the set of elements in ",
+                  {
+                    "math": "A"
+                  },
+                  " or ",
+                  {
+                    "math": "B"
+                  },
+                  ". The intersection ",
+                  {
+                    "math": "A \\cap B"
+                  },
+                  " is the set of elements in both ",
+                  {
+                    "math": "A"
+                  },
+                  " and ",
+                  {
+                    "math": "B"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Complement of a set with respect to a universal set U",
+            "formula": {
+              "page": 7
+            },
+            "skill": "meaning",
+            "question": [
+              "What is the complement of a set A relative to a universal set U?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "The complement of ",
+                  {
+                    "math": "A"
+                  },
+                  " is ",
+                  {
+                    "math": "A^c = U \\setminus A"
+                  },
+                  "; it contains all elements in ",
+                  {
+                    "math": "U"
+                  },
+                  " not in ",
+                  {
+                    "math": "A"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Set membership notation",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "How is it written that an object x is an element of a set A?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "We write \\(x \\in A\\) when \\(x\\) is an element of \\(A\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "math",
+              "latex": "x \\in A",
+              "display": true,
+              "source": {
+                "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                "page": 4,
+                "line_start": null,
+                "line_end": null,
+                "quote": null
+              },
+              "original_latex": null,
+              "change": null
+            },
+            {
+              "kind": "text",
+              "text": "We write \\(x \\in A\\) when \\(x\\) is an element of \\(A\\)."
+            }
+          ],
+          "source": null
+        },
+        {
+          "goal_step": 2,
+          "title": "Definition of the Cartesian product of two sets",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the Cartesian product of two sets A and B?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "The Cartesian product \\(A \\times B\\) is the set of all ordered pairs \\((a,b)\\), where \\(a \\in A\\) and \\(b \\in B\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "The Cartesian product \\(A \\times B\\) is the set of all ordered pairs \\((a,b)\\), where \\(a \\in A\\) and \\(b \\in B\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 5,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 3,
+          "title": "Cardinality of power set of a finite set",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why does a finite set S with n elements have exactly 2 to the power n subsets?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "If a finite set \\(S = \\{x_1, \\ldots, x_n\\}\\) has \\(n\\) elements, each element can either be included or not in a subset, giving \\(2^n\\) subsets."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "Each element \\(x_i\\) has two independent choices: include it or exclude it. Multiplying these for all \\(n\\) elements gives \\(2^n\\) subsets in total."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "If a finite set \\(S = \\{x_1, \\ldots, x_n\\}\\) has \\(n\\) elements, each element can either be included or not in a subset, giving \\(2^n\\) subsets."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "Each element \\(x_i\\) has two independent choices: include it or exclude it. Multiplying these for all \\(n\\) elements gives \\(2^n\\) subsets in total."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 5,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 4,
+          "title": "Definition of union and intersection of sets A and B",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "How are the union and intersection of sets A and B defined?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "The union \\(A \\cup B\\) is the set of elements in \\(A\\) or \\(B\\). The intersection \\(A \\cap B\\) is the set of elements in both \\(A\\) and \\(B\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "The union \\(A \\cup B\\) is the set of elements in \\(A\\) or \\(B\\). The intersection \\(A \\cap B\\) is the set of elements in both \\(A\\) and \\(B\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 6,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "Complement of a set with respect to a universal set U",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the complement of a set A relative to a universal set U?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "The complement of \\(A\\) is \\(A^c = U \\setminus A\\); it contains all elements in \\(U\\) not in \\(A\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "The complement of \\(A\\) is \\(A^c = U \\setminus A\\); it contains all elements in \\(U\\) not in \\(A\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 7,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "usage": {
+        "input_tokens": 9883,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 619,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 10502
+      },
+      "cost_usd": 0.0049436,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "prompt_hashes": {
+        "system.md": "f06c0df62ab3bf26c319586893db34adb5e643e796285038f278a2b3db365dc3",
+        "flashcards.md": "136a76c5c46118d3753c17d9539c83ded3e07e7235d6aec239ba134c2310b5f0",
+        "formula-guide.md": "d017763e3bd7554fbe6393330b6e79e1f6c9cce224f9a43148d37c13e5d938b5",
+        "math-patterns.md": "9d6c41b9f0652b16e72ea9ed22b54436ef446f1caa1e5b19bfb11896f48b4f70"
+      },
+      "site_guards_passed": true
+    },
+    {
+      "id": "induction",
+      "topic": "Mathematical Induction",
+      "pages": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "compact": {
+        "status": "completed",
+        "items": [
+          {
+            "title": "What is the principle of mathematical induction?",
+            "formula": {
+              "page": 14
+            },
+            "skill": "meaning",
+            "question": [
+              "What are the key steps in the principle of mathematical induction for proving a statement  P(n)  for every integer  n  greater or equal to  n0?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "Suppose we want to prove a statement  P(n)  for every integer  n \\geq n_0 . We prove it in three steps: Base case: prove  P(n_0) ; Induction hypothesis: assume  P(n)  is true for arbitrary  n \\geq n_0 ; Induction step: prove  P(n+1)  using the induction hypothesis."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "How is the divisibility notation  a|b  defined for integers?",
+            "formula": {
+              "page": 15
+            },
+            "skill": "recall",
+            "question": [
+              "What does it mean for an integer  a  to divide another integer  b ?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  " For integers  a  and  b , the notation  a|b  means that  a  divides  b . Equivalently,  a|b \\iff \\exists c \\in \\mathbb{Z} : b = c a ."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Why can't the inequality 1/1^2 + 1/2^2 + ... + 1/n^2 \\leq 2  be proved directly by induction?",
+            "formula": {
+              "page": 16
+            },
+            "skill": "error_diagnosis",
+            "question": [
+              "Explain why it is impossible to prove the inequality  1/1 2  plus 1/2 2  plus  ... plus 1/n 2  is less or equal to 2  directly by induction."
+            ],
+            "answer": [],
+            "from_notes": [],
+            "explanation": [
+              {
+                "parts": [
+                  "The direct induction step does not close because adding 1/(n+1) 2  is not sufficient to maintain the inequality; a stronger inequality is needed for a successful induction proof as shown in Example 3.5."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "State the triangle inequality for the sum of  n  real numbers.",
+            "formula": {
+              "page": 17
+            },
+            "skill": "recall",
+            "question": [
+              "What does the triangle inequality say about the absolute value of the sum of real numbers  x1, x2, ..., xn ?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "For real numbers  x_1, \\ldots, x_n , \\left\\lvert x_1 + \\cdots + x_n \\right\\rvert \\leq \\lvert x_1 \\rvert + \\cdots + \\lvert x_n \\rvert ."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "How does strong induction differ from ordinary induction?",
+            "formula": {
+              "page": 18
+            },
+            "skill": "meaning",
+            "question": [
+              "What is the difference between strong induction and ordinary induction in proving  P(n) ?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "Ordinary induction assumes  P(n)  to prove  P(n+1) . Strong induction assumes  P(k)  holds for all  k  with initial value up to  n, and uses these to prove  P(n+1) ."
+                ]
+              }
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "What is the principle of mathematical induction?",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What are the key steps in the principle of mathematical induction for proving a statement  P(n)  for every integer  n  greater or equal to  n0?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Suppose we want to prove a statement  P(n)  for every integer  n \\geq n_0 . We prove it in three steps: Base case: prove  P(n_0) ; Induction hypothesis: assume  P(n)  is true for arbitrary  n \\geq n_0 ; Induction step: prove  P(n+1)  using the induction hypothesis."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Suppose we want to prove a statement  P(n)  for every integer  n \\geq n_0 . We prove it in three steps: Base case: prove  P(n_0) ; Induction hypothesis: assume  P(n)  is true for arbitrary  n \\geq n_0 ; Induction step: prove  P(n+1)  using the induction hypothesis."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 14,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 2,
+          "title": "How is the divisibility notation  a|b  defined for integers?",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What does it mean for an integer  a  to divide another integer  b ?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": " For integers  a  and  b , the notation  a|b  means that  a  divides  b . Equivalently,  a|b \\iff \\exists c \\in \\mathbb{Z} : b = c a ."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": " For integers  a  and  b , the notation  a|b  means that  a  divides  b . Equivalently,  a|b \\iff \\exists c \\in \\mathbb{Z} : b = c a ."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 15,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 3,
+          "title": "Why can't the inequality 1/1^2 + 1/2^2 + ... + 1/n^2 \\leq 2  be proved directly by induction?",
+          "skill": "error_diagnosis",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Explain why it is impossible to prove the inequality  1/1 2  plus 1/2 2  plus  ... plus 1/n 2  is less or equal to 2  directly by induction."
+            }
+          ],
+          "from_notes": [],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "The direct induction step does not close because adding 1/(n+1) 2  is not sufficient to maintain the inequality; a stronger inequality is needed for a successful induction proof as shown in Example 3.5."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "The direct induction step does not close because adding 1/(n+1) 2  is not sufficient to maintain the inequality; a stronger inequality is needed for a successful induction proof as shown in Example 3.5."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 16,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 4,
+          "title": "State the triangle inequality for the sum of  n  real numbers.",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What does the triangle inequality say about the absolute value of the sum of real numbers  x1, x2, ..., xn ?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "For real numbers  x_1, \\ldots, x_n , \\left\\lvert x_1 + \\cdots + x_n \\right\\rvert \\leq \\lvert x_1 \\rvert + \\cdots + \\lvert x_n \\rvert ."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "For real numbers  x_1, \\ldots, x_n , \\left\\lvert x_1 + \\cdots + x_n \\right\\rvert \\leq \\lvert x_1 \\rvert + \\cdots + \\lvert x_n \\rvert ."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 17,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "How does strong induction differ from ordinary induction?",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the difference between strong induction and ordinary induction in proving  P(n) ?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Ordinary induction assumes  P(n)  to prove  P(n+1) . Strong induction assumes  P(k)  holds for all  k  with initial value up to  n, and uses these to prove  P(n+1) ."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Ordinary induction assumes  P(n)  to prove  P(n+1) . Strong induction assumes  P(k)  holds for all  k  with initial value up to  n, and uses these to prove  P(n+1) ."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 18,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "usage": {
+        "input_tokens": 10146,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 698,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 10844
+      },
+      "cost_usd": 0.0051752,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "prompt_hashes": {
+        "system.md": "f06c0df62ab3bf26c319586893db34adb5e643e796285038f278a2b3db365dc3",
+        "flashcards.md": "136a76c5c46118d3753c17d9539c83ded3e07e7235d6aec239ba134c2310b5f0",
+        "formula-guide.md": "d017763e3bd7554fbe6393330b6e79e1f6c9cce224f9a43148d37c13e5d938b5",
+        "math-patterns.md": "9d6c41b9f0652b16e72ea9ed22b54436ef446f1caa1e5b19bfb11896f48b4f70"
+      },
+      "site_guards_passed": true
+    },
+    {
+      "id": "numbers",
+      "topic": "Numbers",
+      "pages": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "compact": {
+        "status": "completed",
+        "items": [
+          {
+            "title": "Definition of irreducible fraction",
+            "formula": {
+              "page": 22
+            },
+            "skill": "recall",
+            "question": [
+              "What does it mean for a fraction to be irreducible or in lowest terms?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "A fraction ",
+                  {
+                    "math": "\\frac{m}{n}"
+                  },
+                  {
+                    "math": " is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],"
+                  },
+                  "explanation:[]},{"
+                ]
+              },
+              {
+                "parts": [
+                  "A fraction ",
+                  {
+                    "math": "\\frac{m}{n}"
+                  },
+                  {
+                    "math": " is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],"
+                  },
+                  "explanation:[]},{"
+                ]
+              },
+              {
+                "parts": [
+                  "A fraction ",
+                  {
+                    "math": "\\frac{m}{n}"
+                  },
+                  {
+                    "math": " is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],"
+                  },
+                  "explanation:[]},{"
+                ]
+              },
+              {
+                "parts": [
+                  "A fraction ",
+                  {
+                    "math": "\\frac{m}{n}"
+                  },
+                  {
+                    "math": " is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],"
+                  },
+                  "explanation:[]},{"
+                ]
+              },
+              {
+                "parts": [
+                  "A fraction ",
+                  {
+                    "math": "\\frac{m}{n}"
+                  },
+                  {
+                    "math": " is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],"
+                  },
+                  "explanation:[]}{"
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Density of rational numbers",
+            "formula": {
+              "page": 22
+            },
+            "skill": "meaning",
+            "question": [
+              "Why is there always a rational number between any two distinct rational numbers?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "Between any two distinct rational numbers there is another rational number."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "The midpoint of two rationals is rational and lies strictly between them."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Irrational numbers and their relation to rationals",
+            "formula": {
+              "page": 23
+            },
+            "skill": "conditions",
+            "question": [
+              "Can the sum of a rational number and an irrational number ever be rational?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "The sum of a rational and an irrational number is never rational."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "If the sum were rational, subtracting the rational from it would make the irrational rational, which is a contradiction."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Decimal representation construction",
+            "formula": {
+              "page": 24
+            },
+            "skill": "application",
+            "question": [
+              "How can we construct the decimal representation of any real number in (0,1)?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "Every x in (0,1) can be approximated by decimal digits a1,a2,a3,... chosen inductively based on successive partitions of intervals."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "At step n, choose digit a_n so that x lies in the corresponding tenth subinterval of size 10^{-n}."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Periodic decimals and rational numbers",
+            "formula": {
+              "page": 26
+            },
+            "skill": "why_justification",
+            "question": [
+              "Why does every periodic decimal represent a rational number?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "Every periodic decimal represents a rational number."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "Shifting the decimal by the length of the period shows that the decimal satisfies a linear equation with integer coefficients, hence equals a rational number."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Definition of irreducible fraction",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What does it mean for a fraction to be irreducible or in lowest terms?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\)\\( is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],\\)explanation:[]},{"
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\)\\( is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],\\)explanation:[]},{"
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\)\\( is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],\\)explanation:[]},{"
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\)\\( is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],\\)explanation:[]},{"
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\)\\( is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],\\)explanation:[]}{"
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\)\\( is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],\\)explanation:[]},{"
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\)\\( is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],\\)explanation:[]},{"
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\)\\( is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],\\)explanation:[]},{"
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\)\\( is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],\\)explanation:[]},{"
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(\\frac{m}{n}\\)\\( is irreducible or in lowest terms if m and n have no common factors greater than 1.}]}],\\)explanation:[]}{"
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 22,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 2,
+          "title": "Density of rational numbers",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why is there always a rational number between any two distinct rational numbers?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Between any two distinct rational numbers there is another rational number."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "The midpoint of two rationals is rational and lies strictly between them."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Between any two distinct rational numbers there is another rational number."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "The midpoint of two rationals is rational and lies strictly between them."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 22,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 3,
+          "title": "Irrational numbers and their relation to rationals",
+          "skill": "conditions",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Can the sum of a rational number and an irrational number ever be rational?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "The sum of a rational and an irrational number is never rational."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "If the sum were rational, subtracting the rational from it would make the irrational rational, which is a contradiction."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "The sum of a rational and an irrational number is never rational."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "If the sum were rational, subtracting the rational from it would make the irrational rational, which is a contradiction."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 23,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 4,
+          "title": "Decimal representation construction",
+          "skill": "application",
+          "question": [
+            {
+              "kind": "text",
+              "text": "How can we construct the decimal representation of any real number in (0,1)?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Every x in (0,1) can be approximated by decimal digits a1,a2,a3,... chosen inductively based on successive partitions of intervals."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "At step n, choose digit a_n so that x lies in the corresponding tenth subinterval of size 10^{-n}."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Every x in (0,1) can be approximated by decimal digits a1,a2,a3,... chosen inductively based on successive partitions of intervals."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "At step n, choose digit a_n so that x lies in the corresponding tenth subinterval of size 10^{-n}."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 24,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "Periodic decimals and rational numbers",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why does every periodic decimal represent a rational number?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Every periodic decimal represents a rational number."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "Shifting the decimal by the length of the period shows that the decimal satisfies a linear equation with integer coefficients, hence equals a rational number."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Every periodic decimal represents a rational number."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "Shifting the decimal by the length of the period shows that the decimal satisfies a linear equation with integer coefficients, hence equals a rational number."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 26,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "usage": {
+        "input_tokens": 10672,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 729,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 11401
+      },
+      "cost_usd": 0.005435200000000001,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "prompt_hashes": {
+        "system.md": "f06c0df62ab3bf26c319586893db34adb5e643e796285038f278a2b3db365dc3",
+        "flashcards.md": "136a76c5c46118d3753c17d9539c83ded3e07e7235d6aec239ba134c2310b5f0",
+        "formula-guide.md": "d017763e3bd7554fbe6393330b6e79e1f6c9cce224f9a43148d37c13e5d938b5",
+        "math-patterns.md": "9d6c41b9f0652b16e72ea9ed22b54436ef446f1caa1e5b19bfb11896f48b4f70"
+      },
+      "site_guards_passed": true
+    },
+    {
+      "id": "functions",
+      "topic": "Functions",
+      "pages": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "compact": {
+        "status": "completed",
+        "items": [
+          {
+            "title": "Definition of a function between sets",
+            "formula": {
+              "page": 63
+            },
+            "skill": "meaning",
+            "question": [
+              "What is the definition of a function from a set X to a set Y?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "A function from ",
+                  {
+                    "math": "X"
+                  },
+                  " to ",
+                  {
+                    "math": "Y"
+                  },
+                  " is a relation ",
+                  {
+                    "math": "f \\subset X \\times Y"
+                  },
+                  " such that for every ",
+                  {
+                    "math": "x \\in X"
+                  },
+                  ", there is exactly one ",
+                  {
+                    "math": "y \\in Y"
+                  },
+                  " with ",
+                  {
+                    "math": "(x,y) \\in f"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "Each element of the domain ",
+                  {
+                    "math": "X"
+                  },
+                  " is associated with a unique element in the codomain ",
+                  {
+                    "math": "Y"
+                  },
+                  ", ensuring a well-defined output for each input."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Equality of functions",
+            "formula": {
+              "page": 63
+            },
+            "skill": "conditions",
+            "question": [
+              "Under what conditions are two functions equal?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "Two functions ",
+                  {
+                    "math": "f: X_1 \\to Y_1"
+                  },
+                  " and ",
+                  {
+                    "math": "g: X_2 \\to Y_2"
+                  },
+                  " are equal if ",
+                  {
+                    "math": "X_1 = X_2"
+                  },
+                  " and ",
+                  {
+                    "math": "f(x) = g(x)"
+                  },
+                  " for all ",
+                  {
+                    "math": "x \\in X_1"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "Equality requires identical domains and matching values for all elements in the domain. The codomain equality may or may not be required depending on definitions."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "When is a function injective, surjective, and bijective?",
+            "formula": {
+              "page": 64
+            },
+            "skill": "meaning",
+            "question": [
+              "What characterizes an injective, surjective, and bijective function from X to Y?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "A function ",
+                  {
+                    "math": "f:X \\to Y"
+                  },
+                  " is: (1) injective if distinct inputs map to distinct outputs; (2) surjective if every element of ",
+                  {
+                    "math": "Y"
+                  },
+                  " is an image of some element in ",
+                  {
+                    "math": "X"
+                  },
+                  "; (3) bijective if it is both injective and surjective."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "Injectivity means no two different inputs share the same output; surjectivity means the function covers the entire codomain; bijection means a perfect one-to-one correspondence between domain and codomain."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "What does the inverse function of a bijection represent?",
+            "formula": {
+              "page": 67
+            },
+            "skill": "meaning",
+            "question": [
+              "What is the inverse function of a bijection and when does it exist?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "If ",
+                  {
+                    "math": "f: X \\to Y"
+                  },
+                  " is a bijection, its inverse function ",
+                  {
+                    "math": "f^{-1}: Y \\to X"
+                  },
+                  " is defined by ",
+                  {
+                    "math": "f^{-1}(y) = x \\iff f(x) = y"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "The inverse function swaps the roles of inputs and outputs and exists only if ",
+                  {
+                    "math": "f"
+                  },
+                  " is bijective, guaranteeing each output comes from exactly one input."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "How does image and preimage of sets under a function behave with unions and intersections?",
+            "formula": {
+              "page": 69
+            },
+            "skill": "application",
+            "question": [
+              "What are the relations between images and preimages of unions and intersections of subsets under a function f?"
+            ],
+            "answer": [],
+            "from_notes": [
+              {
+                "parts": [
+                  "For ",
+                  {
+                    "math": "f: X \\to Y"
+                  },
+                  ", and subsets ",
+                  {
+                    "math": "A,B \\subset X"
+                  },
+                  ", ",
+                  {
+                    "math": "C,D \\subset Y"
+                  },
+                  ": (i) ",
+                  {
+                    "math": "f(A \\cap B) \\subset f(A) \\cap f(B)"
+                  },
+                  ", (ii) ",
+                  {
+                    "math": "f(A \\cup B) = f(A) \\cup f(B)"
+                  },
+                  ", (iii) ",
+                  {
+                    "math": "A \\subset f^{-1}(f(A))"
+                  },
+                  ", (iv) ",
+                  {
+                    "math": "f^{-1}(C \\cap D) = f^{-1}(C) \\cap f^{-1}(D)"
+                  },
+                  " and (v) ",
+                  {
+                    "math": "f^{-1}(C \\cup D) = f^{-1}(C) \\cup f^{-1}(D)"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "The image of a union equals the union of images, but the image of an intersection is contained in (not necessarily equal to) the intersection of images. Preimages preserve unions and intersections exactly."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Definition of a function between sets",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the definition of a function from a set X to a set Y?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "A function from \\(X\\) to \\(Y\\) is a relation \\(f \\subset X \\times Y\\) such that for every \\(x \\in X\\), there is exactly one \\(y \\in Y\\) with \\((x,y) \\in f\\)."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "Each element of the domain \\(X\\) is associated with a unique element in the codomain \\(Y\\), ensuring a well-defined output for each input."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "A function from \\(X\\) to \\(Y\\) is a relation \\(f \\subset X \\times Y\\) such that for every \\(x \\in X\\), there is exactly one \\(y \\in Y\\) with \\((x,y) \\in f\\)."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "Each element of the domain \\(X\\) is associated with a unique element in the codomain \\(Y\\), ensuring a well-defined output for each input."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 63,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 2,
+          "title": "Equality of functions",
+          "skill": "conditions",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Under what conditions are two functions equal?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Two functions \\(f: X_1 \\to Y_1\\) and \\(g: X_2 \\to Y_2\\) are equal if \\(X_1 = X_2\\) and \\(f(x) = g(x)\\) for all \\(x \\in X_1\\)."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "Equality requires identical domains and matching values for all elements in the domain. The codomain equality may or may not be required depending on definitions."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Two functions \\(f: X_1 \\to Y_1\\) and \\(g: X_2 \\to Y_2\\) are equal if \\(X_1 = X_2\\) and \\(f(x) = g(x)\\) for all \\(x \\in X_1\\)."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "Equality requires identical domains and matching values for all elements in the domain. The codomain equality may or may not be required depending on definitions."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 63,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 3,
+          "title": "When is a function injective, surjective, and bijective?",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What characterizes an injective, surjective, and bijective function from X to Y?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "A function \\(f:X \\to Y\\) is: (1) injective if distinct inputs map to distinct outputs; (2) surjective if every element of \\(Y\\) is an image of some element in \\(X\\); (3) bijective if it is both injective and surjective."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "Injectivity means no two different inputs share the same output; surjectivity means the function covers the entire codomain; bijection means a perfect one-to-one correspondence between domain and codomain."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "A function \\(f:X \\to Y\\) is: (1) injective if distinct inputs map to distinct outputs; (2) surjective if every element of \\(Y\\) is an image of some element in \\(X\\); (3) bijective if it is both injective and surjective."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "Injectivity means no two different inputs share the same output; surjectivity means the function covers the entire codomain; bijection means a perfect one-to-one correspondence between domain and codomain."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 64,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 4,
+          "title": "What does the inverse function of a bijection represent?",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the inverse function of a bijection and when does it exist?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "If \\(f: X \\to Y\\) is a bijection, its inverse function \\(f^{-1}: Y \\to X\\) is defined by \\(f^{-1}(y) = x \\iff f(x) = y\\)."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "The inverse function swaps the roles of inputs and outputs and exists only if \\(f\\) is bijective, guaranteeing each output comes from exactly one input."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "If \\(f: X \\to Y\\) is a bijection, its inverse function \\(f^{-1}: Y \\to X\\) is defined by \\(f^{-1}(y) = x \\iff f(x) = y\\)."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "The inverse function swaps the roles of inputs and outputs and exists only if \\(f\\) is bijective, guaranteeing each output comes from exactly one input."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 67,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "How does image and preimage of sets under a function behave with unions and intersections?",
+          "skill": "application",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What are the relations between images and preimages of unions and intersections of subsets under a function f?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "For \\(f: X \\to Y\\), and subsets \\(A,B \\subset X\\), \\(C,D \\subset Y\\): (i) \\(f(A \\cap B) \\subset f(A) \\cap f(B)\\), (ii) \\(f(A \\cup B) = f(A) \\cup f(B)\\), (iii) \\(A \\subset f^{-1}(f(A))\\), (iv) \\(f^{-1}(C \\cap D) = f^{-1}(C) \\cap f^{-1}(D)\\) and (v) \\(f^{-1}(C \\cup D) = f^{-1}(C) \\cup f^{-1}(D)\\)."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "The image of a union equals the union of images, but the image of an intersection is contained in (not necessarily equal to) the intersection of images. Preimages preserve unions and intersections exactly."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "For \\(f: X \\to Y\\), and subsets \\(A,B \\subset X\\), \\(C,D \\subset Y\\): (i) \\(f(A \\cap B) \\subset f(A) \\cap f(B)\\), (ii) \\(f(A \\cup B) = f(A) \\cup f(B)\\), (iii) \\(A \\subset f^{-1}(f(A))\\), (iv) \\(f^{-1}(C \\cap D) = f^{-1}(C) \\cap f^{-1}(D)\\) and (v) \\(f^{-1}(C \\cup D) = f^{-1}(C) \\cup f^{-1}(D)\\)."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "The image of a union equals the union of images, but the image of an intersection is contained in (not necessarily equal to) the intersection of images. Preimages preserve unions and intersections exactly."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 69,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "usage": {
+        "input_tokens": 15371,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 970,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 16341
+      },
+      "cost_usd": 0.0077004000000000005,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "prompt_hashes": {
+        "system.md": "f06c0df62ab3bf26c319586893db34adb5e643e796285038f278a2b3db365dc3",
+        "flashcards.md": "136a76c5c46118d3753c17d9539c83ded3e07e7235d6aec239ba134c2310b5f0",
+        "formula-guide.md": "d017763e3bd7554fbe6393330b6e79e1f6c9cce224f9a43148d37c13e5d938b5",
+        "math-patterns.md": "9d6c41b9f0652b16e72ea9ed22b54436ef446f1caa1e5b19bfb11896f48b4f70"
+      },
+      "site_guards_passed": true
+    }
+  ],
+  "ledger": {
+    "budget_usd": 0.15,
+    "calls": [
+      {
+        "name": "generate-sets-flashcards-cap8000",
+        "digest": "28dbaf4014fadb441370474a58e0823aba5a1fe406b3c48497d91c19b4056adb",
+        "reserved_usd": 0.017148080000000003,
+        "status": "completed",
+        "model": "gpt-4.1-mini",
+        "cost_usd": 0.0049436,
+        "usage": {
+          "input_tokens": 9883,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 619,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10502
+        }
+      },
+      {
+        "name": "generate-induction-flashcards-cap8000",
+        "digest": "2792a7ee236b5b0c93bd3946daf7bb11839eec2c4fd7171d4b10232b6152ef96",
+        "reserved_usd": 0.01726424,
+        "status": "completed",
+        "model": "gpt-4.1-mini",
+        "cost_usd": 0.0051752,
+        "usage": {
+          "input_tokens": 10146,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 698,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10844
+        }
+      },
+      {
+        "name": "generate-numbers-flashcards-cap8000",
+        "digest": "12e3edc9f4a1ead43cc6d34c929eda823017616437e0bb201359c4f3c92d23be",
+        "reserved_usd": 0.01749568,
+        "status": "completed",
+        "model": "gpt-4.1-mini",
+        "cost_usd": 0.005435200000000001,
+        "usage": {
+          "input_tokens": 10672,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 729,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 11401
+        }
+      },
+      {
+        "name": "generate-functions-flashcards-cap8000",
+        "digest": "cfcd1ba1d7ae89023dc65fa7d2feff59e64388e0f688aee653fcdcf357073dba",
+        "reserved_usd": 0.019562799999999998,
+        "status": "completed",
+        "model": "gpt-4.1-mini",
+        "cost_usd": 0.0077004000000000005,
+        "usage": {
+          "input_tokens": 15371,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 970,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16341
+        }
+      }
+    ]
+  },
+  "local_findings": [
+    "Numbers 1 contains repeated serialized JSON-like text inside math fields; invalid mathematical payload despite schema acceptance.",
+    "Induction cards contain raw TeX in prose, ambiguous powers on card 3, and raw notation in titles.",
+    "Induction 3 repeats the overstatement that direct induction is impossible; it should identify failure of a naive induction estimate.",
+    "Sets 4 bundles union and intersection; Functions 3 bundles three definitions; Functions 5 bundles image/preimage properties.",
+    "Functions explanations often paraphrase their source answers. Sets 3 repeats the argument in both sections.",
+    "Recall questions labelled meaning and insufficient application/error-diagnosis targets remain; skill labels alone do not establish level-3 compliance."
+  ],
+  "limitations": [
+    "Coding-assistant inspection only; no model evaluator or independent source/correctness certification.",
+    "Different generated targets and one run per condition; improvements cannot be attributed causally to the technical context.",
+    "Full technical guide and patterns copied byte-for-byte from the local Acadence checkout; production unchanged."
+  ]
+}

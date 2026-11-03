@@ -1,0 +1,167 @@
+{
+  "scope": "Strict KaTeX parse of typed fragments, plus heuristic raw-math string detection; does not establish semantic correctness or full visual layout.",
+  "typed_fragments": 76,
+  "parse_errors": 0,
+  "cards_flagged_raw_math": 7,
+  "items": [
+    {
+      "id": "sets-1",
+      "fragments": 4,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "sets-2",
+      "fragments": 7,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "sets-3",
+      "fragments": 5,
+      "errors": [],
+      "raw_math_in_strings": [
+        {
+          "path": "card.skill",
+          "text": "why_justification"
+        }
+      ]
+    },
+    {
+      "id": "sets-4",
+      "fragments": 6,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "sets-5",
+      "fragments": 10,
+      "errors": [],
+      "raw_math_in_strings": [
+        {
+          "path": "card.skill",
+          "text": "why_justification"
+        }
+      ]
+    },
+    {
+      "id": "induction-1",
+      "fragments": 0,
+      "errors": [],
+      "raw_math_in_strings": [
+        {
+          "path": "card.from_notes.0.parts.0",
+          "text": "Suppose we want to prove a statement P(n) for every integer n greater than or equal to n_0. We prove it in three steps: (1) Base case: prove P(n_0). (2) Induction hypothesis: fix an arbitrary integer n greater or equal to n_0 and assume P(n) is true. (3) Induction step: using the induction hypothesis, prove that P(n+1) is true."
+        }
+      ]
+    },
+    {
+      "id": "induction-2",
+      "fragments": 1,
+      "errors": [],
+      "raw_math_in_strings": [
+        {
+          "path": "card.from_notes.0.parts.0",
+          "text": "To prove that \\sum_{k=1}^n k^2=\\frac{n(n+1)(2n+1)}{6}, first prove the base case n=1. Then assume the formula for n and use it to prove the formula for n+1 by adding (n+1)^2 and simplifying to match the formula."
+        }
+      ]
+    },
+    {
+      "id": "induction-3",
+      "fragments": 0,
+      "errors": [],
+      "raw_math_in_strings": [
+        {
+          "path": "card.skill",
+          "text": "error_diagnosis"
+        },
+        {
+          "path": "card.explanation.0.parts.0",
+          "text": "The induction step requires bounding the added term 1 over (n+1)^2 in a way that the weaker inequality doesn’t suffice, so a stronger inequality is used to complete the induction."
+        }
+      ]
+    },
+    {
+      "id": "induction-4",
+      "fragments": 0,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "induction-5",
+      "fragments": 0,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "numbers-1",
+      "fragments": 3,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "numbers-2",
+      "fragments": 10,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "numbers-3",
+      "fragments": 6,
+      "errors": [],
+      "raw_math_in_strings": [
+        {
+          "path": "card.skill",
+          "text": "why_justification"
+        }
+      ]
+    },
+    {
+      "id": "numbers-4",
+      "fragments": 0,
+      "errors": [],
+      "raw_math_in_strings": [
+        {
+          "path": "card.skill",
+          "text": "why_justification"
+        }
+      ]
+    },
+    {
+      "id": "numbers-5",
+      "fragments": 5,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "functions-1",
+      "fragments": 6,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "functions-2",
+      "fragments": 3,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "functions-3",
+      "fragments": 5,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "functions-4",
+      "fragments": 3,
+      "errors": [],
+      "raw_math_in_strings": []
+    },
+    {
+      "id": "functions-5",
+      "fragments": 2,
+      "errors": [],
+      "raw_math_in_strings": []
+    }
+  ]
+}

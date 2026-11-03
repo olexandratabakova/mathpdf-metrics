@@ -1,0 +1,21 @@
+set_topic,set_level,card_number,front_preview,self_contained_passes,faithfulness_ratio,atomic,front_leaks_answer,trivial,understanding_vs_rote,difficulty
+Sets,Level 3,1,How do you denote that an object x is an element of a set A?,1,1.0,1,0,0,rote,1
+Sets,Level 3,2,What is the definition of the Cartesian product of two sets A and B?,1,1.0,1,0,0,rote,2
+Sets,Level 3,3,Why does a finite set with n elements have 2 to the power n subsets?,1,1.0,1,0,0,understanding,3
+Sets,Level 3,4,"Given sets A and B, what is the set difference A minus B?",1,1.0,1,0,0,rote,2
+Sets,Level 3,5,Why does the intersection of A with the union of B and C equal the union of the intersections of A with B and A with C?,1,0.75,1,0,0,understanding,4
+Mathematical Induction,Level 3,1,What are the three steps to prove a statement using mathematical induction for all integers greater than or equal to some initial integer?,1,1.0,1,0,0,understanding,2
+Mathematical Induction,Level 3,2,How does one prove by induction that the sum of the first n squares equals n times n plus 1 times 2 n plus 1 divided by 6 for natural numbers n?,0,1.0,0,0,0,understanding,4
+Mathematical Induction,Level 3,3,Why can't the inequality 1 over 1 squared plus 1 over 2 squared plus ... plus 1 over n squared is less than or equal to 2 be proven directly by induction?,0,0.6,0,0,0,understanding,3
+Mathematical Induction,Level 3,4,What is the definition of factorial for natural numbers including zero?,1,1.0,1,0,0,rote,1
+Mathematical Induction,Level 3,5,How does strong induction prove that every integer greater or equal to 8 can be expressed as a sum of multiples of 3 euros and 5 euros?,0,1.0,0,0,0,understanding,4
+Numbers,Level 3,1,What does it mean for a fraction to be irreducible or in lowest terms?,1,1.0,1,0,0,understanding,1
+Numbers,Level 3,2,How can you find an irrational number between any two distinct real numbers ,1,1.0,0,0,0,understanding,3
+Numbers,Level 3,3,Why do two different decimal representations of the same number differ only by a repeating 9-to-0 pattern starting from some digit?,1,0.3333333333333333,1,0,0,understanding,4
+Numbers,Level 3,4,Why does every rational number have a decimal representation that is eventually periodic?,1,1.0,1,0,0,understanding,3
+Numbers,Level 3,5,Under what conditions does a natural number have a unique representation in base b?,0,1.0,1,0,0,understanding,4
+Functions,Level 3,1,What is the formal definition of a function from a set X to a set Y?,1,1.0,1,0,0,understanding,2
+Functions,Level 3,2,What condition must a function from set X to Y satisfy to be injective?,1,1.0,1,0,0,understanding,3
+Functions,Level 3,3,How can you prove that a function from X to Y is surjective?,1,1.0,1,0,0,understanding,4
+Functions,Level 3,4,What is the inverse function of a bijection from X to Y?,1,1.0,1,0,0,understanding,3
+Functions,Level 3,5,Find the range of the function defined from real numbers to real numbers by f of x equals two x divided by one plus x squared.,1,0.0,0,0,0,understanding,5

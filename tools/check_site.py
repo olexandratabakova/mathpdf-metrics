@@ -29,8 +29,8 @@ async def check(url, chrome):
         page.on('pageerror', lambda e: errors.append(str(e)))
         await page.goto(url + '/')
         await page.wait_for_selector('.experiment-card')
-        assert await page.locator('.experiment-card').count() == 12
-        assert await page.locator('.history-tile').count() == 4
+        assert await page.locator('.experiment-card').count() == 14
+        assert await page.locator('.history-tile').count() == 0
         assert await page.locator('a', has_text='Primary: Wildflower').count() == 1
         assert await page.locator('.task-evidence').count() == 0
         scripts = await page.locator('script[src]').evaluate_all('(els)=>els.map(e=>e.getAttribute("src"))')
@@ -38,7 +38,7 @@ async def check(url, chrome):
         assert await page.evaluate('db.cards.length') == 505
         assert not re.search('[А-Яа-яІіЇїЄє]', await page.locator('body').inner_text())
         await page.locator('#method-filter').select_option('rag')
-        assert await page.locator('.experiment-card').count() == 2
+        assert await page.locator('.experiment-card').count() == 1
         await page.locator('#method-filter').select_option('all')
         await page.screenshot(path=str(output / 'overview-desktop.png'))
         for width in [320, 390, 1440]:

@@ -1,7 +1,7 @@
 /* Lightweight catalogue; a detail page loads only its selected evidence bundle. */
 const methods={llm:'Model review',templates:'Controlled templates',symbolic:'Symbolic checks',rag:'Retrieval + compilation',baseline:'Direct generation'};
 const bundles={
- 'reviews-data.js':'MATHPDF_REVIEWS','comparison-data.js':'MATHPDF_COMPARISON',
+ 'briefleaf-runs-data.js':'ACADENCE_BRIEFLEAF_RUNS','reviews-data.js':'MATHPDF_REVIEWS','comparison-data.js':'MATHPDF_COMPARISON',
  'cycle-data.js':'MATHPDF_CYCLE','parameterized-data.js':'MATHPDF_PARAMETERIZED',
  'seventy-data.js':'MATHPDF_SEVENTY','symbolic-data.js':'MATHPDF_SYMBOLIC',
  'rag-data.js':'MATHPDF_RAG','hundred-data.js':'MATHPDF_HUNDRED','wildflower-data.js':'MATHPDF_WILDFLOWER','clearleaf-data.js':'MATHPDF_CLEARLEAF','clearleaf-sixty-data.js':'MATHPDF_CLEARLEAF_SIXTY'
@@ -17,11 +17,7 @@ function money(v){return `$${Number(v).toFixed(4)}`}
 function experimentChart(e){return `<figure class="experiment-chart"><figcaption>${esc(e.chart_title)}</figcaption><div class="chart-bars">${e.series.map(s=>`<div class="chart-row"><div class="chart-label"><span>${esc(s.label)}</span><strong>${s.value} / ${s.total}${s.unit==='count'?' tasks':''}</strong></div><div class="chart-track"><div class="chart-fill tone-${s.tone}" style="width:${100*s.value/s.total}%"></div></div></div>`).join('')}</div><p class="chart-caption">${esc(e.chart_note)}</p></figure>`}
 function renderHub(){
  detailRevision++;
- const all=window.MATHPDF_EXPERIMENTS.experiments;
- $('main').innerHTML=title('EXPERIMENT NOTEBOOK','Experiments','Results, costs and original evidence.')+
- `<div class="research-intro"><a class="tag" href="experiment.html?id=wildflower">Primary: Wildflower</a><a class="text-button" href="#comparison">Compare all versions & next steps →</a><span class="tag">${all.length} studies</span><span class="tag neutral">4 historical card versions</span></div><div class="filters"><label>Method <select id="method-filter"><option value="all">All methods</option>${Object.entries(methods).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select></label><span id="experiment-count" class="count">${all.length} experiments</span></div><div id="experiment-grid" class="experiment-grid"></div><div class="section-head"><div><span class="eyebrow">A SEPARATE EVIDENCE TRACK</span><h2>Flashcards · v1–v4</h2></div><a class="text-button" href="#overview">Compare matching sets →</a></div><p class="subline">Historical LLM scores for cards. These samples differ and do not form a single accuracy trend.</p><div class="history-grid">${db.versions.filter(v=>historyTitles[v.id]).map(v=>{const rows=db.records.filter(r=>r.version===v.id);return `<a class="panel history-tile" href="experiment.html?id=cards-${encodeURIComponent(v.id)}"><span class="eyebrow">${esc(v.id)} · ${sum(rows)} cards</span><h3>${esc(historical(v,'title'))}</h3><span class="text-button">View study →</span></a>`}).join('')}</div>`;
- function draw(){const selected=$('method-filter').value;const rows=all.filter(e=>selected==='all'||e.method===selected).reverse();$('experiment-count').textContent=`${rows.length} experiments`;$('experiment-grid').innerHTML=rows.map(e=>`<article class="panel experiment-card"><div class="experiment-meta"><span class="eyebrow">ATTEMPT ${String(e.number).padStart(2,'0')}</span><span class="tag neutral">${methods[e.method]}</span></div><h2>${e.id===window.MATHPDF_EXPERIMENTS.primary_flashcard_version?'<span class="tag">Primary for flashcards</span><br>':''}<a href="experiment.html?id=${e.id}">${esc(e.title)}</a></h2>${experimentChart(e)}<p class="experiment-finding">${esc(e.finding)}</p><div class="experiment-footer"><span class="small-label">${esc(e.date)} · API ${money(e.cost_usd)}</span><a class="text-button" href="experiment.html?id=${e.id}">Read study →</a></div></article>`).join('')}
- $('method-filter').onchange=draw;draw();
+ renderVersionHub();
 }
 const studyNotes={
  'clearleaf-sixty':[
@@ -115,6 +111,8 @@ function renderHistoricalDetail(id){
 }
 function renderMissing(){document.title='Study not found · Acadence Metrics';$('main').innerHTML=title('EXPERIMENT NOTEBOOK','Study not found.','Choose an experiment from the catalogue.')+'<a class="primary" href="index.html#reviews">Back to experiments</a>'}
 window.renderReviews=async function(){
+ const family=new URLSearchParams(location.search).get('family');
+ if(family)return renderVersionHistory(family);
  if(!location.pathname.endsWith('experiment.html'))return renderHub();
  const rev=++detailRevision,id=new URLSearchParams(location.search).get('id');
  if(id?.startsWith('cards-'))return renderHistoricalDetail(id.slice(6));

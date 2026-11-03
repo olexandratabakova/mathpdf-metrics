@@ -4,7 +4,7 @@ A public notebook for mathematical task generation, formula rendering and flashc
 
 **[Compare all versions & next steps](https://olexandratabakova.github.io/mathpdf-metrics/#comparison)** · **[Explore the experiments](https://olexandratabakova.github.io/mathpdf-metrics/#reviews)** · [Flashcard metrics](https://olexandratabakova.github.io/mathpdf-metrics/#overview) · [Methods & guide](https://olexandratabakova.github.io/mathpdf-metrics/#guide)
 
-The overview gives each attempt a short description, a chart explaining its scope and one main finding. Each study has a separate detail page with its method, limitations, tasks and original evidence. Opening the site makes **no AI-provider calls** and spends no API credit. This repository is separate from production Acadence.
+The overview shows one tile per version, ordered by latest activity. Each version opens its runs from newest to oldest, with the latest expanded. Clearleaf, Briefleaf, Task V5 and RAG keep their related runs together. Briefleaf includes all three 20-card experiments and the latest original evaluator scores. Each study has a separate detail page with its method, limitations, tasks and original evidence. Opening the site makes **no AI-provider calls** and spends no API credit. This repository is separate from production Acadence.
 
 ## Experiment map
 

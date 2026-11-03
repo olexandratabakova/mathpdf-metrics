@@ -1,0 +1,1986 @@
+{
+  "id": "briefleaf",
+  "status": "generated_not_promoted",
+  "generator": "gpt-4.1-mini",
+  "judge": null,
+  "cost_usd": 0.0253192,
+  "ledger": {
+    "budget_usd": 0.15,
+    "calls": [
+      {
+        "name": "generate-sets-flashcards",
+        "digest": "977cea9b4f3e95ef8015a0ae7b7b09783ade4e1dee7a35c6be145879cad58f1a",
+        "reserved_usd": 0.008903639999999999,
+        "status": "incomplete",
+        "model": "gpt-4.1-mini",
+        "cost_usd": 0.0087128,
+        "usage": {
+          "input_tokens": 4782,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 4250,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9032
+        }
+      },
+      {
+        "name": "generate-sets-flashcards-cap8000",
+        "digest": "977cea9b4f3e95ef8015a0ae7b7b09783ade4e1dee7a35c6be145879cad58f1a",
+        "reserved_usd": 0.01490364,
+        "status": "completed",
+        "model": "gpt-4.1-mini",
+        "cost_usd": 0.0033144000000000003,
+        "usage": {
+          "input_tokens": 4782,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 876,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5658
+        }
+      },
+      {
+        "name": "generate-induction-flashcards-cap8000",
+        "digest": "32f70f2d54460d13d6b2a4e74ac9ab5103d54962e81b20ea192dc8f16b2b5d5b",
+        "reserved_usd": 0.0150198,
+        "status": "completed",
+        "model": "gpt-4.1-mini",
+        "cost_usd": 0.0035956000000000004,
+        "usage": {
+          "input_tokens": 5045,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 986,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6031
+        }
+      },
+      {
+        "name": "generate-numbers-flashcards-cap8000",
+        "digest": "cdd5c22b994611cfb41f22ec86487cb09d3f8bf1c7d5fe0393ae937691d3178c",
+        "reserved_usd": 0.01525124,
+        "status": "completed",
+        "model": "gpt-4.1-mini",
+        "cost_usd": 0.0038508,
+        "usage": {
+          "input_tokens": 5571,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1014,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6585
+        }
+      },
+      {
+        "name": "generate-functions-flashcards-cap8000",
+        "digest": "c13d5ef50dfa88c48c5e068a530b42066b1e7d603d58a3370a27526c23729a21",
+        "reserved_usd": 0.01731836,
+        "status": "completed",
+        "model": "gpt-4.1-mini",
+        "cost_usd": 0.0058456,
+        "usage": {
+          "input_tokens": 10270,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1086,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 11356
+        }
+      }
+    ]
+  },
+  "card_sets": [
+    {
+      "topic": "Sets",
+      "pages": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "compact": {
+        "status": "completed",
+        "items": [
+          {
+            "title": "Definition and notation of a set and its elements",
+            "formula": {
+              "page": 4
+            },
+            "skill": "recall",
+            "question": [
+              "What is a set and how is membership of an element in a set denoted?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "A set is a collection of objects, called its elements. Membership is denoted by ",
+                  "x \u00022A",
+                  " meaning element ",
+                  "x",
+                  " is in set ",
+                  "A,",
+                  "and ",
+                  "x \u00022A",
+                  " otherwise."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Definition 1.1. A set is a collection of objects. The objects belonging to the set are called its elements. We write ",
+                  "x \u00022A A",
+                  " when ",
+                  "x",
+                  " is an element of ",
+                  "A,",
+                  " and ",
+                  "x \u00022A A",
+                  " otherwise."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Definition and cardinality of the empty set",
+            "formula": {
+              "page": 4
+            },
+            "skill": "meaning",
+            "question": [
+              "What is the empty set and how is it distinguished from the set containing the empty set?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "The empty set ",
+                  "\u000285",
+                  " or {} contains no elements, and is not equal to ",
+                  "{\u000285}",
+                  " which contains one element: the empty set itself."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Definition 1.2. The empty set is the set with no elements. It is denoted by ",
+                  "\u000285",
+                  " or {}. In particular, ",
+                  "\u000285 \u00022A \u000285",
+                  " : the first set has no elements, whereas the second has one element."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Number of subsets of a finite set",
+            "formula": {
+              "latex": "2^{n}",
+              "page": 5,
+              "variant": null
+            },
+            "skill": "why_justification",
+            "question": [
+              "Why does a finite set with n elements have exactly 2 to the power n subsets?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "A finite set with ",
+                  "n",
+                  " elements has ",
+                  "2^{n}",
+                  " subsets because each element can either be included or not included independently in a subset."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Theorem 1.7. If a finite set ",
+                  "S",
+                  " has ",
+                  "n",
+                  " elements, then it has ",
+                  "2^{n}",
+                  " subsets. Proof: for each element ",
+                  "x_i,",
+                  " there are two choices: include it or exclude it, so the total number of subsets is ",
+                  "2 \\cdot 2 \\cdots 2 = 2^{n}."
+                ]
+              }
+            ],
+            "explanation": [
+              {
+                "parts": [
+                  "Each subset corresponds to choosing independently whether to include each element or not, producing ",
+                  "2^{n}",
+                  " distinct subsets that correspond to binary strings of length ",
+                  "n."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Set equality conditions",
+            "formula": {
+              "page": 4
+            },
+            "skill": "conditions",
+            "question": [
+              "Under what condition are two sets A and B equal?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "Two sets ",
+                  "A",
+                  " and ",
+                  "B",
+                  " are equal if every element of ",
+                  "A",
+                  " is in ",
+                  "B",
+                  ", and every element of ",
+                  "B",
+                  " is in ",
+                  "A."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Definition 1.4. Two sets ",
+                  "A",
+                  " and ",
+                  "B",
+                  " are equal if every element of ",
+                  "A",
+                  " is an element of ",
+                  "B,",
+                  " and every element of ",
+                  "B",
+                  " is an element of ",
+                  "A."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Definition and notation of Cartesian product of sets",
+            "formula": {
+              "page": 5
+            },
+            "skill": "meaning",
+            "question": [
+              "What is the Cartesian product of sets A and B, and how is it represented?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "The Cartesian product ",
+                  "A \u0000D7 B",
+                  " is the set of ordered pairs ",
+                  "(a,b)",
+                  " with ",
+                  "a \u00022A A",
+                  " and ",
+                  "b \u00022A B",
+                  "."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Definition 1.5. For sets ",
+                  "A",
+                  " and ",
+                  "B,",
+                  " the Cartesian product is ",
+                  "A \u0000D7 B = \\{ (a,b) : a \u00022A A, b \u00022A B \\}."
+                ]
+              }
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Definition and notation of a set and its elements",
+          "skill": "recall",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is a set and how is membership of an element in a set denoted?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Definition 1.1. A set is a collection of objects. The objects belonging to the set are called its elements. We write x \u00022A A when x is an element of A, and x \u00022A A otherwise."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Definition 1.1. A set is a collection of objects. The objects belonging to the set are called its elements. We write x \u00022A A when x is an element of A, and x \u00022A A otherwise."
+            },
+            {
+              "kind": "text",
+              "text": "A set is a collection of objects, called its elements. Membership is denoted by x \u00022A meaning element x is in set A,and x \u00022A otherwise."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 4,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 2,
+          "title": "Definition and cardinality of the empty set",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the empty set and how is it distinguished from the set containing the empty set?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Definition 1.2. The empty set is the set with no elements. It is denoted by \u000285 or {}. In particular, \u000285 \u00022A \u000285 : the first set has no elements, whereas the second has one element."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Definition 1.2. The empty set is the set with no elements. It is denoted by \u000285 or {}. In particular, \u000285 \u00022A \u000285 : the first set has no elements, whereas the second has one element."
+            },
+            {
+              "kind": "text",
+              "text": "The empty set \u000285 or {} contains no elements, and is not equal to {\u000285} which contains one element: the empty set itself."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 4,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 3,
+          "title": "Number of subsets of a finite set",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why does a finite set with n elements have exactly 2 to the power n subsets?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Theorem 1.7. If a finite set S has n elements, then it has 2^{n} subsets. Proof: for each element x_i, there are two choices: include it or exclude it, so the total number of subsets is 2 \\cdot 2 \\cdots 2 = 2^{n}."
+            }
+          ],
+          "explanation": [
+            {
+              "kind": "text",
+              "text": "Each subset corresponds to choosing independently whether to include each element or not, producing 2^{n} distinct subsets that correspond to binary strings of length n."
+            }
+          ],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "math",
+              "latex": "2^{n}",
+              "display": true,
+              "source": {
+                "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                "page": 5,
+                "line_start": null,
+                "line_end": null,
+                "quote": null
+              },
+              "original_latex": null,
+              "change": null
+            },
+            {
+              "kind": "text",
+              "text": "Theorem 1.7. If a finite set S has n elements, then it has 2^{n} subsets. Proof: for each element x_i, there are two choices: include it or exclude it, so the total number of subsets is 2 \\cdot 2 \\cdots 2 = 2^{n}."
+            },
+            {
+              "kind": "text",
+              "text": "Explanation"
+            },
+            {
+              "kind": "text",
+              "text": "Each subset corresponds to choosing independently whether to include each element or not, producing 2^{n} distinct subsets that correspond to binary strings of length n."
+            },
+            {
+              "kind": "text",
+              "text": "A finite set with n elements has 2^{n} subsets because each element can either be included or not included independently in a subset."
+            }
+          ],
+          "source": null
+        },
+        {
+          "goal_step": 4,
+          "title": "Set equality conditions",
+          "skill": "conditions",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Under what condition are two sets A and B equal?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Definition 1.4. Two sets A and B are equal if every element of A is an element of B, and every element of B is an element of A."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Definition 1.4. Two sets A and B are equal if every element of A is an element of B, and every element of B is an element of A."
+            },
+            {
+              "kind": "text",
+              "text": "Two sets A and B are equal if every element of A is in B, and every element of B is in A."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 4,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "Definition and notation of Cartesian product of sets",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the Cartesian product of sets A and B, and how is it represented?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Definition 1.5. For sets A and B, the Cartesian product is A \u0000D7 B = \\{ (a,b) : a \u00022A A, b \u00022A B \\}."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Definition 1.5. For sets A and B, the Cartesian product is A \u0000D7 B = \\{ (a,b) : a \u00022A A, b \u00022A B \\}."
+            },
+            {
+              "kind": "text",
+              "text": "The Cartesian product A \u0000D7 B is the set of ordered pairs (a,b) with a \u00022A A and b \u00022A B."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 5,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "usage": {
+        "input_tokens": 4782,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 876,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 5658
+      },
+      "cost_usd": 0.0033144000000000003,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "prompt_hashes": {
+        "system.md": "f06c0df62ab3bf26c319586893db34adb5e643e796285038f278a2b3db365dc3",
+        "flashcards.md": "136a76c5c46118d3753c17d9539c83ded3e07e7235d6aec239ba134c2310b5f0"
+      },
+      "site_guards_passed": true
+    },
+    {
+      "topic": "Mathematical Induction",
+      "pages": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "compact": {
+        "status": "completed",
+        "items": [
+          {
+            "title": "Basic principle of mathematical induction",
+            "formula": {
+              "page": 14
+            },
+            "skill": "meaning",
+            "question": [
+              "What are the three essential steps to prove a statement P(n) for all integers n greater or equal to n0 using mathematical induction?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "To prove the statement P(n) for all integers n ≥ n0 by induction, we perform (1) base case: prove P(n0), (2) induction hypothesis: fix n ≥ n0 and assume P(n) true, (3) induction step: prove P(n + 1) using the hypothesis."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Suppose we want to prove a statement P(n) for every integer n ≥ n0 . We prove it in three steps: 1. Base case: prove P(n0) . 2. Induction hypothesis: fix an arbitrary integer n ≥ n0 and assume that P(n) is true. 3. Induction step: using the induction hypothesis, prove that P(n + 1) is true."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Sum of squares formula proven by induction",
+            "formula": {
+              "latex": "12 + 22 + \\cdots + n^2 = \\frac{n(n+1)(2n+1)}{6}",
+              "page": 14,
+              "variant": null
+            },
+            "skill": "application",
+            "question": [
+              "How can the formula for the sum of the first n squares be proven using induction?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "The formula n000 \\sum_{k=1}^n k^2 = \\frac{n(n+1)(2n+1)}{6} is proven by base case check for n=1 and then assuming it for n, proving it for n+1 by algebraic manipulation."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Example 3.1 proves that 1^2 + 2^2 + ... + n^2 = \\frac{n(n+1)(2n+1)}{6} by verifying base case n=1, assuming the formula holds for n, then adding (n+1)^2 and simplifying to get the formula for n+1."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Why direct proof by induction fails for a sum of reciprocals",
+            "formula": {
+              "page": 16
+            },
+            "skill": "why_justification",
+            "question": [
+              "Why is it impossible to prove the inequality 1/1 squared plus 1/2 squared plus ... plus 1/n squared less or equal to 2 by direct induction?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "It is impossible to prove the inequality directly by induction because the induction step requires a stronger statement to close the argument."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Example 3.4 explains why direct induction fails and instead proves a stronger inequality  \\sum_{i=1}^n \\frac{1}{i^2} \\leq 2-\\frac{1}{n}."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Statement and proof method of the triangle inequality",
+            "formula": {
+              "page": 17
+            },
+            "skill": "meaning",
+            "question": [
+              "What does the triangle inequality for real numbers x1, ..., xn state and how is it proven by induction?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "The triangle inequality states |x1 + ... + xn| ≤ |x1| + ... + |xn| for real numbers and is proven by induction using the two-number case as the base and inductive step."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Theorem 3.7 states for real numbers x1,...,xn, |x1 + · · · + xn| ≤ |x1| + · · · + |xn|. The proof is by induction, using Lemma 3.6 (two-number case) as a base."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Strong induction with coin problem example",
+            "formula": {
+              "page": 18
+            },
+            "skill": "application",
+            "question": [
+              "How is strong induction used to prove every integer n greater or equal to 8 can be expressed as 3a plus 5b for nonnegative integers a,b?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "Strong induction proves this by verifying base cases n=8,9,10 and assuming all integers k with 8 ≤ k ≤ n can be expressed, then showing n+1 can be expressed using the form of n-2 plus 3."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Example 3.12 proves every integer n ≥ 8 can be expressed as n=3a+5b by strong induction: base cases 8,9,10, then assuming true for all k ≤ n, proving for n+1 by writing n+1-3 and adding back 3."
+                ]
+              }
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Basic principle of mathematical induction",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What are the three essential steps to prove a statement P(n) for all integers n greater or equal to n0 using mathematical induction?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Suppose we want to prove a statement P(n) for every integer n ≥ n0 . We prove it in three steps: 1. Base case: prove P(n0) . 2. Induction hypothesis: fix an arbitrary integer n ≥ n0 and assume that P(n) is true. 3. Induction step: using the induction hypothesis, prove that P(n + 1) is true."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Suppose we want to prove a statement P(n) for every integer n ≥ n0 . We prove it in three steps: 1. Base case: prove P(n0) . 2. Induction hypothesis: fix an arbitrary integer n ≥ n0 and assume that P(n) is true. 3. Induction step: using the induction hypothesis, prove that P(n + 1) is true."
+            },
+            {
+              "kind": "text",
+              "text": "To prove the statement P(n) for all integers n ≥ n0 by induction, we perform (1) base case: prove P(n0), (2) induction hypothesis: fix n ≥ n0 and assume P(n) true, (3) induction step: prove P(n + 1) using the hypothesis."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 14,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 2,
+          "title": "Sum of squares formula proven by induction",
+          "skill": "application",
+          "question": [
+            {
+              "kind": "text",
+              "text": "How can the formula for the sum of the first n squares be proven using induction?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Example 3.1 proves that 1^2 + 2^2 + ... + n^2 = \\frac{n(n+1)(2n+1)}{6} by verifying base case n=1, assuming the formula holds for n, then adding (n+1)^2 and simplifying to get the formula for n+1."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "math",
+              "latex": "12 + 22 + \\cdots + n^2 = \\frac{n(n+1)(2n+1)}{6}",
+              "display": true,
+              "source": {
+                "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                "page": 14,
+                "line_start": null,
+                "line_end": null,
+                "quote": null
+              },
+              "original_latex": null,
+              "change": null
+            },
+            {
+              "kind": "text",
+              "text": "Example 3.1 proves that 1^2 + 2^2 + ... + n^2 = \\frac{n(n+1)(2n+1)}{6} by verifying base case n=1, assuming the formula holds for n, then adding (n+1)^2 and simplifying to get the formula for n+1."
+            },
+            {
+              "kind": "text",
+              "text": "The formula n000 \\sum_{k=1}^n k^2 = \\frac{n(n+1)(2n+1)}{6} is proven by base case check for n=1 and then assuming it for n, proving it for n+1 by algebraic manipulation."
+            }
+          ],
+          "source": null
+        },
+        {
+          "goal_step": 3,
+          "title": "Why direct proof by induction fails for a sum of reciprocals",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why is it impossible to prove the inequality 1/1 squared plus 1/2 squared plus ... plus 1/n squared less or equal to 2 by direct induction?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Example 3.4 explains why direct induction fails and instead proves a stronger inequality  \\sum_{i=1}^n \\frac{1}{i^2} \\leq 2-\\frac{1}{n}."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Example 3.4 explains why direct induction fails and instead proves a stronger inequality  \\sum_{i=1}^n \\frac{1}{i^2} \\leq 2-\\frac{1}{n}."
+            },
+            {
+              "kind": "text",
+              "text": "It is impossible to prove the inequality directly by induction because the induction step requires a stronger statement to close the argument."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 16,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 4,
+          "title": "Statement and proof method of the triangle inequality",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What does the triangle inequality for real numbers x1, ..., xn state and how is it proven by induction?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Theorem 3.7 states for real numbers x1,...,xn, |x1 + · · · + xn| ≤ |x1| + · · · + |xn|. The proof is by induction, using Lemma 3.6 (two-number case) as a base."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Theorem 3.7 states for real numbers x1,...,xn, |x1 + · · · + xn| ≤ |x1| + · · · + |xn|. The proof is by induction, using Lemma 3.6 (two-number case) as a base."
+            },
+            {
+              "kind": "text",
+              "text": "The triangle inequality states |x1 + ... + xn| ≤ |x1| + ... + |xn| for real numbers and is proven by induction using the two-number case as the base and inductive step."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 17,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "Strong induction with coin problem example",
+          "skill": "application",
+          "question": [
+            {
+              "kind": "text",
+              "text": "How is strong induction used to prove every integer n greater or equal to 8 can be expressed as 3a plus 5b for nonnegative integers a,b?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Example 3.12 proves every integer n ≥ 8 can be expressed as n=3a+5b by strong induction: base cases 8,9,10, then assuming true for all k ≤ n, proving for n+1 by writing n+1-3 and adding back 3."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Example 3.12 proves every integer n ≥ 8 can be expressed as n=3a+5b by strong induction: base cases 8,9,10, then assuming true for all k ≤ n, proving for n+1 by writing n+1-3 and adding back 3."
+            },
+            {
+              "kind": "text",
+              "text": "Strong induction proves this by verifying base cases n=8,9,10 and assuming all integers k with 8 ≤ k ≤ n can be expressed, then showing n+1 can be expressed using the form of n-2 plus 3."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 18,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "usage": {
+        "input_tokens": 5045,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 986,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 6031
+      },
+      "cost_usd": 0.0035956000000000004,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "prompt_hashes": {
+        "system.md": "f06c0df62ab3bf26c319586893db34adb5e643e796285038f278a2b3db365dc3",
+        "flashcards.md": "136a76c5c46118d3753c17d9539c83ded3e07e7235d6aec239ba134c2310b5f0"
+      },
+      "site_guards_passed": true
+    },
+    {
+      "topic": "Numbers",
+      "pages": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "compact": {
+        "status": "completed",
+        "items": [
+          {
+            "title": "Definition and properties of irreducible fractions",
+            "formula": {
+              "page": 22
+            },
+            "skill": "meaning",
+            "question": [
+              "What defines a fraction m/n as irreducible in the rational number system?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "A fraction ",
+                  {
+                    "math": "m/n"
+                  },
+                  " is irreducible, or in lowest terms, if ",
+                  {
+                    "math": "m"
+                  },
+                  " and ",
+                  {
+                    "math": "n"
+                  },
+                  " have no common factors greater than 1."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Definition 5.1. A fraction ",
+                  {
+                    "math": "m/n"
+                  },
+                  " is irreducible, or in lowest terms, if ",
+                  {
+                    "math": "m"
+                  },
+                  " and ",
+                  {
+                    "math": "n"
+                  },
+                  " have no common factors greater than 1."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Density of rational numbers on the real line",
+            "formula": {
+              "latex": "c=\\frac{a+b}{2}",
+              "page": 22,
+              "variant": null
+            },
+            "skill": "why_justification",
+            "question": [
+              "Why is there always another rational number between any two distinct rational numbers a and b?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "Between any two distinct rational numbers ",
+                  {
+                    "math": "a < b"
+                  },
+                  ", the midpoint ",
+                  {
+                    "math": "c=\\frac{a+b}{2}"
+                  },
+                  " is a rational number that satisfies ",
+                  {
+                    "math": "a < c < b"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Theorem 5.2. Between any two distinct rational numbers there is another rational number. Proof: If ",
+                  {
+                    "math": "a,b \\in \\mathbb{Q}"
+                  },
+                  " and ",
+                  {
+                    "math": "a < b"
+                  },
+                  " then their midpoint ",
+                  {
+                    "math": "c=\\frac{a+b}{2}"
+                  },
+                  " is rational and satisfies ",
+                  {
+                    "math": "a < c < b"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Existence of irrational numbers between any two real numbers",
+            "formula": {
+              "page": 23
+            },
+            "skill": "application",
+            "question": [
+              "How can one find an irrational number between any two distinct real numbers a and b?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "If ",
+                  {
+                    "math": "a < b"
+                  },
+                  ", choose a large enough natural number ",
+                  {
+                    "math": "n"
+                  },
+                  " so that ",
+                  {
+                    "math": "\\frac{\\sqrt{2}}{n} < b - a"
+                  },
+                  ". Then if ",
+                  {
+                    "math": "a \\in \\mathbb{Q} "
+                  },
+                  "take ",
+                  {
+                    "math": "a + \\frac{\\sqrt{2}}{n}"
+                  },
+                  "; if ",
+                  {
+                    "math": "a \\notin \\mathbb{Q} "
+                  },
+                  "take ",
+                  {
+                    "math": "a + \\frac{1}{n}"
+                  },
+                  "; these lie between ",
+                  {
+                    "math": "a"
+                  },
+                  " and ",
+                  {
+                    "math": "b"
+                  },
+                  " and are irrational."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Theorem 5.6. Between any two distinct real numbers there is an irrational number. Proof involves choosing large ",
+                  {
+                    "math": "n \\in \\mathbb{N}"
+                  },
+                  " such that ",
+                  {
+                    "math": "\\frac{\\sqrt{2}}{n} < b - a"
+                  },
+                  " and constructing the irrational number accordingly."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Uniqueness and non-uniqueness of decimal expansions",
+            "formula": {
+              "page": 25
+            },
+            "skill": "error_diagnosis",
+            "question": [
+              "What explains the non-uniqueness of decimal representations for the same real number?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "If two decimal representations differ, then at some position ",
+                  {
+                    "math": "k"
+                  },
+                  " they agree until digit ",
+                  {
+                    "math": "k-1"
+                  },
+                  " and afterwards one has repeating 9's and the other has the digit ",
+                  {
+                    "math": "a_k+1"
+                  },
+                  " followed by zeros."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Theorem 5.9 states: If two decimal representations of the same real number are different, then for some ",
+                  {
+                    "math": "k"
+                  },
+                  " they agree up to the (",
+                  {
+                    "math": "k-1"
+                  },
+                  " )-st digit, and from the ",
+                  {
+                    "math": "k"
+                  },
+                  "-th digit onward they are of the form ",
+                  {
+                    "math": "\\cdots a_k 999\\ldots"
+                  },
+                  " and ",
+                  {
+                    "math": "\\cdots (a_k+1) 000\\ldots"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Relationship between rational numbers and periodic decimals",
+            "formula": {
+              "page": 26
+            },
+            "skill": "comparison",
+            "question": [
+              "How is every rational number related to decimal expansions in terms of periodicity?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "Every rational number has an eventually periodic decimal representation, and conversely, every periodic decimal represents a rational number."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Theorem 5.11. Every rational number has an eventually periodic decimal representation."
+                ]
+              },
+              {
+                "parts": [
+                  "Theorem 5.12. Every periodic decimal represents a rational number."
+                ]
+              }
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Definition and properties of irreducible fractions",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What defines a fraction m/n as irreducible in the rational number system?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Definition 5.1. A fraction \\(m/n\\) is irreducible, or in lowest terms, if \\(m\\) and \\(n\\) have no common factors greater than 1."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Definition 5.1. A fraction \\(m/n\\) is irreducible, or in lowest terms, if \\(m\\) and \\(n\\) have no common factors greater than 1."
+            },
+            {
+              "kind": "text",
+              "text": "A fraction \\(m/n\\) is irreducible, or in lowest terms, if \\(m\\) and \\(n\\) have no common factors greater than 1."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 22,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 2,
+          "title": "Density of rational numbers on the real line",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why is there always another rational number between any two distinct rational numbers a and b?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Theorem 5.2. Between any two distinct rational numbers there is another rational number. Proof: If \\(a,b \\in \\mathbb{Q}\\) and \\(a < b\\) then their midpoint \\(c=\\frac{a+b}{2}\\) is rational and satisfies \\(a < c < b\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "math",
+              "latex": "c=\\frac{a+b}{2}",
+              "display": true,
+              "source": {
+                "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                "page": 22,
+                "line_start": null,
+                "line_end": null,
+                "quote": null
+              },
+              "original_latex": null,
+              "change": null
+            },
+            {
+              "kind": "text",
+              "text": "Theorem 5.2. Between any two distinct rational numbers there is another rational number. Proof: If \\(a,b \\in \\mathbb{Q}\\) and \\(a < b\\) then their midpoint \\(c=\\frac{a+b}{2}\\) is rational and satisfies \\(a < c < b\\)."
+            },
+            {
+              "kind": "text",
+              "text": "Between any two distinct rational numbers \\(a < b\\), the midpoint \\(c=\\frac{a+b}{2}\\) is a rational number that satisfies \\(a < c < b\\)."
+            }
+          ],
+          "source": null
+        },
+        {
+          "goal_step": 3,
+          "title": "Existence of irrational numbers between any two real numbers",
+          "skill": "application",
+          "question": [
+            {
+              "kind": "text",
+              "text": "How can one find an irrational number between any two distinct real numbers a and b?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Theorem 5.6. Between any two distinct real numbers there is an irrational number. Proof involves choosing large \\(n \\in \\mathbb{N}\\) such that \\(\\frac{\\sqrt{2}}{n} < b - a\\) and constructing the irrational number accordingly."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Theorem 5.6. Between any two distinct real numbers there is an irrational number. Proof involves choosing large \\(n \\in \\mathbb{N}\\) such that \\(\\frac{\\sqrt{2}}{n} < b - a\\) and constructing the irrational number accordingly."
+            },
+            {
+              "kind": "text",
+              "text": "If \\(a < b\\), choose a large enough natural number \\(n\\) so that \\(\\frac{\\sqrt{2}}{n} < b - a\\). Then if \\(a \\in \\mathbb{Q} \\)take \\(a + \\frac{\\sqrt{2}}{n}\\); if \\(a \\notin \\mathbb{Q} \\)take \\(a + \\frac{1}{n}\\); these lie between \\(a\\) and \\(b\\) and are irrational."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 23,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 4,
+          "title": "Uniqueness and non-uniqueness of decimal expansions",
+          "skill": "error_diagnosis",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What explains the non-uniqueness of decimal representations for the same real number?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Theorem 5.9 states: If two decimal representations of the same real number are different, then for some \\(k\\) they agree up to the (\\(k-1\\) )-st digit, and from the \\(k\\)-th digit onward they are of the form \\(\\cdots a_k 999\\ldots\\) and \\(\\cdots (a_k+1) 000\\ldots\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Theorem 5.9 states: If two decimal representations of the same real number are different, then for some \\(k\\) they agree up to the (\\(k-1\\) )-st digit, and from the \\(k\\)-th digit onward they are of the form \\(\\cdots a_k 999\\ldots\\) and \\(\\cdots (a_k+1) 000\\ldots\\)."
+            },
+            {
+              "kind": "text",
+              "text": "If two decimal representations differ, then at some position \\(k\\) they agree until digit \\(k-1\\) and afterwards one has repeating 9's and the other has the digit \\(a_k+1\\) followed by zeros."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 25,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "Relationship between rational numbers and periodic decimals",
+          "skill": "comparison",
+          "question": [
+            {
+              "kind": "text",
+              "text": "How is every rational number related to decimal expansions in terms of periodicity?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Theorem 5.11. Every rational number has an eventually periodic decimal representation."
+            },
+            {
+              "kind": "text",
+              "text": "Theorem 5.12. Every periodic decimal represents a rational number."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Theorem 5.11. Every rational number has an eventually periodic decimal representation."
+            },
+            {
+              "kind": "text",
+              "text": "Theorem 5.12. Every periodic decimal represents a rational number."
+            },
+            {
+              "kind": "text",
+              "text": "Every rational number has an eventually periodic decimal representation, and conversely, every periodic decimal represents a rational number."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 26,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "usage": {
+        "input_tokens": 5571,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1014,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 6585
+      },
+      "cost_usd": 0.0038508,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "prompt_hashes": {
+        "system.md": "f06c0df62ab3bf26c319586893db34adb5e643e796285038f278a2b3db365dc3",
+        "flashcards.md": "136a76c5c46118d3753c17d9539c83ded3e07e7235d6aec239ba134c2310b5f0"
+      },
+      "site_guards_passed": true
+    },
+    {
+      "topic": "Functions",
+      "pages": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "compact": {
+        "status": "completed",
+        "items": [
+          {
+            "title": "Definition of a function from X to Y",
+            "formula": {
+              "page": 63
+            },
+            "skill": "meaning",
+            "question": [
+              "What is the definition of a function from a set X to a set Y?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "A function from ",
+                  {
+                    "math": "X"
+                  },
+                  " to ",
+                  {
+                    "math": "Y"
+                  },
+                  " is a relation ",
+                  {
+                    "math": "f\\subset X \\times Y"
+                  },
+                  " such that, for every ",
+                  {
+                    "math": "x \\in X"
+                  },
+                  ", there is exactly one ",
+                  {
+                    "math": "y \\in Y"
+                  },
+                  " with ",
+                  {
+                    "math": "(x,y) \\in f"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Definition 12.1. A function from ",
+                  {
+                    "math": "X"
+                  },
+                  " to ",
+                  {
+                    "math": "Y"
+                  },
+                  " is a relation ",
+                  {
+                    "math": "f \\subset X \\times Y"
+                  },
+                  " such that, for every ",
+                  {
+                    "math": "x \\in X"
+                  },
+                  ", there is exactly one ",
+                  {
+                    "math": "y \\in Y"
+                  },
+                  " with ",
+                  {
+                    "math": "(x, y) \\in f"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Equality of functions with different domains",
+            "formula": {
+              "page": 64
+            },
+            "skill": "error_diagnosis",
+            "question": [
+              "Are the functions defined by f1: R to R, f1(x) equals x plus 2, and f2: R without 2 to R, f2(x) equals x plus 2, equal?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "No, ",
+                  {
+                    "math": "f_1 \\neq f_2"
+                  },
+                  " because their domains differ: ",
+                  {
+                    "math": "\\mathbb{R} \\neq \\mathbb{R} \\setminus \\{2\\}"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "We have ",
+                  {
+                    "math": "g_2 \\neq f_1"
+                  },
+                  ", because their domains differ: ",
+                  {
+                    "math": "\\mathbb{R} \\setminus \\{2\\}"
+                  },
+                  " vs. ",
+                  {
+                    "math": "\\mathbb{R}"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Condition for injectivity of a function f: X to Y",
+            "formula": {
+              "page": 64
+            },
+            "skill": "meaning",
+            "question": [
+              "What is the definition of an injective function from X to Y?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "A function ",
+                  {
+                    "math": "f: X \\to Y"
+                  },
+                  " is injective if for all ",
+                  {
+                    "math": "x_1, x_2 \\in X"
+                  },
+                  ", ",
+                  {
+                    "math": "f(x_1) = f(x_2)"
+                  },
+                  " implies ",
+                  {
+                    "math": "x_1 = x_2"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Definition 12.8. (1) ",
+                  {
+                    "math": "f"
+                  },
+                  " is injective (one-to-one) if \u00022",
+                  {
+                    "math": "\\forall x_1,x_2 \\in X : f(x_1) = f(x_2) \\implies x_1 = x_2"
+                  },
+                  "\u00021."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Inverse function of a bijection f: X to Y",
+            "formula": {
+              "page": 67
+            },
+            "skill": "meaning",
+            "question": [
+              "What is the definition of the inverse function for a bijection f: X to Y?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "The inverse function ",
+                  {
+                    "math": "f^{-1}: Y \\to X"
+                  },
+                  " is defined by ",
+                  {
+                    "math": "f^{-1}(y) = x \\iff f(x) = y"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Definition 12.18. Let ",
+                  {
+                    "math": "f: X \\to Y"
+                  },
+                  " be a bijection. The inverse function ",
+                  {
+                    "math": "f^{-1}: Y \\to X"
+                  },
+                  " is the inverse relation of ",
+                  {
+                    "math": "f"
+                  },
+                  ": ",
+                  {
+                    "math": "f^{-1}(y) = x \\iff f(x) = y"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": []
+          },
+          {
+            "title": "Composition of injective and surjective functions",
+            "formula": {
+              "page": 66
+            },
+            "skill": "why_justification",
+            "question": [
+              "Why is the composition g o f injective if both f: X to Y and g: Y to Z are injective?"
+            ],
+            "answer": [
+              {
+                "parts": [
+                  "If ",
+                  {
+                    "math": "(g \\circ f)(x_1) = (g \\circ f)(x_2)"
+                  },
+                  ", then injectivity of ",
+                  {
+                    "math": "g"
+                  },
+                  " implies ",
+                  {
+                    "math": "f(x_1) = f(x_2)"
+                  },
+                  ", which injectivity of ",
+                  {
+                    "math": "f"
+                  },
+                  " implies ",
+                  {
+                    "math": "x_1 = x_2"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "from_notes": [
+              {
+                "parts": [
+                  "Proof. (i) Suppose ",
+                  {
+                    "math": "(g \\circ f)(x_1) = (g \\circ f)(x_2)"
+                  },
+                  ". Then ",
+                  {
+                    "math": "g(f(x_1)) = g(f(x_2))"
+                  },
+                  " which by injectivity of ",
+                  {
+                    "math": "g"
+                  },
+                  " implies ",
+                  {
+                    "math": "f(x_1) = f(x_2)"
+                  },
+                  " which by injectivity of ",
+                  {
+                    "math": "f"
+                  },
+                  " implies ",
+                  {
+                    "math": "x_1 = x_2"
+                  },
+                  "."
+                ]
+              }
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      "items": [
+        {
+          "goal_step": 1,
+          "title": "Definition of a function from X to Y",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the definition of a function from a set X to a set Y?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Definition 12.1. A function from \\(X\\) to \\(Y\\) is a relation \\(f \\subset X \\times Y\\) such that, for every \\(x \\in X\\), there is exactly one \\(y \\in Y\\) with \\((x, y) \\in f\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Definition 12.1. A function from \\(X\\) to \\(Y\\) is a relation \\(f \\subset X \\times Y\\) such that, for every \\(x \\in X\\), there is exactly one \\(y \\in Y\\) with \\((x, y) \\in f\\)."
+            },
+            {
+              "kind": "text",
+              "text": "A function from \\(X\\) to \\(Y\\) is a relation \\(f\\subset X \\times Y\\) such that, for every \\(x \\in X\\), there is exactly one \\(y \\in Y\\) with \\((x,y) \\in f\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 63,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 2,
+          "title": "Equality of functions with different domains",
+          "skill": "error_diagnosis",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Are the functions defined by f1: R to R, f1(x) equals x plus 2, and f2: R without 2 to R, f2(x) equals x plus 2, equal?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "We have \\(g_2 \\neq f_1\\), because their domains differ: \\(\\mathbb{R} \\setminus \\{2\\}\\) vs. \\(\\mathbb{R}\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "We have \\(g_2 \\neq f_1\\), because their domains differ: \\(\\mathbb{R} \\setminus \\{2\\}\\) vs. \\(\\mathbb{R}\\)."
+            },
+            {
+              "kind": "text",
+              "text": "No, \\(f_1 \\neq f_2\\) because their domains differ: \\(\\mathbb{R} \\neq \\mathbb{R} \\setminus \\{2\\}\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 64,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 3,
+          "title": "Condition for injectivity of a function f: X to Y",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the definition of an injective function from X to Y?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Definition 12.8. (1) \\(f\\) is injective (one-to-one) if \u00022\\(\\forall x_1,x_2 \\in X : f(x_1) = f(x_2) \\implies x_1 = x_2\\)\u00021."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Definition 12.8. (1) \\(f\\) is injective (one-to-one) if \u00022\\(\\forall x_1,x_2 \\in X : f(x_1) = f(x_2) \\implies x_1 = x_2\\)\u00021."
+            },
+            {
+              "kind": "text",
+              "text": "A function \\(f: X \\to Y\\) is injective if for all \\(x_1, x_2 \\in X\\), \\(f(x_1) = f(x_2)\\) implies \\(x_1 = x_2\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 64,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 4,
+          "title": "Inverse function of a bijection f: X to Y",
+          "skill": "meaning",
+          "question": [
+            {
+              "kind": "text",
+              "text": "What is the definition of the inverse function for a bijection f: X to Y?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Definition 12.18. Let \\(f: X \\to Y\\) be a bijection. The inverse function \\(f^{-1}: Y \\to X\\) is the inverse relation of \\(f\\): \\(f^{-1}(y) = x \\iff f(x) = y\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Definition 12.18. Let \\(f: X \\to Y\\) be a bijection. The inverse function \\(f^{-1}: Y \\to X\\) is the inverse relation of \\(f\\): \\(f^{-1}(y) = x \\iff f(x) = y\\)."
+            },
+            {
+              "kind": "text",
+              "text": "The inverse function \\(f^{-1}: Y \\to X\\) is defined by \\(f^{-1}(y) = x \\iff f(x) = y\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 67,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        },
+        {
+          "goal_step": 5,
+          "title": "Composition of injective and surjective functions",
+          "skill": "why_justification",
+          "question": [
+            {
+              "kind": "text",
+              "text": "Why is the composition g o f injective if both f: X to Y and g: Y to Z are injective?"
+            }
+          ],
+          "from_notes": [
+            {
+              "kind": "text",
+              "text": "Proof. (i) Suppose \\((g \\circ f)(x_1) = (g \\circ f)(x_2)\\). Then \\(g(f(x_1)) = g(f(x_2))\\) which by injectivity of \\(g\\) implies \\(f(x_1) = f(x_2)\\) which by injectivity of \\(f\\) implies \\(x_1 = x_2\\)."
+            }
+          ],
+          "explanation": [],
+          "answer": [
+            {
+              "kind": "text",
+              "text": "From notes"
+            },
+            {
+              "kind": "text",
+              "text": "Proof. (i) Suppose \\((g \\circ f)(x_1) = (g \\circ f)(x_2)\\). Then \\(g(f(x_1)) = g(f(x_2))\\) which by injectivity of \\(g\\) implies \\(f(x_1) = f(x_2)\\) which by injectivity of \\(f\\) implies \\(x_1 = x_2\\)."
+            },
+            {
+              "kind": "text",
+              "text": "If \\((g \\circ f)(x_1) = (g \\circ f)(x_2)\\), then injectivity of \\(g\\) implies \\(f(x_1) = f(x_2)\\), which injectivity of \\(f\\) implies \\(x_1 = x_2\\)."
+            }
+          ],
+          "source": {
+            "document_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "page": 66,
+            "line_start": null,
+            "line_end": null,
+            "quote": null
+          }
+        }
+      ],
+      "usage": {
+        "input_tokens": 10270,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1086,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 11356
+      },
+      "cost_usd": 0.0058456,
+      "resolved_model": "gpt-4.1-mini-2025-04-14",
+      "prompt_hashes": {
+        "system.md": "f06c0df62ab3bf26c319586893db34adb5e643e796285038f278a2b3db365dc3",
+        "flashcards.md": "136a76c5c46118d3753c17d9539c83ded3e07e7235d6aec239ba134c2310b5f0"
+      },
+      "site_guards_passed": true
+    }
+  ],
+  "mechanical_summary": {
+    "cards": 20,
+    "nonempty_legacy_answer": 20,
+    "nonempty_explanation": 1,
+    "front_words_mean": 17.1,
+    "cards_with_control_characters": 4
+  },
+  "local_findings": [
+    "Sets 1,2,5 contain corrupted PDF glyph/control sequences; Functions 3 also contains control characters.",
+    "Induction 2 central formula has 12 + 22 instead of squared terms; its proof is only a summary.",
+    "Induction 3 overstates impossibility of direct induction; failure of the naive estimate is not impossibility.",
+    "Several recall questions are labelled meaning or comparison. Level quotas require semantic review.",
+    "Functions 2 source excerpt uses a different function identifier from the front.",
+    "Source/added-answer role and detailed explanation structure were not consistently followed."
+  ],
+  "limitations": [
+    "No model evaluator invoked. Local inspection is not independent expert verification.",
+    "No claim of overall accuracy, faithfulness rate or improvement. No production or website changes."
+  ]
+}
